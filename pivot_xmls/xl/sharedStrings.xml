@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="26577" uniqueCount="2117"><si><t>Route Location NA Ports Flag</t></si><si><t>Vessel OB flag</t></si><si><t>Trade Summary Avg Max Laden</t></si><si><t>TPT</t></si><si><t>AW</t></si><si><t>WIN</t></si><si><t>VMS</t></si><si><t>Y</t></si><si><t>PS</t></si><si><t>TAT</t></si><si><t>TA</t></si><si><t>AT4</t></si><si><t>AT3</t></si><si><t>LAT</t></si><si><t>LN</t></si><si><t>AN2</t></si><si><t>AL5</t></si><si><t>AT1</t></si><si><t>FLX</t></si><si><t>PS3</t></si><si><t>PN</t></si><si><t>PN3</t></si><si><t>EC4</t></si><si><t>PS4</t></si><si><t>PN1</t></si><si><t>PS6</t></si><si><t>FP2</t></si><si><t>EC1</t></si><si><t>EC2</t></si><si><t>PS7</t></si><si><t>MAR</t></si><si><t>EMA</t></si><si><t>EC3</t></si><si><t>ANG</t></si><si><t>ZIM BALTIMORE</t></si><si><t>LONCOMILLA</t></si><si><t>TO BE NOMINATED</t></si><si><t>SPYROS V</t></si><si><t>SUNNY PHOENIX</t></si><si><t>2026/W20</t></si><si><t>Trade</t></si><si><t>Sub Trade</t></si><si><t>Values</t></si><si><t>Total TEU</t></si><si><t>TPT Total TEU</t></si><si><t>TAT Total TEU</t></si><si><t>LAT Total TEU</t></si><si><t>Booking Flash Report NA</t></si><si><t>Date:</t></si><si><t>Current Calendar Wk:</t></si><si><t xml:space="preserve">Sale Week </t></si><si><t>-0 days 0 hrs</t></si><si><t>Service</t></si><si><t xml:space="preserve"> Coastal ETD</t></si><si><t>Port Cut</t></si><si><t xml:space="preserve">Status </t></si><si><t>VVD</t></si><si><t>Vessel Name</t></si><si><t>POL</t></si><si><t>Loadable Quantity</t></si><si><t>RFR BKG TEU</t></si><si><t>Peak Laden Utilz %</t></si><si><t>Inland  w/Activity</t></si><si><t>Inland No-Activity</t></si><si><t xml:space="preserve">Inland Total </t></si><si><t>Port w/Activity</t></si><si><t>Port No-Activity</t></si><si><t>Port Total</t></si><si><t xml:space="preserve"> Last Coastal ETA Time</t></si><si><t>Proforma ETA Time</t></si><si><t>Coastal ETA vs Proforma</t></si><si><t xml:space="preserve"> </t></si><si><t>Inland Total</t></si><si><t>Note*</t></si><si><t>Port Seq</t></si><si><t>BSA TEU</t></si><si><t>1. Summary by Trade and Sub Trade</t></si><si><t>[Unit: TEU]</t></si><si><t>HMM HANUL</t></si><si><t xml:space="preserve">Trade </t></si><si><t>Lane</t></si><si><t>PIC (spc/mkg)</t></si><si><t>Sale Week</t></si><si><t>ETD Last Port</t></si><si><t xml:space="preserve">VVD </t></si><si><t>1st POL Cutoff</t></si><si><t>RFR BSA Plugs</t></si><si><t>RFR BKG Plugs</t></si><si><t>RFR Max LDN</t></si><si><t>RFR BKG TTL</t></si><si><t>Route Date Past 4 Week Flag</t></si><si><t>Max Laden</t></si><si><t xml:space="preserve"> Sub Trade</t></si><si><t>TPT Max Laden</t></si><si><t>TAT Max Laden</t></si><si><t>LAT Max Laden</t></si><si><t>Avg Max Laden</t></si><si><t>Avg Booking</t></si><si><t>Avg Max Laden vs Bkg</t></si><si><t>Avg Utilization</t></si><si><t xml:space="preserve">Sub Trade </t></si><si><t xml:space="preserve">Lane </t></si><si><t xml:space="preserve">Sector Summary </t></si><si><t>Average Booking</t></si><si><t>LKCMB</t></si><si><t>SGSIN</t></si><si><t>CNSHA</t></si><si><t>CNSHK</t></si><si><t>INNSA</t></si><si><t xml:space="preserve"> Trade</t></si><si><t>POD Sector</t></si><si><t>Sector Alloc</t></si><si><t>Open Space</t></si><si><t>Average Max Laden vs Booking</t></si><si><t>Activity vs Booking Utilz</t></si><si><t>Max LDN vs BKG (Short_Fall)</t></si><si><t>Activity vs Max Laden</t></si><si><t>Voyage Remarks</t></si><si><t>Sector Allocation</t></si><si><t>Actual Rotation</t></si><si><t>AP Status</t></si><si><t xml:space="preserve">Inland Activity </t></si><si><t xml:space="preserve">Inland No Activity </t></si><si><t>Port Activity</t></si><si><t xml:space="preserve">Port No Activity </t></si><si><t xml:space="preserve">Port Total </t></si><si><t>All</t></si><si><t xml:space="preserve">Max LDN </t></si><si><t>Trunk Utilization</t></si><si><t>TPT Trunk Utilization</t></si><si><t>TAT Trunk Utilization</t></si><si><t>LAT Trunk Utilization</t></si><si><t>RFR Utilz%</t></si><si><t>Max Laden vs POL  Booking</t></si><si><t xml:space="preserve">RFR Max Laden TEU </t></si><si><t xml:space="preserve">POL Laden Threshold </t></si><si><t>Operational Issues</t></si><si><t>-For VVD's phasing out in N.A., vessels will still appear on the Flash.  Analysts should include on the Max Laden file.</t></si><si><t>VSE</t></si><si><t>PS1</t></si><si><t>NYK SILVIA</t></si><si><t>EVER MEGA</t></si><si><t>+1 days 0 hrs</t></si><si><t>ONE HONOLULU</t></si><si><t>CORNEILLE</t></si><si><t>MS2</t></si><si><t>NYK JOANNA</t></si><si><t>HSL NIKE</t></si><si><t>CMA CGM ALIAGA</t></si><si><t>CMA CGM AMBITION</t></si><si><t>MATTHEW SCHULTE</t></si><si><t>CMA CGM INNOVATION</t></si><si><t>CMA CGM ENDURANCE</t></si><si><t>MARTINIQUE</t></si><si><t>ONE MANEUVER</t></si><si><t>OOCL SEOUL</t></si><si><t>CMA CGM BEIRA</t></si><si><t>APL MINNESOTA</t></si><si><t>CMA CGM LAMARTINE</t></si><si><t>OOCL BREMERHAVEN</t></si><si><t>CMA CGM MOLIERE</t></si><si><t>APL CALIFORNIA</t></si><si><t>WIDE HOTEL</t></si><si><t>SANTA VANESSA</t></si><si><t>DALIAN EXPRESS</t></si><si><t>CAPE PIONEER</t></si><si><t>LE HAVRE EXPRESS</t></si><si><t>PALENA</t></si><si><t>JAZAN</t></si><si><t>COSTA RICA EXPRESS</t></si><si><t>CMA CGM PHOENIX</t></si><si><t>OOCL CHONGQING</t></si><si><t>COSCO HOPE</t></si><si><t>-0 days -3 hrs</t></si><si><t>+1 days 13 hrs</t></si><si><t>SAN FRANCISCO BRIDGE</t></si><si><t>ONE MAXIM</t></si><si><t>ONE MAGNIFICENCE</t></si><si><t>ONE MARVEL</t></si><si><t>KINGSTON</t></si><si><t>OOCL GUANGZHOU</t></si><si><t>CMA CGM LAPIS</t></si><si><t>BERNHARD SCHULTE</t></si><si><t>X-PRESS ANTLIA</t></si><si><t>YM MOVEMENT</t></si><si><t>EVER SALUTE</t></si><si><t>ONE HAMMERSMITH</t></si><si><t>NYK NEBULA</t></si><si><t>NYK RIGEL</t></si><si><t>NYK METEOR</t></si><si><t>NYK DEMETER</t></si><si><t>CMA CGM BLUE WHALE</t></si><si><t>NYK REMUS</t></si><si><t>NYK ROMULUS</t></si><si><t>YM UPWARD</t></si><si><t>YM UNIFORMITY</t></si><si><t>ONE MAESTRO</t></si><si><t>YM UPSURGENCE</t></si><si><t>ONE SATISFACTION</t></si><si><t>YM UTILITY</t></si><si><t>YM UNIFORM</t></si><si><t>ONE MODERN</t></si><si><t>YM UBIQUITY</t></si><si><t>MOL COURAGE</t></si><si><t>ONE TRITON</t></si><si><t>MOL PROFICIENCY</t></si><si><t>ONE HAWK</t></si><si><t>ONE FALCON</t></si><si><t>ONE STORK</t></si><si><t>ONE WREN</t></si><si><t>ONE CRANE</t></si><si><t>HYUNDAI SUPREME</t></si><si><t>ONE COMMITMENT</t></si><si><t>HMM DIAMOND</t></si><si><t>CONTI CONTESSA</t></si><si><t>ONE MUNCHEN</t></si><si><t>ONE GRUS</t></si><si><t>ONE MONACO</t></si><si><t>CONTI CORTESIA</t></si><si><t>HMM EMERALD</t></si><si><t>ONE MILANO</t></si><si><t>ONE MANCHESTER</t></si><si><t>ONE MADRID</t></si><si><t>ONE MILLAU</t></si><si><t>HYUNDAI FORWARD</t></si><si><t>HMM TURQUOISE</t></si><si><t>HMM TOPAZ</t></si><si><t>HMM AQUAMARINE</t></si><si><t>HMM RUBY</t></si><si><t>YM MILESTONE</t></si><si><t>ONE AQUILA</t></si><si><t>WAN HAI A01</t></si><si><t>ONE COLUMBA</t></si><si><t>ONE SPRINTER</t></si><si><t>YM MATURITY</t></si><si><t>HYUNDAI PLUTO</t></si><si><t>MOL CHARISMA</t></si><si><t>ONE CONTRIBUTION</t></si><si><t>YM TRILLION</t></si><si><t>WAN HAI A05</t></si><si><t>WAN HAI A19</t></si><si><t>YM PLUM</t></si><si><t>HYUNDAI NEPTUNE</t></si><si><t>ONE SINGAPORE</t></si><si><t>YM WEALTH</t></si><si><t>YM COSMOS</t></si><si><t>HMM AMETHYST</t></si><si><t>HMM SAPPHIRE</t></si><si><t>CHARLOTTE SCHULTE</t></si><si><t>HMM VICTORY</t></si><si><t>YM TRANQUILITY</t></si><si><t>YM MASCULINITY</t></si><si><t>YM TRUST</t></si><si><t>YM MANDATE</t></si><si><t>HMM VANCOUVER</t></si><si><t>YM UNANIMITY</t></si><si><t>YM UNICORN</t></si><si><t>CONTI CONQUEST</t></si><si><t>HYUNDAI EARTH</t></si><si><t>HYUNDAI SATURN</t></si><si><t>ONE EAGLE</t></si><si><t>YM MUTUALITY</t></si><si><t>YM TOGETHER</t></si><si><t>ONE IBIS</t></si><si><t>ONE MATRIX</t></si><si><t>NYK VESTA</t></si><si><t>NYK LAURA</t></si><si><t>ALIAGA EXPRESS</t></si><si><t>ONE HUMBER</t></si><si><t>ONE CYGNUS</t></si><si><t>RUBY TOWER</t></si><si><t>ONE ORPHEUS</t></si><si><t/></si><si><t>-Vessels not yet input in the Max Laden table will by default show as a VMS week.</t></si><si><t>YM WIND</t></si><si><t>PS8</t></si><si><t>FELIXSTOWE</t></si><si><t>ONE MISSION</t></si><si><t>Actual Mty (TEU)</t></si><si><t>POL Max Laden (TEU)</t></si><si><t>Discharge (TEU)</t></si><si><t>Loadable WGT</t></si><si><t>AP ACTIVE LATAM / APPEAL STATUS: OPEN</t></si><si><t>Joe / Bob</t></si><si><t>NAVIOS AMARILLO</t></si><si><t>SEASPAN BENEFACTOR</t></si><si><t>HYUNDAI JUPITER</t></si><si><t>WAN HAI 513</t></si><si><t>GREENHOUSE</t></si><si><t>USOAK01</t></si><si><t>+1 days 23 hrs</t></si><si><t>+0 days 22 hrs</t></si><si><t>+2 days 0 hrs</t></si><si><t>+3 days 0 hrs</t></si><si><t>USLAX03</t></si><si><t>+5 days 0 hrs</t></si><si><t>+4 days 0 hrs</t></si><si><t>+2 days 20 hrs</t></si><si><t>+3 days 20 hrs</t></si><si><t>+7 days 0 hrs</t></si><si><t>CAVAN01</t></si><si><t>+3 days 6 hrs</t></si><si><t>USOAK08</t></si><si><t>USTIW02</t></si><si><t>+4 days 16 hrs</t></si><si><t>USLAX06</t></si><si><t>CAHAL02</t></si><si><t>+1 days 10 hrs</t></si><si><t>USLGB02</t></si><si><t>USSAV01</t></si><si><t>USCHS01</t></si><si><t>USMSY01</t></si><si><t>-0 days -7 hrs</t></si><si><t>+1 days 21 hrs</t></si><si><t>-0 days -18 hrs</t></si><si><t>USTIW05</t></si><si><t>USORF01</t></si><si><t>USMOB01</t></si><si><t>USMIA02</t></si><si><t>USJAX03</t></si><si><t>USLAX01</t></si><si><t>USHOU05</t></si><si><t>-0 days -14 hrs</t></si><si><t>USNYC05</t></si><si><t>+1 days 2 hrs</t></si><si><t>+0 days 2 hrs</t></si><si><t>PAROD01</t></si><si><t>+3 days 2 hrs</t></si><si><t>USNYC01</t></si><si><t>USNYC02</t></si><si><t>USLAX08</t></si><si><t>USORF03</t></si><si><t>+0 days 1 hrs</t></si><si><t>USNYC06</t></si><si><t>USHOU01</t></si><si><t>USLAX04</t></si><si><t>+5 days 1 hrs</t></si><si><t>+3 days 1 hrs</t></si><si><t>+0 days 0 hrs</t></si><si><t>USMIA01</t></si><si><t>-0 days -1 hrs</t></si><si><t>USPHL02</t></si><si><t>+3 days 23 hrs</t></si><si><t>USPEF03</t></si><si><t>-0 days -4 hrs</t></si><si><t>+2 days 12 hrs</t></si><si><t>+2 days 2 hrs</t></si><si><t>+7 days 15 hrs</t></si><si><t>+1 days 1 hrs</t></si><si><t>-0 days -2 hrs</t></si><si><t>+2 days 15 hrs</t></si><si><t>+5 days 2 hrs</t></si><si><t>+4 days 1 hrs</t></si><si><t>+8 days 7 hrs</t></si><si><t>+1 days 15 hrs</t></si><si><t>+0 days 6 hrs</t></si><si><t>+7 days 12 hrs</t></si><si><t>+0 days 5 hrs</t></si><si><t>+2 days 23 hrs</t></si><si><t>+0 days 3 hrs</t></si><si><t>+2 days 3 hrs</t></si><si><t>+6 days 13 hrs</t></si><si><t>+1 days 12 hrs</t></si><si><t>+6 days 0 hrs</t></si><si><t>+0 days 11 hrs</t></si><si><t>+0 days 23 hrs</t></si><si><t>+1 days 11 hrs</t></si><si><t>+7 days 10 hrs</t></si><si><t>+2 days 22 hrs</t></si><si><t>+0 days 10 hrs</t></si><si><t>+2 days 7 hrs</t></si><si><t>+8 days 17 hrs</t></si><si><t>+0 days 12 hrs</t></si><si><t>+1 days 16 hrs</t></si><si><t>+3 days 12 hrs</t></si><si><t>+1 days 22 hrs</t></si><si><t>+8 days 15 hrs</t></si><si><t>+2 days 6 hrs</t></si><si><t>Broken Routes</t></si><si><t>ONE HANOI</t></si><si><t>AP DEACTIVATED / APPEAL STATUS: OPEN</t></si><si><t>Evan / Bob</t></si><si><t>AP ACTIVE / APPEAL STATUS: OPEN</t></si><si><t>AP ACTIVE / APPEAL STATUS: CLOSED</t></si><si><t>Lani / Alex</t></si><si><t>Joe / Marissa</t></si><si><t>CAHAL02-USNYC02 -USORF01-USSAV01-USMIA02-&gt; ESALG-ITSPE-ITGOA-ITVDL-FRFOS-ESVLC</t></si><si><t>Evan / Alex</t></si><si><t>Ryan T / Alex</t></si><si><t>Ryan T / Bob</t></si><si><t>Peter / Marissa</t></si><si><t>Ryan T / Marissa</t></si><si><t>USLAX01-USOAK01-CNSHK01-VNHPH07-VNCMP04-CNXMN01-TWTPE05</t></si><si><t>USLAX01-USOAK01 -&gt; CNSHK-VNHPH-VNCMP-CNXMN-TWTPE</t></si><si><t>Resid / Marissa</t></si><si><t>Kysa / Alex</t></si><si><t>USLAX01-MXMZT02-MXZLO01-MXLZC02-GTPRQ02-NICIO01-CRCAL01</t></si><si><t>LAX01 -&gt; MXMZT-MXZLO-MXLZC-GTPRQ-NICIO-CRCAL - POST MEXICO PORTS: GTPRQ - NICIO - CRCAL</t></si><si><t>Evan / Marissa</t></si><si><t>MXVER03-MXATM01-USHOU05-USMSY01-GBSOU01-NLRTM15-BEANR07-DEBRV01</t></si><si><t>MXVER03 -&gt;MXATM01 -&gt; USHOU05-&gt;USMSY01 -&gt; GBSOU-&gt; NLRTM-&gt; BEANR-&gt; DEBRV</t></si><si><t>Ryan H / Alex</t></si><si><t>MXVER03-MXATM01-USHOU01-USMSY01-COCNR01 -&gt; BRSUA-BRSSZ-ARBUE-UYMVD-BRRIG-BRITJ-BRPNG-BRSSZ-COCNR</t></si><si><t>Peter / Alex</t></si><si><t>USPEF03-USPHL02-USNYC02-USCHS02-COSPC01-PAPCA10-ECGYE04-PECLL02-CLSAI02</t></si><si><t>USNYC06-USORF01-USSAV01-USJAX03-USCHS01&gt;AEJEA-PKBQM-INHZA-INNSA-INMUN</t></si><si><t>USHOU05-USMOB01-PAPCA-PAROD-&gt;TWKHH-HKHKG-CNYTN-CNNGB-CNSHA-KRPUS</t></si><si><t>TBA / Alex</t></si><si><t>USNYC05-USORF01-USSAV01-TRISK01-TRALI03-TRIST22-GRPIR20-ITSAL01</t></si><si><t>USNYC05-USORF03-USSAV01-&gt;TRISK-TRALI-TRIST-GRPIR-ITSAL</t></si><si><t>USNYC02-USORF01-USSAV01-TRISK01-TRALI03-TRIST22-GRPIR20-ITSAL01</t></si><si><t>+5 days 22 hrs</t></si><si><t>+1 days 7 hrs</t></si><si><t>+1 days 6 hrs</t></si><si><t>NYK RUMINA</t></si><si><t>WAN HAI A09</t></si><si><t>OHWT0035W</t></si><si><t>OMGT0185W</t></si><si><t>WAN HAI 511</t></si><si><t>SEASPAN ADONIS</t></si><si><t>-No PIC on the Max Laden table will result in a "TBA" for the SPC PIC.D9</t></si><si><t>-Empty volume does not count coastal to coastal</t></si><si><t>-AL5 ETD Last port of NA ports not PAROD</t></si><si><t>-Broken routes volume will show on any VVD has cutoff date less than 37 days</t></si><si><t>+4 days 2 hrs</t></si><si><t>YTUT0107W</t></si><si><t>ZEPHYR LUMOS</t></si><si><t>-PAROD POL load volume from Space bottleneck</t></si><si><t>- LATAM load is the volume of all bookings discharge in LAT trade (doesn't include TAT and TPT)</t></si><si><t>+2 days 9 hrs</t></si><si><t>ONE REASSURANCE</t></si><si><t>-PAROD discharge volume only from NA ports</t></si><si><t>Vessel 1st Trade</t></si><si><t>Vessel 1st Sub Trade</t></si><si><t>Vessel 1st Lane</t></si><si><t>Route Date 1st Sale Week</t></si><si><t>Vessel 1st VVD</t></si><si><t>Vessel Vessel Name</t></si><si><t>Route Location Calling Port Seq</t></si><si><t>Route Location 1st Yard</t></si><si><t>Route Location 1st Pol</t></si><si><t>MCT AP Status</t></si><si><t>Measures Loading Status</t></si><si><t>Measures Overall Status</t></si><si><t>MCT PIC</t></si><si><t>MCT Mktg Analyst</t></si><si><t>Vessel Operation Notice</t></si><si><t>Vessel Voyage Remark</t></si><si><t>Route Location Actual Rotation Port</t></si><si><t>Route Location Rotation Port</t></si><si><t>Sector Remarks</t></si><si><t>Route Date Coastal ETD Date</t></si><si><t>Route Date POL Cut/off Date</t></si><si><t>Route Date Cut/off Date</t></si><si><t>Route Date Last Port ETD Date</t></si><si><t>Route Date Last Coastal ETA Time</t></si><si><t>Route Date Proforma ETA Time</t></si><si><t>Route Date Coastal ETA vs Proforma</t></si><si><t>MCT Spc Analyst</t></si><si><t>MCT Spc Team</t></si><si><t>MCT Overall Threshold</t></si><si><t>MCT Voyage Count</t></si><si><t>MCT Sector Allocation</t></si><si><t>Measures BSA TEU</t></si><si><t>Measures BSA WGT</t></si><si><t>Measures Last NA Port BSA QTY</t></si><si><t>Measures Last NA Port BSA Wgt</t></si><si><t>Measures Planned Mty TEU</t></si><si><t>Measures Actual Mty TEU</t></si><si><t>MCT Max Laden</t></si><si><t>MCT Loading Threshold</t></si><si><t>Measures Peak Pol Utilz</t></si><si><t>Measures Peak Overall Utilz</t></si><si><t>Measures Overall Booking Utilz</t></si><si><t>Measures POL Booking Utilz</t></si><si><t>Measures POL Reefer Utilz</t></si><si><t>Measures Overall Reefer Utilz</t></si><si><t>Measures Load TEU</t></si><si><t>Measures Laden TEU</t></si><si><t>Measures POL Laden TEU</t></si><si><t>Measures Total Booking TEU by Service</t></si><si><t>Measures Discharge TEU</t></si><si><t>Measures Loadable TEU</t></si><si><t>Measures Loadable WGT update</t></si><si><t>Measures Max Laden vs POL Booking</t></si><si><t>Measures Max Laden vs Booking</t></si><si><t>Measures POL Reefer TEU</t></si><si><t>Measures Reefer TEU</t></si><si><t>MCT RFR Max Laden TEU</t></si><si><t>Measures BSA UNIT RF</t></si><si><t>Measures BSA TEU RF</t></si><si><t>Measures Booking Reefer UNIT</t></si><si><t>Measures Ipi Total TEU</t></si><si><t>Measures Active Ipi TEU</t></si><si><t>Measures Non Active Ipi TEU</t></si><si><t>Measures Local Total TEU</t></si><si><t>Measures Active Local TEU</t></si><si><t>Measures Non Active Loc TEU</t></si><si><t>Trade Summary Avg Booking</t></si><si><t>Trade Summary Avg Max Laden vs Bkg</t></si><si><t>Measures Broken Routes TEU</t></si><si><t>Measures Activity vs Max Laden</t></si><si><t>Measures Activity vs Booking Utilz</t></si><si><t>Trade Summary Total Max Laden TEU</t></si><si><t>Measures Active total TEU</t></si><si><t>Measures Onboard TEU</t></si><si><t>Measures Onboard WGT</t></si><si><t>MCT Max Laden Update</t></si><si><t>MCT Loading TEU incl Parod</t></si><si><t>Measures RF Load TEU</t></si><si><t>Trade Summary Avg Utiliz</t></si><si><t>Max LDN</t></si><si><t>Trunk Threshold</t></si><si><t>RFR Max Laden TEU</t></si><si><t>POL Max Laden TEU</t></si><si><t>POL Laden Threshold</t></si><si><t>Laden Utiliz%</t></si><si><t>POL Laden TEU Parod</t></si><si><t>USLAX</t></si><si><t>Marissa</t></si><si><t>Resid</t></si><si><t>WC</t></si><si><t>N</t></si><si><t>PAROD</t></si><si><t>USOAK</t></si><si><t>USLAX01-USOAK08-PAROD01-PAPCA10-DOCAU01-GBSOU01-FRLEH01-DEHAM01-BEANR01</t></si><si><t>USHOU</t></si><si><t>Alex</t></si><si><t>MXVER04-MXATM04-USHOU01-USMIA01-JMKIN01-COSPC01-BRSSZ04-UYMVD01-ARBUE05-BRIOA01-BRPNG01-BRRIO01</t></si><si><t>MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC-&gt;ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO</t></si><si><t>Ryan T</t></si><si><t>EC</t></si><si><t>TBA</t></si><si><t>USMIA</t></si><si><t>USMSY</t></si><si><t>USORF</t></si><si><t>USNYC01-USORF03-USCHS01-USSAV01-GBSOU01-BEANR07-NLRTM01-DEBRV01-FRLEH06</t></si><si><t>USNYC01 - USORF03 - USCHS01 - USSAV01 - GBSOU-BEANR-NLRTM-DEBRV-FRLEH</t></si><si><t>Peter</t></si><si><t>USNYC</t></si><si><t>USSAV</t></si><si><t>USCHS</t></si><si><t>Evan</t></si><si><t>+0 days 16 hrs</t></si><si><t>Joe</t></si><si><t>CAHAL</t></si><si><t>n/a</t></si><si><t>USLGB</t></si><si><t>Kysa</t></si><si><t>Bob</t></si><si><t>USJAX</t></si><si><t>AP ACTIVE / APPEAL STATUS: Open</t></si><si><t>USHOU05-USMOB01-PAPCA10-PAROD01-TWKHH16-VNCMP08-CNYTN01-CNNGB01-CNSHA19-KRPUS14</t></si><si><t>USMOB</t></si><si><t>USPEF</t></si><si><t>USPHL</t></si><si><t>USTIW</t></si><si><t>USTIW05-CAVAN01-KRPUS14-TWKHH16-CNSHA19-CNNGB02-CNYTN01-SGSIN04</t></si><si><t>Ryan H</t></si><si><t>CAVAN</t></si><si><t>LBG02-OAK01 -&gt; KRPUS-CNSHA-CNNGB-TWKHH-CNSHK-SGSIN</t></si><si><t>TIW02-VAN01 -&gt; JPTYO-JPUKB-JPNGO-TWKHH-CNNGB</t></si><si><t>Lani</t></si><si><t>VAN01-TIW02-&gt; JPTYO-JPUKB-CNTAO-CNNGB-CNSHA-KRPUS</t></si><si><t>LAX06-OAK08 -&gt; JPTYO-KRPUS-CNSHA-CNNGB-CNSHK-SGSIN-MYPKG-INNSA-INPAV</t></si><si><t>USLAX08-USOAK08-TWKEL04-TWKHH16-CNYTN01-CNSHA19</t></si><si><t>LAX08-OAK08  -&gt; TWKEL-TWKHH-CNYTN-CNSHA</t></si><si><t>LAX03-OAK01-&gt; KRPUS-KRKAN-KRINC-CNSHA-CNNGB</t></si><si><t>USLAX06 -&gt; KRPUS-CNSHA-CNSHK-SGSIN-VNCMP-VNHPH</t></si><si><t>+4 days 3 hrs</t></si><si><t>2026/W27</t></si><si><t>NMTT0090E</t></si><si><t>WHOT2625S</t></si><si><t>POHT0076E</t></si><si><t>GLMT1006E</t></si><si><t>IHRT0011W</t></si><si><t>EAOT0038W</t></si><si><t>OONT0044W</t></si><si><t>EVER SAFETY</t></si><si><t>BHST0272E</t></si><si><t>CGIT0021S</t></si><si><t>YTNT0020W</t></si><si><t>YM THRONE</t></si><si><t>NJOT0210E</t></si><si><t>RSCT0255W</t></si><si><t>YUOT0084W</t></si><si><t>ZPTT0012W</t></si><si><t>HMM NURI</t></si><si><t>A05T0016W</t></si><si><t>+0 days 20 hrs</t></si><si><t>-Service which for "EMPTY ONLY" need to remove max laden on gsheet (0) if don't want to show on report</t></si><si><t>GRPIR</t></si><si><t>ITSAL</t></si><si><t>TRALI</t></si><si><t>TRISK</t></si><si><t>TRIST</t></si><si><t>POD Sec</t></si><si><t>Sector Open Space</t></si><si><t>-duplicate volume caused by external input duplicate</t></si><si><t>+5 days 12 hrs</t></si><si><t>+2 days 5 hrs</t></si><si><t>2026/W28</t></si><si><t>FOWT0529S</t></si><si><t>CPRT2626S</t></si><si><t>+4 days 18 hrs</t></si><si><t>USNYC01-USSAV01-USCHS01-PAPCA10-PAROD01-TWKHH16-CNYTN01-CNSHA19-CNNGB01-KRPUS12</t></si><si><t>SADT0083W</t></si><si><t>YMTT0022W</t></si><si><t>YTRT0019W</t></si><si><t>+7 days 8 hrs</t></si><si><t>CRNT0102W</t></si><si><t>MOL CREATION</t></si><si><t>OMST0104W</t></si><si><t>ONE COSMOS</t></si><si><t>CMJT0067W</t></si><si><t>HEWT0144S</t></si><si><t>TTLT0028W</t></si><si><t>YM TOTALITY</t></si><si><t>NLAT0667E</t></si><si><t>CARL SCHULTE</t></si><si><t>OHNT0101W</t></si><si><t>ONE HANNOVER</t></si><si><t>YUPT0101W</t></si><si><t>AQMT0012W</t></si><si><t>HI3T0016W</t></si><si><t>WAN HAI A03</t></si><si><t>1ST VESSEL NEW PRODUCT</t></si><si><t>NAVIOS CYAN</t></si><si><t>HMM MIR</t></si><si><t>LAX01-OAK01-&gt; JPYTO-JPUKB-JPNGO</t></si><si><t>USLAX01-USOAK08-JPTYO01-JPUKB03-JPNGO07</t></si><si><t>USLAX01-USOAK08 -&gt; CNTAO-CNNGB</t></si><si><t>+9 days 20 hrs</t></si><si><t xml:space="preserve">Standby Threshold </t></si><si><t>USLAX01-USOAK08-PAROD01-PAPCA10-DOCAU01-GBSOU01-FRLEH01-BEANR01</t></si><si><t>-Peak will be one day behind.  Will show the % jump from day to day.</t></si><si><t>2026/W29</t></si><si><t>NROT0079E</t></si><si><t>LCMT0034S</t></si><si><t>SNVT2627S</t></si><si><t>APL HOUSTON</t></si><si><t>HSMT0090E</t></si><si><t>OSUT0120E</t></si><si><t>+12 days 10 hrs</t></si><si><t>YMOT0027W</t></si><si><t>YM TARGET</t></si><si><t>OSTT0029W</t></si><si><t>OEHT0100W</t></si><si><t>ONE HUMEN</t></si><si><t>CMLT0025E</t></si><si><t>IAIT0006S</t></si><si><t>AAET0371E</t></si><si><t>OIST0088W</t></si><si><t>ONNT0066W</t></si><si><t>UNFT0249W</t></si><si><t>HRDT0014W</t></si><si><t>YDET0044W</t></si><si><t>ONMT0084W</t></si><si><t>OGOT0011W</t></si><si><t>ONE RECOGNITION</t></si><si><t>+2 days 11 hrs</t></si><si><t>USLAX01-USOAK08-CNTAO10-CNNGB01</t></si><si><t>Last Refresh:</t></si><si><t>USSAV01-&gt;USORF01-&gt;USNYC01-&gt;CAHAL02-&gt;SGSIN-&gt;VNCMP-&gt;CNYTN-&gt;CNNGB-&gt;CNSHA-&gt;KRPUS-&gt;PAMIT</t></si><si><t>ONYT0024W</t></si><si><t>+4 days 12 hrs</t></si><si><t>USHOU05-USMOB01-PAPCA-PAROD-&gt;KRPUS</t></si><si><t>+5 days 6 hrs</t></si><si><t>+3 days 15 hrs</t></si><si><t>USNYC02-USORF01-USSAV01-USMIA02-ESALG01-ITSPE01-ITGOA01-FRFOS11-ESVLC01</t></si><si><t>CALLING OICT</t></si><si><t>HMM RAON</t></si><si><t>USNYC01-USSAV01-USCHS&gt;PAPCA&gt;PAROD-TWKHH-CNYTN-CNSHA-CNNGB-KRPUS</t></si><si><t>YM MOBILITY</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-KRPUS12-CNSHA19-THLCH13-VNCMP04-SGSIN04-LKCMB05</t></si><si><t>YCOT0190W</t></si><si><t>+3 days 5 hrs</t></si><si><t>YMKT0113W</t></si><si><t>SPDT0439W</t></si><si><t>SEASPAN BEYOND</t></si><si><t>BRNT0026W</t></si><si><t>BRIGHTON</t></si><si><t>YLST0102W</t></si><si><t>+0 days 9 hrs</t></si><si><t>HSUT0158W</t></si><si><t>YPMT0195W</t></si><si><t>2026/W30</t></si><si><t>IKET0014S</t></si><si><t>NRET0084E</t></si><si><t>SROT0044S</t></si><si><t>VGET0010E</t></si><si><t>CQAT0015W</t></si><si><t>YVTT0027W</t></si><si><t>YM TRAVEL</t></si><si><t>HFWT0170W</t></si><si><t>UTLT0102W</t></si><si><t>MXNT0046W</t></si><si><t>PNAT2628S</t></si><si><t>OMDT0081W</t></si><si><t>MITT0075W</t></si><si><t>WWIT0109W</t></si><si><t>NKST0440E</t></si><si><t>SEFT0104W</t></si><si><t>SEATTLE BRIDGE</t></si><si><t>Measures SGSIN Sector Remarks</t></si><si><t>SGSIN Dry vs Reefer</t></si><si><t>OMVT0082E</t></si><si><t>BEANR</t></si><si><t>GBSOU</t></si><si><t>FRLEH</t></si><si><t>DEHAM</t></si><si><t>DEBRV</t></si><si><t>NLRTM</t></si><si><t>ITGOA</t></si><si><t>FRFOS</t></si><si><t>ITSPE</t></si><si><t>ESALG</t></si><si><t>ESVLC</t></si><si><t>CNTAO</t></si><si><t>VNCMP</t></si><si><t>THLCH</t></si><si><t>CIKT0013W</t></si><si><t>+10 days 16 hrs</t></si><si><t>(blank)</t></si><si><t xml:space="preserve">Peak Utiliz % </t></si><si><t xml:space="preserve">Planned Mty (TEU) </t></si><si><t>USLAX03-USOAK01-KRPUS12-KRKAN02-KRINC03-CNTAO10-CNSHA19-CNNGB01</t></si><si><t>P/I @ GBSOU</t></si><si><t>+6 days 12 hrs</t></si><si><t>BSA Wgt (Last NA Port )</t></si><si><t xml:space="preserve">RFR Utiliz % </t></si><si><t>Trade Summary NA</t></si><si><t>USPEF03-USPHL02-USNYC02-COSPC-PAPCA-ECGYE-PECLL-CASAI</t></si><si><t>-0 days -5 hrs</t></si><si><t>MXQT0104W</t></si><si><t>MOL EXPERIENCE</t></si><si><t>AHBT0002E</t></si><si><t>OTRT0122E</t></si><si><t>PTRT0005W</t></si><si><t>2026/W31</t></si><si><t>YNDT0604W</t></si><si><t>NJOT0211E</t></si><si><t>CYQT0002W</t></si><si><t>MEQT0022S</t></si><si><t>ACNT0022E</t></si><si><t>NOCT0082W</t></si><si><t>NYK OCEANUS</t></si><si><t>CCQT0036W</t></si><si><t>OAQT0032W</t></si><si><t>ZHOT0177E</t></si><si><t>OMLT0047W</t></si><si><t>OCQT0068E</t></si><si><t>NOBT0042E</t></si><si><t>NRUT0076W</t></si><si><t>HWXT0007W</t></si><si><t>YMQT0078W</t></si><si><t>SBFT0076W</t></si><si><t>HMVT0306W</t></si><si><t>HDYT0164W</t></si><si><t>HYUNDAI TOKYO</t></si><si><t>OOCL VERACRUZ</t></si><si><t>Data Model Field</t></si><si><t>Bkg Flash Fields</t></si><si><t>A</t></si><si><t>POL BKG FLASH STATUS</t></si><si><t>BKG FLASH STATUS</t></si><si><t>PIC (SPC/MKG)</t></si><si><t>Operation Issue</t></si><si><t>l Voyage Remark</t></si><si><t>Actual Rotation Port</t></si><si><t>Rotation Port</t></si><si><t>Coastal ETD</t></si><si><t>POL Cut</t></si><si><t>BKG FLASH 1ST POL CUT/OFF</t></si><si><t>ETD Last port</t></si><si><t>Last Coastal ETA Time</t></si><si><t xml:space="preserve"> Proforma ETA Time</t></si><si><t xml:space="preserve"> Last NA Port BSA Wgt</t></si><si><t>Planned Mty</t></si><si><t>Actual Mty</t></si><si><t>Peak Laden Utilz</t></si><si><t>Peak Utilz</t></si><si><t>Laden( TEU)</t></si><si><t>POL Laden TEU</t></si><si><t xml:space="preserve"> Discharge TEU</t></si><si><t xml:space="preserve"> Loadable TEU</t></si><si><t xml:space="preserve"> Loadable WGT</t></si><si><t>Inland total</t></si><si><t>Inland Activity</t></si><si><t>Inland No activity</t></si><si><t>Port No Activity</t></si><si><t>Broken Routes TEU</t></si><si><t>Standby Threshold</t></si><si><t>B</t></si><si><t>G</t></si><si><t>S</t></si><si><t>C</t></si><si><t>D</t></si><si><t>L</t></si><si><t>E</t></si><si><t>F</t></si><si><t>H</t></si><si><t>I</t></si><si><t>J</t></si><si><t>K</t></si><si><t>M</t></si><si><t>O</t></si><si><t>P</t></si><si><t>Q</t></si><si><t>R</t></si><si><t>T</t></si><si><t>U</t></si><si><t>V</t></si><si><t>W</t></si><si><t>X</t></si><si><t>Z</t></si><si><t>AA</t></si><si><t>AB</t></si><si><t>AC</t></si><si><t>AD</t></si><si><t>AF</t></si><si><t>AE</t></si><si><t>AG</t></si><si><t>AH</t></si><si><t>AI</t></si><si><t>AJ</t></si><si><t>AK</t></si><si><t>AL</t></si><si><t>AM</t></si><si><t>AN</t></si><si><t>AO</t></si><si><t>AP</t></si><si><t>AQ</t></si><si><t>AR</t></si><si><t>AS</t></si><si><t>AT</t></si><si><t>AU</t></si><si><t>AV</t></si><si><t>AX</t></si><si><t>AY</t></si><si><t>AZ</t></si><si><t>BA</t></si><si><t>BB</t></si><si><t>BC</t></si><si><t>BD</t></si><si><t>BE</t></si><si><t>BF</t></si><si><t>BG</t></si><si><t>BH</t></si><si><t>BI</t></si><si><t>BJ</t></si><si><t>BK</t></si><si><t>BL</t></si><si><t>BM</t></si><si><t>BN</t></si><si><t>BO</t></si><si><t>BP</t></si><si><t>BQ</t></si><si><t>BR</t></si><si><t>BS</t></si><si><t>BT</t></si><si><t>BU</t></si><si><t>BV</t></si><si><t>BW</t></si><si><t>BX</t></si><si><t>BY</t></si><si><t>BZ</t></si><si><t>CA</t></si><si><t>CB</t></si><si><t>CC</t></si><si><t>CD</t></si><si><t>CF</t></si><si><t>CE</t></si><si><t>CG</t></si><si><t>CH</t></si><si><t>CI</t></si><si><t>CJ</t></si><si><t>CK</t></si><si><t>CL</t></si><si><t>CM</t></si><si><t>CN</t></si><si><t>CO</t></si><si><t>Column</t></si><si><t>2026/W32</t></si><si><t>NNBT0093E</t></si><si><t>NSOT0066S</t></si><si><t>PIXT1004E</t></si><si><t>MMOT0309E</t></si><si><t>GMIT0009E</t></si><si><t>YMST0105W</t></si><si><t>+8 days 5 hrs</t></si><si><t>EHPT0061W</t></si><si><t>HMM HOPE</t></si><si><t>+11 days 11 hrs</t></si><si><t>HMM PERIDOT</t></si><si><t>OWRT0030W</t></si><si><t>KGST0022E</t></si><si><t>EXW</t></si><si><t>HPTT0056W</t></si><si><t>HMM PRIDE</t></si><si><t>NLAT0668E</t></si><si><t>OFVT0009W</t></si><si><t>ONE FOREVER</t></si><si><t>ZOST0017W</t></si><si><t>ZEAL LUMOS</t></si><si><t>YWIT0040W</t></si><si><t>YM WIDTH</t></si><si><t>OFFT0008W</t></si><si><t>ONE FUTURE</t></si><si><t>YULT0107W</t></si><si><t>YMWT0192W</t></si><si><t>YUCT0080W</t></si><si><t>RNUT0020W</t></si><si><t>HONT0025W</t></si><si><t>HODT0011W</t></si><si><t>OSGT0519W</t></si><si><t>BYBT0216W</t></si><si><t>BAY BRIDGE</t></si><si><t>HS5T0111W</t></si><si><t>OMFT0085W</t></si><si><t>Measures ONE Quote volume</t></si><si><t>+5 days 11 hrs</t></si><si><t>OVZT0019E</t></si><si><t>YTPT0024W</t></si><si><t>YM TIPTOP</t></si><si><t>HPDT0010W</t></si><si><t>EVRT0128W</t></si><si><t>ONE Quote (TEU)</t></si><si><t>Current Laden Utiliz %</t></si><si><t>2026/W34</t></si><si><t>NDMT0124E</t></si><si><t>LAX01-OAK08-PAROD-DOCAU-&gt; GBSOU-FRLEH-DEHAM-BEANR</t></si><si><t>+7 days 1 hrs</t></si><si><t>2026/W33</t></si><si><t>+6 days 16 hrs</t></si><si><t>PHXT0075S</t></si><si><t>RCXT2632S</t></si><si><t>POHT0077E</t></si><si><t>STFT0004E</t></si><si><t>MIET0109E</t></si><si><t>BVNT0017E</t></si><si><t>HAL CALL DROPPED</t></si><si><t>DEWT0036E</t></si><si><t>+4 days 22 hrs</t></si><si><t>USNYC02-USSAV01-USCHS01-PAPCA10-PAROD01-TWKHH16-CNYTN01-CNSHA19-CNNGB01-KRPUS12</t></si><si><t>CALLING NYC02 &amp; OMIT ROD FOR SCHEDULE RECOVERY</t></si><si><t>020626 | [PA] EC1 LTS JUN/2026 NO.01 – SEASPAN BEYOND (BEO) 439W CHANGE OF USNYC TERMINAL
+PORT - NYC
+ORIGINAL TML - NYC – PORT LIBERTY BAYONNE
+CHANGE TML - GCT NEW YORK (NYCT)
+REMARKS/REASONS - TO AVOID VESSEL BUNCHING.
+==================================================
+06032026 [PA] EC1 LTS JUN/2026 NO.02 – SEASPAN BEYOND (BEO) 439W TO OMIT PAROD
+OMIT PORT ROD
+NEW ROTATION NYC – SAV – CHS – PCN - KHH
+REMARKS/REASONS (IF ANY) FOR SCHEDULE RECOVERY.</t></si><si><t>HMNT0055W</t></si><si><t>HYUNDAI MARS</t></si><si><t>OCBT0527W</t></si><si><t>HGTT0010W</t></si><si><t>HMM GARNET</t></si><si><t>+5 days 10 hrs</t></si><si><t>ONGT0031W</t></si><si><t>290526 - [PA] EC3 LTS MAY/2026 NO.11 – ONE CYGNUS (OCG) 024W/025E STRUCTURAL ADJUSTMENTS
+WB WK 28
+OMIT PORT WB YSA
+ADHOC PORT (S) NIL
+ORIGINAL ROTATION NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION NYC – JAX – SAV – CHS – MIT - PCN
+CARGO ARRANGEMENT (IF ANY)NIL.
+REMARKS/REASONS(IF ANY) TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM</t></si><si><t>05292026 [PA] EC3 LTS MAY/2026 NO.12 – YM TRAVEL (TRV) 027W/028E STRUCTURAL ADJUSTMENTS
+VESSEL NAME/CODE YM TRAVEL (TRV)
+VOYAGE 027W
+OMIT PORT WB YSA
+ADHOC PORT (S) NIL
+ORIGINAL ROTATION 
+NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION
+NYC – JAX – SAV – CHS – MIT - PCN
+CARGO ARRANGEMENT
+(IF ANY) NIL.
+EMARKS/REASONS (IF ANY)
+TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM.</t></si><si><t>ODDT0030W</t></si><si><t>05142026 [PA] EC3 LTS MAY/2026 NO.03 – VESSEL POSITION UPDATES FROM WEEK 25 TO 27
+ONE MADRID V.0030W phase out TBA.
+Tentatively added asia ports for booking purposes to avoid broken routes.</t></si><si><t>+5 days 19 hrs</t></si><si><t>+7 days 17 hrs</t></si><si><t>CNTT0025W</t></si><si><t>BHST0273E</t></si><si><t>XPLT0018E</t></si><si><t>CGIT0022S</t></si><si><t>HEWT0145S</t></si><si><t>YDDT0031W</t></si><si><t>YM WONDERLAND</t></si><si><t>NKST0441E</t></si><si><t>AAET0372E</t></si><si><t>OFOT0008W</t></si><si><t>ONE FOCUS</t></si><si><t>ILPT0002W</t></si><si><t>YM WILLPOWER</t></si><si><t>OFUT0008W</t></si><si><t>ONE FORTUNE</t></si><si><t>ONE MEISHAN</t></si><si><t>USTIW02-CAVAN01-JPTYO03-JPUKB03-JPNGO01-TWKHH16-CNNGB01</t></si><si><t>ARET0613W</t></si><si><t>YBYT0090W</t></si><si><t>YCOT0191W</t></si><si><t>RSCT0256W</t></si><si><t>OMGT0186W</t></si><si><t>YMFT0086W</t></si><si><t>HYZT0047W</t></si><si><t>+5 days 15 hrs</t></si><si><t>YUNT0080W</t></si><si><t>MTY LOADER / NO LADEN CARGO</t></si><si><t>USLAX08 -&gt; CNSHA</t></si><si><t>OHRT0104W</t></si><si><t>YUOT0085W</t></si><si><t>+7 days 23 hrs</t></si><si><t>ULHT0026W</t></si><si><t>TQST0011W</t></si><si><t>YBRT0014W</t></si><si><t>HW9T0017W</t></si><si><t>WH0T0019W</t></si><si><t>+4 days 20 hrs</t></si><si><t>090626 - [PA] PS8 LTS JUN/2026 NO.01 – VESSEL POSITION UPDATES FROM WEEK 27 TO 32
+VMS ON 7/27</t></si><si><t>MXQT0105W</t></si><si><t>OGWT0003W</t></si><si><t>ONE GEORGE WASHINGTON</t></si><si><t>OOHT0077W</t></si><si><t>+18 days 6 hrs</t></si><si><t>KRPUS</t></si><si><t>LHTT2631S</t></si><si><t>DXPT2630S</t></si><si><t>QUIT0020W</t></si><si><t>USSAV01-USORF01-USNYC01-CAHAL02-SGSIN04-VNCMP04-CNYTN01-CNSHA19-KRPUS14</t></si><si><t>USSAV01-USORF01-USNYC01-SGSIN04-VNCMP04-CNYTN01-CNSHA19-KRPUS14</t></si><si><t>FSLT0002S</t></si><si><t>CMA CGM FORT ST LOUIS</t></si><si><t>MOBT0033W</t></si><si><t>CAVAN01-USTIW02-JPTYO03-JPUKB01-CNTAO10-CNNGB01-CNSHA19-KRPUS18</t></si><si><t>USLAX06-USOAK08-JPTYO02-KRPUS18-CNSHA07-CNNGB01-CNSHK03-SGSIN04-MYPKG02-INNSA03-INPAV01</t></si><si><t>USLAX06-USOAK08-JPTYO02-KRPUS18-CNSHA07</t></si><si><t>+4 days 15 hrs</t></si><si><t>Measures IMT</t></si><si><t>Measures LET</t></si><si><t>Measures LNT</t></si><si><t>Measures LWT</t></si><si><t>Measures TAT</t></si><si><t>Measures TPT</t></si><si><t>IMT</t></si><si><t>LET</t></si><si><t>LNT</t></si><si><t>LWT</t></si><si><t>+6 days 22 hrs</t></si><si><t>+6 days 8 hrs</t></si><si><t>+4 days 14 hrs</t></si><si><t>+2 days 17 hrs</t></si><si><t>+5 days 20 hrs</t></si><si><t>Proforma Rotation</t></si><si><t>OMIT EB ROD</t></si><si><t>090626 | NYK METEOR 0090E SKIP CALL PAROD UNDER AL5 SERVICE.
+============================================================
+061326 - NYK METEOR 0090E SKIP CALL PAROD</t></si><si><t>2026/W35</t></si><si><t>CGBT0015E</t></si><si><t>+5 days 16 hrs</t></si><si><t>48 TEU of compensation</t></si><si><t>ZBTT0349S</t></si><si><t>MX Laden: 2 + MTY: 0 = 2</t></si><si><t>120 TEU of compensation</t></si><si><t>MX Laden: 77 + MTY: 0 = 77</t></si><si><t>MXVER03-MXATM04-USHOU01-USMSY01-COCNR01-BRSUA01-BRSSZ11-ARBUE01-UYMVD01-BRRIG01-BRITJ02-BRPNG01</t></si><si><t>20260504 - ANG PF8022 &gt; New Proforma with updated Cartagena SB &amp; Santos NB berth windows and Total Moves.
+-------------------------------------------------------
+050326 - WIDE HOTEL2625S TML CHANGE TO MXATM04 ATP Terminal</t></si><si><t>MU6T2633S</t></si><si><t>MSC UNIFIC VI</t></si><si><t>AHBT0003E</t></si><si><t>+1 days 14 hrs</t></si><si><t>+4 days 4 hrs</t></si><si><t>GLMT1007E</t></si><si><t>USNYC01-USSAV01-USCHS01-PAPCA10-TWKHH16-CNYTN01-CNSHA19-CNNGB01-KRPUS12</t></si><si><t>TSTT0053W</t></si><si><t>+11 days 0 hrs</t></si><si><t>+6 days 1 hrs</t></si><si><t>YSHT0011W</t></si><si><t>NCMT0031W</t></si><si><t>+9 days 5 hrs</t></si><si><t>+4 days 23 hrs</t></si><si><t>+3 days 22 hrs</t></si><si><t>USPEF03-USPHL02-USNYC02-COSPC01-PAPCA10-ECGYE04-PECLL02-CLSAI02</t></si><si><t>20260506- New PF7010 with updated Berth Windows
+=====================================
+061326 - CMA CGM BEIRA CGIT0021S USCHS02 skip call.</t></si><si><t>IAIT0007S</t></si><si><t>P/O PUS</t></si><si><t>+2 days 14 hrs</t></si><si><t>HMM DRIVE</t></si><si><t>+1 days 5 hrs</t></si><si><t>CAVAN01-USTIW02-JPTYO03-JPUKB01-CNTAO10-CNSHA19-KRPUS18</t></si><si><t>MPFT0255W</t></si><si><t>P/O Kobe</t></si><si><t>OIST0089W</t></si><si><t>RBTT0005W</t></si><si><t>P/O CNYTN</t></si><si><t>06122026 - [PA] PS4 LTS JUN/2025 NO.01 – YM UPWARD (UPW) 101W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT: YTN
+PHASE OUT ROTATION: LAX – OAK – KEL - KHH - YTN
+CARGOES ARRANGEMENT: AS LOADING HAS NOT COMMENCE FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS: PHASE OUT TO DRY DOCK.</t></si><si><t>USLAX08-USOAK08-TWKEL04-TWKHH16-CNYTN01</t></si><si><t>+4 days 5 hrs</t></si><si><t>+10 days 11 hrs</t></si><si><t>ZPTT0013W</t></si><si><t>+7 days 2 hrs</t></si><si><t>A05T0017W</t></si><si><t>+7 days 7 hrs</t></si><si><t>+2 days 1 hrs</t></si><si><t>+5 days 14 hrs</t></si><si><t>BYBT0217W</t></si><si><t>IDXT0145W</t></si><si><t>HMM JAKARTA</t></si><si><t>SFDT0086W</t></si><si><t>Current Laden (TEU)</t></si><si><t>Resid / Bob</t></si><si><t>Lani / Marissa</t></si><si><t>Ryan H / Marissa</t></si><si><t>+6 days 2 hrs</t></si><si><t>Lani / Bob</t></si><si><t>TIW05-VAN01-&gt; KRPUS-TWKHH-CNSHA-CNNGB-CNYTN-SGSIN</t></si><si><t>--1 days 0 hrs</t></si><si><t>+12 days 14 hrs</t></si><si><t>Omit TAO</t></si><si><t>+8 days 22 hrs</t></si><si><t>--1 days -14 hrs</t></si><si><t>+4 days 7 hrs</t></si><si><t>+8 days 16 hrs</t></si><si><t>CALLING NYC02** COR CHS-SAV</t></si><si><t>120626 | [PA] EC1 LTS JUN/2026 NO.06 – YM TOGETHER (TGR) 022W CHANGE OF USNYC TERMINAL
+PORT - NYC
+ORIGINAL TML - NYC – PORT LIBERTY BAYONNE
+CHANGE TML - GCT NEW YORK (NYCT)
+REMARKS/REASONS - TO AVOID VESSEL BUNCHING.
+===============================================================================================
+06262026 | [PA] EC1 LTS JUN/2026 NO.15 – YM TOGETHER (TGR) 022W COR AS AGREED
+ORIGINAL ROTATION: NYC – SAV – CHS – PCN
+NEW ROTATION (COR): NYC – CHS – SAV – PCN
+RESTOWS, IF ANY, DUE TO COR TO BE SHARED UNDER TGR 022W’S LAS%.
+FOR SCHEDULE RECOVERY.</t></si><si><t>+10 days 0 hrs</t></si><si><t>OMIT PKBQM &amp; INHZA, AEJEA Suspended</t></si><si><t>090726 - ONE RECOGNITION0011 P/O TBA TENTATIVELY EXTENDED ASI FOR BOOKING PURPOSES /  WIN SERVICE SUSPENSION</t></si><si><t>Omit TYO / Omit PKG</t></si><si><t>290626 - [PA] PS3 LTS JUN/2026 NO.13 – VESSEL POSITION UPDATES FROM WK 30 TO 35
+ONE HANNOVER 0101E WILL TAKE 7/26 AT CNSHA
+=======================================================================
+20260703 | [PA] PS3 LTS JUL/2026 NO.02 – ONE HANNOVER  (HAN) 101W OMIT WB TYO
+WEEK: WK 27 AT LAX
+OMIT PORT: TYO
+ORIGINAL ROTATION: LAX – OAK – TYO – PUS - SHG
+NEW ROTATION: LAX – OAK – PUS - SHG
+CARGO ARRANGEMENT
+(IF ANY): ALL TYO INBOUND TO T/S AT PUS UNDER COL’S ACCOUNT AND ARRANGEMENT.
+REMARKS/REASONS (IF ANY): FOR SCHEDULE RECOVERY.
+==================================================================
+07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+ONE HANNOVER V.0101W  OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.
+======================================
+07212026| [PA] PS3 LTS JUL/2026 NO.09 – NYK VESTA (NVT) 094W OMIT WB CNSHK &amp; ONE HANNOVER  (HAN) 101W OMIT SHG
+ONE HANNOVER VOYAGE 101W WEEK WK 27 AT LAX
+OMIT PORT : SHK
+ORIGINAL ROTATION
+LAX – OAK – TYO – PUS – SHG – NBO – SHK - SIN
+NEW ROTATION
+LAX – OAK – TYO - PUS – SHG - NBO - SIN
+CARGO ARRANGEMENT
+ALL SHG INBOUND TO T/S AT PUS UNDER COL’S ACCOUNT AND ARRANGEMENT.
+REMARKS/REASONS
+FOR SCHEDULE RECOVERY.
+=====================================================================================================</t></si><si><t>USLAX06-USOAK08-KRPUS18-CNNGB01-CNSHK03-SGSIN04-INNSA03-INPAV01</t></si><si><t>CNNGB: 0 - 9 = +9* / CNSHK: 20 - 59 = +39* / INNSA: 380 - 325 = (-55) / SGSIN: 180 - 343 = +163*</t></si><si><t>SGSIN: (Dry) 160 - 310 = +150* / (Rrf) 20 - 33 = +13*</t></si><si><t>PAROD Discharge: : 58</t></si><si><t>+8 days 23 hrs</t></si><si><t>MX Laden: 62 + MTY: 15 = 77 / BEANR: 50 - 188 = +138* / DEBRV: 50 - 42 = (-8) / GBSOU: 200 - 87 = (-113) / NLRTM: 200 - 91 = (-109)</t></si><si><t>--1 days -13 hrs</t></si><si><t>USLAX01-USOAK08-JPTYO01-JPUKB03-JPNGO07-JPTYO01</t></si><si><t>LKCMB: 20 - 70 = +50* / SGSIN: 350 - 268 = (-82) / THLCH: 500 - 112 = (-388) / VNCMP: 325 - 15 = (-310)</t></si><si><t>EB PAMIT Laden : 347 + Mty: 1,000 = 1,347</t></si><si><t>07212026| [PA] PS6 LTS JUL/2026 NO.05 – WB KRINC STRUCTURAL BI-WEEKLY OMISSION FROM WB WK 26 ONWARDS
+HMM TOPAZ (HTP) 012W will omit INC call under PS6 service.
+WB INC OMISSION EFFECTIVE FROM HTQ 010W, WB WK 25 ONWARDS UNTILL WB WK 33 CONGESTION EASES AS AGREED BY EXECOM:
+REVISED ROTATION: LAX-OAK-PUS-KAN
+CARGO ARRANGEMENT: ALL INC INBOUND TO T/S AT KAN UNDER COL’S ACCOUNT AND ARRANGEMENT.RESTOWS IF ANY INCUR DUE TO INC OMISSION WILL BE SHARED BY PS6 LAS.
+WB  WK 26: HMM TOPAZ (HTP) 012W
+===========================================================================================</t></si><si><t>USLAX03-USOAK01-KRPUS12-KRKAN02-CNNGB01-CNSHA19</t></si><si><t>+11 days 23 hrs</t></si><si><t>OMIT CNNGB</t></si><si><t>+9 days 12 hrs</t></si><si><t>+10 days 14 hrs</t></si><si><t>+16 days 15 hrs</t></si><si><t>MX Laden: 185 + MTY: 0 = 185</t></si><si><t>+6 days 15 hrs</t></si><si><t>USLAX01-MXMZT02-MXZLO01-MXLZC02-GTPRQ02-NICIO01-CRCAL01-CNSHA19</t></si><si><t>CR/GT/NI Discharge: 149</t></si><si><t>+17 days 21 hrs</t></si><si><t>USLAX08-CNYTN01-CNSHA19</t></si><si><t>+2 days 13 hrs</t></si><si><t>+8 days 2 hrs</t></si><si><t>+16 days 13 hrs</t></si><si><t>USNYC01-USORF03-USCHS01-USSAV01-GBSOU01-BEANR07-DEBRV01-NLRTM01-FRLEH06</t></si><si><t>+3 days 13 hrs</t></si><si><t>AD HOC P/O PUS &amp; OMIT TWKKH</t></si><si><t>+8 days 8 hrs</t></si><si><t>Omit TAO/SHA</t></si><si><t>+10 days 23 hrs</t></si><si><t>20260515 | [PA] EC3 LTS MAY/2026 NO.06 – ONE EAGLE (NEA) 038W STRUCTURAL ADJUSTMENTS
+OMIT PORT: WB YSA
+ADHOC PORT (S): TXG &amp; TAO
+ORIGINAL ROTATION: NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION: NYC – JAX – SAV – CHS – MIT - PCN – TXG – TAO - PUS - LCH
+CARGO ARRANGEMENT(IF ANY): ADDITIONAL COST DUE TO AD HOC TXG/TAO TO BE SHARED BY NEA 038W’S LAS%.
+REMARKS/REASONS (IF ANY) TEMPORARY EC3 WB ADJUSTMENTS AS AGREED BY EXECOM.</t></si><si><t>+9 days 8 hrs</t></si><si><t>OMIT USNYC**</t></si><si><t>07012026 - [PA] EC2 LTS JUL/2026 NO.01 – TLN 019W,OST 029W, HHO 061W OMIT WB USNYC &amp; TGT 027W OMIT CAHAL
+YM TRILLION (TLN) 027W OMIT USNYC FOR SCHEDULE RECOVERY.
+NEW ROTATION: SAV – ORF – HAL - COGH - SIN
+CARGO ARRANGEMENT (IF ANY): ALL NYC LADEN INBOUND TO T/S AT TLN 019E MIT UNDER COL’S ACCOUNT AND ARRANGEMENT.
+60 RESTOWS AT TLN 019E MIT TO BE SHARED UNDER TLN 019W’S LAS%.
+REMARKS/REASONS :  FOR SCHEDULE RECOVERY.</t></si><si><t>USSAV01-USORF01-CAHAL02-SGSIN04-VNCMP04-CNYTN01-CNSHA19-KRPUS14</t></si><si><t>EB PAMIT Laden : 73 + Mty: 1,000 = 1,073</t></si><si><t>Omit PKG</t></si><si><t>USLAX06-USOAK08-JPTYO02-KRPUS18-CNSHA07-CNNGB01-CNSHK03-SGSIN04-INNSA03-INPAV01</t></si><si><t>SGSIN: (Dry) 160 - 123 = (-37) / (Rrf) 20 - 20 = 0</t></si><si><t>Omit USCHS**</t></si><si><t>20260506- New PF7010 with updated Berth Windows
+===============================================
+200626 | MATTHEW SCHULTE 0144S OMIT USCHS UNDER FLX SERVICE.
+===================================</t></si><si><t>USPEF03-USPHL02-USNYC02-COSPC01-PAPCA10-ECGYE04-PECLL02-CLVAP01-COSPC01</t></si><si><t>D2 Laden: 22 + Mty: 264 =&gt; Total: 153 - 286 = +133**</t></si><si><t>20260618 - New PF8023 with updated port MXATM Terminal from 01 to 04 and updated BW</t></si><si><t>MX Laden: 270 + MTY: 0 = 270</t></si><si><t>--2 days -1 hrs</t></si><si><t>+9 days 15 hrs</t></si><si><t>P/O NGO</t></si><si><t>+7 days 20 hrs</t></si><si><t>SGSIN: 200 - 178 = (-22)</t></si><si><t>SGSIN: (Dry) 120 - 152 = +32* / (Rrf) 80 - 26 = (-54)</t></si><si><t>+3 days 4 hrs</t></si><si><t>LBG02-OAK08 -&gt; KRPUS-CNSHA-CNNGB-TWKHH-CNSHK-SGSIN</t></si><si><t>SGSIN: 0 - 2 = +2*</t></si><si><t>+3 days 17 hrs</t></si><si><t>PAROD Discharge: : 246</t></si><si><t>+9 days 16 hrs</t></si><si><t>Vessel Operator is COSCO</t></si><si><t>OMIT CAHAL**</t></si><si><t>07012026 - [PA] EC2 LTS JUL/2026 NO.01 - YM TARGET 027W (TGT) 027W OMIT CAHAL
+OMIT PORT: WB HAL
+NEW ROTATION: SAV – ORF – NYC – COGH - SIN
+CARGO ARRANGEMENT: ALL HAL LADEN INBOUND TO T/S AT TGT 027E MIT UNDER COL’S ACCOUNT AND ARRANGEMENT
+REMARKS: FOR SCHEDULE RECOVERY.</t></si><si><t>EB PAMIT Laden : 164 + Mty: 1,000 = 1,164</t></si><si><t>+5 days 23 hrs</t></si><si><t>090726 - ONE MARVEL0084 P/O TBA TENTATIVELY EXTENDED ASI FOR BOOKING PURPOSES /  WIN SERVICE SUSPENSION</t></si><si><t>USNYC06-USORF01-USSAV01-USJAX03-USCHS01-INMUN03-INNSA03-CNTAO10</t></si><si><t>+14 days 13 hrs</t></si><si><t>PAROD Discharge: 50 - 107 = +57 / BEANR: 50 - 281 = +231* / DEHAM: 220 - 294 = +74* / FRLEH: 450 - 51 = (-399) / GBSOU: 700 - 444 = (-256) / LATAM: 180 - 278 = +98*</t></si><si><t>Discharge Only USNYC**</t></si><si><t>06232026 - CMA CGM ALIAGA 006S SKIP CALL USCHS PORT UNDER FLX SERVICE</t></si><si><t>MX Laden: 37 + MTY: 41 = 78</t></si><si><t>+10 days 12 hrs</t></si><si><t>SHIFTING BACK TO NYC01** OMIT ROD FOR SCHEDULE RECOVERY</t></si><si><t>230626 | [PA] EC1 LTS JUN/2026 NO.13 – SEASPAN ADONIS (NAD) 083W TO OMIT PAROD
+OMIT PORT - ROD
+NEW ROTATION - NYC – SAV – CHS – PCN – KHH
+REMARKS/REASONS - FOR SCHEDULE RECOVERY.
+=========================================================
+03072026 | SEASPAN ADONIS 083W TMNL change to USNYC01</t></si><si><t>+7 days 16 hrs</t></si><si><t>LKCMB: 20 - 62 = +42* / SGSIN: 350 - 257 = (-93) / THLCH: 500 - 233 = (-267) / VNCMP: 325 - 226 = (-99)</t></si><si><t>USLAX03-USOAK01-KRPUS12-KRKAN02-KRINC03-CNSHA19-CNNGB01</t></si><si><t>+9 days 10 hrs</t></si><si><t>CR/GT/NI Discharge: 235</t></si><si><t>+11 days 5 hrs</t></si><si><t>+9 days 1 hrs</t></si><si><t>MX Laden: 69 + MTY: 28 = 97 / BEANR: 50 - 307 = +257* / DEBRV: 50 - 98 = +48* / GBSOU: 200 - 125 = (-75) / NLRTM: 200 - 136 = (-64)</t></si><si><t>+12 days 0 hrs</t></si><si><t>MX Laden: 135 + MTY: 80 = 215</t></si><si><t>+11 days 16 hrs</t></si><si><t>HAL call officially dropped starting with the OMVT0082E</t></si><si><t>MX Laden: 45 + MTY: 6 = 51</t></si><si><t>Omit INC</t></si><si><t>14072026- [PA] PS6 LTS JUL/2026 NO.03 – WB KRINC STRUCTURAL BI-WEEKLY OMISSION FROM WB WK 25 ONWARDS
+HMM NURI V.020W OMIT KRINC UNDER PS6 SVC.
+REVISED ROTATION: LAX-OAK-PUS-KAN
+CARGO ARRANGEMENT: ALL INC INBOUND TO T/S AT KAN UNDER COL’S ACCOUNT AND ARRANGEMENT.RESTOWS IF ANY INCUR DUE TO INC OMISSION WILL BE SHARED BY PS6 LAS.</t></si><si><t>+5 days 7 hrs</t></si><si><t>OMIT ROD FOR SCHEDULE RECOVERY**</t></si><si><t>020726 | [PA] EC1 LTS JUL/2026 NO.01 – TPT 024W, HAQ 012W, YDM 055W &amp; TRA 020W TO OMIT PAROD
+OMIT PORT - WB ROD
+ORIGINAL ROTATION - NYC - SAV - CHS - PCN - ROD - KHH
+NEW ROTATION - NYC - SAV - CHS - PCN - KHH
+REMARKS/REASONS - FOR SCHEDULE RECOVERY.</t></si><si><t>+12 days 22 hrs</t></si><si><t>+8 days 6 hrs</t></si><si><t>CR/GT/NI Discharge: 157</t></si><si><t>07032026 [PA] EC2 LTS JUL/2026 NO.02 – VESSEL POSITION UPDATES FOR WEEK 33 TO 36
+ONE STORK V.0029W tentatively extended asia ports for booking purposes to avoid broken routes. P/O TBA.</t></si><si><t>EB PAMIT Laden : 499 + Mty: 1,500 = 1,999</t></si><si><t>MX Laden: 208 + MTY: 104 = 312</t></si><si><t>--2 days -18 hrs</t></si><si><t>--2 days -6 hrs</t></si><si><t>+19 days 2 hrs</t></si><si><t>07032026 [PA] EC2 LTS JUL/2026 NO.02 – VESSEL POSITION UPDATES FOR WEEK 33 TO 36
+ONE AQUILA (OAQ) 032W PHASE OUT TO DRY DOCK. PHASE OUT ARRANGEMENT, TO BE ADVISED.
+=================================================================
+07172026 - [PA] EC2 LTS JUL/2026 NO.04 – ONE AQUILA (OAQ) 032W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT: YTN
+PHASE OUT ROTATION: HAL – COGH – SIN - YTN
+CARGOES ARRANGEMENT: AD HOC YTN.
+ADDITIONAL COST DUE TO AD HOC YTN TO BE SHARED UNDER OAQ 032W’S LAS%.
+AS LOADING HAS NOT COMMENCE FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS: PHASE OUT TO DRY DOCK.</t></si><si><t>USSAV01-USORF01-USNYC01-CAHAL02-SGSIN04-CNYTN01</t></si><si><t>P/O MXMZT</t></si><si><t>07112026 - MARTINIQUE MEQT0022S USCHS SKIP CALL</t></si><si><t>07072026 - [PA] MS2 LTS JUL/2026 NO.04 – VESSEL POSITION UPDATES FROM WEEK 34 TO 39 AT KRPUS
+ONE FOREVER (OFV) 009W PHASE OUT TO FE3. PHASE OUT ARRANGEMENT: TO BE ADVISED.</t></si><si><t>--1 days -10 hrs</t></si><si><t>100 TEU of compensation</t></si><si><t>MX Laden: 49 + MTY: 0 = 49</t></si><si><t>P/O AT NBO, OMIT KHH**</t></si><si><t>07132026| PA] EC1 LTS JUL/2026 NO.03 – YM TRUST (TRT) 105W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+YM TRUST VOYAGE 105W
+DATE : PLS REFER TO SOL’S C/S.
+WEEK : 31
+PHASE OUT PORT : NBO
+PHASE OUT ROTATION : PCN – ROD – PUS - NBO
+CARGOES ARRANGEMENT (IF ANY)
+OMIT KHH.
+AD HOC NBO.
+ADDITIONAL COST DUE TO AD HOC NBO TO BE SHARED UNDER TRT 105W’S LAS%.
+AS LOADING HAS NOT COMMENCE FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS
+PHASE OUT TO DRY DOCK.
+==========================================================================================</t></si><si><t>USNYC01-USSAV01-USCHS01-PAPCA10-PAROD01-KRPUS12-CNNGB01</t></si><si><t>DDMT0366W</t></si><si><t>ONE DIAMOND</t></si><si><t>VAN01-TIW02 -&gt; JPTYO-JPUKB</t></si><si><t>USLAX01-USOAK08-CNTAO10</t></si><si><t>Omit KHH</t></si><si><t>14072026- [PA] PS6 LTS JUL/2026 NO.03 – WB KRINC STRUCTURAL BI-WEEKLY OMISSION FROM WB WK 25 ONWARDS
+HMM RAON V.025W OMIT KRINC UNDER PS6 SVC.
+REVISED ROTATION: LAX-OAK-PUS-KAN
+CARGO ARRANGEMENT: ALL INC INBOUND TO T/S AT KAN UNDER COL’S ACCOUNT AND ARRANGEMENT.RESTOWS IF ANY INCUR DUE TO INC OMISSION WILL BE SHARED BY PS6 LAS.</t></si><si><t>-0 days -11 hrs</t></si><si><t>07032026| NYK NEBULA NNBT0093E skip call PAROD &amp; DOCAU under AL5 service.</t></si><si><t>USLAX01-USOAK08-PAPCA10-GBSOU01-FRLEH01-DEHAM01-BEANR01</t></si><si><t>+2 days 16 hrs</t></si><si><t>090726 - ONE MAGNIFICENCE0085 P/O TBA TENTATIVELY EXTENDED ASI FOR BOOKING PURPOSES /  WIN SERVICE SUSPENSION</t></si><si><t>020726 | [PA] EC1 LTS JUL/2026 NO.01 – TPT 024W, HAQ 012W, YDM 055W &amp; TRA 020W TO OMIT PAROD
+VESSEL NAME/CODE - HYUNDAI MARS (YDM)
+VOYAGE - 055W 
+OMIT PORT - WB ROD
+ORIGINAL ROTATION - NYC - SAV - CHS - PCN - ROD - KHH
+NEW ROTATION - NYC - SAV - CHS - PCN - KHH
+REMARKS/REASONS - FOR SCHEDULE RECOVERY.</t></si><si><t>+10 days 15 hrs</t></si><si><t>+14 days 1 hrs</t></si><si><t>10072026 - [PA] EC3 LTS JUL/2026 NO.05 – ONE MANCHESTER (MCH) 046W/047E STRUCTURAL ADJUSTMENTS
+VOYAGE : 046W
+ORIGINAL ROTATION : NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION : NYC – JAX – SAV – CHS – MIT - PCN
+CARGO ARRANGEMENT : NIL.
+REMARKS/REASONS : TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM.</t></si><si><t>+8 days 19 hrs</t></si><si><t>+8 days 13 hrs</t></si><si><t>HMDT0022W</t></si><si><t>HMM DAON</t></si><si><t>07212026| [PA] PS6 LTS JUL/2026 NO.05 – WB KRINC STRUCTURAL BI-WEEKLY OMISSION FROM WB WK 26 ONWARDS
+HMM TURQUOISE 011W will reinstate INC call under PS6 service.
+WB INC OMISSION EFFECTIVE FROM HTQ 010W, WB WK 25 ONWARDS UNTILL WB WK 33 CONGESTION EASES AS AGREED BY EXECOM:
+REVISED ROTATION: LAX-OAK-PUS-KAN
+CARGO ARRANGEMENT: ALL INC INBOUND TO T/S AT KAN UNDER COL’S ACCOUNT AND ARRANGEMENT.RESTOWS IF ANY INCUR DUE TO INC OMISSION WILL BE SHARED BY PS6 LAS.
+WB  WK 33: HMM TURQUOISE (HTQ) 011W
+===========================================================================================
+21072026 - [PA] PS6 LTS JUL/2026 NO.05 – WB KRINC STRUCTURAL BI-WEEKLY OMISSION FROM WB WK 26 ONWARDS
+WB INC OMISSION EFFECTIVE FROM HTP 012W, WB WK 26 ONWARDS UNTILL WB WK 33 CONGESTION EASES AS AGREED BY EXECOM:
+REVISED ROTATION: LAX-OAK-PUS-KAN
+CARGO ARRANGEMENT: ALL INC INBOUND TO T/S AT KAN UNDER COL’S ACCOUNT AND ARRANGEMENT.RESTOWS IF ANY INCUR DUE TO INC OMISSION WILL BE SHARED BY PS6 LAS.
+WB  WK 33: HMM TURQUOISE (HTQ) 011W</t></si><si><t>05142026 [PA] EC3 LTS MAY/2026 NO.03 – VESSEL POSITION UPDATES FROM WEEK 25 TO 27
+ONE WREN V.0030W phase out TBA.
+Tentatively added asia ports for booking purposes to avoid broken routes.
+=====================================================================================
+100726 | [PA] EC3 LTS JUL/2026 NO.06 – ONE WREN (NWN) 030W/031E STRUCTURAL ADJUSTMENTS
+VESSEL NAME/CODE - ONE WREN (NWN)
+VOYAGE - 030W
+WEEK - WB WK 32
+OMIT PORT - WB YSA
+ADHOC PORT (S) - NIL
+ORIGINAL ROTATION - NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION - NYC – JAX – SAV – CHS – MIT - PCN
+CARGO ARRANGEMENT - NIL.
+REMARKS/REASONS - TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM.
+
+
+VESSEL NAME/CODE - ONE WREN (NWN)
+VOYAGE - 031E
+WEEK - TBA
+OMIT PORT - NIL
+ADHOC PORT (S) - TXG, TAO &amp; NBO
+ORIGINAL ROTATION - LCH – VUT – SIN – CMB
+NEW ROTATION - TXG – TAO - PUS – NBO – LCH – VUT – SIN – CMB
+CARGO ARRANGEMENT - ADDITIONAL COST DUE TO AD HOC TXG/TAO/NBO TO BE SHARED BY NWN 030W’S LAS%.
+REMARKS/REASONS - TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM.</t></si><si><t>HTET0001W</t></si><si><t>HANS SCHULTE</t></si><si><t>YUNT0081W</t></si><si><t>OILT0013W</t></si><si><t>+12 days 16 hrs</t></si><si><t>07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+HYUNDAI PLUTO V.047W OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.</t></si><si><t>22062026 - [PA] EC3 LTS JUN/2026 NO.09 – VESSEL POSITION UPDATE FOR WEEK 30
+HMM GARNET HGTT001W re-created to 9/Aug position
+====================================================================================
+070126 - HMM GARNET HGTT0010W phase-out TBA under EC3/7018 service tentatively added Asia ports for booking purposes.
+====================================================================================
+100726 - [PA] EC3 LTS JUL/2026 NO.07 – HMM GARNET (HGN) 010W/011E STRUCTURAL ADJUSTMENTS
+WEEK WB WK 33
+OMIT PORT WB YSA
+ADHOC PORT (S) NIL
+ORIGINAL ROTATION NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION NYC – JAX – SAV – CHS – MIT - PCN
+CARGO ARRANGEMENT (IF ANY) NIL.
+REMARKS/REASONS(IF ANY) TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM.</t></si><si><t>090726 - SAN FRANCISCO BRIDGE0086 P/O TBA TENTATIVELY EXTENDED ASI FOR BOOKING PURPOSES /  WIN SERVICE SUSPENSION</t></si><si><t>WOTT0052W</t></si><si><t>YM WORTH</t></si><si><t>+11 days 15 hrs</t></si><si><t>07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+RUBY TOWER V.005W OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.</t></si><si><t>+7 days 14 hrs</t></si><si><t>1CLT0017E</t></si><si><t>ONE CLARA</t></si><si><t>MCWT0238W</t></si><si><t>HRVT0060W</t></si><si><t>2026/W36</t></si><si><t>UNFT0250W</t></si><si><t>HI3T0017W</t></si><si><t>HOVT0060W</t></si><si><t>CMLT0026E</t></si><si><t>HA7T0027W</t></si><si><t>WAN HAI 723</t></si><si><t>IKET0015S</t></si><si><t>JZAT2634S</t></si><si><t>MX Laden: 4 + MTY: 0 = 4</t></si><si><t>OHOT0056W</t></si><si><t>+6 days 7 hrs</t></si><si><t>YDIT0084W</t></si><si><t>YM MODERATION</t></si><si><t>HRIT0022W</t></si><si><t>REDT0014W</t></si><si><t>ONE FREEDOM</t></si><si><t>OSUT0121E</t></si><si><t>-0 days -22 hrs</t></si><si><t>OHIT0066W</t></si><si><t>ONE HELSINKI</t></si><si><t>YPMT0196W</t></si><si><t>HLLT0231W</t></si><si><t>OGHT0002W</t></si><si><t>ONE STRENGTH</t></si><si><t>NLAT0669E</t></si><si><t>2026/W37</t></si><si><t>ONE PREMIUM</t></si><si><t>YWMT0002W</t></si><si><t>YM WORTHINESS</t></si><si><t>YDET0045W</t></si><si><t>OEIT0032W</t></si><si><t>HSMT0091E</t></si><si><t>UTLT0103W</t></si><si><t>+13 days 17 hrs</t></si><si><t>WHOT2635S</t></si><si><t>HFWT0171W</t></si><si><t>OHHT0098W</t></si><si><t>ONE HENRY HUDSON</t></si><si><t>OTRT0123E</t></si><si><t>YDJT0050W</t></si><si><t>EVST0125W</t></si><si><t>HRDT0015W</t></si><si><t>USMT0001W</t></si><si><t>ONE SUMMIT</t></si><si><t>140726 | [PA] EC3 LTS JUN/2026 NO.09 – VESSEL POSITION UPDATE FOR WEEK 30
+ONE SUMMIT USMT0002E Phase In EC3 service at THLCH ETA 25/Jul
+===========================================================
+140726 | ONE SUMMIT USMT0001W Change in voyage number from 002 to 001 onwards</t></si><si><t>FOWT0530S</t></si><si><t>CYQT0003W</t></si><si><t>NMTT0091E</t></si><si><t>20072026 - NYK METEOR NMTT0091E will only perform discharge after coming back SOU on 29-Sep position. Once discharging is done in EU, she will phase out at ANR and heading to Dry dock in ANR.  Phase out rotation is being reviewed by RCC now.</t></si><si><t>MEQT0023S</t></si><si><t>+11 days 22 hrs</t></si><si><t>AAET0373E</t></si><si><t>INE</t></si><si><t>2026/W38</t></si><si><t>LEAT6232E</t></si><si><t>TUCAPEL</t></si><si><t>USNYC05-USORF01-USSAV01-USCHS01-INNSA04-INMUN03-OMSLL01</t></si><si><t>USNYC05-USORF01-USSAV01-USCHS01 -&gt; INNSA-INMUN-OMSLL</t></si><si><t>HERT0056W</t></si><si><t>MPFT0256W</t></si><si><t>LCMT0035S</t></si><si><t>NKST0442E</t></si><si><t>YNDT0605W</t></si><si><t>H72T0026W</t></si><si><t>WAN HAI 722</t></si><si><t>NRIT0083E</t></si><si><t>CPRT2636S</t></si><si><t>FSLT0003S</t></si><si><t>NOBT0043E</t></si><si><t>USNYC02 -USORF01-USSAV01-USMIA02-&gt; ESALG-ITSPE-ITGOA-ITVDL-FRFOS-ESVLC</t></si><si><t>RNUT0021W</t></si><si><t>ZHOT0178E</t></si><si><t>OVZT0020E</t></si><si><t>VGET0011E</t></si><si><t>HBKT0132W</t></si><si><t>HMM BANGKOK</t></si><si><t>ONPT0023W</t></si><si><t>ONE APUS</t></si><si><t>CRET0036W</t></si><si><t>HMVT0307W</t></si><si><t>NVTT0095W</t></si><si><t>YMQT0079W</t></si><si><t>OHST0064W</t></si><si><t>ONE HOUSTON</t></si><si><t>2026/W39</t></si><si><t>OHNT0102W</t></si><si><t>ACNT0023E</t></si><si><t>SNVT2637S</t></si><si><t>ARET0614W</t></si><si><t>HSUT0159W</t></si><si><t>OMGT0187W</t></si><si><t>KGST0023E</t></si><si><t>YMTT0023W</t></si><si><t>+8 days 21 hrs</t></si><si><t>LODT6233E</t></si><si><t>TOLTEN</t></si><si><t>SROT0045S</t></si><si><t>OTNT0046W</t></si><si><t>ONE MANHATTAN</t></si><si><t>HODT0012W</t></si><si><t>YWBT0035W</t></si><si><t>OCQT0069E</t></si><si><t>CGIT0023S</t></si><si><t>OMVT0083E</t></si><si><t>HWXT0008W</t></si><si><t>RGHT0008W</t></si><si><t>YUCT0081W</t></si><si><t>1CLT0018E</t></si><si><t>2026/W40</t></si><si><t>STFT0005E</t></si><si><t>CRNT0103W</t></si><si><t>HEWT0146S</t></si><si><t>YVMT0087W</t></si><si><t>OIIT0038W</t></si><si><t>NROT0080E</t></si><si><t>NEXT6234E</t></si><si><t>NAGOYA EXPRESS</t></si><si><t>YULT0108W</t></si><si><t>11062026 | YM MASCULINITY 108W phase out of PA POOL.
+Phase out arrangement : TO BE ADVISED"</t></si><si><t>ZPLT0019W</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-CNTXG07-CNTAO10-KRPUS14-CNNGB01-THLCH13-VNCMP04-SGSIN04-LKCMB05</t></si><si><t>OSGT0520W</t></si><si><t>CMJT0068W</t></si><si><t>GMIT0010E</t></si><si><t>XPLT0019E</t></si><si><t>HONT0026W</t></si><si><t>SPDT0440W</t></si><si><t>PNAT2638S</t></si><si><t>YMWT0193W</t></si><si><t>NLAT0670E</t></si><si><t>MMOT0310E</t></si><si><t>OMNT0030W</t></si><si><t>ONE MINATO</t></si><si><t>RSCT0257W</t></si><si><t>VCO Analyst</t></si><si><t>Measures DG TEU</t></si><si><t>Diana Stephens</t></si><si><t>Veronica Charlton</t></si><si><t>Joseph Awere</t></si><si><t>Max Meyers</t></si><si><t>Jennifer McCollum</t></si><si><t>Richard Similton</t></si><si><t>Elizabeth Mitchell</t></si><si><t>Alysha Haygood</t></si><si><t>Maurice Robinson</t></si><si><t>Melinda Mendez</t></si><si><t>Keith Metzger</t></si><si><t>James Mundlin</t></si><si><t>Gail Jordan</t></si><si><t>Megan McNiel</t></si><si><t>Matthew DeBoer</t></si><si><t>Aaliyah Rashad</t></si><si><t>Amina Dillard</t></si><si><t>Victor Castro</t></si><si><t>Karis Godwin</t></si><si><t>Philip Hagen</t></si><si><t>Valerie Miller</t></si><si><t>Diana Yaroshchuk</t></si><si><t>Kelly Dawson</t></si><si><t>Aya Nishikido</t></si><si><t>Laurian Lackey</t></si><si><t>Kara Renfro</t></si><si><t>Brittney Williams</t></si><si><t>Tiffany Tate</t></si><si><t>Marsue Joiner</t></si><si><t>Siafa Dorley</t></si><si><t>Tunde Saibu</t></si><si><t>Patricia Fryer</t></si><si><t>DG TEU</t></si><si><t>PAMIT</t></si><si><t>CAHAL02-USNYC02-USORF01-USSAV01-USMIA02-ESALG01-ITSPE01-ITGOA01-FRFOS11-ESVLC01</t></si><si><t>**ALERT: POSSIBLE VESSEL MISMATCH**</t></si><si><t>USNYC01-&gt;USJAX03-&gt;USSAV01-&gt;USCHS01&gt;-PAMIT-&gt;PAPCA-&gt;CNTXG-&gt;KRPUS-&gt;CNSHA-&gt;THLCH-&gt;VNCMP-&gt;SGSIN-&gt;LKCMB</t></si><si><t>+18 days 16 hrs</t></si><si><t>Omit PKG/NBO</t></si><si><t>USLAX01-MXMZT02-MXZLO01-MXLZC02-GTPRQ02-NICIO01-CRCAL01-MXZLO01</t></si><si><t>+15 days 1 hrs</t></si><si><t>SGSIN: (Dry) 160 - 171 = +11* / (Rrf) 20 - 48 = +28*</t></si><si><t>CR/GT/NI Discharge: 204</t></si><si><t>+7 days 13 hrs</t></si><si><t>P/O TAO</t></si><si><t>LKCMB: 20 - 55 = +35* / SGSIN: 350 - 207 = (-143) / THLCH: 500 - 273 = (-227) / VNCMP: 325 - 115 = (-210)</t></si><si><t>+6 days 10 hrs</t></si><si><t>LKCMB: 20 - 18 = (-2) / SGSIN: 350 - 158 = (-192) / THLCH: 500 - 56 = (-444) / VNCMP: 325 - 84 = (-241)</t></si><si><t>USLAX01-USOAK01-CNSHK01-VNCMP04-CNXMN01-TWTPE05</t></si><si><t>MX Laden: 38 + MTY: 0 = 38</t></si><si><t>+4 days 21 hrs</t></si><si><t>+16 days 16 hrs</t></si><si><t>+19 days 1 hrs</t></si><si><t>+17 days 16 hrs</t></si><si><t>EB PAMIT Laden : 78 + Mty: 1,000 = 1,078</t></si><si><t>+12 days 5 hrs</t></si><si><t>USNYC01-&gt;USJAX03-&gt;USSAV01-&gt;USCHS01&gt;-PAMIT-&gt;PAPCA-&gt;CNTXG-&gt;CNTAO-&gt;KRPUS-&gt;CNNGB-&gt;THLCH-&gt;VNCMP-&gt;SGSIN-&gt;LKCMB</t></si><si><t>+13 days 2 hrs</t></si><si><t>+14 days 2 hrs</t></si><si><t>+21 days 1 hrs</t></si><si><t>+17 days 2 hrs</t></si><si><t>+15 days 23 hrs</t></si><si><t>OEAT0087W</t></si><si><t>+6 days 14 hrs</t></si><si><t>08062026 - CMA CGM BLUE WHALE CGBT0015E terminal change from USLAX01 to USLAX04.
+From CMA CGM BLUE WHALE 14E onwards, please set as calling FENIX terminal at USLAX for all CMA' vessels until NP provides further notice.
+========================================================================================================
+20260724 | CMA CGM BLUE WHALE 015E omit PAROD &amp; DOCAU.</t></si><si><t>USLAX04-USOAK08-PAPCA10-GBSOU01-FRLEH01-DEHAM01-BEANR01</t></si><si><t>+5 days 13 hrs</t></si><si><t>+11 days 20 hrs</t></si><si><t>+15 days 9 hrs</t></si><si><t>+11 days 8 hrs</t></si><si><t>Change Terminals LA to LGB</t></si><si><t>USLGB02-USOAK08-CNTAO10-CNNGB01</t></si><si><t>USLGB02-USOAK08 -&gt; CNTAO-CNNGB</t></si><si><t>+11 days 2 hrs</t></si><si><t>+12 days 6 hrs</t></si><si><t>+12 days 1 hrs</t></si><si><t>+12 days 2 hrs</t></si><si><t>OMUT0095W</t></si><si><t>+12 days 12 hrs</t></si><si><t>+14 days 8 hrs</t></si><si><t>+12 days 3 hrs</t></si><si><t>+11 days 21 hrs</t></si><si><t>OGOT0014W</t></si><si><t>+11 days 18 hrs</t></si><si><t>+13 days 23 hrs</t></si><si><t>+12 days 20 hrs</t></si><si><t>AP Only</t></si><si><t>AP Frozen</t></si><si><t>GRPIR: 115 - 87 = (-28) / ITSAL: 20 - 7 = (-13) / TRISK: 235 - 98 = (-137) / TRIST: 347 - 158 = (-189)</t></si><si><t>USHOU05-USMOB01-PAPCA10-PAROD01-TWKHH16-VNCMP08-CNYTN01-CNNGB01-KRPUS14</t></si><si><t>USLGB02-USOAK08-KRPUS12-CNSHA19-CNNGB02-TWKHH16-CNSHK03</t></si><si><t>+14 days 6 hrs</t></si><si><t>SGSIN: 200 - 171 = (-29)</t></si><si><t>SGSIN: (Dry) 120 - 155 = +35* / (Rrf) 80 - 16 = (-64)</t></si><si><t>USLAX06-KRPUS12-CNSHA19-CNSHK03-SGSIN04</t></si><si><t>SGSIN: 0 - 63 = +63*</t></si><si><t>Omit SHA/PKG</t></si><si><t>USLAX06-USOAK08-JPTYO02-KRPUS18-CNNGB01-CNSHK03-SGSIN04-INNSA03-INPAV01</t></si><si><t>+10 days 4 hrs</t></si><si><t>OMIT ROD FOR SCHEDULE RECOVERY****COR USCHS&gt;USSAV**</t></si><si><t>020726 | [PA] EC1 LTS JUL/2026 NO.01 – TPT 024W, HAQ 012W, YDM 055W &amp; TRA 020W TO OMIT PAROD
+OMIT PORT - WB ROD
+ORIGINAL ROTATION - NYC - SAV - CHS - PCN - ROD - KHH
+NEW ROTATION - NYC - SAV - CHS - PCN - KHH
+REMARKS/REASONS - FOR SCHEDULE RECOVERY.
+=========================================
+07292026 - [PA] EC1 LTS JUL/2026 NO.05 – YM TIPTOP (TPT) 024W COR AS AGREED
+YM TIPTOP YTPT0024W COR TO USCHS-USSAV. FOR SCHEDULE RECOVERY.
+ORIGINAL ROTATION: NYC – SAV – CHS – PCN - KHH
+NEW ROTATION (COR): NYC – CHS – SAV – PCN - KHH
+CARGOES ARRANGEMENT: RESTOWS, IF ANY, DUE TO COR TO BE SHARED UNDER TPT 024W’S LAS%.</t></si><si><t>USNYC01-USCHS01-USSAV01-PAPCA10-TWKHH16-CNYTN01-CNSHA19-CNNGB01-KRPUS12</t></si><si><t>Omit SHK/PKG</t></si><si><t>Omit TYO/PKG // P/O SHA</t></si><si><t>072826 - SEFT v.0104W change terminal of from KRPUS18 to KRPUS12</t></si><si><t>--2 days -13 hrs</t></si><si><t>+10 days 17 hrs</t></si><si><t>+10 days 6 hrs</t></si><si><t>07132026 - WAN HAI 511 111W PHASE OUT TBA UNDER PS8/7020 SERVICE
+===========================================================================
+23072026- [PA] PS8 LTS JUL/2026 NO.04 – WAN HAI 513 (513)109W &amp; WAN HAI 511 (511)111W PHASE OUT ROTATION &amp; CARGO ARRANGEMENTS
+WAN HAI 511 V.0111W PHASE OUT AT TAO. 
+PHASE OUT ROTATION: LAX-OAK-TAO
+CARGOES ARRANGEMENTS: AS LOADING HAS NOT COMMENCE FROM (WB), NO LOADING OF NBO LADEN CARGO DUE TO CABOTAGE.
+ALL EMPTY WILL BE DISCHARGED AT TAO UNDER COL ACCOUNT AND ARRANGEMENTS.
+==========================================================================================
+07242026 WAN HAI 511 adj P/O PS8 SVC at W111/TAO
+About the I/B cargo arrangement(including WHL/ONE/HMM/YML)
+All containers (including empty and laden): Discharge at TAO.</t></si><si><t>MX Laden: 187 + MTY: 125 = 312</t></si><si><t>+1 days 20 hrs</t></si><si><t>+16 days 2 hrs</t></si><si><t>07272026| [PA] PS4 LTS JUL/2026 NO.02 – VMS ON WK 32 &amp; VESSEL POSITION UPDATES FROM WK 33 TO 39
+ONE HUMBER OHRT0104W phase out TBA tentative added ASIA ports.
+======================================================================================</t></si><si><t>OMIT CNSHK</t></si><si><t>USLAX01-USOAK01-VNHPH07-VNCMP04-CNXMN01-TWTPE05</t></si><si><t>280726 | APL MINNESOTA 109E ad-hoc call USCHS.</t></si><si><t>+11 days 1 hrs</t></si><si><t>072126 - ONE GEORGE WASHINGTON  OGWT0003W created under VSE/7000 service 08/16 position @LAX.
+072826 - OGWT0003 terminal change from KRPUS18 to KRPUS12</t></si><si><t>+3 days 21 hrs</t></si><si><t>20260727 - NEW PF7001 with update terminal of PUS for PUS18 to PUS12
+04062026 - IDXT 0145E phase in VSE SGSIN August 4 position</t></si><si><t>+8 days 0 hrs</t></si><si><t>LAST WIN VESSEL</t></si><si><t>OMIT EB PAROD / OMIT EB DOCAU</t></si><si><t>P/O CNTAO</t></si><si><t>MX Laden: 7 + MTY: 0 = 7</t></si><si><t>+14 days 0 hrs</t></si><si><t>OMJT0025W</t></si><si><t>ONE MAJESTY</t></si><si><t>+4 days 19 hrs</t></si><si><t>2026/W41</t></si><si><t>OEAT0088W</t></si><si><t>POHT0078E</t></si><si><t>SADT0084W</t></si><si><t>OEHT0101W</t></si><si><t>YBYT0091W</t></si><si><t>NCFT0033W</t></si><si><t>20072026- ONE FALCON V.0033W TERMINAL CHANGE FROM PUS18 TO PUS14 UNDER EC3 SVC.</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-KRPUS14</t></si><si><t>IHRT0012W</t></si><si><t>BRXT6235E</t></si><si><t>BREMEN EXPRESS</t></si><si><t>RDVT0079W</t></si><si><t>RDO ENDEAVOUR</t></si><si><t>IAIT0008S</t></si><si><t>YBRT0015W</t></si><si><t>XGIT0220E</t></si><si><t>COSCO SHANGHAI</t></si><si><t>ONNT0067W</t></si><si><t>OHWT0036W</t></si><si><t>+5 days 8 hrs</t></si><si><t>NSOT0067S</t></si><si><t>BHST0274E</t></si><si><t>PLHT0012W</t></si><si><t>HMM OPAL</t></si><si><t>HW9T0018W</t></si><si><t>USLAX01-USOAK01-CNSHK01-VNHPH07-VNCMP04-CNXMN01</t></si><si><t>MIET0110E</t></si><si><t>YUPT0102W</t></si><si><t>+11 days 19 hrs</t></si><si><t>OIST0090W</t></si><si><t>WEBT0037W</t></si><si><t>YM WELLBEING</t></si><si><t>+12 days 4 hrs</t></si><si><t>AAET0374E</t></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 77 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 77</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 37 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 41 = 78</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 45 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 6 = 51</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 38 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 38</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 49 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 49</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 7 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 7</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 2 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 2</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 185 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 185</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 270 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 270</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 135 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 80 = 215</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 208 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 104 = 312</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 187 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 125 = 312</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 4 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 4</t></r></si><si><t>CNSHA: 50 - 79 = +29* / CNSHK: 25 - 52 = +27* / SGSIN: 150 - 119 = (-31)</t></si><si><t>SGSIN: (Dry) 130 - 117 = (-13) / (Rrf) 20 - 2 = (-18)</t></si><si><t>CNSHA: 300 - 72 = (-228) / CNSHK: 20 - 39 = +19* / INNSA: 380 - 391 = +11* / SGSIN: 180 - 143 = (-37)</t></si><si><t>26062026 - [PA] MS2 LTS JUN/2026 NO.13 – ONE FUTURE (OFE) 008W’S PHASE OUT ROTATION AND CARGO ARRANGEMENT
+VESSEL NAME/CODE: ONE FUTURE (OFE)
+VOYAGE: 008W
+PHASE OUT PORT: OAK 
+PHASE OUT ROTATION: LGB - OAK 
+CARGOES ARRANGEMENT : 
+AS LOADING HAS NOT COMMENCED FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS : P/O MS2, P/I FE3 WK33 12/AUG TAO</t></si><si><t>MX Laden: 47 + MTY: 0 = 47 / BEANR: 50 - 157 = +107* / DEBRV: 50 - 50 = 0 / GBSOU: 200 - 55 = (-145) / NLRTM: 200 - 90 = (-110)</t></si><si><t>2026/07/02 ONE MODERN (MOD) 081W PHASE OUT TO SX2. ROTATION TBA TENTATIVELY EXTEND ASIA PORT
+----------------------------------------------------------------------------------------------------------
+[PA] PS1 LTS JUL/2026 NO.01 – VMS ON WK 33
+==========================================================================================
+07292026| [PA] PS1 LTS JUL/2026 NO.02 – ONE MODERN (MOD) 081W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+VOYAGE: ONE MODERN VOYAGE 081W
+PHASE OUT PORT: UKB
+PHASE OUT ROTATION: LAX - OAK – TYO – NGO - UKB
+CARGOES ARRANGEMENT: AD HOC NGO CALL TO BE SHARED BY PS1 LAS.
+REMARKS/REASONS: P/O PS1. P/I PN1 WK34 KHH 21/AUG.</t></si><si><t>07092026 - NYK JOANNA NJOT0211E SCHEDULE CREATED UNDER MAR</t></si><si><t>+2 days 8 hrs</t></si><si><t>Ad Hoc USCHS call USCHS&gt;MXVER&gt;MXATM&gt;USHOU&gt;USMSY**</t></si><si><t>Ad Hoc USSAV call USSAV&gt;MXVER&gt;MXATM&gt;USHOU&gt;USMSY**</t></si><si><t>+9 days 2 hrs</t></si><si><t>+4 days 6 hrs</t></si><si><t>+23 days 9 hrs</t></si><si><t>OMDT0082W</t></si><si><t>+6 days 11 hrs</t></si><si><t>GRPIR: 115 - 2 = (-113) / TRISK: 235 - 50 = (-185)</t></si><si><t>R2JT0018W</t></si><si><t>REN JIAN 20</t></si><si><t>300626 | REN JIAN 20 W0018 ADD CALL MXZLO UNDER EXW SERVICE.
+===================================================
+01072026 - REN JIAN 20 R2JT0018W phase out at CNTAO
+===================================================
+070926 - REN JIAN 20 v.0018W add call cancel CNNGB and add call CNTAO.</t></si><si><t>LAX06 -&gt; CNSHA</t></si><si><t>+11 days 14 hrs</t></si><si><t>290626 - [PA] PS3 LTS JUN/2026 NO.13 – VESSEL POSITION UPDATES FROM WK 30 TO 35
+ONE CONTRIBUTION0066W WILL TAKE 8/9 AT CNSHA
+========================================================================
+07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+ONE CONTRIBUTION V.066W  OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.
+==============================================================
+280726 | [PA] PS3 LTS JUL/2026 NO.12 – CTT 075W OMIT WB CNSHK &amp; CBU 066W,CEB 106W OMIT SHG
+VESSEL NAME/CODE - ONE CONTRIBUTION (CBU)
+VOYAGE - 066W
+OMIT PORT - SHG
+ORIGINAL ROTATION - LAX – OAK – TYO – PUS – SHG – NBO – SHK – SIN - NSA
+NEW ROTATION - LAX – OAK – TYO - PUS - NBO – SHK - SIN - NSA
+CARGO ARRANGEMENT - ALL SHG INBOUND TO T/S AT PUS UNDER COL’S ACCOUNT AND ARRANGEMENT.
+REMARKS/REASONS - FOR SCHEDULE RECOVERY AS AGREED BY EXECOM.
+====================================================================================</t></si><si><t>+2 days 10 hrs</t></si><si><t>USCHS01-MXVER03-MXATM01-USHOU05-USMSY01-GBSOU01-NLRTM15-BEANR07-DEBRV01</t></si><si><t>+10 days 13 hrs</t></si><si><t>+5 days 21 hrs</t></si><si><t>+12 days 9 hrs</t></si><si><t>USNYC02-USCHS01-USSAV01-PAPCA10-PAROD01-TWKHH16-CNDCB01-CNSHA19-CNNGB01-KRPUS12</t></si><si><t>LATAM: 550 - 60 = (-490) / PAROD Move Count Unit: 600 - 717 = 117 / PA Load: 1,298</t></si><si><t>USLAX06-MXZLO01-CNTAO10-CNSHA09</t></si><si><t>BEANR: 175 - 346 = +171* / DEBRV: 990 - 337 = (-653) / FRLEH: 210 - 55 = (-155) / GBSOU: 231 - 381 = +150* / NLRTM: 1,080 - 490 = (-590)</t></si><si><t>USNYC06-USORF01-USSAV01-USJAX03-USCHS01-INMUN03-INNSA03</t></si><si><t>060826 | YM MATURITY 107W terminal change to SHA09
+========================================================================================================
+060826 | YM MATURITY 107W omit CNSHK to avoid a delay of more than 7 days to SSZ.
+SHK laden will be discharged at SIN under individual line own cost/arrangement while SHK empty will be COD for SHA discharge.
+===================================================================================
+08072026 YM MATURITY V.0107W reinstate CNSHK under VSE service.
+SHK empty will cancel to discharge at SHA and remain as SHK discharge.</t></si><si><t>USLAX06-KRPUS18-CNSHA09-CNSHK03-SGSIN04</t></si><si><t>USSAV01-USORF01-USNYC01-CAHAL02-SGSIN04-VNCMP04-CNYTN01-KRPUS14</t></si><si><t>07242026 YM MUTUALITY (MMU) 113W P/OUT AT JPNGO UNDER PN1 AND WILL PHASE IN UNDER SX2 SERVICE
+===================================================
+28072026 - [PA] PN1 LTS JUL/2025 NO.07 – YM MUTUALITY (MMU) 113W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+PHASE OUT PORT: NGO
+PHASE OUT ROTATION: VAN – TYO – UKB – NGO
+CARGOES ARRANGEMENT (IF ANY): ALL KHH &amp; NBO LADEN CARGO ROB TO SX2 MMU 114W, DISCHARGE AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS.
+ALL KHH &amp; NBO EMPTIES ROB TO SX2 MMU 114W, DISCHARGE AT SHA UNDER COL ACCOUNT AND ARRANGEMENTS.
+600 RETOWS TO BE SHARED BY PN1 LAS.
+REMARKS/REASONS (IF ANY) : PHASE OUT &amp; P/IN SX2
+TENTATIVELY ADDED CNNGB PORT TO AVOID BROKEN ROUTES</t></si><si><t>USTIW02-CAVAN01-JPTYO03-JPUKB03-JPNGO01-KRPUS12-CNSHA19</t></si><si><t>KRPUS: 250 - 281 = +31* / D2 Laden: 73 + Mty: 50 =&gt; Total: 102 - 123 = +21**</t></si><si><t>COSPC Discharge(Unit): 5</t></si><si><t>OMIT TWKHH</t></si><si><t>USHOU05-USMOB01-PAPCA10-PAROD01-VNCMP08-CNYTN01-CNNGB01-KRPUS14</t></si><si><t>USLAX01-USOAK08-PAPCA10-DOCAU01-GBSOU01-FRLEH01-DEHAM01-BEANR02</t></si><si><t>290526 | [PA] MS2 LTS MAY/2026 NO.09 – USOAK TERMINAL CHANGE FOR ONE FOCUS (OFO) 008W
+ORIGINAL TML: TPOAK - TRAPAC CONTAINER TERMINAL
+CHANGE TML: B58 - OAKLAND INTERNATIONAL CONTAINER TERMINAL (OICT)
+ONGOING COMMISSIONING OF NEW CRANES AT TRAPAC.
+=======================================================================
+06042026 [PA] MS2 LTS JUN/2026 NO.05 – VESSEL POSITION UPDATES FROM WEEK 28 TO 31 AT KRPUS
+ONE FOCUS V.0008W recreated under MS2 service.
+==============================================================================
+08042026| [PA] MS2 LTS AUG/2026 NO.02 – ONE FOCUS (OFO) 008W TO OMIT CNYSA AND REINSTATE CNNBO
+ONE FOCUS VOYAGE 008W
+WEEK : 30
+OMIT PORT : CNYSA
+ORIGINAL ROTATION
+PUS – YSA – KHH – SHK – SIN - PTM
+NEW ROTATION
+PUS – NBO – KHH – SHK – SIN - PTM
+CARGOES ARRANGEMENT
+CNNBO CALL REINSTATED.
+PA'S ARRANGEMENT:
+ALL YSA LADEN INBOUNDS DISCHARGE &amp; T/S AT SIN UNDER COL'S ACCOUNT AND ARRANGEMENT.
+ALL YSA EMPTY INBOUNDS DISCHARGE AT OTHER CHINA PORTS.
+RESTOWS (TBA) TO BE SHARED UNDER OFO 008W’S LAS%.
+MSC'S ARRANGEMENT:
+NIL YSA INBOUNDS ONBOARD ONE FOCUS.
+REMARKS/REASONS (IF ANY)
+FOR SCHEDULE RECOVERY RESULTING FROM CONGESTIONS AT ASIAN PORTS DUE TO TYPHOON IMPACT.
+====================================================================================</t></si><si><t>USLGB02-USOAK01-KRPUS18-CNNGB02-TWKHH16-CNSHK03</t></si><si><t>Phillip Hagen</t></si><si><t>USLAX06-KRPUS18-CNTAO10-CNSHK03-SGSIN04</t></si><si><t>CNSHK: 25 - 15 = (-10) / SGSIN: 150 - 91 = (-59)</t></si><si><t>SGSIN: (Dry) 130 - 77 = (-53) / (Rrf) 20 - 14 = (-6)</t></si><si><t>USNYC02-USSAV01-USCHS01-PAPCA10-TWKHH16-CNDCB01-CNSHA19-CNNGB01-KRPUS12</t></si><si><t>[PA] PN1 LTS JUL/2026 NO.02 – VMS ON WK 32 &amp; VESSEL POSITION UPDATES ON WK 39
+=========================================================================================
+07312026| [PA] PN1 LTS JUL/2025 NO.04 – BRIGHTON (BRG) 026W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+VESSEL NAME/CODE: BRIGHTON (BRG)
+VOYAGE: 026W
+PHASE OUT PORT: NGO
+PHASE OUT ROTATION: VAN- TYO – UKB - NGO
+CARGOES ARRANGEMENT (IF ANY):
+ALL ONE,HMM NBO CARGO ROB TO DISCHARGE ON NON PA BRG NBO CALL UNDER COL ACCOUNT AND ARRANGEMENTS.
+ALL ONE,HMM NBO EMPTY WILL ROB &amp; DISCHARGE AT NON PA BRG TAO CALL.
+ALL NBO CARGO WILL BE DISCHARGE AT NON PA PUS (HPNT) EXCEPT 22 TEU YML EMPTY ROB TO TAO (QQCTN) UNDER ONE ALLOCATION TO AVOID HUGE RESTOW.
+AS LOADING HAS NOT COMMENCE FROM (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION EXCEPT NBO.
+REMARKS/REASONS:
+PHASE OUT PA POOL</t></si><si><t>USTIW02-CAVAN01-JPTYO03-JPUKB03-JPNGO01-KRPUS12-CNTAO10-CNNGB06</t></si><si><t>COSPC Discharge(Unit): 94</t></si><si><t>07272026 - [PA] FP2 LTS JUL/2026 NO.09 – YM THRONE (TRN) 020W TO OMIT TWKHH AND CNNBO
+ORIGINAL ROTATION: PUS - KHH - YSA - NBO - YTN - SIN - SOU
+NEW ROTATION: PUS - YSA - YTN - SIN - SOU
+CARGOES ARRANGEMENT:
+PA'S ARRANGEMENT:
+ALL KHH &amp; NBO LADEN INBOUNDS DISCHARGE &amp; T/S IN PUS UNDER COL'S ACCOUNT AND ARRANGEMENT.
+ALL KHH &amp; NBO EMPTY INBOUNDS DISCHARGE AT YSA.
+RESTOWS (TBA) TO BE SHARED UNDER TRN 020W'S LAS%.
+MSC'S ARRANGEMENT:
+NIL KHH &amp; NBO INBOUNDS ON YM THRONE.
+REMARKS: FOR SCHEDULE RECOVERY.
+=================================================
+08032026 YM THRONE YTNT0020W [PA] FP2 LTS AUG/2026 NO.01 – YM THRONE (TRN) 020W TO OMIT CNYTN
+ORIGINAL ROTATION = PUS - YSA - YTN - SIN - SOU
+NEW ROTATION = PUS - YSA - SIN - SOU
+CARGOES ARRANGEMENT (IF ANY) = PA'S ARRANGEMENT:
+ALL YTN LADEN INBOUNDS DISCHARGE &amp; T/S IN PUS UNDER COL'S ACCOUNT AND ARRANGEMENT.
+ALL YTN EMPTY INBOUNDS DISCHARGE AT YSA.
+RESTOWS (TBA) TO BE SHARED UNDER TRN 020W'S LAS%.
+MSC'S ARRANGEMENT:
+NIL YTN INBOUNDS ON YM THRONE.
+REMARKS/REASONS (IF ANY) = FOR SCHEDULE RECOVERY.</t></si><si><t>USTIW05-CAVAN01-KRPUS14-CNSHA19-SGSIN04</t></si><si><t>210726 | [PA] EC4 LTS JUL/2026 NO.04 – ONE COSMOS (CSM) 104W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT KHH
+PHASE OUT ROTATION PCN - PUS
+CARGO ARRANGEMENT (IF ANY) OMIT KHH/VUT.
+AD HOC PUS.
+ADDITIONAL COST DUE TO AD HOC PUS TO BE SHARED UNDER CSM 104W’S LAS%.
+ALL VUT LADEN INBOUND TO ROB FOR FE1 DIRECT DISCHARGE.
+ALL EMC’S VUT LADEN INBOUND TO ROB FOR FE1 DIRECT DISCHARGE UNDER ONE’S FE1 BSA.
+ALL YTN/YSA/NBO/KHH TO T/S AT PUS UNDER COL’S ACCOUNT AND ARRANGEMENT.
+ALL EMTPIES INBOUND TO ROB FOR FE1 VUT DIRECT DISCHARGE UNDER COL’S ACCOUNT AND ARRANGEMENT.
+RESTOWS, IF ANY, TO BE SHARED UNDER CSM 104W’S LAS%.
+REMARKS/REASONS (IF ANY) PHASE OUT EC4, PHASE IN FE1.
+================================================================================
+31072026- [PA] EC4 LTS JUL/2026 NO.08 – ONE COSMOS (CSM)104W REVISED PHASE OUT ROTATION AND CARGO ARRANGEMENT
+ONE COSMOS V.0104W PHASE OUT AT KHH UNDER EC4 SVC. 
+PHASE OUT ROTATION: PCN - KHH
+CARGO ARRANGEMENT: OMIT VUT. OMIT PUS AD HOC CALL. ALL VUT LADEN INBOUND TO ROB FOR FE1 DIRECT DISCHARGE.
+ALL EMC’S VUT LADEN INBOUND TO ROB FOR FE1 DIRECT DISCHARGE UNDER ONE’S FE1 BSA.
+ALL PUS LADEN INBOUND TO T/S AT KHH UNDER COL’S ACCOUNT AND ARRANGEMENT.
+ALL YTN/YSA/NBO LADEN INBOUND TO T/S AT FE1 VUT UNDER COL’S ACCOUNT AND ARRANGEMENT.
+ALL EMTPIES INBOUND TO ROB FOR FE1 VUT DIRECT DISCHARGE UNDER COL’S ACCOUNT AND ARRANGEMENT.</t></si><si><t>USHOU05-USMOB01-PAPCA10-TWKHH16-THLCH11-VNCMP04-SGSIN04</t></si><si><t>290626 - [PA] PS3 LTS JUN/2026 NO.13 – VESSEL POSITION UPDATES FROM WK 30 TO 35
+MOL COURAGE0067W WILL TAKE 8/2 POSITION AT CNSHA
+=========================================================================
+07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+MOL COURAGE V.067W OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.
+=====================================================================
+30072026 - [PA] PS3 LTS JUL/2026 NO.10 – MOL COURAGE (COU) 067W OMIT WB CNNBO
+VESSEL NAME/CODE : MOL COURAGE (COU)
+VOYAGE : 067W
+OMIT PORT : NBO
+ORIGINAL ROTATION : LAX – OAK – TYO – PUS – SHG – NBO – SHK - SIN
+NEW ROTATION : LAX – OAK – TYO - PUS – SHG – SHK - SIN
+CARGO ARRANGEMENT : ALL NBO LADEN &amp; EMPTY CARGO DISCHARGE AND T/S AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS : FOR SCHEDULE RECOVERY AS AGRRED BY EXECOM.
+=====================================================
+08072026 - [PA] PS3 LTS AUG/2026 NO.04 – COU 067W OMIT WB CNSHK &amp; CTT 075W,NOH 079W,UNN 086W OMIT SHG
+OMIT PORT SHK
+ORIGINAL ROTATION LAX – OAK – TYO – PUS – SHG – SHK – SIN - NSA
+NEW ROTATION LAX – OAK – TYO - PUS - SHG - SIN - NSA
+CARGO ARRANGEMENT ALL SHK LADEN TO DISCHARGE AND T/S AT SIN AND EMPTY DISCHARGE AT SHG UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS FOR SCHEDULE RECOVERY AS AGREED BY EXECOM.</t></si><si><t>USLAX06-USOAK08-JPTYO02-KRPUS18-CNSHA07-SGSIN04-INNSA03-INPAV01</t></si><si><t>06162026 HYUNDAI SUPREME (HSU) 158W PHASE OUT TO DRY DOCK. PHASE OUT ARRANGEMENT: TBA.
+========================= 
+30072026 - HYUNDAI SUPREME HSUT0158W ADD CALL CNTAO10.</t></si><si><t>LKCMB: 20 - 18 = (-2) / SGSIN: 350 - 352 = +2* / THLCH: 500 - 202 = (-298) / VNCMP: 325 - 154 = (-171)</t></si><si><t>06172026 HMM HANUL (HHL) 026W P/OUT DRYDOCK. ROTATION TBA
+======================================================================
+14072026- WB INC OMISSION EFFECTIVE FROM HTQ 010W, WB WK 25 ONWARDS UNTILL CONGESTION EASES AS AGREED BY EXECOM
+HMM HANUL V.026W OMIT KRINC UNDER PS6 SVC.
+==========================================
+15072026 - [PA] PS6 LTS JUL/2026 NO.03 – WB KRINC STRUCTURAL BI-WEEKLY OMISSION FROM WB WK 25 ONWARDS
+WB INC OMISSION EFFECTIVE FROM HTQ 010W, WB WK 25 ONWARDS UNTILL WB WK 33 CONGESTION EASES AS AGREED BY EXECOM:
+HMM HANUL ULHT0026W Re-instate KRINC
+====================================
+071526 - [PA] PS6 LTS JUL/2026 NO.03 – HMM HANUL (HHL) 026W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+VESSEL NAME/CODE: HMM HANUL (HHL)
+VOYAGE: 026W
+PHASE OUT PORT: NBO
+PHASE OUT ROTATION: OAK-PUS-KAN-INC-NBO
+CARGOES ARRANGEMENT:
+AS LOADING HAS NOT COMMENCE FROM (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+ALL NBO/SHA LADEN &amp; EMPTY WILL BE DISCHARGED AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS (IF ANY): PHASE OUT DRYDOCK
+=============================================
+04082026 - [PA] PS6 LTS AUG/2026 NO.01 – HMM HANUL (HHL) 026W REVISED PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+PHASE OUT PORT : INC
+PHASE OUT ROTATION : OAK-PUS-KAN-INC
+CARGOES ARRANGEMENT : AS LOADING HAS NOT COMMENCE FROM (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+ALL NBO/SHA LADEN &amp; EMPTY WILL BE DISCHARGED AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS : PHASE OUT DRYDOCK</t></si><si><t>USSAV01-USORF01-CAHAL02-SGSIN04-VNCMP04-CNYTN01-KRPUS14</t></si><si><t>MXVER04-MXATM04-USHOU01-USMIA01-JMKIN01-COSPC01-BRSSZ04-BRNVT01-BRIOA01-BRPNG01-BRSSZ04-BRRIO01-JMKIN01</t></si><si><t>MXVER03-MXATM04-USHOU01-USMSY01-COCNR01-BRSUA01-BRSSZ11-ARBUE01-BRRIG01-BRPNG01-BRITJ02</t></si><si><t>GRPIR: 115 - 110 = (-5) / ITSAL: 20 - 3 = (-17) / TRALI: 275 - 52 = (-223) / TRISK: 235 - 190 = (-45) / TRIST: 347 - 324 = (-23)</t></si><si><t>ESALG: 28 - 148 = +120* / ESVLC: 209 - 69 = (-140) / FRFOS: 77 - 70 = (-7) / ITGOA: 312 - 73 = (-239) / ITSPE: 262 - 35 = (-227)</t></si><si><t>11082026- HYUNDAI NEPTUNE V.044W ADD CALL SHK UNDER PS7 SVC.</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-CNSHA19-KRPUS14</t></si><si><t>+15 days 7 hrs</t></si><si><t>+15 days 22 hrs</t></si><si><t>TBA / Bob</t></si><si><t>ESALG: 25 - 108 = +83* / ESVLC: 190 - 74 = (-116) / FRFOS: 70 - 51 = (-19) / ITGOA: 284 - 57 = (-227) / ITSPE: 238 - 21 = (-217)</t></si><si><t>USLAX06-USOAK08-JPTYO02-KRPUS18-CNNGB01-SGSIN04-INNSA03-INPAV01</t></si><si><t>CNSHA: 300 - 125 = (-175) / CNSHK: 20 - 53 = +33* / INNSA: 380 - 328 = (-52) / SGSIN: 180 - 297 = +117*</t></si><si><t>SGSIN: (Dry) 160 - 267 = +107* / (Rrf) 20 - 30 = +10*</t></si><si><t>COSPC Discharge(Unit): 91</t></si><si><t>Omit KHH/NGB</t></si><si><t>20260803 ONE SPRINTER PTRT V.005W OMIT TWKHH AND CNNBO UNDER FP2 SERVICE
+[PA] FP2 LTS AUG/2026 NO.03 – ONE SPRINTER (OSP) 005W TO OMIT TWKHH AND CNNBO
+ORIGINAL ROTATION: PUS - KHH - YSA - NBO - YTN - SIN - SOU
+NEW ROTATION: PUS - YSA - YTN - SIN - SOU
+CARGOES ARRANGEMENT(IF ANY)
+PA'S ARRANGEMENT:
+ALL KHH &amp; NBO LADEN INBOUNDS DISCHARGE &amp; T/S IN PUS UNDER COL'S ACCOUNT AND ARRANGEMENT.
+ALL KHH &amp; NBO EMPTY INBOUNDS DISCHARGE AT YSA.
+RESTOWS (TBA) TO BE SHARED UNDER OSP 005W'S LAS%.
+MSC'S ARRANGEMENT:
+NIL KHH &amp; NBO INBOUNDS ON ONE SPRINTER.
+REMARKS/REASONS (IF ANY): FOR SCHEDULE RECOVERY.
+===============================================================
+08052026| ONE SPRINTER PTRT0005W OMIT TWKHH UNDER FP2 SERVICE.
+=====================================================
+080826 | ONE SPRINTER PTRT0005W ADD CALL CANCEL TWKHH AND CNNGB DUE TO MANIFEST SUBMISSION.</t></si><si><t>SGSIN: 200 - 297 = +97*</t></si><si><t>SGSIN: (Dry) 120 - 287 = +167* / (Rrf) 80 - 10 = (-70)</t></si><si><t>27072026 - [PA] MS2 LTS JUL/2026 NO.11 – CHANGE OF WB KRPUS TERMINAL EFFECTIVE YM WILLPOWER (WPR) 002W
+ORIGINAL TERMINAL: DONGWON GLOBAL TERMINAL (DGT) - KRPUS18
+CHANGE TERMINAL: HMM PSA NEW-PORT TERMINAL (HPNT) - KRPUS12
+APPLICABLE FROM BELOW VESSELS UNTIL FURTHER NOTICE:
+WB WK 33 @SIN: YM WIDTH (WDH) 040W</t></si><si><t>USLAX03-USOAK01-KRPUS12-KRKAN02-CNSHA19-CNNGB01</t></si><si><t>BEANR: 175 - 238 = +63* / DEBRV: 990 - 283 = (-707) / FRLEH: 210 - 83 = (-127) / GBSOU: 231 - 346 = +115* / NLRTM: 1,080 - 341 = (-739)</t></si><si><t>USLAX01-USOAK08-JPTYO01-JPNGO07-JPUKB03</t></si><si><t>OMIT EB DOCAU</t></si><si><t>PAROD Discharge: 50 - 96 = +46 / BEANR: 50 - 267 = +217* / FRLEH: 450 - 33 = (-417) / GBSOU: 700 - 357 = (-343) / LATAM: 180 - 96 = (-84)</t></si><si><t>KRPUS: 250 - 319 = +69* / D2 Laden: 142 + Mty: 40 =&gt; Total: 153 - 182 = +29**</t></si><si><t>Omit KHH // P/O UKB</t></si><si><t>USLAX01-MXMZT02-MXZLO01-MXLZC02-GTPRQ02-NICIO01-CRCAL01-GTPRQ01-MXZLO01</t></si><si><t>MXVER04-MXATM04-USHOU01-USMIA01-JMKIN01-COSPC01-BRSSZ04-UYMVD01-BRIOA01-BRPNG01-BRRIO01</t></si><si><t>07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+CONTI CONTESSA V.025W OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.
+==============
+16072026 - CONTI CONTESSA CNTT0025W PHASE OUT: TBA
+TENTATIVELY ADDED ASI PORTS FOR BOOKING PURPOSES.
+============================================
+07202026 - [PA] PS3 LTS JUL/2026 NO.08 – CONTI CONTESSA (CCS)025W OMIT WB TYO
+ORIGINAL ROTATION: LAX – OAK – TYO – PUS - SHG
+NEW ROTATION: LAX – OAK – PUS - SHG
+CARGO ARRANGEMENT: ALL TYO INBOUND TO T/S AT PUS UNDER COL’S ACCOUNT AND ARRANGEMENT.
+REMARKS/REASONS: FOR SCHEDULE RECOVERY.
+==========================================================================================
+27072026- [PA] PS3 LTS JUL/2026 NO.11 – CONTI CONTESSA (CCS)025W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+PHASE OUT PORT: NBO
+PHASE OUT ROTATION: LAX – OAK - NBO
+CARGOES ARRANGEMENT: ALL NBO/PUS CARGO ROB TO DISCHARGE ON AX4 CCS 026E.
+ALL SHG/SHK/SIN CARGO WILL ROB AND T/S AT AX4 CCC 026E PUS CALL UNDER COL ACCOUNT AND ARRANGEMENTS,
+REMARKS/REASONS: PHASE OUT &amp; P/IN AX4, COMBINED PS3/AX4 SHA CALL.</t></si><si><t>USLAX06-USOAK08-CNNGB03-KRPUS18</t></si><si><t>CNSHA: 50 - 86 = +36* / CNSHK: 25 - 26 = +1* / SGSIN: 150 - 291 = +141*</t></si><si><t>SGSIN: (Dry) 130 - 279 = +149* / (Rrf) 20 - 12 = (-8)</t></si><si><t>KRPUS: 250 - 195 = (-55) / D2 Laden: 86 + Mty: 300 =&gt; Total: 254 - 386 = +132**</t></si><si><t>GRPIR: 115 - 90 = (-25) / ITSAL: 20 - 3 = (-17) / TRISK: 235 - 100 = (-135) / TRIST: 347 - 330 = (-17)</t></si><si><t>ESALG: 25 - 64 = +39* / ESVLC: 190 - 57 = (-133) / FRFOS: 70 - 28 = (-42) / ITGOA: 284 - 27 = (-257) / ITSPE: 238 - 2 = (-236)</t></si><si><t>+11 days 4 hrs</t></si><si><t>EXE</t></si><si><t>GJMT0003W</t></si><si><t>CMA CGM J. ADAMS</t></si><si><t>20260803 - Extraloader - New PF 7044 - ESS vsl skd roll out on CMA CGM J. ADAMS 0XRBEW1MA from USNYC to CNSHA under EXE svc
+========================================================
+20260803 - CMA CGM J. ADAMS (GJMT) 0XRBEW1MA PHASE IN UNDER EXE svc</t></si><si><t>USNYC01-CNSHA10</t></si><si><t>SGSIN: 0 - 123 = +123*</t></si><si><t>USLAX01-MXMZT02-MXZLO01-CNNGB03</t></si><si><t>+15 days 18 hrs</t></si><si><t>COSPC Discharge(Unit): 62</t></si><si><t>08072026 - CONTI CORTESIA V.0013W ADD CALL PAONX AND SKIP CALL PAROD PORT
+==============================================================
+080726 - [PA] EC4 LTS AUG/2026 NO.03 – CONTI CORTESIA (CTC) 013W TO OMIT PAROD &amp; AD HOC PAONX 
+OMIT PORT : ROD   
+NEW ROTATION : HOU – MOB – ONX – PCN - KHH 
+CARGOES ARRANGMENT (IF ANY) : DISCHARGE CALL ONLY.
+ALL ROD INBOUND TO T/S AT ONX UNDER COL’S ACCOUNT AND ARRANGEMENT.
+TERMINAL: PLS REFER TO SOL’S C/S.   
+REMARKS/REASONS (IF ANY) : FOR SCHEDULE RECOVERY.</t></si><si><t>USHOU05-USMOB01-PAONX01-PAPCA10-TWKHH16-VNCMP08-CNYTN01-CNNGB01-CNSHA19-KRPUS14</t></si><si><t>+16 days 1 hrs</t></si><si><t>+7 days 9 hrs</t></si><si><t>+10 days 8 hrs</t></si><si><t>MX Laden: 45 + MTY: 15 = 60 / BEANR: 50 - 177 = +127* / DEBRV: 50 - 29 = (-21) / GBSOU: 200 - 77 = (-123) / NLRTM: 200 - 86 = (-114)</t></si><si><t>100 TEU of compensation &amp; P/O JMKIN</t></si><si><t>20260731 | SUNNY PHOENIX V.0075S PHASE OUT AT AN2 JMKIN
+CARGO on PHXT0075_SB from MX and US up to COSPC: The units will remain on board and must be discharged at Kingston to connect with the first available connection according to its priority (Attached sheet file)
+RICGZ9922700 : The units will remain on board and must be discharged at Kingston_SB to connect with FELIXSTOWE _ FOWT0529N
+CARGO on PHXT0075_SB up to CRMOB and GTSTC: The units will remain on board and must be discharged at Kingston to connect with TBC
+CARGO on PHXT0075_SB from BRSSZ up to ARBUE (SAOG39199500) : Transfer to the next vessel - ZIM BALTIMORE v.0349SB</t></si><si><t>MXVER04-MXATM04-USHOU01-USMIA01-JMKIN01</t></si><si><t>+16 days 20 hrs</t></si><si><t>+0 days 4 hrs</t></si><si><t>-0 days -8 hrs</t></si><si><t>+1 days 19 hrs</t></si><si><t>+12 days 23 hrs</t></si><si><t>OMIT PAROD / OMIT DOCAU</t></si><si><t>CR/GT/NI Discharge: 371</t></si><si><t>08112026 - HMM PERIDOT 010W TENTATIVELY ADDED CNTXG UNDER EC3 SERVICE</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-THLCH13-VNCMP04-LKCMB05-CNTXG07-KRPUS12-CNSHA19-SGSIN04</t></si><si><t>LKCMB: 20 - 118 = +98* / SGSIN: 350 - 435 = +85* / THLCH: 500 - 369 = (-131) / VNCMP: 325 - 137 = (-188)</t></si><si><t>COSPC Discharge(Unit): 51</t></si><si><t>27072026 - [PA] MS2 LTS JUL/2026 NO.11 – CHANGE OF WB KRPUS TERMINAL EFFECTIVE YM WILLPOWER (WPR) 002W
+ORIGINAL TERMINAL: DONGWON GLOBAL TERMINAL (DGT) - KRPUS18
+CHANGE TERMINAL: HMM PSA NEW-PORT TERMINAL (HPNT) - KRPUS12
+APPLICABLE FROM BELOW VESSELS UNTIL FURTHER NOTICE:
+WB WK 35 @SIN: ZEAL LUMOS (ZLL) 017W</t></si><si><t>+18 days 2 hrs</t></si><si><t>07012026 CONTI CONQUEST (CCQ)036W P/OUT PA POOL. ROTATION: LAX - OAK – TYO – PUS – SHG, ALL NBO,SHK,SIN,PKG INBOUND CARGO TO DISCHARGE AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS.
+================================================
+08072026 - [PA] PS3 LTS AUG/2026 NO.06 – CONTI CONQUEST (CCQ)036W REVISED PHASE OUT ROTATION AND CARGO ARRANGEMENTS 
+PHASE OUT PORT PUS
+PHASE OUT ROTATION LAX - OAK – TYO – PUS
+CARGOES ARRANGEMENT (IF ANY)
+ALL SHG,NBO,SHK,SIN,PKG INBOUND CARGO TO DISCHARGE AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS
+(IF ANY)
+PHASE OUT PA POOL</t></si><si><t>20260730 HMM PRIDE HOTT0056W [PA] FP2 LTS JUL/2026 NO.11 – HMM PRIDE (HPR) 056W TO OMIT TWKHH
+ORIGINAL ROTATION = PUS - KHH - YSA - NBO - YTN - SIN - SOU
+NEW ROTATION = PUS - YSA - NBO - YTN - SIN - SOU
+CARGOES ARRANGEMENT (IF ANY) = AS LOADING HAS NOT COMMENCE FROM NAM SECTOR (WB), COL WILL DECIDE ON THE POD THAT IS OMITTED.
+REMARKS/REASONS (IF ANY) = FOR SCHEDULE RECOVERY.
+=========================================================================================================
+08112026 - HMM PRIDE 056W TENTATIVELY REINSTATED TWKHH FOR BOOKING PURPOSES.</t></si><si><t>OMIT USNYC****Ad hoc USNYC call**</t></si><si><t>07012026 - [PA] EC2 LTS JUL/2026 NO.01 – TLN 019W,OST 029W, HHO 061W OMIT WB USNYC &amp; TGT 027W OMIT CAHAL
+HMM HOPE (HHO) 061W OMIT USNYC FOR SCHEDULE RECOVERY.
+NEW ROTATION: SAV – ORF – HAL - COGH - SIN
+CARGO ARRANGEMENT (IF ANY): ALL NYC LADEN INBOUND TO T/S AT HHO 061E MIT UNDER COL’S ACCOUNT AND ARRANGEMENT.
+=====================================================================================================
+08082026 - HMM HOPE 061W REINSTATE USNYC PORT
+=================================================
+080826 | HMM HOPE 0061W COR TO CAHAL-USNYC UNDER EC2 SERVICE.</t></si><si><t>USSAV01-USORF01-CAHAL02-USNYC01-SGSIN04-VNCMP04-CNYTN01-CNSHA19-KRPUS14</t></si><si><t>+28 days 16 hrs</t></si><si><t>ZYXT0176W</t></si><si><t>XIN YA ZHOU</t></si><si><t>20260806 - ESS vsl skd roll out on XIN YA ZHOU 176W from USHOU to CNXMN. Hidden in e-commerce.</t></si><si><t>USHOU01-CNXMN07</t></si><si><t>+12 days 15 hrs</t></si><si><t>--1 days -1 hrs</t></si><si><t>+17 days 15 hrs</t></si><si><t>+28 days 4 hrs</t></si><si><t>+0 days 14 hrs</t></si><si><t>MX Laden: 75 + MTY: 0 = 75 / BEANR: 50 - 73 = +23* / DEBRV: 50 - 62 = +12* / GBSOU: 200 - 86 = (-114) / NLRTM: 200 - 30 = (-170)</t></si><si><t>07282026| MOL EXPERIENCE MXQT0105W ADD CALL CNNGB UNDER PS8 SERVICE.
+=================================================================================
+31072026- [PA] PS8 LTS JUL/2026 NO.05 – NRU 076W,EXP 105W,BAY 217W PHASE OUT ROTATION &amp; CARGO ARRANGEMENTS
+MOL EXPERIENCE V.0105W PHASE OUT AT NBO UNDER PS8 SVC.
+PHASE OUT ROTATION: LAX-OAK-TAO-NBO
+CARGOES ARRANGEMENTS: ALL CONTAINERS(LADEN+EMPTY) TO TAO AND NBO WILL BE DISCHARGE AT TAO AND NGB DIRECTLY
+========================================================================================
+080126 - ONE OPR VSL-MOL EXPERIENCE 0105W will P/O PS8 service (AP2 svc) 0105W/ NGB after discharge all the cargo.
+About the I/B cargo arrangement  (including WHL/ONE/HMM/YML)
+Both 0105W/TAO &amp; NGB of all containers(including laden &amp; empty) will be discharge at direct calling port.
+================================================================================
+[PA]PS8 LTS AUG/2026 NO.01 – NRU 076W,EXP 105W,BAY 217W REVISED PHASE OUT ROTATION &amp; CARGO
+ARRANGEMENTS
+MOL EXPERIENCE V.0105W ADD CALL CANCEL TAO UNDER PS8 SVC.
+PHASE OUT ROTATION: LAX-OAK-NBO.
+CARGOES ARRANGEMENTS: ALL EMPTIES AND NGB LADEN WILL BE DISCHARGED AT NGB.
+ALL EMPTY CONTAINERS WILL DISCHARGE AT NGB. TAO CARGO WILL BE PROHIBITED FROM LOADING.</t></si><si><t>USLAX01-USOAK08-CNNGB01</t></si><si><t>LATAM: 550 - 2 = (-548)</t></si><si><t>+23 days 2 hrs</t></si><si><t>Omit PKG/SHA</t></si><si><t>07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+YM UNANIMITY V.086W OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.
+================================================
+08072026 - [PA] PS3 LTS AUG/2026 NO.04 – COU 067W OMIT WB CNSHK &amp; CTT 075W,NOH 079W,UNN 086W OMIT SHG
+OMIT PORT SHG
+ORIGINAL ROTATION LAX – OAK – TYO - PUS – SHG – NBO – SHK - SIN - NSA
+NEW ROTATION LAX – OAK – TYO - PUS – NBO – SHK - SIN - NSA
+CARGO ARRANGEMENT ALL SHG LADEN TO DISCHARGE AND T/S AT PUS AND EMPTY DISCHARGE AT NBO UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS FOR SCHEDULE RECOVERY AS AGREED BY EXECOM.</t></si><si><t>COSPC Discharge(Unit): 57</t></si><si><t>OMIT CAHAL**** P/O CNYTN**</t></si><si><t>07032026 [PA] EC2 LTS JUL/2026 NO.02 – VESSEL POSITION UPDATES FOR WEEK 33 TO 36
+ONE COLUMBA (OCB) 527W PHASE OUT TO DRY DOCK. PHASE OUT ARRANGEMENT, TO BE ADVISED, TENTATIVELY EXTEND ASIA PORTS
+================================================================
+20072026 - [PA] EC2 LTS JUL/2026 NO.06 – ONE COLUMBA (OCB) 527W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT: YTN
+PHASE OUT ROTATION: HAL – COGH – SIN - YTN
+CARGOES ARRANGEMENT (IF ANY): AD HOC YTN.
+ADDITIONAL COST DUE TO AD HOC YTN TO BE SHARED UNDER OCB 527W’S LAS%.
+AS LOADING HAS NOT COMMENCE FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS (IF ANY): PHASE OUT TO DRY DOCK.
+=======================================================================
+20260731 | ONE COLUMBA V.0527W OMIT CAHAL</t></si><si><t>USSAV01-USORF01-USNYC01-SGSIN04-CNYTN01</t></si><si><t>+20 days 19 hrs</t></si><si><t>P/O PUSAN</t></si><si><t>07072026 - [PA] MS2 LTS JUL/2026 NO.04 – VESSEL POSITION UPDATES FROM WEEK 34 TO 39 AT KRPUS
+HMM DAON (HDA) 022E PHASE OUT TO DRY DOCK. PHASE OUT ARRANGEMENT, TO BE ADVISED. REPLACEMENT VESSEL AT KRPUS, TO BE ADVISED.
+=====================================================
+071526 - HMM DAON 0022W ADD CALL KRPUS UNDER MS2 SERVICE.
+===================================
+08052026 - HMM DAON HMDT0022W TML CHANGE FROM KRPUS18 TO KRPUS12
+==================================================================
+08062026 [PA] MS2 LTS AUG/2026 NO.05 – HMM DAON (HDA) 022W’S PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT PUS
+PHASE OUT ROTATION LGB - OAK - PUS
+CARGOES ARRANGEMENT (IF ANY)
+AS LOADING HAS NOT COMMENCED FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS
+PHASE OUT TO DRY DOCK.</t></si><si><t>USLGB02-USOAK08-KRPUS12</t></si><si><t>LKCMB: 20 - 12 = (-8) / SGSIN: 350 - 308 = (-42) / THLCH: 500 - 290 = (-210) / VNCMP: 325 - 86 = (-239)</t></si><si><t>CR/GT/NI Discharge: 188</t></si><si><t>+7 days 6 hrs</t></si><si><t>+18 days 21 hrs</t></si><si><t>+23 days 8 hrs</t></si><si><t>+18 days 1 hrs</t></si><si><t>+23 days 14 hrs</t></si><si><t>MX Laden: 145 + MTY: 93 = 238</t></si><si><t>+2 days 18 hrs</t></si><si><t>290726 - HYUNDAI SATURN TSTT0053W PAROD SKIP CALL CANCEL
+=====================================================================================
+08072026 | [PA] EC1 LTS AUG/2026 NO.06 – HYUNDAI SATURN (TST) 053W CHANGE OF USNYC TERMINAL
+ORIGINAL TML: NYC – PORT LIBERTY BAYONNE
+CHANGE TML: GCT NEW YORK (NYCT)
+TO AVOID VESSEL BUNCHING.</t></si><si><t>+27 days 0 hrs</t></si><si><t>08042026 - MATTHEW SCHULTE 145S SKIP CALL USCHS PORT UNDER FLX SERVICE</t></si><si><t>COSPC Discharge(Unit): 61</t></si><si><t>USHOU05-USMOB01-PAROD-&gt;TWKHH-HKHKG-CNYTN-CNNGB-CNSHA-KRPUS</t></si><si><t>USLAX01-KRPUS12-CNSHA19-CNSHK03-SGSIN04</t></si><si><t>WB ROD DISCHARGE ONLY</t></si><si><t>06102026 ONE MILLAU 0033E PHASE IN FROM EC3.
+=============================================================
+15062026- [PA] EC3 LTS JUN/2026 NO.06 – ONE MILANO (MLN) 032W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+ONE MILANO V.032W PHASE OUT AT SIN UNDER EC3 SVC. . PHASE OUT EC3, PHASE IN FP2.
+PHASE OUT ROTATION: CHS – COGH - SIN
+CARGOES ARRANGEMENT: OMIT LCH.
+SIN COMBINE CALL EC3 &amp; FP2.
+ALL LCH/VUT LADEN INBOUND TO ROB FOR FP2 DIRECT DISCHARGE.
+ALL CMB LADEN INBOUND TO T/S AT SIN UNDER COL’S ACCOUNT AND ARRANGEMENTS.
+RESTOWS, IF ANY, TO BE SHARED UNDER MLN 032W’S LAS%.
+===============================================================================
+07302026 - ONE MILANO 033W TERMINAL CHANGE TO KRPUS14</t></si><si><t>+9 days 7 hrs</t></si><si><t>+7 days 11 hrs</t></si><si><t>EB PAMIT Laden : 386 + Mty: 1,000 = 1,386</t></si><si><t>+8 days 4 hrs</t></si><si><t>+27 days 9 hrs</t></si><si><t>OMIT USMSY</t></si><si><t>20260618 - New PF8023 with updated port MXATM Terminal from 01 to 04 and updated BW
+===============
+06082026 - COSTA RICA EXPRESS RCXT2632S omit USMSY.</t></si><si><t>MXVER03-MXATM04-USHOU01-COCNR01-BRSUA01-BRSSZ11-ARBUE01-UYMVD01-BRRIG01-BRITJ02-BRPNG01</t></si><si><t>+27 days 14 hrs</t></si><si><t>+0 days 21 hrs</t></si><si><t>+7 days 3 hrs</t></si><si><t>08042026 - [PA]PS1 LTS AUG/2026 NO.01 – CHANGE OF LAX TERMINAL FOR ONE MISSION (MIS)089W
+ORIGINAL TML: YTI
+CHANGE TML: LAX TRAPAC
+REMARKS: TERMINAL SWAP WITH VSE HTE DUE TO HTE NON-AMP FITTED. YTI ALLOW TO UTILIZE A VIE EXEMPTION</t></si><si><t>USLAX06-USOAK08-JPTYO01-JPUKB03-JPNGO07</t></si><si><t>30072026-YM WORTH v.0052W omission for USNYC will Temporary reinstated to avoid broken routes USNYC omission will reflect once they sail at KRPUS.
+========================================================================================================
+080626 - [PA] EC2 LTS JUL/2026 NO.07 – YM WORTH (WTH) 052W TO OMIT USNYC
+VESSEL NAME/CODE: YM WORTH
+VOYAGE: 052W
+OMIT PORT: NYC
+ORIGINAL ROTATION: SAV - ORF - NYC - HAL - SIN
+NEW ROTATION: SAV - ORF - HAL - SIN
+CARGO ARRANGEMENT (IF ANY): ALL NYC LADEN INBOUND TO BE DISCHARGED &amp; T/S AT MIT UNDER COL’S ACCOUNT AND ARRANGEMENT.
+RESTOWS, IF ANY, TO BE SHARED UNDER WTH 052W’S LAS%.
+REMARKS/REASONS (IF ANY): FOR SCHEDULE RECOVERY.</t></si><si><t>+11 days 13 hrs</t></si><si><t>USTIW05-CAVAN01-KRPUS14-TWKHH16-CNSHA19-CNTAO02-CNNGB02-CNYTN01</t></si><si><t>07282026| BAY BRIDGE BYBT0217W ADD CALL CNNGB UNDER PS8 SERVICE.
+==========================================================================
+31072026- [PA] PS8 LTS JUL/2026 NO.05 – NRU 076W,EXP 105W,BAY 217W PHASE OUT ROTATION &amp; CARGO ARRANGEMENTS
+BAY BRIDGE V.0217W PHASE OUT AT NBO UNDER PS8 SVC.
+PHASE OUT ROTATION: LAX-OAK-TAO-NBO
+CARGOES ARRANGEMENTS:ALL CONTAINERS(LADEN+EMPTY) TO TAO AND NBO WILL BE DISCHARGE AT TAO AND NGB DIRECTLY
+==========================================================================================
+080126 - ONE OPR VSL-BAY BRIDGE 0217W will P/O PS8 service (AP2 svc) at 0217W NGB after discharge all the cargo.
+About the I/B cargo arrangement  (including WHL/ONE/HMM/YML)
+Both 0217W/TAO &amp; NGB of all containers(including laden &amp; empty) will be discharge at direct calling port.
+==============================================================================
+06082026- PA]PS8 LTS AUG/2026 NO.01 – NRU 076W,EXP 105W,BAY 217W REVISED PHASE OUT ROTATION &amp; CARGO
+ARRANGEMENTS
+BAY BRIDGE V.0217W ADD CALL CANCEL TAO UNDER PS8 SVC.
+PHASE OUT ROTATION: LAX-OAK-NBO.
+CARGOES ARRANGEMENTS: ALL EMPTIES AND NGB LADEN WILL BE DISCHARGED AT NGB.
+ALL EMPTY CONTAINERS WILL DISCHARGE AT NGB. TAO CARGO WILL BE PROHIBITED FROM LOADING.</t></si><si><t>Omit USCHS****Omit NB COSPC call units ROB to SB COSPC**</t></si><si><t>07312026 - [PA] PS6 LTS JUL/2026 NO.06 – VESSEL POSITION UPDATES FROM WK 33 TO 39
+HMM TOPAZ 013W PHASE OUT TBA. TENTATIVELY EXTEND ASIA PORTS FOR BOOKING PURPOSES.</t></si><si><t>+15 days 2 hrs</t></si><si><t>OMIT PAROD**</t></si><si><t>02072026 - [PA] EC1 LTS JUL/2026 NO.01 – TPT 024W, HAQ 012W, YDM 055W &amp; TRA 020W TO OMIT PAROD
+OMIT PORT - WB ROD
+ORIGINAL ROTATION - NYC - SAV - CHS - PCN - ROD - KHH
+NEW ROTATION - NYC - SAV - CHS - PCN - KHH
+REMARKS/REASONS - FOR SCHEDULE RECOVERY.
+============================================================
+050826 | YM TRANQUILITY 0020W OMIT PAROD UNDER EC1 SERVICE.</t></si><si><t>+21 days 22 hrs</t></si><si><t>+11 days 10 hrs</t></si><si><t>+22 days 15 hrs</t></si><si><t>+22 days 21 hrs</t></si><si><t>+11 days 7 hrs</t></si><si><t>+3 days 16 hrs</t></si><si><t>31072026 - HMM MIR HRIT0022W omit CNTAO.</t></si><si><t>PAROD Discharge: : 52</t></si><si><t>20260730 | ONE GRUS V.0031W PHASE OUT AT KRPUS
+Phaseout Cargo arrangements 
+As loading yet commenced at NA side, only PUS to be retained as the official p/o port.</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-KRPUS12</t></si><si><t>08102026- [PA] EC2 LTS JUL/2026 NO.08 – HMM VICTORY (HVR) 060W TO OMIT CAHAL
+ORIGINAL ROTATION SAV – ORF – NYC – HAL - SIN
+NEW ROTATION SAV – ORF – NYC - SIN
+CARGO ARRANGEMENT : ALL HAL LADEN INBOUND TO BE DISCHARGED &amp; T/S AT MIT
+UNDER COL’S ACCOUNT AND ARRANGEMENT.
+RESTOWS, IF ANY, TO BE SHARED UNDER HVR 060W’S LAS%.
+REMARKS : FOR SCHEDULE RECOVERY.</t></si><si><t>+22 days 0 hrs</t></si><si><t>07302026 - ONE STRENGTH 0002W TERMINAL CHANGE TO KRPUS14</t></si><si><t>310726 | [PA] EC3 LTS JUL/2026 NO.17 – VESSEL POSITION UPDATE FOR WEEK 34
+ONE MONACO (MNC) 031W PHASE OUT TBA.
+ASI PORTS EXTENDED FOR BOOKING PURPOSES.</t></si><si><t>USNYC01-USJAX03-USSAV01-USCHS01-PAMIT01-PAPCA10-KRPUS18-CNSHA19-THLCH13-VNCMP04-SGSIN04-LKCMB05</t></si><si><t>27072026 - [PA] MS2 LTS JUL/2026 NO.11 – CHANGE OF WB KRPUS TERMINAL EFFECTIVE YM WILLPOWER (WPR) 002W
+ORIGINAL TERMINAL: DONGWON GLOBAL TERMINAL (DGT) - KRPUS18
+CHANGE TERMINAL: HMM PSA NEW-PORT TERMINAL (HPNT) - KRPUS12
+APPLICABLE FROM BELOW VESSELS UNTIL FURTHER NOTICE:
+WB WK 39 @SIN: ONE FREEDOM (OFD) 014W</t></si><si><t>SGSIN: (Dry) 160 - 142 = (-18) / (Rrf) 20 - 2 = (-18)</t></si><si><t>+22 days 2 hrs</t></si><si><t>+10 days 2 hrs</t></si><si><t>08072026 [PA] PS4 LTS AUG/2026 NO.01 – VMS ON WEEK 40
+YM UNIFORM V.0250W p/o TBA. Tentatively extended asia ports for booking purposes to avoid broken routes.</t></si><si><t>08052026 - YM WORTHINESS  YWMT0002W TML CHANGE FROM KRPUS18 TO KRPUS12
+===========================================================
+07082026 - [PA] MS2 LTS JUL/2026 NO.11 – CHANGE OF WB KRPUS TERMINAL EFFECTIVE YM WILLPOWER (WPR) 002W
+ORIGINAL TERMINAL: DONGWON GLOBAL TERMINAL (DGT) - KRPUS18
+CHANGE TERMINAL: HMM PSA NEW-PORT TERMINAL (HPNT) - KRPUS12
+APPLICABLE FROM BELOW VESSELS UNTIL FURTHER NOTICE:
+WB WK 40 @SIN: YM WORTHINESS (WTN) 002W</t></si><si><t>PAROD Discharge: : 42</t></si><si><t>CR/GT/NI Discharge: 55</t></si><si><t>+17 days 9 hrs</t></si><si><t>080726 - ONE MODERN OMDT0082W phase-out TBA under PN3/7029 service due to 10/04 position VMS. tentatively added Asia ports for booking purposes.</t></si><si><t>+17 days 19 hrs</t></si><si><t>+18 days 22 hrs</t></si><si><t>Peter / TBA</t></si><si><t>07302026 - ONE APUS 023W TERMINAL CHANGE TO KRPUS14</t></si><si><t>+15 days 15 hrs</t></si><si><t>OXMT0080W</t></si><si><t>ULHT0027W</t></si><si><t>CR/GT/NI Discharge: 54</t></si><si><t>+7 days 5 hrs</t></si><si><t>LATAM: 550 - 21 = (-529) / PAROD Move Count Unit: 600 - 11 = -589 / PA Load: 0</t></si><si><t>+13 days 0 hrs</t></si><si><t>CR/GT/NI Discharge: 40</t></si><si><t>073032026 - ONE MANHATTAN 046W TERMINAL CHANGE TO KRPUS14</t></si><si><t>+7 days 19 hrs</t></si><si><t>USLGB02-USOAK08-CNTAO10</t></si><si><t>OMIT CNYSA**</t></si><si><t>--1 days -4 hrs</t></si><si><t>+13 days 15 hrs</t></si><si><t>+14 days 21 hrs</t></si><si><t>05082026- GREENHOUSE 008W PHASE IN SIN SEP09 UNDER VSE SVC.</t></si><si><t>EB PAMIT Laden : 10 + Mty: 0 = 10</t></si><si><t>LATAM: 550 - 42 = (-508) / PAROD Move Count Unit: 600 - 21 = -579 / PA Load: 0</t></si><si><t>07302026 - ONE MINATO 030W TERMINAL CHANGE TO KRPUS14</t></si><si><t>PAROD Discharge: : 6</t></si><si><t>CR/GT/NI Discharge: 23</t></si><si><t>COSPC Discharge(Unit): 18</t></si><si><t>KRPUS: 250 - 2 = (-248) / D2 Laden: 11 + Mty: 0 =&gt; Total: 102 - 11 = (-91)</t></si><si><t>+6 days 23 hrs</t></si><si><t>08052026 - HMM OPAL PLHT0012W TML CHANGE FROM KRPUS18 TO KRPUS12</t></si><si><t>COSPC Discharge(Unit): 12</t></si><si><t>07302026 - YM WELLBEING 037W TERMINAL CHANGE TO KRPUS14</t></si><si><t>--7 days -9 hrs</t></si><si><t>KRPUS: 250 - 2 = (-248)</t></si><si><t>+13 days 14 hrs</t></si><si><t>--7 days -11 hrs</t></si><si><t>+14 days 22 hrs</t></si><si><t>--8 days -10 hrs</t></si><si><t>MX Laden: 40 + MTY: 0 = 40 / GBSOU: 200 - 9 = (-191)</t></si><si><t>--8 days -11 hrs</t></si><si><t>2026/W42</t></si><si><t>NKST0443E</t></si><si><t>8B8T0001W</t></si><si><t>MEET0107W</t></si><si><t>MOL CELEBRATION</t></si><si><t>CIKT0014W</t></si><si><t>YCOT0192W</t></si><si><t>9L9T0001W</t></si><si><t>DEWT0037E</t></si><si><t>YUNT0082W</t></si><si><t>HA7T0028W</t></si><si><t>WH0T0020W</t></si><si><t>CNSHA: 50 - 2 = (-48)</t></si><si><t>AHBT0004E</t></si><si><t>NLRTM: 790 - 2 = (-788)</t></si><si><t>SCNT1010W</t></si><si><t>SEASPAN BEACON</t></si><si><t>IKET0016S</t></si><si><t>YTPT0025W</t></si><si><t>OWLT0034W</t></si><si><t>ONE OWL</t></si><si><t>SGSIN: 200 - 22 = (-178)</t></si><si><t>SGSIN: (Dry) 120 - 22 = (-98) / (Rrf) 80 - 0 = (-80)</t></si><si><t>YTRT0020W</t></si><si><t>+12 days 21 hrs</t></si><si><t>+9 days 18 hrs</t></si><si><t>+14 days 12 hrs</t></si><si><t>+16 days 5 hrs</t></si><si><t>BVNT0018E</t></si><si><t>DXPT2640S</t></si><si><t>+6 days 9 hrs</t></si><si><t>2026/W43</t></si><si><t>1CLT0019E</t></si><si><t>AQMT0013W</t></si><si><t>+19 days 14 hrs</t></si><si><t>SBFT0077W</t></si><si><t>+36 days 18 hrs</t></si><si><t>OCNT0079W</t></si><si><t>ONE CONTINUITY</t></si><si><t>HFWT0172W</t></si><si><t>A05T0018W</t></si><si><t>+7 days 18 hrs</t></si><si><t>MEQT0024S</t></si><si><t>CYQT0004W</t></si><si><t>MITT0076W</t></si><si><t>TQST0012W</t></si><si><t>CMLT0027E</t></si><si><t>TRISK: 235 - 12 = (-223)</t></si><si><t>H72T0027W</t></si><si><t>NNBT0094E</t></si><si><t>YUOT0086W</t></si><si><t>EAOT0039W</t></si><si><t>+3 days 3 hrs</t></si><si><t>YPMT0197W</t></si><si><t>YMOT0028W</t></si><si><t>EB PAMIT Laden : 4 + Mty: 0 = 4</t></si><si><t>MIYT0021W</t></si><si><t>YM TUTORIAL</t></si><si><t>PIXT1005E</t></si><si><t>BEANR: 145 - 2 = (-143) / FRLEH: 170 - 2 = (-168)</t></si><si><t>LHTT2641S</t></si><si><t>+22 days 5 hrs</t></si><si><t>LMLT0065S</t></si><si><t>MELINA</t></si><si><t>GLMT1008E</t></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 145 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 93 = 238</t></r></si><si><t>060826 | YM MILESTONE 102W omit SHA &amp; ad-hoc call CNTAO
+PA cargo arrangement
+ONE/HMM/YML all SHA Laden + Empty unit discharge at PUS,
+Related restow costs shared by LAS% based on JWP
+====================================
+081126 - YM MILESTONE mirrored CSSM for VSE/SX2 vice versa</t></si><si><t>USLAX03-USOAK01-KRPUS12-KRKAN02-KRINC03-CNNGB01-CNSHA19</t></si><si><t>USLAX01-USOAK01-CNSHK02-CNSHK01-VNHPH07-VNCMP04-CNXMN01-TWTPE05</t></si><si><t>USLGB02-USOAK08-CNTAO10-CNNGB02-CNYTN01</t></si><si><t>CNSHK: 20 - 37 = +17* / INNSA: 380 - 455 = +75* / SGSIN: 180 - 219 = +39*</t></si><si><t>06082026- [PA]VSE LTS AUG/2026 NO.02 – ONE ORPHEUS (NOH) 077W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+ONE ORPHEUS V.0077W PHASE OUT AT PUS. PHASE OUT FOR BOHAI SERVICE
+PHASE OUT ROTATION: LAX - PUS
+CARGOES ARRANGEMENT: ALL CARGO DISCHARGE AT PUS UNDER COL ACCOUNT AND ARRANGEMENTS
+====================================================================================]
+08112026 - ONE ORPHEUS BLANK SAILING AUG/30 UNDER PS3
+==============================================================
+08112026| [PA] PS3 LTS AUG/2026 NO.03 – ONE ORPHEUS (NOH) 078E AD HOC TXG/TAO/PUS
+VESSEL NAME/CODE
+ONE ORPHEUS (NOH)
+VOYAGE
+078E
+ADHOC CANCEL PORT (S)
+TXG/TAO/PUS
+NEW ROTATION
+TXG – TAO – PUS
+ESTIMATED ETA FOR ADHOC PORT CALL
+REFER TO SOL’S CS.
+REMARKS/REASONS (IF ANY)
+BSA allocation (shared by P26 PS3 LAS)
+PA Loop Allocation Shares (LAS)
+HMM  23.943%
+ONE 67.367%
+YML 8.690%
+Total 100.000%
+ADHOC PORT COSTS WILL BE SHARED BY PS3 LAS.
+Terminals:
+TXG → TIANJIN PORT SECOND CONTAINER TERMINAL (TSCT)
+TAO → QINGDAO NEW QIANWAN CONTAINER TERMINAL (QQCTN)
+PUS → HANJIN BUSAN NEW PORT CO. (HJNC)
+AD HOC TXG/TAO/PUS BEFORE PHASE IN NOH 079W PS3 SHG
+============================================================================</t></si><si><t>USLAX06-KRPUS12-CNTXG07-CNTAO10-KRPUS12-CNNGB02-CNSHA19-CNYTN01</t></si><si><t>USNYC01-USORF03-USCHS01-USSAV01-GBSOU01-BEANR07-NLRTM08-DEBRV01-FRLEH06</t></si><si><t>PAROD OMIT &amp; ADHOC ONX</t></si><si><t>OMIT PAMIT &amp; Ad hoc call PAONX****P/O CNYTN**</t></si><si><t>SGSIN: 200 - 277 = +77*</t></si><si><t>SGSIN: (Dry) 120 - 261 = +141* / (Rrf) 80 - 16 = (-64)</t></si><si><t>072826 - HDYT v.0164W change terminal of from KRPUS18 to KRPUS12
+==============================================
+081126 - HYUNDAI TOKYO 0164E/W mirrored CSSM for VSE/SX2 vice versa</t></si><si><t>ESALG: 25 - 151 = +126* / ESVLC: 190 - 94 = (-96) / FRFOS: 70 - 76 = +6* / ITGOA: 284 - 79 = (-205) / ITSPE: 238 - 26 = (-212)</t></si><si><t>280726 | WAN HAI A09 W0017 OMIT CNSHK UNDER PS7 SERVICE.
+================================================
+11082026 - [PA] PS7 LTS AUG/2026 NO.01 – WAN HAI A09 (A09) 017W OMIT WB SHK
+ORIGINAL ROTATION : LAX-OAK-SHK-HPH
+NEW ROTATION : LAX-OAK-HPH
+CARGOES ARRANGEMENT : FOR SCHEDULE RECOVERY DUE TO TS NOUL.</t></si><si><t>PAROD Discharge: : 74</t></si><si><t>CR/GT/NI Discharge: 297</t></si><si><t>20260727 - NEW PF7001 with update terminal of PUS for PUS18 to PUS12
+07132026 - HANS SCHULTE V.0001E PHASE IN AT VSE SERVICE
+====================================================
+04082026-[PA]VSE LTS AUG/2026 NO.01 – CHANGE OF LAX TERMINAL FOR HANS SCHULTE (HTET)001W
+ORIGINAL TML TRAPAC 
+CHANGE TML YTI
+REMARKS/REASONS (IF ANY)-TERMINAL SWAP WITH PS1 MIS DUE
+TO HTE NON-AMP FITTED. YTI
+ALLOW TO UTILIZE A VIE EXEMPTION
+========================================
+081126 - HANS SCHULTE mirrored CSSM for VSE/SX2 vice versa</t></si><si><t>+19 days 7 hrs</t></si><si><t>P/O YSA</t></si><si><t>05252026 | [PA] MS2 LTS MAY/2026 NO.06 – VESSEL POSITION UPDATES FROM WEEK 25 TO 27 AT KRPUS &amp; WEEK 24 TO 29 AT SGSIN
+ONE FORTUNE 008W CONTINUED SAILING UNDER MS2 SERVICE
+=======================================================================================================
+27072026 - [PA] MS2 LTS JUL/2026 NO.11 – CHANGE OF WB KRPUS TERMINAL EFFECTIVE ONE SUCCESS (USE) 001W
+ORIGINAL TERMINAL: DONGWON GLOBAL TERMINAL (DGT) - KRPUS18
+CHANGE TERMINAL: HMM PSA NEW-PORT TERMINAL (HPNT) - KRPUS12
+APPLICABLE FROM BELOW VESSELS UNTIL FURTHER NOTICE:
+WB WK 37 @SIN: ONE FORTUNE (OFR) 008W
+=============================================================================================
+070826 | [PA] MS2 LTS AUG/2026 NO.06 – VESSEL POSITION UPDATES FROM WEEK 36 TO 42 AT KRPUS
+ONE FORTUNE (OFR) 008W PHASE OUT TO FE4. PHASE OUT ARRANGEMENT, TO BE ADVISED.
+ASI PORTS TENTATIVELY EXTENDED FOR BOOKING PURPOSES.
+=================================================================
+11082026 - [PA] MS2 LTS AUG/2026 NO.09 – ONE FORTUNE (OFR) 008W’S PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT: YSA
+PHASE OUT ROTATION: LGB - OAK - YSA
+CARGOES ARRANGEMENT (IF ANY): YSA AS COMBINE CALL FOR MS2 AND FE4.
+AS LOADING HAS NOT COMMENCED FOR (WB), COL WILL DECIDE ON THE POD THAT ARE NOT IN THE P/OUT ROTATION.
+REMARKS/REASONS: P/O MS2_PS, P/I FE4 WK38 YSA 12/SEP.</t></si><si><t>USLGB02-USOAK08-CNSHA19-KRPUS14</t></si><si><t>--1 days -20 hrs</t></si><si><t>+8 days 1 hrs</t></si><si><t>+32 days 16 hrs</t></si><si><t>+32 days 9 hrs</t></si><si><t>+7 days 21 hrs</t></si><si><t>SGSIN: (Dry) 160 - 42 = (-118) / (Rrf) 20 - 0 = (-20)</t></si><si><t>OOHT0078W</t></si><si><t>USLGB02-USOAK08-KRPUS18-CNSHA19-CNNGB02-TWKHH16-CNSHK03</t></si><si><t>+9 days 6 hrs</t></si><si><t>TRIST: 305 - 4 = (-301)</t></si><si><t>+9 days 9 hrs</t></si><si><t>+8 days 12 hrs</t></si><si><t>EB PAMIT Laden : 6 + Mty: 0 = 6</t></si><si><t>CAVAN01-USTIW02-JPTYO03-JPUKB01-CNTAO10-CNTAO10-CNSHA19-KRPUS18</t></si><si><t>070926 - YM WILLPOWER ILPT0002W re-create under MS2/7805 service with 1week slide @PUS 08/08 position.
+==================================================
+27072026 - [PA] MS2 LTS JUL/2026 NO.11 – CHANGE OF WB KRPUS TERMINAL EFFECTIVE YM WILLPOWER (WPR) 002W
+ORIGINAL TERMINAL: DONGWON GLOBAL TERMINAL (DGT) - KRPUS18
+CHANGE TERMINAL: HMM PSA NEW-PORT TERMINAL (HPNT) - KRPUS12
+APPLICABLE FROM BELOW VESSELS UNTIL FURTHER NOTICE:
+WB WK 32 @SIN: YM WILLPOWER (WPR) 002W
+=============================================
+081226 - [PA] MS2 LTS AUG/2026 NO.12 – YM WILLPOWER (WPR) 002W TO OMIT CNNBO AND TWKHH
+VESSEL NAME/CODE: YM WILLPOWER (WPR)
+VOYAGE: 002W
+OMIT PORT: CNNBO AND TWKHH
+ORIGINAL ROTATION: PUS - YSA - NBO - KHH - SHK - SIN - PTM
+NEW ROTATION: PUS - YSA - SHK - SIN - PTM
+CARGOES ARRANGEMENT (IF ANY):
+PA'S ARRANGEMENT:
+ALL NBO &amp; KHH LADEN INBOUNDS DISCHARGE &amp; T/S AT SIN UNDER COL'S ACCOUNT AND ARRANGEMENT.
+ALL NBO &amp; KHH EMPTY INBOUNDS DISCHARGE AT OTHER CHINA PORTS.
+RESTOWS (TBA) TO BE SHARED UNDER WPR 002W’S LAS%.
+MSC'S ARRANGEMENT:
+NIL NBO &amp; KHH INBOUNDS ONBOARD YM WILLPOWER.
+REMARKS/REASONS (IF ANY):
+FOR SCHEDULE RECOVERY RESULTING FROM CONGESTIONS AT ASIAN PORTS DUE TO TYPHOON IMPACT.</t></si><si><t>USLGB02-USOAK08-KRPUS12-CNSHA19-CNSHK03</t></si><si><t>05292026 [PA] EC3 LTS MAY/2026 NO.10 – ONE MUNCHEN (MUN) 044W/045E STRUCTURAL ADJUSTMENTS
+VESSEL NAME/CODE ONE MUNCHEN (MUN)
+VOYAGE 044W
+ORIGINAL ROTATION
+NYC – JAX – SAV – CHS – MIT - PCN – PUS – YSA - LCH
+NEW ROTATION
+NYC – JAX – SAV – CHS – MIT - PCN
+CARGO ARRANGEMENT
+(IF ANY) NIL.
+REMARKS/REASONS (IF ANY) TEMPORARY EC3 WB/EB ADJUSTMENTS AS AGREED BY EXECOM.
+====================================================================
+07302026 - [PA] EC3 LTS JUL/2026 NO.18 – ONE MUNCHEN (MUN) 044W PHASE OUT ROTATION AND CARGO ARRANGEMENT
+PHASE OUT PORT: YSA
+PHASE OUT ROTATION: MIT – PCN - YSA
+CARGOES ARRANGEMENT (IF ANY): YSA COMBINE CALL EC3/FE4.
+ALL PUS LADEN INBOUND TO ROB FOR FE4 DIRECT DISCHARGE.
+ALL TXG/TAO/NBO/LCH/VUT/SIN/CMB LADEN INBOUND TO T/S AT FE4 PUS CALL UNDER COL’S ACCOUNT AND ARRANGEMENTS.
+ALL EMPTIES INBOUND TO BE DISCHARGED AT YSA UNDER COL’S ACCOUNT AND ARRANGEMENT.
+RESTOWS, IF ANY, TO BE SHARED UNDER MUN 044W’S LAS%.
+REMARKS/REASONS: PHASE OUT EC3, PHASE IN FE4.</t></si><si><t>0891026 - CARL SCHULTE CQAT0015W TWKHH reinstate under PN1/7025 service hide in ecom.
+========================================================================
+08122026 [PA] PN1 LTS AUG/2025 NO.01 – CARL SCHULTE (CQA) 015W PHASE OUT ROTATION AND CARGO ARRANGEMENTS
+PHASE OUT PORT UKB
+PHASE OUT ROTATION VAN – TYO – NGO - UKB
+CARGOES ARRANGEMENT (IF ANY)
+ALL KHH LADEN WILL BE DISCHARGE AND T/S AT UKB ONTO PN1 YM MANDATE 604W UNDER ONE ACCOUNT AND ARRANGEMENTS.
+ALL NBO LADEN WILL BE ROB TO ONE SAS NBO CALL AND DISCHARGE UNDER ONE ACCOUNT AND ARRANGEMENTS.
+ALL KHH,NBO EMPTIES WILL BE DISCHARGE AT TAO UNDER COL ACCOUNT AND ARRANGEMENTS. TAO
+(P/I SAS, non-PA service rotation: TAO - SHA - NGB - SHK - HKG – SIN)
+REMARKS/REASONS (IF ANY)
+PHASE OUT PA POOL &lt;90 DAYS NOTICE</t></si><si><t>USTIW02-CAVAN01-JPTYO03-JPNGO01-JPUKB03-TWKHH16-CNTAO10-CNSHA09-CNNGB07-CNSHK02</t></si><si><t>290626 - [PA] PS3 LTS JUN/2026 NO.13 – VESSEL POSITION UPDATES FROM WK 30 TO 35
+ONE COMMITMENT0075W WILL TAKE 8/16 AT CNSHA
+=====================================================================
+07072026-  [PA] PS3 LTS JUL/2026 NO.03 – WB PKG STRUCTURAL OMISSION FROM WB SHG WK 27 TO 39
+ONE COMMITMENT V.075W  OMIT PKG UNDER PS3 SVC.
+Cargo arrangements: ALL PKG INBOUND CARGO TO T/S AT WB SIN IF ANY UNDER COL ACCOUNT AND ARRANGEMENTS.
+============================================================
+280726 | [PA] PS3 LTS JUL/2026 NO.12 – CTT 075W OMIT WB CNSHK &amp; CBU 066W,CEB 106W OMIT SHG
+VESSEL NAME/CODE - ONE COMMITMENT (CTT)
+VOYAGE - 075W
+OMIT PORT - SHG
+ORIGINAL ROTATION - LAX – OAK – TYO – PUS – SHG – NBO – SHK – SIN - NSA
+NEW ROTATION - LAX – OAK - PUS - SHG - NBO - SIN - NSA
+CARGO ARRANGEMENT - TBA
+REMARKS/REASONS - FOR SCHEDULE RECOVERY AS AGREED BY EXECOM.
+===================================
+08072026 - [PA] PS3 LTS AUG/2026 NO.04 – COU 067W OMIT WB CNSHK &amp; CTT 075W,NOH 079W,UNN 086W OMIT SHG
+OMIT PORT SHG
+ORIGINAL ROTATION LAX – OAK – TYO - PUS – SHG – NBO – SIN - NSA
+NEW ROTATION LAX – OAK – TYO - PUS – NBO – SIN - NSA
+CARGO ARRANGEMENT ALL SHG LADEN TO DISCHARGE AND T/S AT PUS AND EMPTY DISCHARGE AT NBO UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS FOR SCHEDULE RECOVERY AS AGREED BY EXECOM.
+================================================================================
+08112026| [PA] PS3 LTS AUG/2026 NO.04 – COU 067W OMIT WB CNSHK &amp; CTT 075W,NOH 079W,UNN 086W OMIT SHG
+VESSEL NAME/CODE ONE COMMITMENT (CTT) VOYAGE 075W
+WEEK : WK 30 AT LAX
+OMIT PORT : SHG
+ORIGINAL ROTATION : LAX – OAK – TYO - PUS – SHG – NBO – SIN - NSA
+NEW ROTATION : LAX – OAK – TYO - PUS – NBO – SIN - NSA
+CARGO ARRANGEMENT : ALL SHK INBOUND TO T/S AT PUS UNDER COL’S ACCOUNT AND ARRANGEMENT.
+ALL SHG LADEN TO DISCHARGE AND T/S AT PUS AND EMPTY DISCHARGE AT NBO UNDER COL ACCOUNT AND ARRANGEMENTS.
+REMARKS/REASONS : FOR SCHEDULE RECOVERY AS AGREED BY EXECOM.
+==========================================================================================</t></si><si><t>073126 - [PA] PS8 LTS JUL/2026 NO.05 – NRU 076W,EXP 105W,BAY 217W PHASE OUT ROTATION &amp; CARGO ARRANGEMENTS
+NYK RUMINA V.076W PHASE OUT AT NBO UNDER PS8 SVC.
+PHASE OUT ROTATION: LAX-OAK-PUS-NBO
+==================================================
+080126 - ONE OPR VSL-NYK RUMINA 0076W back to FE area add PUS call , and adj port rotation as 0076W/LAX-OAK-PUS-NGB then P/O PS8 service (AP2 svc) at 0076W/NGB after discharge all the cargo.
+About the I/B cargo arrangement  (including WHL/ONE/HMM/YML)
+0076W/TAO Laden cargo : Discharge at PUS and T/S to TAO under ONE’S arrangement.
+0076W/NGB Laden cargo : Discharge at NGB.
+All empty containers discharged at NGB directly without further T/S
+===============================================
+08122026 - NYK RUMINA NRUT0076W PUS AND NGB ADD CALL CANCEL</t></si><si><t>USLAX01-USOAK08-KRPUS12-CNNGB03-CNSHK03-SGSIN04</t></si><si><t>+25 days 15 hrs</t></si><si><t>+24 days 16 hrs</t></si><si><t>+28 days 1 hrs</t></si><si><t>120826 | ONE DIAMOND 366W ad-hoc call cancel CNSHA. To phase in under BH3 DLC 23/AUG.</t></si><si><t>CAVAN01-USTIW02-JPTYO03-JPUKB01-CNDLC01</t></si><si><t>CNSHA: 50 - 120 = +70* / CNSHK: 25 - 41 = +16* / SGSIN: 150 - 335 = +185*</t></si><si><t>SGSIN: (Dry) 130 - 313 = +183* / (Rrf) 20 - 22 = +2*</t></si><si><t>+27 days 1 hrs</t></si><si><t>+27 days 10 hrs</t></si><si><t>KRPUS: 250 - 351 = +101* / D2 Laden: 108 + Mty: 0 =&gt; Total: 102 - 108 = +6**</t></si><si><t>CALLING NYC02**</t></si><si><t>LATAM: 550 - 99 = (-451) / PAROD Move Count Unit: 600 - 51 = -549 / PA Load: 0</t></si><si><t>+4 days 13 hrs</t></si><si><t>+3 days 11 hrs</t></si><si><t>+17 days 0 hrs</t></si><si><t>+30 days 7 hrs</t></si><si><t>COSPC Discharge(Unit): 69</t></si><si><t>+16 days 9 hrs</t></si><si><t>+30 days 9 hrs</t></si><si><t>COSPC Discharge(Unit): 75</t></si><si><t>+13 days 7 hrs</t></si><si><t>+13 days 6 hrs</t></si><si><t>+12 days 7 hrs</t></si><si><t>EB PAMIT Laden : 11 + Mty: 0 = 11</t></si><si><t>SGSIN: 200 - 372 = +172*</t></si><si><t>SGSIN: (Dry) 120 - 360 = +240* / (Rrf) 80 - 12 = (-68)</t></si><si><t>ESALG: 25 - 102 = +77* / ESVLC: 190 - 100 = (-90) / FRFOS: 70 - 4 = (-66) / ITGOA: 284 - 26 = (-258) / ITSPE: 238 - 1 = (-237)</t></si><si><t>SGSIN: (Dry) 160 - 31 = (-129) / (Rrf) 20 - 0 = (-20)</t></si><si><t>+18 days 0 hrs</t></si><si><t>MX Laden: 25 + MTY: 0 = 25</t></si><si><t>GRPIR: 115 - 2 = (-113) / TRIST: 347 - 34 = (-313)</t></si><si><t>AEIT0634W</t></si><si><t>ARIES</t></si><si><t>ESALG: 25 - 40 = +15* / ESVLC: 190 - 6 = (-184) / ITGOA: 284 - 10 = (-274) / ITSPE: 238 - 1 = (-237)</t></si><si><t>COSPC Discharge(Unit): 32</t></si><si><t>08122026 - CMA CGM MOLIERE 0310E ADD CALL USCHS PORT UNDER AT3 SERVICE</t></si><si><t>SGSIN: (Dry) 160 - 2 = (-158) / (Rrf) 20 - 0 = (-20)</t></si><si><t>SGSIN: 200 - 298 = +98*</t></si><si><t>SGSIN: (Dry) 120 - 298 = +178* / (Rrf) 80 - 0 = (-80)</t></si><si><t>LATAM: 550 - 20 = (-530) / PAROD Move Count Unit: 600 - 10 = -590 / PA Load: 0</t></si><si><t>+24 days 14 hrs</t></si><si><t>+23 days 15 hrs</t></si><si><t>+34 days 3 hrs</t></si><si><t>CNTXG</t></si><si><t>071326 - WAN HAI 513 WWIT0109W phase-out TBA under PS8/7020 service.
+==========================================================================
+23072026- [PA] PS8 LTS JUL/2026 NO.04 – WAN HAI 513 (513)109W &amp; WAN HAI 511 (511)111W PHASE OUT ROTATION &amp; CARGO ARRANGEMENTS
+WAN HAI 513 V.0109W PHASE OUT AT TAO. 
+PHASE OUT ROTATION: LAX-OAK-TAO
+CARGOES ARRANGEMENTS: NBO LADEN CARGO WILL BE ROB TO WHL INTERNAL SERVICE TO DISCHARGE, REFER SOL C/S FOR MORE DETAILS.
+ALL EMPTY WILL BE DISCHARGED AT TAO UNDER COL ACCOUNT AND ARRANGEMENTS.
+=====================================================================
+07242026 WAN HAI 513 adj P/O PS8 SVC at W109/TAO
+About the I/B cargo arrangement(including WHL/ONE/HMM/YML)
+W109/TAO Laden cargo : Discharge at TAO directly.
+W109/NGB Laden cargo : ROB and discharge at NGB.
+All empty containers discharged in TAO directly without further T/S
+======================================================
+07252026 WAN HAI 513 0109W TENTATIVELY ADDED CNNGB UNDER PS8 SERVICE.
+============================================================
+120826 | WAN HAI 513 0109W TERMINAL CHANGE TO CNTAO02 UNDER PS8 SERVICE.</t></si><si><t>USLAX01-USOAK08-CNTAO02-CNNGB01</t></si><si><t>060526 - NYK REMUS 0084E PHASE OUT FOR DRY DOCK AT BEANR UNDER AL5 SERVICE.
+=============================================================================
+06302026 - NYK REMUS 084E SKIP CALL DOCAU PORT FOR SCHEDULE RECOVERY
+========================================
+07222026 - NYK REMUS 084E SKIP CALL DOCAU SKIP CALL CANCEL FOR CUSTOM SUBMISSION
+===================================================
+20260731 | NYK REMUS V.0084E ADD CALL CANCEL PABLB &amp; SKIP CALL CANCEL PAROD
+=============================================================
+10082026 - NYK REMUS V.0084E terminal change from BEANR01 to BEANR02 under AL5 service
+-----------------------------------------------------------------
+08122026 NYK REMUS NRET0084E Addhoc cancel BEANR port  and phase out in FRLEH under AL5 service.</t></si><si><t>USLAX01-USOAK08-PAROD01-PAPCA10-GBSOU01-FRLEH01</t></si><si><t>BEANR: 175 - 350 = +175* / DEBRV: 990 - 456 = (-534) / FRLEH: 210 - 100 = (-110) / GBSOU: 231 - 570 = +339* / NLRTM: 1,080 - 446 = (-634)</t></si><si><t>CNSHA: 300 - 242 = (-58)</t></si><si><t>PAROD OMIT</t></si><si><t>EB PAMIT Laden : 726 + Mty: 1,000 = 1,726</t></si><si><t>240726 | CMA CGM ALIAGA 007S omit USCHS.
+====================================
+08072026 - CMA CGM ALIAGA V.0007S REINSTATE USCHS
+=============================================
+08122026 CMA CGM ALIAGA V.0007S SKIP CALL ECGYE UNDER FLX SERVICE.</t></si><si><t>USPEF03-USPHL02-USNYC02-USCHS02-COSPC01-PAPCA10-PECLL02-CLSAI02</t></si><si><t>MX Laden: 109 + MTY: 144 = 253</t></si><si><t>P/O USNYC**</t></si><si><t>KRPUS: 250 - 229 = (-21)</t></si><si><t>+22 days 16 hrs</t></si><si><t>BEANR: 146 - 133 = (-13) / DEBRV: 748 - 127 = (-621) / FRLEH: 176 - 17 = (-159) / GBSOU: 187 - 126 = (-61) / NLRTM: 820 - 181 = (-639)</t></si><si><t>+21 days 16 hrs</t></si><si><t>KRPUS: 250 - 238 = (-12) / D2 Laden: 173 + Mty: 0 =&gt; Total: 254 - 173 = (-81)</t></si><si><t>COSPC Discharge(Unit): 53</t></si><si><t>KRPUS: 250 - 70 = (-180) / D2 Laden: 107 + Mty: 0 =&gt; Total: 153 - 107 = (-46)</t></si><si><t>MX Laden: 2 + MTY: 0 = 2 / BEANR: 50 - 1 = (-49) / DEBRV: 50 - 6 = (-44) / GBSOU: 200 - 12 = (-188) / NLRTM: 200 - 6 = (-194)</t></si><si><t>BEANR: 175 - 5 = (-170) / DEBRV: 990 - 11 = (-979) / GBSOU: 231 - 6 = (-225) / NLRTM: 1,080 - 9 = (-1,071)</t></si><si><t>BEANR: 175 - 4 = (-171)</t></si><si><t>SGSIN: 200 - 229 = +29*</t></si><si><t>SGSIN: (Dry) 120 - 229 = +109* / (Rrf) 80 - 0 = (-80)</t></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 25 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 25</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 109 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 144 = 253</t></r></si><si><t>BEANR: 145 - 202 = +57* / DEBRV: 742 - 268 = (-474) / FRLEH: 170 - 31 = (-139) / GBSOU: 180 - 261 = +81* / NLRTM: 790 - 361 = (-429)</t></si><si><t>NO N.A. CALL</t></si><si><t>USLAX01-USOAK08</t></si><si><t>BEANR: 146 - 217 = +71* / DEBRV: 748 - 354 = (-394) / FRLEH: 176 - 67 = (-109) / GBSOU: 187 - 331 = +144* / NLRTM: 820 - 435 = (-385)</t></si><si><t>CNNGB: 0 - 2 = +2*</t></si><si><t>LATAM: 550 - 266 = (-284) / PAROD Move Count Unit: 600 - 163 = -437 / PA Load: 62</t></si><si><t>GRPIR: 115 - 65 = (-50) / ITSAL: 20 - 5 = (-15) / TRALI: 275 - 2 = (-273) / TRISK: 235 - 32 = (-203) / TRIST: 347 - 286 = (-61)</t></si><si><t>SGSIN: 200 - 208 = +8*</t></si><si><t>SGSIN: (Dry) 120 - 202 = +82* / (Rrf) 80 - 6 = (-74)</t></si><si><t>PAROD Discharge: : 120</t></si><si><t>SGSIN: 200 - 423 = +223*</t></si><si><t>SGSIN: (Dry) 120 - 397 = +277* / (Rrf) 80 - 26 = (-54)</t></si><si><t>120826 | [PA] EC4 LTS AUG/2026 NO.05 – EVER SALUTE (EVS) 128W TO OMIT PAROD
+VESSEL NAME/CODE - EVER SALUTE (EVS)
+VOYAGE - 128W
+OMIT PORT - ROD
+ORIGINAL ROTATION - HOU – MOB – PCN – ROD - KHH
+NEW ROTATION - HOU – MOB – PCN - KHH
+REMARKS/REASONS - FOR SCHEDULE RECOVERY.</t></si><si><t>USHOU05-USMOB01-PAPCA10</t></si><si><t>EB PAMIT Laden : 42 + Mty: 1,150 = 1,192</t></si><si><t>CNNGB: 0 - 17 = +17* / CNSHA: 300 - 87 = (-213) / CNSHK: 20 - 34 = +14* / INNSA: 380 - 857 = +477* / SGSIN: 180 - 316 = +136*</t></si><si><t>SGSIN: (Dry) 160 - 246 = +86* / (Rrf) 20 - 70 = +50*</t></si><si><t>BEANR: 175 - 437 = +262* / DEBRV: 990 - 418 = (-572) / FRLEH: 210 - 55 = (-155) / GBSOU: 231 - 395 = +164* / NLRTM: 1,080 - 405 = (-675)</t></si><si><t>MX Laden: 57 + MTY: 0 = 57 / BEANR: 50 - 193 = +143* / DEBRV: 50 - 76 = +26* / GBSOU: 200 - 112 = (-88) / NLRTM: 200 - 76 = (-124)</t></si><si><t>GRPIR: 99 - 140 = +41* / ITSAL: 18 - 6 = (-12) / TRALI: 215 - 32 = (-183) / TRISK: 199 - 134 = (-65) / TRIST: 305 - 464 = +159*</t></si><si><t>CNSHA: 50 - 148 = +98* / CNSHK: 25 - 38 = +13* / SGSIN: 150 - 223 = +73*</t></si><si><t>SGSIN: (Dry) 130 - 213 = +83* / (Rrf) 20 - 10 = (-10)</t></si><si><t>ESALG: 25 - 327 = +302* / ESVLC: 190 - 164 = (-26) / FRFOS: 70 - 90 = +20* / ITGOA: 284 - 59 = (-225) / ITSPE: 238 - 51 = (-187)</t></si><si><t>PAROD Discharge: 50 - 230 = +180 / BEANR: 50 - 287 = +237* / DEHAM: 220 - 276 = +56* / FRLEH: 450 - 50 = (-400) / GBSOU: 700 - 398 = (-302) / LATAM: 180 - 455 = +275*</t></si><si><t>CNSHA: 50 - 130 = +80* / CNSHK: 25 - 40 = +15* / SGSIN: 150 - 259 = +109*</t></si><si><t>SGSIN: (Dry) 130 - 255 = +125* / (Rrf) 20 - 4 = (-16)</t></si><si><t>GRPIR: 115 - 98 = (-17) / ITSAL: 20 - 17 = (-3) / TRISK: 235 - 168 = (-67) / TRIST: 347 - 567 = +220*</t></si><si><t>KRPUS: 250 - 298 = +48*</t></si><si><t>SGSIN: 200 - 483 = +283*</t></si><si><t>SGSIN: (Dry) 120 - 471 = +351* / (Rrf) 80 - 12 = (-68)</t></si><si><t>LKCMB: 20 - 46 = +26* / SGSIN: 350 - 630 = +280* / THLCH: 500 - 300 = (-200) / VNCMP: 325 - 182 = (-143)</t></si><si><t>BEANR: 175 - 252 = +77* / DEBRV: 990 - 229 = (-761) / FRLEH: 210 - 119 = (-91) / GBSOU: 231 - 281 = +50* / NLRTM: 1,080 - 368 = (-712)</t></si><si><t>CNSHA: 300 - 123 = (-177) / CNSHK: 20 - 18 = (-2) / INNSA: 380 - 1,089 = +709* / SGSIN: 180 - 352 = +172*</t></si><si><t>SGSIN: (Dry) 160 - 336 = +176* / (Rrf) 20 - 16 = (-4)</t></si><si><t>PAROD Discharge: : 75</t></si><si><t>MX Laden: 30 + MTY: 10 = 40 / BEANR: 50 - 299 = +249* / DEBRV: 50 - 92 = +42* / GBSOU: 200 - 145 = (-55) / NLRTM: 200 - 127 = (-73)</t></si><si><t>MX Laden: 243 + MTY: 54 = 297</t></si><si><t>CR/GT/NI Discharge: 176</t></si><si><t>KRPUS: 250 - 372 = +122* / D2 Laden: 202 + Mty: 0 =&gt; Total: 102 - 202 = +100**</t></si><si><t>CNNGB: 0 - 1 = +1* / CNSHA: 300 - 77 = (-223) / CNSHK: 20 - 15 = (-5) / INNSA: 380 - 903 = +523* / SGSIN: 180 - 218 = +38*</t></si><si><t>SGSIN: (Dry) 160 - 212 = +52* / (Rrf) 20 - 6 = (-14)</t></si><si><t>CNSHA: 50 - 65 = +15* / CNSHK: 25 - 20 = (-5) / SGSIN: 150 - 194 = +44*</t></si><si><t>SGSIN: (Dry) 130 - 186 = +56* / (Rrf) 20 - 8 = (-12)</t></si><si><t>BEANR: 145 - 289 = +144* / DEBRV: 742 - 263 = (-479) / FRLEH: 170 - 47 = (-123) / GBSOU: 180 - 383 = +203* / NLRTM: 790 - 331 = (-459)</t></si><si><t>LKCMB: 20 - 76 = +56* / SGSIN: 350 - 592 = +242* / THLCH: 500 - 335 = (-165) / VNCMP: 325 - 87 = (-238)</t></si><si><t>USHOU05-USMOB01-PAPCA10-PAROD01</t></si><si><t>PAROD Discharge: : 95</t></si><si><t>MX Laden: 39 + MTY: 0 = 39 / BEANR: 50 - 235 = +185* / DEBRV: 50 - 79 = +29* / GBSOU: 200 - 94 = (-106) / NLRTM: 200 - 137 = (-63)</t></si><si><t>ESALG: 28 - 165 = +137* / ESVLC: 209 - 159 = (-50) / FRFOS: 77 - 26 = (-51) / ITGOA: 312 - 49 = (-263) / ITSPE: 262 - 9 = (-253)</t></si><si><t>GRPIR: 115 - 29 = (-86) / ITSAL: 20 - 3 = (-17) / TRALI: 275 - 6 = (-269) / TRISK: 235 - 110 = (-125) / TRIST: 347 - 148 = (-199)</t></si><si><t>LATAM: 550 - 305 = (-245) / PAROD Move Count Unit: 600 - 154 = -446 / PA Load: 0</t></si><si><t>CNNGB: 0 - 2 = +2* / CNSHA: 300 - 79 = (-221) / CNSHK: 20 - 1 = (-19) / INNSA: 380 - 826 = +446* / SGSIN: 180 - 144 = (-36)</t></si><si><t>BEANR: 145 - 186 = +41* / DEBRV: 742 - 140 = (-602) / FRLEH: 170 - 24 = (-146) / GBSOU: 180 - 221 = +41* / NLRTM: 790 - 344 = (-446)</t></si><si><t>LKCMB: 20 - 12 = (-8) / SGSIN: 350 - 300 = (-50) / THLCH: 500 - 178 = (-322) / VNCMP: 325 - 96 = (-229)</t></si><si><t>KRPUS: 250 - 560 = +310* / D2 Laden: 89 + Mty: 0 =&gt; Total: 153 - 89 = (-64)</t></si><si><t>CR/GT/NI Discharge: 48</t></si><si><t>SGSIN: 200 - 669 = +469*</t></si><si><t>SGSIN: (Dry) 120 - 655 = +535* / (Rrf) 80 - 14 = (-66)</t></si><si><t>EB PAMIT Laden : 48 + Mty: 0 = 48</t></si><si><t>MX Laden: 159 + MTY: 0 = 159</t></si><si><t>LKCMB: 20 - 36 = +16* / SGSIN: 350 - 658 = +308* / THLCH: 500 - 781 = +281* / VNCMP: 325 - 142 = (-183)</t></si><si><t>CNNGB: 0 - 2 = +2* / CNSHA: 300 - 75 = (-225) / CNSHK: 20 - 2 = (-18) / INNSA: 380 - 568 = +188* / SGSIN: 180 - 146 = (-34)</t></si><si><t>SGSIN: (Dry) 160 - 146 = (-14) / (Rrf) 20 - 0 = (-20)</t></si><si><t>EB PAMIT Laden : 459 + Mty: 0 = 459</t></si><si><t>PAROD Discharge: 50 - 175 = +125 / BEANR: 50 - 300 = +250* / FRLEH: 450 - 29 = (-421) / GBSOU: 700 - 500 = (-200) / LATAM: 180 - 309 = +129*</t></si><si><t>LKCMB: 20 - 20 = 0 / SGSIN: 350 - 214 = (-136) / THLCH: 500 - 280 = (-220) / VNCMP: 325 - 22 = (-303)</t></si><si><t>CNSHA: 50 - 42 = (-8) / CNSHK: 25 - 6 = (-19) / SGSIN: 150 - 243 = +93*</t></si><si><t>SGSIN: (Dry) 130 - 237 = +107* / (Rrf) 20 - 6 = (-14)</t></si><si><t>MX Laden: 127 + MTY: 0 = 127</t></si><si><t>MX Laden: 30 + MTY: 0 = 30</t></si><si><t>MX Laden: 11 + MTY: 0 = 11 / BEANR: 50 - 167 = +117* / DEBRV: 50 - 90 = +40* / GBSOU: 200 - 57 = (-143) / NLRTM: 200 - 110 = (-90)</t></si><si><t>LATAM: 550 - 124 = (-426) / PAROD Move Count Unit: 600 - 62 = -538 / PA Load: 0</t></si><si><t>CNSHA: 50 - 13 = (-37) / SGSIN: 150 - 109 = (-41)</t></si><si><t>SGSIN: (Dry) 130 - 109 = (-21) / (Rrf) 20 - 0 = (-20)</t></si><si><t>BEANR: 204 - 37 = (-167) / DEBRV: 1,078 - 58 = (-1,020) / FRLEH: 204 - 12 = (-192) / GBSOU: 262 - 47 = (-215) / NLRTM: 1,166 - 94 = (-1,072)</t></si><si><t>PAROD Discharge: 50 - 107 = +57 / BEANR: 50 - 147 = +97* / DEHAM: 220 - 210 = (-10) / FRLEH: 450 - 43 = (-407) / GBSOU: 700 - 300 = (-400) / LATAM: 180 - 214 = +34*</t></si><si><t>GRPIR: 115 - 41 = (-74) / TRALI: 275 - 8 = (-267) / TRISK: 235 - 50 = (-185) / TRIST: 347 - 410 = +63*</t></si><si><t>CNSHA: 300 - 28 = (-272) / INNSA: 380 - 373 = (-7) / SGSIN: 180 - 31 = (-149)</t></si><si><t>MX Laden: 89 + MTY: 0 = 89</t></si><si><t>MX Laden: 8 + MTY: 0 = 8 / BEANR: 50 - 87 = +37* / DEBRV: 50 - 13 = (-37) / GBSOU: 200 - 23 = (-177) / NLRTM: 200 - 42 = (-158)</t></si><si><t>CNSHA: 300 - 22 = (-278) / INNSA: 380 - 446 = +66* / SGSIN: 180 - 42 = (-138)</t></si><si><t>SGSIN: 200 - 335 = +135*</t></si><si><t>SGSIN: (Dry) 120 - 335 = +215* / (Rrf) 80 - 0 = (-80)</t></si><si><t>CNSHA: 50 - 16 = (-34) / CNSHK: 25 - 1 = (-24) / SGSIN: 150 - 63 = (-87)</t></si><si><t>SGSIN: (Dry) 130 - 63 = (-67) / (Rrf) 20 - 0 = (-20)</t></si><si><t>BEANR: 175 - 19 = (-156) / DEBRV: 990 - 34 = (-956) / FRLEH: 210 - 15 = (-195) / GBSOU: 231 - 23 = (-208) / NLRTM: 1,080 - 95 = (-985)</t></si><si><t>MX Laden: 44 + MTY: 0 = 44</t></si><si><t>INNSA: 380 - 44 = (-336) / SGSIN: 180 - 2 = (-178)</t></si><si><t>HBDT0021W</t></si><si><t>HMM HANBADA</t></si><si><t>CNSHA: 50 - 12 = (-38) / SGSIN: 150 - 31 = (-119)</t></si><si><t>SGSIN: (Dry) 130 - 31 = (-99) / (Rrf) 20 - 0 = (-20)</t></si><si><t>PAROD Discharge: 50 - 18 = (-32*) / BEANR: 50 - 72 = +22* / DEHAM: 220 - 68 = (-152) / FRLEH: 450 - 4 = (-446) / GBSOU: 700 - 72 = (-628) / LATAM: 180 - 29 = (-151)</t></si><si><t>SGSIN: 350 - 28 = (-322) / THLCH: 500 - 51 = (-449)</t></si><si><t>ESALG: 25 - 3 = (-22)</t></si><si><t>CNSHA: 50 - 2 = (-48) / CNSHK: 25 - 2 = (-23) / SGSIN: 150 - 14 = (-136)</t></si><si><t>SGSIN: (Dry) 130 - 14 = (-116) / (Rrf) 20 - 0 = (-20)</t></si><si><t>PAROD Discharge: 50 - 7 = (-43*) / DEHAM: 220 - 2 = (-218) / GBSOU: 700 - 2 = (-698) / LATAM: 180 - 13 = (-167)</t></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 30 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 30</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 243 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 54 = 297</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 159 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 159</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 127 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 127</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 89 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 89</t></r></si><si><r><t>MX Laden:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 44 + </t></r><r><rPr><b/><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>MTY:</t></r><r><rPr><sz val="11"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> 0 = 44</t></r></si></sst>
