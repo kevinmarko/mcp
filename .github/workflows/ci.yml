@@ -1,0 +1,282 @@
+name: CI
+
+# The app is one static HTML file you edit directly in JSX -- local development still needs no
+# build step (see README.md). There is now ONE build artifact, dist/index.html, which is the
+# deployable copy with the JSX precompiled; it is what Apps Script serves, and the
+# deployable-build job below keeps it from going stale. These jobs mirror AGENTS.md's "Required:
+# run the checks after every change to the app" checklist exactly, so a check that's required
+# locally is required here too. See README.md's "Verifying changes" section for what each one
+# catches and why check 1 alone was never sufficient.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  # AGENTS.md check 1 -- fast, catches JSX/JS syntax errors only. Auto-detects the current app
+  # file the same way tests/check_alias_landmines.py does (highest dotted-version number among
+  # Booking_flash_report_na(_Kevin)?_<ver>_*.html, excluding testing builds), so a version bump
+  # never needs a workflow edit.
+  #
+  # 2026-09-17: this step's own copy of the detection logic was missed by commit 0de749e ("Stop
+  # four checks validating the testing build instead of the main file") -- that commit fixed
+  # AGENTS.md's snippet plus check_alias_landmines.py/check_date_timezone_safety.js/
+  # perf_benchmark.js, but not this embedded copy, so CI's syntax-check job kept silently
+  # validating Booking_flash_report_na_1.67_TESTING.html (numerically higher, but missing the
+  # Fields picker feature entirely) on every push after that "fix" landed. Confirmed live against
+  # origin/main before patching. Now excludes /testing/i before the version comparison, matching
+  # the other four copies, and logs what it skipped.
+  #
+  # If you change the rule here, change it in AGENTS.md's snippet, check_alias_landmines.py,
+  # check_date_timezone_safety.js, check_field_filter_gating.py, check_server_prefs_logic.js,
+  # ci_regression_runner.js and perf_benchmark.js too -- seven hand-synced copies, which is
+  # exactly why this one got missed.
+  syntax-check:
+    name: Syntax check (Babel + node --check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Extract inline script and check syntax
+        run: |
+          python3 - <<'EOF'
+          import re, os
+          repo_root = os.getcwd()
+          all_files = [f for f in os.listdir(repo_root) if re.match(r'[Bb]ooking_flash_report_na(_Kevin)?_[\d.]+_.*\.html$', f)]
+          assert all_files, f"No Booking_flash_report_na*.html file found in {repo_root}"
+          excluded = [f for f in all_files if re.search(r'testing', f, re.I)]
+          if excluded:
+              print("(excluded as testing builds: %s)" % ', '.join(sorted(excluded)))
+          candidates = [f for f in all_files if not re.search(r'testing', f, re.I)]
+          assert candidates, f"No main (non-testing) Booking_flash_report_na*.html file found in {repo_root}"
+          version_key = lambda fname: tuple(int(p) for p in re.search(r'na_(?:Kevin_)?([\d.]+)_', fname).group(1).split('.'))
+          html_path = max(candidates, key=version_key)
+          print(f"(main app file: {html_path})")
+          content = open(html_path).read()
+          open('/tmp/extracted.jsx', 'w').write(re.search(r'<script type="text/babel">(.*?)</script>', content, re.DOTALL).group(1))
+          EOF
+          node -e "
+          const babel = require('@babel/core');
+          const fs = require('fs');
+          const result = babel.transformFileSync('/tmp/extracted.jsx', { presets: ['@babel/preset-react'] });
+          fs.writeFileSync('/tmp/out.js', result.code);
+          " && node --check /tmp/out.js
+
+  # Keeps the deployable artifact honest. dist/index.html is COMMITTED so the manual Apps
+  # Script deploy stays a copy/paste (see apps-script/README.md) rather than requiring node --
+  # which means it can silently go stale the moment someone edits the app file without
+  # rebuilding, and stale here means production quietly runs old code behind a green CI.
+  # --check rebuilds in memory and diffs, so that fails loudly instead. Blocking, because it is
+  # a deterministic file comparison with none of the regression suite's false-failure shape.
+  deployable-build:
+    name: Deployable build is up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Verify dist/index.html matches a fresh build
+        run: node scripts/build_deployable.js --check
+      # The artifact is what production loads, so its compiled payload gets the same syntax
+      # gate the source does -- a build that emitted broken JS would otherwise only be caught
+      # by the (non-blocking) regression suite.
+      - name: Syntax-check the compiled payload
+        run: |
+          node - <<'EOF'
+          const fs = require('fs');
+          // extractCompiledPayload is required, not re-derived, so this check always matches
+          // whatever marker build_deployable.js actually writes -- see that file's own
+          // COMPILED_SCRIPT_REGEX/COMPILED_SCRIPT_OPEN comment.
+          const { extractCompiledPayload } = require('./scripts/build_deployable.js');
+          const html = fs.readFileSync('dist/index.html', 'utf8');
+          const payload = extractCompiledPayload(html);
+          if (!payload) { console.error('no compiled payload found in dist/index.html'); process.exit(1); }
+          // Deliberately NOT un-escaping the build's <\\/script sequences. The app's own source
+          // contains the regex literal /<script type="text\\/babel">...<\\/script>/, so reversing
+          // the escape blindly corrupts code that was always written that way -- which is how
+          // this check first failed. No un-escape is needed: \\/ and / mean the same thing in a
+          // JS string, template literal and regex alike, so the payload checks as-is.
+          fs.writeFileSync('/tmp/dist_payload.js', payload);
+          console.log(`compiled payload: ${(payload.length / 1024).toFixed(0)} KB`);
+          EOF
+          node --check /tmp/dist_payload.js
+
+  # AGENTS.md check 2 -- static getVal()/alias check against a real export's real header row.
+  # Uses the sample export checked into the repo root, same as AGENTS.md's own usage example.
+  alias-landmines:
+    name: Alias-landmine static check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install openpyxl
+      - run: python3 tests/check_alias_landmines.py Booking_Flash_Data_MAIN_UPLOAD_8-12-2026.xlsx
+
+  # Guards the Fields picker's header-filter cleanup. Pure-stdlib and static, so it is fast
+  # and blocking: it caught a real shipped bug (bsaTeu listed for auto-clearing while POL
+  # renders it ungated), and that bug survived a careful manual scan of the render sites,
+  # which is precisely why it is automated rather than written down.
+  field-filter-gating:
+    name: Field-picker filter-gating check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 tests/check_field_filter_gating.py
+
+  # Server-backed preference resolution: WHICH stored value wins and WHETHER a write is sent.
+  # Added to CI 2026-09-18 because it was the one check in AGENTS.md's required list that CI did
+  # not run -- and that gap had already cost us. #88 merged with this check broken: it slices the
+  # preference block positionally, out of the app HTML, and #88 declared a JSX component inside
+  # that slice, so `new Function` threw `SyntaxError: Unexpected token '<'` on every run. Nobody
+  # saw it, because nothing here ran it. A required check that only runs when someone remembers
+  # is not a required check.
+  #
+  # Blocking, and cheap enough to be: pure Node, no browser, ~22 assertions, needs only the
+  # devDependencies `npm ci` already installs.
+  server-prefs-logic:
+    name: Server preference-resolution check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node tests/check_server_prefs_logic.js
+
+  # resolveAppHtml() (tests/perf_benchmark.js) is shared infrastructure now -- both
+  # ci_regression_runner.js and perf_highlight_benchmark.js call it instead of hand-rolling their
+  # own BF_APP_HTML handling. A live browser run only ever exercises its two SUCCESS paths (unset,
+  # a valid override); nothing exercises its two FAILURE paths (an absolute override, a
+  # nonexistent one) or the exact override-flattening bug class it was built to prevent. Blocking,
+  # and cheap enough to be: pure Node, no browser, 8 assertions.
+  resolve-app-html-check:
+    name: App-file resolver check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node tests/check_resolve_app_html.js
+
+  # AGENTS.md check 3 -- forces the timezone itself via subprocess, so it needs no special CI
+  # timezone configuration to be meaningful (a UTC-only run would silently miss this bug class).
+  timezone-safety:
+    name: Date timezone-safety check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node tests/check_date_timezone_safety.js
+
+  # AGENTS.md check 4 -- live browser regression suite, driven headlessly. NON-BLOCKING: see
+  # tests/ci_regression_runner.js's header comment for why (AGENTS.md's own "Known flakiness"
+  # section documents this exact shape of run -- one long automated script -- as an intermittent
+  # false-failure source in this project's history). Treat a red run here as "investigate by
+  # hand," not as a merge blocker on its own.
+  regression-suite:
+    name: Live regression suite (best-effort, see AGENTS.md "Known flakiness")
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # continue-on-error here too, not just at the job level: a job-level continue-on-error
+      # does NOT give the next step an implicit if: always() -- a step still only runs if every
+      # prior step in the job succeeded. Without this, a flaky/failing run here (see "Known
+      # flakiness" above) would silently skip the artifact run below on that CI run.
+      - run: node tests/ci_regression_runner.js
+        continue-on-error: true
+      # Run the suite a second time against the DEPLOYED artifact, not just the source it was
+      # built from. The chain is otherwise one link short: deployable-build proves
+      # dist/index.html matches a fresh build of the source, and the run above proves the
+      # source behaves -- but nothing exercises the artifact itself, whose script structure
+      # genuinely differs (no babel-standalone, an inert text/babel block, the compiled payload
+      # appended after the primer). That is precisely what a future change to
+      # scripts/build_deployable.js could break with every other check still green, and the
+      # artifact is the thing users actually load. Verified at 125/125 locally against this
+      # artifact before being added here.
+      - run: BF_APP_HTML=dist/index.html node tests/ci_regression_runner.js
+
+  # Row-highlight interaction budget (added 2026-09-18 with the fix for the ~41s freeze on the
+  # 0->1 highlight -- see tests/perf_highlight_benchmark.js's header for the full post-mortem).
+  # BLOCKING, unlike the regression suite above: this is a deterministic script with a numeric
+  # threshold, not a long assertion sweep, so it does not have that job's known false-failure
+  # shape. The per-tab budgets live in the script (POL 8000ms, Detail 1500ms, both derived from
+  # recorded measurements); this job only SCALES them, because a shared runner is slower and
+  # noisier than a dev box. 1.5x keeps POL ~3.4x below the 41,000ms regression it guards.
+  # 2026-09-19: the script now measures click->PAINTED rather than click->DOM. The old clock
+  # stopped before the browser did any of the work to show the change and so scored about a
+  # quarter of the interaction -- it missed a 2.7s whole-document style recalc entirely. Every
+  # number is therefore larger than it was, which is why this scales the budget instead of
+  # keeping the old BF_HIGHLIGHT_BUDGET_MS=4000. If this ever goes red, read the printed
+  # per-transition numbers before touching the scale -- the failure mode it is built for (a
+  # table-wide value threaded through per-row props, breaking React.memo for every row at once)
+  # shows up as SECONDS, not as drift past the threshold.
+  highlight-perf:
+    name: Row-highlight interaction budget
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/perf_highlight_benchmark.js
+        env:
+          BF_HIGHLIGHT_BUDGET_SCALE: '1.5'
+      # Run the same budget a second time against the DEPLOYED artifact, not just the source it
+      # was measured against. dist/index.html is what production actually loads, and its script
+      # structure is deliberately different from the source's (no babel-standalone; a Tailwind
+      # JIT-priming script, then the compiled payload appended after it -- see
+      # scripts/build_deployable.js for why that inert-block presence and script order are
+      # load-bearing). Nothing above exercises that priming path: deployable-build only diffs
+      # bytes, and the run above only ever measures the source file. A future change to the
+      # build script could reorder or drop the primer -- exactly the kind of thing check 5 and
+      # this job exist to catch -- and every other check would stay green while it crept into
+      # production. This closes that gap the same way regression-suite's second run does above.
+      #
+      # Reuses the same POL/Detail budgets and the same 1.5x scale, not new ones -- and that has
+      # now been VERIFIED, not just argued from "should be nearly identical." Measured
+      # 2026-09-20, same machine, back to back, unscaled (BF_HIGHLIGHT_BUDGET_SCALE=1) against
+      # the real 8,769-row historical CSV, click->painted:
+      #
+      #   POL     source  0->1  306.7ms   1->2  219.2ms   >0->0  315.5ms
+      #   POL     dist    0->1  317.4ms   1->2  223.6ms   >0->0  315.7ms
+      #   Detail  source  0->1   54.2ms   1->2   44.8ms   >0->0   32.1ms
+      #   Detail  dist    0->1   39.7ms   1->2   45.0ms   >0->0   49.5ms
+      #
+      # The artifact's numbers match the source's to within ordinary run-to-run noise -- exactly
+      # what "same DOM, same React code, just precompiled" predicts -- and both are nowhere near
+      # either budget: the worst POL reading (317.4ms) is ~25x under the unscaled 8000ms budget
+      # (~38x under CI's 1.5x-scaled 12000ms), and the worst Detail reading (54.2ms) is ~28x
+      # under the unscaled 1500ms budget. That is a far bigger margin than the 1.5x scale factor
+      # above already reasons about ("keeps POL ~3.4x below the 41,000ms regression it guards"),
+      # so this step is BLOCKING like the rest of this job, not hedged behind continue-on-error.
+      #
+      # Also roughly doubles this job's ~6 minute runtime, same tradeoff regression-suite's
+      # second run already accepted above for the same reason: exercising the artifact, not
+      # just the source it was built from.
+      - run: BF_APP_HTML=dist/index.html node tests/perf_highlight_benchmark.js
+        env:
+          BF_HIGHLIGHT_BUDGET_SCALE: '1.5'
