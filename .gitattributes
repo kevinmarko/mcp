@@ -1,0 +1,18 @@
+# dist/index.html is a generated artifact whose bytes are asserted exactly (see
+# scripts/build_deployable.js --check, which compares fs.readFileSync(...) with strict !==).
+# Pin it to LF so a checkout with core.autocrlf=true can't rewrite it to CRLF and make --check
+# report a genuinely up-to-date artifact as stale.
+dist/index.html text eol=lf
+
+# Shared logic is concatenated into the app HTML and apps-script/Shared.gs by scripts/sync_shared.js, and
+# tests/check_shared_sync.js rejects CR characters in it, so pin these to LF like dist/index.html above.
+shared/*.js text eol=lf
+apps-script/Shared.gs text eol=lf
+
+# The app HTML carries the generated shared-logic region, and scripts/sync_shared.js refuses CR line endings in
+# it, so pin the versioned app files and the basic build to LF as well. When these lines were added every tracked
+# file they match was already LF in the index (git ls-files --eol), so pinning rewrites none of them. The first
+# pattern matches the versioned app and testing builds without naming the current app file; the lower-case
+# booking_flash_report_na_Kevin_* snapshots only match on a case-insensitive checkout, and are LF anyway.
+Booking_flash_report_na_*.html text eol=lf
+dist/basic/index.html text eol=lf
