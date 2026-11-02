@@ -1,0 +1,6 @@
+node_modules/
+.venv/
+.DS_Store
+~$*.xlsm
+~$*.xlsx
+.claude/worktrees/
