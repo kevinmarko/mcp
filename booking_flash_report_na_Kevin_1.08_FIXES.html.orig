@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Flash Report NA</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useMemo, useRef, useEffect } = React;
+
+        const SECTOR_DATA_SEED = [
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AL5",
+                "POD Sec": "BEANR",
+                "MCT Sector Allocation": 50,
+                "Measures Laden TEU": 887,
+                "MCT Voyage Count": 3,
+                "Average Booking": 296,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AL5",
+                "POD Sec": "DEHAM",
+                "MCT Sector Allocation": 220,
+                "Measures Laden TEU": 507,
+                "MCT Voyage Count": 3,
+                "Average Booking": 169,
+                "Sector Open Space": 51
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AL5",
+                "POD Sec": "FRLEH",
+                "MCT Sector Allocation": 450,
+                "Measures Laden TEU": 143,
+                "MCT Voyage Count": 3,
+                "Average Booking": 48,
+                "Sector Open Space": 402
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AL5",
+                "POD Sec": "GBSOU",
+                "MCT Sector Allocation": 700,
+                "Measures Laden TEU": 1180,
+                "MCT Voyage Count": 3,
+                "Average Booking": 393,
+                "Sector Open Space": 307
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT1",
+                "POD Sec": "BEANR",
+                "MCT Sector Allocation": 175,
+                "Measures Laden TEU": 1003,
+                "MCT Voyage Count": 4,
+                "Average Booking": 251,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT1",
+                "POD Sec": "DEBRV",
+                "MCT Sector Allocation": 990,
+                "Measures Laden TEU": 1242,
+                "MCT Voyage Count": 4,
+                "Average Booking": 311,
+                "Sector Open Space": 680
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT1",
+                "POD Sec": "FRLEH",
+                "MCT Sector Allocation": 210,
+                "Measures Laden TEU": 236,
+                "MCT Voyage Count": 4,
+                "Average Booking": 59,
+                "Sector Open Space": 151
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT1",
+                "POD Sec": "GBSOU",
+                "MCT Sector Allocation": 231,
+                "Measures Laden TEU": 1319,
+                "MCT Voyage Count": 4,
+                "Average Booking": 330,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT1",
+                "POD Sec": "NLRTM",
+                "MCT Sector Allocation": 1080,
+                "Measures Laden TEU": 1627,
+                "MCT Voyage Count": 4,
+                "Average Booking": 407,
+                "Sector Open Space": 673
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT3",
+                "POD Sec": "BEANR",
+                "MCT Sector Allocation": 50,
+                "Measures Laden TEU": 652,
+                "MCT Voyage Count": 3,
+                "Average Booking": 217,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT3",
+                "POD Sec": "DEBRV",
+                "MCT Sector Allocation": 50,
+                "Measures Laden TEU": 190,
+                "MCT Voyage Count": 3,
+                "Average Booking": 63,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT3",
+                "POD Sec": "GBSOU",
+                "MCT Sector Allocation": 200,
+                "Measures Laden TEU": 267,
+                "MCT Voyage Count": 3,
+                "Average Booking": 89,
+                "Sector Open Space": 111
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT3",
+                "POD Sec": "NLRTM",
+                "MCT Sector Allocation": 200,
+                "Measures Laden TEU": 317,
+                "MCT Voyage Count": 3,
+                "Average Booking": 106,
+                "Sector Open Space": 94
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT3",
+                "POD Sec": "USHOU",
+                "MCT Sector Allocation": 0,
+                "Measures Laden TEU": 0,
+                "MCT Voyage Count": 3,
+                "Average Booking": 0,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT4",
+                "POD Sec": "ESALG",
+                "MCT Sector Allocation": 28,
+                "Measures Laden TEU": 256,
+                "MCT Voyage Count": 2,
+                "Average Booking": 128,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT4",
+                "POD Sec": "ESVLC",
+                "MCT Sector Allocation": 209,
+                "Measures Laden TEU": 143,
+                "MCT Voyage Count": 2,
+                "Average Booking": 72,
+                "Sector Open Space": 138
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT4",
+                "POD Sec": "FRFOS",
+                "MCT Sector Allocation": 77,
+                "Measures Laden TEU": 121,
+                "MCT Voyage Count": 2,
+                "Average Booking": 61,
+                "Sector Open Space": 17
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT4",
+                "POD Sec": "ITGOA",
+                "MCT Sector Allocation": 312,
+                "Measures Laden TEU": 130,
+                "MCT Voyage Count": 2,
+                "Average Booking": 65,
+                "Sector Open Space": 247
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "AT4",
+                "POD Sec": "ITSPE",
+                "MCT Sector Allocation": 262,
+                "Measures Laden TEU": 56,
+                "MCT Voyage Count": 2,
+                "Average Booking": 28,
+                "Sector Open Space": 234
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "EMA",
+                "POD Sec": "GRPIR",
+                "MCT Sector Allocation": 115,
+                "Measures Laden TEU": 197,
+                "MCT Voyage Count": 2,
+                "Average Booking": 99,
+                "Sector Open Space": 1
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "EMA",
+                "POD Sec": "ITSAL",
+                "MCT Sector Allocation": 20,
+                "Measures Laden TEU": 10,
+                "MCT Voyage Count": 2,
+                "Average Booking": 5,
+                "Sector Open Space": 15
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "EMA",
+                "POD Sec": "TRALI",
+                "MCT Sector Allocation": 275,
+                "Measures Laden TEU": 52,
+                "MCT Voyage Count": 2,
+                "Average Booking": 26,
+                "Sector Open Space": 249
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "EMA",
+                "POD Sec": "TRISK",
+                "MCT Sector Allocation": 235,
+                "Measures Laden TEU": 288,
+                "MCT Voyage Count": 2,
+                "Average Booking": 144,
+                "Sector Open Space": 91
+            },
+            {
+                "Vessel 1st Trade": "TAT",
+                "Vessel 1st Sub Trade": "TA",
+                "Vessel 1st Lane": "EMA",
+                "POD Sec": "TRIST",
+                "MCT Sector Allocation": 347,
+                "Measures Laden TEU": 482,
+                "MCT Voyage Count": 2,
+                "Average Booking": 241,
+                "Sector Open Space": 106
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "CNSHA",
+                "MCT Sector Allocation": 0,
+                "Measures Laden TEU": 24,
+                "MCT Voyage Count": 4,
+                "Average Booking": 6,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "CNTAO",
+                "MCT Sector Allocation": 0,
+                "Measures Laden TEU": 113,
+                "MCT Voyage Count": 4,
+                "Average Booking": 28,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "LKCMB",
+                "MCT Sector Allocation": 20,
+                "Measures Laden TEU": 205,
+                "MCT Voyage Count": 4,
+                "Average Booking": 51,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "PAMIT",
+                "MCT Sector Allocation": 0,
+                "Measures Laden TEU": 337,
+                "MCT Voyage Count": 4,
+                "Average Booking": 84,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "SGSIN",
+                "MCT Sector Allocation": 350,
+                "Measures Laden TEU": 1084,
+                "MCT Voyage Count": 4,
+                "Average Booking": 271,
+                "Sector Open Space": 79
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "THLCH",
+                "MCT Sector Allocation": 500,
+                "Measures Laden TEU": 820,
+                "MCT Voyage Count": 4,
+                "Average Booking": 205,
+                "Sector Open Space": 295
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "AW",
+                "Vessel 1st Lane": "EC3",
+                "POD Sec": "VNCMP",
+                "MCT Sector Allocation": 325,
+                "Measures Laden TEU": 510,
+                "MCT Voyage Count": 4,
+                "Average Booking": 128,
+                "Sector Open Space": 198
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PN",
+                "Vessel 1st Lane": "FP2",
+                "POD Sec": "SGSIN",
+                "MCT Sector Allocation": 200,
+                "Measures Laden TEU": 646,
+                "MCT Voyage Count": 3,
+                "Average Booking": 215,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "PS3",
+                "POD Sec": "CNSHA",
+                "MCT Sector Allocation": 300,
+                "Measures Laden TEU": 197,
+                "MCT Voyage Count": 4,
+                "Average Booking": 49,
+                "Sector Open Space": 251
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "PS3",
+                "POD Sec": "CNSHK",
+                "MCT Sector Allocation": 20,
+                "Measures Laden TEU": 188,
+                "MCT Voyage Count": 4,
+                "Average Booking": 47,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "PS3",
+                "POD Sec": "INNSA",
+                "MCT Sector Allocation": 380,
+                "Measures Laden TEU": 1499,
+                "MCT Voyage Count": 4,
+                "Average Booking": 375,
+                "Sector Open Space": 5
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "PS3",
+                "POD Sec": "SGSIN",
+                "MCT Sector Allocation": 180,
+                "Measures Laden TEU": 1002,
+                "MCT Voyage Count": 4,
+                "Average Booking": 251,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "VSE",
+                "POD Sec": "CNSHA",
+                "MCT Sector Allocation": 50,
+                "Measures Laden TEU": 79,
+                "MCT Voyage Count": 3,
+                "Average Booking": 26,
+                "Sector Open Space": 24
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "VSE",
+                "POD Sec": "CNSHK",
+                "MCT Sector Allocation": 25,
+                "Measures Laden TEU": 67,
+                "MCT Voyage Count": 3,
+                "Average Booking": 22,
+                "Sector Open Space": 3
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "VSE",
+                "POD Sec": "CNTXG",
+                "MCT Sector Allocation": 0,
+                "Measures Laden TEU": 41,
+                "MCT Voyage Count": 3,
+                "Average Booking": 14,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "VSE",
+                "POD Sec": "KRPUS",
+                "MCT Sector Allocation": 0,
+                "Measures Laden TEU": 1113,
+                "MCT Voyage Count": 3,
+                "Average Booking": 371,
+                "Sector Open Space": 0
+            },
+            {
+                "Vessel 1st Trade": "TPT",
+                "Vessel 1st Sub Trade": "PS",
+                "Vessel 1st Lane": "VSE",
+                "POD Sec": "SGSIN",
+                "MCT Sector Allocation": 150,
+                "Measures Laden TEU": 210,
+                "MCT Voyage Count": 3,
+                "Average Booking": 70,
+                "Sector Open Space": 80
+            }
+        ];
+
+
+        const FilterIcon = ({ size, className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+        );
+
+        const ListFilterIcon = ({ size, className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+                <path d="M3 6h18"/><path d="M7 12h10"/><path d="M10 18h4"/>
+            </svg>
+        );
+
+        const SlicerBtn = ({ children, bgClass, isSelected, isFilterActive, onClick }) => {
+            const isFaded = isFilterActive && !isSelected;
+            return (
+                <button
+                    onClick={onClick}
+                    className={`
+                        ${bgClass}
+                        ${isFaded ? 'opacity-40' : 'opacity-100'}
+                        text-white px-2 py-0.5 text-xs font-semibold m-0.5 cursor-pointer
+                        border ${isSelected ? 'border-black shadow-inner' : 'border-transparent'}
+                        hover:brightness-110 transition-all
+                    `}
+                >
+                    {children}
+                </button>
+            );
+        };
+
+        
+        // getPercentNum / formatPercent are only ever applied to raw columns that Power
+        // Query casts to Percentage.Type (curUtilRaw <- "Measures Overall Booking Utilz",
+        // peakUtilRaw <- "Measures Peak Overall Utilz", standbyRaw <- "Trunk Threshold",
+        // rfrUtilizRaw <- "Measures POL Reefer Utilz", plus the computed actVsBkgUtilzRaw
+        // ratio) - i.e. always fractional decimals (0.75 = 75%), never bare whole-number
+        // percents. Verified against Booking_Flash_Data_MAIN_UPLOAD_8-12-2026.xlsx: every
+        // sampled value in these columns (899/899 rows) is a plain fractional decimal, and
+        // two real rows have values up to 8.0 (=800%, e.g. rows 161 & 329 in "Measures POL
+        // Reefer Utilz"/"RFR Utilz%") - well outside the old "(0,5] must be fractional"
+        // guess, which would have silently left those rendered as "8%" instead of "800%".
+        // So we trust the known column type and scale unconditionally instead of guessing
+        // from the value's magnitude.
+        const getPercentNum = (val) => {
+            if (!val) return 0;
+            let s = String(val).trim();
+            if (s.includes('%')) return parseFloat(s) || 0;
+            let n = parseFloat(s);
+            if (isNaN(n)) return 0;
+            return n * 100;
+        };
+
+        const formatPercent = (val) => {
+            if (val === '' || val === null || val === undefined) return '';
+            let strVal = String(val).trim();
+            if (strVal.includes('%')) {
+                const parsed = parseFloat(strVal);
+                return isNaN(parsed) ? strVal : `${Math.round(parsed)}%`;
+            }
+            let num = parseFloat(strVal);
+            if (!isNaN(num)) {
+                return `${Math.round(num * 100)}%`;
+            }
+            return strVal;
+        };
+
+        const formatNumberWithCommas = (val) => {
+            if (val === '' || val === null || val === undefined || isNaN(val)) return val;
+            return Math.round(parseFloat(val)).toLocaleString('en-US');
+        };
+
+        const formatAccountingNumber = (val) => {
+            if (val === '' || val === null || val === undefined || isNaN(val)) return val;
+            const num = Math.round(parseFloat(val));
+            if (num < 0) {
+                return `(-${Math.abs(num).toLocaleString('en-US')})`;
+            }
+            return num.toLocaleString('en-US');
+        };
+
+        // Native Excel Conditional Formatting rule (Booking_Flash!N13:O47 and
+        // POL_Booking_Flash!V13:W2000): ($Current-$Peak) > 10 percentage points -> solid
+        // red fill on BOTH the Peak and Current Laden Utiliz % cells. Both inputs here are
+        // expected already on the 0-100 percent-point scale (not 0-1 fractions) — matching
+        // how this file's `calc` fields and the PivotTableViewer's raw-field parsing both
+        // already produce/consume percent values.
+        const isUtilGapFlagged = (currentUtilz, peakUtilz) => {
+            const cur = Number(currentUtilz) || 0;
+            const peak = Number(peakUtilz) || 0;
+            return (cur - peak) > 10;
+        };
+        const utilGapCellClass = (currentUtilz, peakUtilz) =>
+            isUtilGapFlagged(currentUtilz, peakUtilz) ? 'bg-red-600 text-white font-bold' : '';
+
+        function compareSaleWeek(a, b) {
+            const parse = (s) => {
+                const m = /^(\d{4})\/W(\d{1,2})$/.exec(String(s || '').trim());
+                return m ? [parseInt(m[1], 10), parseInt(m[2], 10)] : null;
+            };
+            const pa = parse(a), pb = parse(b);
+            if (pa && pb) {
+                if (pa[0] !== pb[0]) return pa[0] - pb[0];
+                return pa[1] - pb[1];
+            }
+            // fallback: keep unparseable/blank values sorted after real weeks, else lexicographic
+            if (pa && !pb) return -1;
+            if (!pa && pb) return 1;
+            return String(a || '').localeCompare(String(b || ''));
+        }
+
+        // Sector Allocation text formatting: bold known port/lane keyword labels,
+        // color numeric "+N*"/"(-N*)" deltas red, and blank out a cell that is
+        // literally just "*".
+        const SEC_ALLOC_BOLD_KEYWORDS = [
+            "AEJEA:", "CNNGB:", "CNSHA:", "CNSHK:", "CR/GT/NI Discharge:", "EB PA Load:",
+            "FRFOS/ESVLC Discharge:", "GRPIR:", "INPAV:", "KRPUS:", "LATAM Load:", "MX Laden:",
+            "PA Load:", "PAROD Discharge :", "PAROD Move Count Unit:", "LKCMB:", "SGSIN:",
+            "BEANR:", "DEBRV:", "DEHAM:", "FRLEH:", "GBSOU:", "LATAM:", "NLRTM:", "THLCH:",
+            "VNCMP:", "ESALG:", "ESVLC:", "FRFOS:", "ITGOA:", "ITSPE:", "Laden:", "ITSAL:",
+            "TRALI:", "TRISK:", "TRIST:", "INNSA:", "MTY:", "PAROD Discharge:"
+        ];
+
+        const renderSecAlloc = (text) => {
+            if (text === null || text === undefined || text === '') return text;
+            const raw = String(text);
+            if (raw.trim() === '*') return null;
+
+            const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            // Longer keywords first so e.g. "PAROD Discharge :" wins over a shorter overlapping alternative.
+            const sortedKeywords = [...SEC_ALLOC_BOLD_KEYWORDS].sort((a, b) => b.length - a.length);
+            const keywordPattern = sortedKeywords.map(escapeRegex).join('|');
+            const redPattern = '\\+\\d+\\*+|\\(-\\d+\\*+\\)';
+            const combined = new RegExp(`(${keywordPattern})|(${redPattern})`, 'gi');
+
+            const parts = [];
+            let lastIndex = 0;
+            let match;
+            let key = 0;
+            while ((match = combined.exec(raw)) !== null) {
+                if (match.index > lastIndex) {
+                    parts.push(<React.Fragment key={key++}>{raw.slice(lastIndex, match.index)}</React.Fragment>);
+                }
+                if (match[1]) {
+                    parts.push(<b key={key++}>{match[1]}</b>);
+                } else if (match[2]) {
+                    parts.push(<span key={key++} className="text-red-600 font-semibold">{match[2]}</span>);
+                }
+                lastIndex = combined.lastIndex;
+                if (match.index === combined.lastIndex) combined.lastIndex += 1;
+            }
+            if (lastIndex < raw.length) {
+                parts.push(<React.Fragment key={key++}>{raw.slice(lastIndex)}</React.Fragment>);
+            }
+            return parts;
+        };
+
+        // Lighter-weight companion to renderSecAlloc: applies only the VBA
+        // "hide lone asterisk" rule (Trim(cell.Text) = "*" -> blank), with no
+        // bold-keyword or red-delta formatting. Used on Detail View columns
+        // that are in the AH13:AN asterisk-blanking range but NOT in the
+        // AI13:AJ bold/red range (Operational Issues, Proforma Rotation,
+        // Actual Rotation, AP Status, Voyage Remarks).
+        const renderAsteriskHide = (text) => {
+            if (text === null || text === undefined || text === '') return text;
+            const raw = String(text);
+            if (raw.trim() === '*') return null;
+            return raw;
+        };
+
+
+                const PivotTableViewer = ({ data, config }) => {
+            const [collapsedNodes, setCollapsedNodes] = useState(new Set());
+            const toggleCollapse = (nodeId) => {
+                const next = new Set(collapsedNodes);
+                if (next.has(nodeId)) next.delete(nodeId);
+                else next.add(nodeId);
+                setCollapsedNodes(next);
+            };
+            const { rowFields = [], dataFields = [], title = "Pivot", colField = null, valuesInRows = false, rowClass = null } = config;
+            
+            const aggregated = useMemo(() => {
+                const root = { _totals: {}, _children: {}, label: 'Grand Total', context: {} };
+                const colKeysSet = new Set();
+                
+                data.forEach(row => {
+                    if (colField) {
+                        const colVal = row[colField] || '(blank)';
+                        colKeysSet.add(colVal);
+                    }
+                    
+                    let current = root;
+                    
+                    const aggregateData = (node, r, colVal = 'Total') => {
+                        if (!node._totals[colVal]) {
+                            node._totals[colVal] = {};
+                            dataFields.forEach(df => {
+                                node._totals[colVal][df.name] = { sum: 0, count: 0, max: -Infinity };
+                            });
+                        }
+                        dataFields.forEach(df => {
+                            const val = parseFloat(String(r[df.base] || '0').replace(/[,%()]/g, '')) || 0;
+                            node._totals[colVal][df.name].sum += val;
+                            node._totals[colVal][df.name].count += 1;
+                            if (val > node._totals[colVal][df.name].max) node._totals[colVal][df.name].max = val;
+                        });
+                    };
+                    
+                    const cVal = colField ? (row[colField] || '(blank)') : 'Total';
+                    
+                    // Aggregate root
+                    aggregateData(root, row, 'Total');
+                    if (colField) aggregateData(root, row, cVal);
+                    
+                    rowFields.forEach((rf, idx) => {
+                        const val = row[rf.key] || '(blank)';
+                        if (!current._children[val]) {
+                            current._children[val] = { _totals: {}, _children: {}, label: val, context: { ...current.context, [rf.key]: row[rf.key] } };
+                        }
+                        
+                        current = current._children[val];
+                        aggregateData(current, row, 'Total');
+                        if (colField) aggregateData(current, row, cVal);
+                    });
+                });
+                
+                const colKeys = Array.from(colKeysSet).sort(compareSaleWeek);
+
+                // Parent-level (e.g. Trade) subtotal rollup for fields that opt in via
+                // `rollupSumOfChildren: true`. By default every node's _totals (at every
+                // level, including intermediate parent nodes) is aggregated directly from
+                // the raw rows beneath it — correct for 'sum'/'count'/'avg' fields (sum of
+                // raw rows always equals sum of children's sums), and mathematically still
+                // a valid "further max" for 'max' fields. Verified against
+                // validation_ground_truth.json's Trade_Summary `trade_total` rows, though,
+                // that a Trade-level subtotal of a max-aggregated field (e.g. "Max Laden")
+                // is actually the SUM of its Sub Trades' own max values, not a further max
+                // across all raw rows (e.g. TPT Max Laden 2026/W27 = 18800+3725+28045 =
+                // 50570, matching ground truth exactly — not max(18800,3725,28045)=28045).
+                // 'calc' fields (e.g. Trunk Utilization = Total TEU / Max Laden) need no
+                // separate handling: they read from these same _totals at render time, so
+                // once the underlying 'max' field is rolled up correctly the ratio is too
+                // (verified: 17763 / 50570 = 0.3512557 matches ground truth's TPT Trunk
+                // Utilization trade_total for 2026/W27 exactly).
+                const rollupFields = dataFields.filter(df => df.rollupSumOfChildren && df.agg === 'max');
+                if (rollupFields.length > 0) {
+                    const applyRollup = (node) => {
+                        const childNodes = Object.values(node._children);
+                        childNodes.forEach(applyRollup); // post-order: children resolved first
+                        if (childNodes.length === 0) return; // leaf: keep raw-aggregated value
+                        rollupFields.forEach(df => {
+                            const colVals = new Set(Object.keys(node._totals));
+                            childNodes.forEach(c => Object.keys(c._totals).forEach(cv => colVals.add(cv)));
+                            colVals.forEach(colVal => {
+                                if (!node._totals[colVal] || !node._totals[colVal][df.name]) return;
+                                let sum = 0;
+                                childNodes.forEach(c => {
+                                    const ct = c._totals[colVal] && c._totals[colVal][df.name];
+                                    if (ct) sum += ct.max;
+                                });
+                                node._totals[colVal][df.name].max = sum;
+                            });
+                        });
+                    };
+                    applyRollup(root);
+                }
+
+                return { root, colKeys };
+            }, [data, config]);
+            
+            const flatten = (node, level = 0, isLastChild = true, prefix = '', parentId = 'root') => {
+                let rows = [];
+                const nodeId = `${parentId}-${node.label}`;
+                const hasChildren = Object.keys(node._children).length > 0;
+                rows.push({
+                    id: nodeId,
+                    level,
+                    label: node.label,
+                    totals: node._totals,
+                    context: node.context,
+                    isLastChild,
+                    prefix,
+                    hasChildren
+                });
+                
+                if (collapsedNodes.has(nodeId)) return rows;
+                
+                const childrenKeys = rowFields[level] && rowFields[level].key === 'saleWeek'
+                    ? Object.keys(node._children).sort(compareSaleWeek)
+                    : Object.keys(node._children).sort();
+                childrenKeys.forEach((key, index) => {
+                    const isLast = index === childrenKeys.length - 1;
+                    const newPrefix = prefix + (isLastChild ? '    ' : '│   ');
+                    rows = rows.concat(flatten(node._children[key], level + 1, isLast, newPrefix, nodeId));
+                });
+                return rows;
+            };
+            
+            const renderRows = useMemo(() => {
+                if (!aggregated.root || Object.keys(aggregated.root._totals).length === 0) return [];
+                return flatten(aggregated.root, 0, true, '');
+            }, [aggregated]);
+            
+            const colKeysToRender = colField ? aggregated.colKeys : ['Total'];
+            
+            return (
+                <div className="border-2 border-black overflow-x-auto bg-white shadow-md mb-4">
+                    <h2 className="text-xl font-bold bg-[#002060] text-white p-2 flex justify-between">
+                        <span>{title}</span>
+                        {colField && <span className="text-sm font-normal self-end">Columns: {colField}</span>}
+                    </h2>
+                    <table className="w-full text-xs text-center border-collapse border border-gray-400 whitespace-nowrap">
+                        <thead className="bg-[#203764] text-white sticky top-0 z-10 shadow-sm border-black">
+                            {colField && !valuesInRows && (
+                                <tr>
+                                    <th className="border border-black p-1 min-w-[200px] text-left">Row Labels</th>
+                                    {colKeysToRender.map((c, i) => (
+                                        <th key={i} colSpan={dataFields.length} className="border border-black p-1 bg-[#1e2f50]">{c}</th>
+                                    ))}
+                                    <th colSpan={dataFields.length} className="border border-black p-1 font-bold">Grand Total</th>
+                                </tr>
+                            )}
+                            <tr>
+                                <th className="border border-black p-1 min-w-[200px] text-left">Row Labels</th>
+                                {colField && valuesInRows && (
+                                    <>
+                                        <th className="border border-black p-1 bg-[#1e2f50]">Values</th>
+                                        {colKeysToRender.map((c, i) => (
+                                            <th key={i} className="border border-black p-1 bg-[#1e2f50]">{c}</th>
+                                        ))}
+                                        <th className="border border-black p-1 font-bold">Grand Total</th>
+                                    </>
+                                )}
+                                {(!colField || !valuesInRows) && (colField ? [...colKeysToRender, 'Total'] : ['Total']).map((cKey) => (
+                                    dataFields.map((df, dfIdx) => (
+                                        <th key={`${cKey}-${dfIdx}`} className={`border border-black p-1 min-w-[80px] ${cKey === 'Total' && colField ? 'font-bold bg-[#203764]' : ''}`}>{df.label}</th>
+                                    ))
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {renderRows.map((row, i) => {
+                                const trClassBase = `hover:bg-gray-100 ${row.level === 0 ? 'bg-[#d9e1f2] font-bold' : ''} ${row.level === 1 ? 'font-bold' : ''}`;
+                                const customClass = rowClass && row.level === rowFields.length ? rowClass(row.totals, row.context) : '';
+                                
+                                if (valuesInRows) {
+                                    return (
+                                        <React.Fragment key={i}>
+                                            <tr className={`${trClassBase} ${customClass} ${row.level === 0 ? 'bg-[#d9e1f2] font-bold' : ''}`}>
+                                                <td rowSpan={dataFields.length + 1} className="border border-gray-400 p-1 text-left align-top">
+                                                    <span style={{ paddingLeft: `${Math.max(0, row.level - 1) * 1.5}rem` }} className="flex items-center">
+                                                        {row.level > 0 && (row.hasChildren 
+                                                            ? <button onClick={() => toggleCollapse(row.id)} className="mr-1 w-4 text-center border border-gray-400 bg-white shadow-sm font-bold text-[10px] leading-tight hover:bg-gray-200">{collapsedNodes.has(row.id) ? '+' : '−'}</button>
+                                                            : <span className="mr-1 w-4 text-center inline-block">•</span>
+                                                        )}
+                                                        {row.label}
+                                                    </span>
+                                                </td>
+                                                {/* Fill the empty cells for the parent header row so borders connect */}
+                                                <td className="border border-gray-400 p-1 bg-gray-100"></td>
+                                                {[...colKeysToRender, 'Total'].map((cKey, cIdx) => (
+                                                    <td key={`empty-${cIdx}`} className="border border-gray-400 p-1 bg-gray-100"></td>
+                                                ))}
+                                            </tr>
+                                            {dataFields.map((df, dfIdx) => (
+                                                <tr key={`${i}-${dfIdx}`} className={`${customClass || 'bg-white hover:bg-gray-50'}`}>
+                                                    <td className="border border-gray-400 p-1 text-left bg-gray-100 font-semibold">{df.label}</td>
+                                                    {[...colKeysToRender, 'Total'].map((cKey, cIdx) => {
+                                                        let val = 0;
+                                                        const tGrp = row.totals[cKey] || {};
+                                                        if (df.agg === 'calc' && df.calc) {
+                                                            val = df.calc(tGrp);
+                                                        } else {
+                                                            const t = tGrp[df.name] || { sum: 0, max: 0, count: 0 };
+                                                            if (df.agg === 'sum') val = t.sum;
+                                                            if (df.agg === 'max') val = t.max;
+                                                            if (df.agg === 'count') val = t.count;
+                                                            if (df.agg === 'avg') val = t.count > 0 ? t.sum / t.count : 0;
+                                                        }
+                                                        
+                                                        let displayVal = val;
+                                                        if (df.format === 'number') displayVal = formatNumberWithCommas(val);
+                                                        else if (df.format === 'percent') displayVal = `${Math.round(val)}%`;
+                                                        else if (df.format === 'accounting') displayVal = formatAccountingNumber(val);
+                                                        
+                                                        // Backward-compatible extension: pass the row's full totals
+                                                        // bundle (tGrp) as a 2nd arg so cellClass callbacks that need
+                                                        // to compare sibling fields (e.g. Peak vs Current Utiliz %)
+                                                        // can do so; existing single-arg callbacks just ignore it.
+                                                        const cClass = df.cellClass ? df.cellClass(val, tGrp) : '';
+                                                        return <td key={cIdx} className={`border border-gray-400 p-1 ${cKey === 'Total' ? 'font-bold bg-[#eef2fa]' : ''} ${cClass}`}>{displayVal}</td>;
+                                                    })}
+                                                </tr>
+                                            ))}
+                                        </React.Fragment>
+                                    );
+                                }
+                                
+                                return (
+                                    <tr key={i} className={`${trClassBase} ${customClass}`}>
+                                        <td className="border border-gray-400 p-1 text-left">
+                                            <span style={{ paddingLeft: `${Math.max(0, row.level - 1) * 1.5}rem` }}>
+                                                {row.level > 0 && (row.hasChildren
+                                                    ? <span onClick={() => toggleCollapse(row.id)} className="cursor-pointer select-none hover:text-blue-700">{collapsedNodes.has(row.id) ? '▶ ' : '▼ '}</span>
+                                                    : '• '
+                                                )}
+                                                {row.label}
+                                            </span>
+                                        </td>
+                                        {(colField ? [...colKeysToRender, 'Total'] : ['Total']).map((cKey) => (
+                                            dataFields.map((df, colIdx) => {
+                                                let val = 0;
+                                                const tGrp = row.totals[cKey] || {};
+                                                if (df.agg === 'calc' && df.calc) {
+                                                    val = df.calc(tGrp);
+                                                } else {
+                                                    const t = tGrp[df.name] || { sum: 0, max: 0, count: 0 };
+                                                    if (df.agg === 'sum') val = t.sum;
+                                                    if (df.agg === 'max') val = t.max;
+                                                    if (df.agg === 'count') val = t.count;
+                                                    if (df.agg === 'avg') val = t.count > 0 ? t.sum / t.count : 0;
+                                                }
+
+                                                let displayVal = val;
+                                                if (df.format === 'number') displayVal = formatNumberWithCommas(val);
+                                                else if (df.format === 'percent') displayVal = `${Math.round(val)}%`;
+                                                else if (df.format === 'accounting') displayVal = formatAccountingNumber(val);
+
+                                                // Mirrors native POL_Booking_Flash CF rules like
+                                                // AND($H12="VMS", P12=0) -> white-on-white font, which hide the
+                                                // "0" placeholder for VMS rows on specific numeric columns. This
+                                                // pivot reads straight from filteredRawRows (not the Detail
+                                                // View's tableData VMS field-wipe), so a VMS leaf row's raw 0
+                                                // would otherwise render as a literal "0" here. Only applies at
+                                                // the leaf level (one raw row per group, since rowFields here
+                                                // form a unique key) and only to dataFields opted in via
+                                                // config.vmsZeroMaskFields.
+                                                const isLeafRow = row.level === rowFields.length;
+                                                const rowIsVMS = isLeafRow && String(row.context.vvd || '').trim().toUpperCase() === 'VMS';
+                                                if (rowIsVMS && val === 0 && config.vmsZeroMaskFields && config.vmsZeroMaskFields.includes(df.name)) {
+                                                    displayVal = '';
+                                                }
+
+                                                // See matching comment above: cellClass(val, tGrp) is a
+                                                // backward-compatible extension for sibling-field comparisons.
+                                                const cClass = df.cellClass ? df.cellClass(val, tGrp) : '';
+                                                return <td key={`${cKey}-${colIdx}`} className={`border border-gray-400 p-1 ${cKey === 'Total' ? 'font-bold bg-[#eef2fa]' : ''} ${cClass}`}>{displayVal}</td>;
+                                            })
+                                        ))}
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        };
+
+        function FlashReportDashboard() {
+            const [remarksHidden, setRemarksHidden] = useState(true);
+            const [reeferHidden, setReeferHidden] = useState(false);
+            const [bsaHidden, setBsaHidden] = useState(false);
+            const [activityHidden, setActivityHidden] = useState(false);
+            const [sectorAllocHidden, setSectorAllocHidden] = useState(false);
+            const [dgVolumeHidden, setDgVolumeHidden] = useState(false);
+            const [opIssuesHidden, setOpIssuesHidden] = useState(false);
+            const [apStatusHidden, setApStatusHidden] = useState(false);
+            const [rotationHidden, setRotationHidden] = useState(false);
+            const [tradeBreakdownHidden, setTradeBreakdownHidden] = useState(false);
+            const [vcoHidden, setVcoHidden] = useState(false);
+
+            // Detail View column-group sizes (field count per toggle group), used to keep
+            // header/sub-header/filter/body rows and the colSpan-based filler rows in sync.
+            const DETAIL_BASE_COLUMN_COUNT = 18; // Trade, Sub Trade, Lane + 15 always-visible fields (Sale Week .. Broken Routes)
+            const detailVisibleColumnCount = DETAIL_BASE_COLUMN_COUNT
+                + (bsaHidden ? 0 : 2)            // BSA TEU, BSA Wgt
+                + (reeferHidden ? 0 : 5)         // RFR BSA Plugs, RFR BKG Plugs, RFR Max LDN, RFR BKG TTL, RFR Utiliz %
+                + (activityHidden ? 0 : 8)       // Activity vs Booking Utilz/Max Laden + Inland(3) + Port(3)
+                + (opIssuesHidden ? 0 : 1)       // Operational Issues
+                + (sectorAllocHidden ? 0 : 2)    // Sector Allocation, SGSIN Dry vs Reefer
+                + (rotationHidden ? 0 : 2)       // Proforma Rotation, Actual Rotation
+                + (apStatusHidden ? 0 : 1)       // AP Status
+                + (vcoHidden ? 0 : 1)            // VCO Analyst
+                + (tradeBreakdownHidden ? 0 : 6) // TPT, TAT, LWT, LNT, IMT, LET
+                + (dgVolumeHidden ? 0 : 1)       // DG TEU
+                + (remarksHidden ? 0 : 1);       // Voyage Remarks
+            const detailBlankRowColSpan = detailVisibleColumnCount - 3; // minus Trade/Sub Trade/Lane (rendered as separate rowSpan tds)
+            const detailNoDataColSpan = detailVisibleColumnCount;
+
+            const [zoomLevel, setZoomLevel] = useState(1.0);
+            const [isDragging, setIsDragging] = useState(false);
+            const [lastRefresh, setLastRefresh] = useState(null);
+            const [rawRows, setRawRows] = useState([]);
+            const [activeTab, setActiveTab] = useState('detail');
+            const [parseError, setParseError] = useState(null);
+            const fileInputRef = useRef(null);
+
+            const [selectedSubTrades, setSelectedSubTrades] = useState([]);
+            const [selectedAnalysts, setSelectedAnalysts] = useState([]);
+            const [selectedCoasts, setSelectedCoasts] = useState([]);
+            const [selectedLanes, setSelectedLanes] = useState([]);
+            const [selectedSaleWeeks, setSelectedSaleWeeks] = useState([]);
+
+            const [headerFilters, setHeaderFilters] = useState({});
+
+            const handleHeaderFilterChange = (key, value) => {
+                setHeaderFilters(prev => ({ ...prev, [key]: value }));
+            };
+
+            const renderFilter = (colKey) => (
+                <input 
+                    type="text" 
+                    className="block w-full text-black font-normal text-[9px] px-1 py-0.5 border border-gray-400 focus:outline-none focus:border-blue-500 bg-white placeholder-gray-400 shadow-inner rounded-sm" 
+                    placeholder="Filter..." 
+                    value={headerFilters[colKey] || ''} 
+                    onChange={e => handleHeaderFilterChange(colKey, e.target.value)} 
+                    onClick={e => e.stopPropagation()}
+                />
+            );
+
+            const processFile = (file) => {
+                if (!file) return;
+
+                if (!window.XLSX) {
+                    console.error("XLSX library is not loaded.");
+                    setParseError("Unable to read the file: the XLSX library failed to load. Please refresh the page and try again.");
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = (evt) => {
+                    try {
+                        const bstr = evt.target.result;
+                        const wb = window.XLSX.read(bstr, { type: 'binary' });
+                        const wsname = wb.SheetNames[0];
+                        const ws = wb.Sheets[wsname];
+
+                        const rawData = window.XLSX.utils.sheet_to_json(ws, { raw: false, defval: '' });
+
+                        if (rawData && rawData.length > 0) {
+                            // --- Schema validation: confirm this file actually looks like a Booking Flash
+                            // "Data_download" export before trusting it, using the same normalized-alias
+                            // matching approach as getVal() below so this check can't disagree with how
+                            // the app actually reads data.
+                            const CRITICAL_COLUMNS = [
+                                'Vessel 1st Trade',
+                                'Vessel 1st Sub Trade',
+                                'Vessel 1st VVD',
+                                'Route Date 1st Sale Week',
+                                'Route Location 1st Pol',
+                                'Measures Overall Status',
+                                'MCT Max Laden',
+                                'Measures POL Laden TEU',
+                                'POL Max Laden TEU',
+                                'Measures Overall Booking Utilz'
+                            ];
+                            const headerKeys = Object.keys(rawData[0]).map(k => String(k).toLowerCase().replace(/[^a-z0-9]/g, ''));
+                            const isColumnPresent = (rawAlias) => {
+                                const cleanAlias = rawAlias.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                if (headerKeys.includes(cleanAlias)) return true;
+                                if (cleanAlias.length < 3) return false;
+                                return headerKeys.some(k => k.includes(cleanAlias));
+                            };
+                            const criticalFoundCount = CRITICAL_COLUMNS.filter(isColumnPresent).length;
+
+                            if (criticalFoundCount < CRITICAL_COLUMNS.length / 2) {
+                                setParseError("This file doesn't look like a Booking Flash \"Data_download\" export — expected columns like \"Vessel 1st Trade\" and \"Route Date 1st Sale Week\" were not found. Please check you're uploading the right file.");
+                                return;
+                            }
+
+                            const formattedData = rawData.map((row, index) => {
+                                const cleanRow = {};
+                                const rowKeys = Object.keys(row);
+                                
+                                rowKeys.forEach(k => {
+                                    const cleanK = String(k).toLowerCase().replace(/[^a-z0-9]/g, '');
+                                    cleanRow[cleanK] = row[k];
+                                });
+
+                                const cleanRowKeys = Object.keys(cleanRow);
+
+                                const getVal = (aliases) => {
+                                    for (let alias of aliases) {
+                                        const cleanAlias = alias.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                        if (cleanRow[cleanAlias] !== undefined && cleanRow[cleanAlias] !== '') {
+                                            return cleanRow[cleanAlias];
+                                        }
+                                    }
+                                    for (let alias of aliases) {
+                                        const cleanAlias = alias.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                        if (cleanAlias.length < 3) continue;
+                                        const matchingKey = cleanRowKeys.find(k => k.includes(cleanAlias));
+                                        if (matchingKey && cleanRow[matchingKey] !== '') {
+                                            return cleanRow[matchingKey];
+                                        }
+                                    }
+                                    return '';
+                                };
+
+                                const rowObj = {
+                                    id: index + 1,
+                                    trade: getVal(['Trade']) || 'TPT',
+                                    subTrade: getVal(['Sub Trade', 'SubTrade', 'Sub_Trade']),
+                                    lane: getVal(['Lane', 'Service']),
+                                    saleWeek: getVal(['Sale Week', 'SaleWeek', 'Week']),
+                                    pic: getVal(['MCT Spc Analyst', 'PIC (spc/mkg)', 'PIC', 'SPC Analyst', 'Mktg Analyst']),
+                                    coast: getVal(['MCT Spc Team', 'Spc Team', 'Coast']),
+                                    cutoff: getVal(['1st POL Cutoff', '1stPOLCutoff', 'Cutoff', '1st POL']),
+                                    etd: getVal(['ETD Last Port', 'ETDLastPort', 'Last Port ETD', 'ETD']),
+                                    status: getVal(['Measures Overall Status', 'BKG FLASH STATUS', 'MeasuresOverallStatus']),
+                                    loadingStatus: getVal(['Measures Loading Status', 'MeasuresLoadingStatus']),
+                                    vvd: getVal(['Vessel 1st VVD', 'VVD', 'Voyage']),
+                                    vessel: getVal(['Vessel Name', 'Vessel']),
+                                    maxLdn: getVal(['MCT Max Laden', 'Max LDN', 'MaxLdn', 'Max Laden']),
+                                    standbyRaw: getVal(['Trunk Threshold', 'Standby Threshold', 'Overall Threshold', 'Threshold', 'Standby']),
+                                    curLaden: getVal(['Measures POL Laden TEU', 'Current Laden', 'Laden TEU', 'Cur Laden']),
+                                    peakUtilRaw: getVal(['Measures Peak Overall Utilz', 'Peak Utiliz', 'Peak Overall', 'Peak Util']),
+                                    curUtilRaw: getVal(['Measures Overall Booking Utilz', 'Current Laden Utiliz', 'Booking Utilz', 'Booking Utiliz']),
+                                    shortfall: getVal(['Max LDN vs BKG', 'Short_Fall', 'Short Fall', 'Shortfall', 'Max Laden vs POL  Booking', 'Max Laden vs POL Booking']),
+                                    quote: getVal(['Measures ONE Quote volume', 'ONE Quote', 'ONE Quote Volume', 'Quote']),
+                                    broken: getVal(['Measures Broken Routes TEU', 'Broken Routes', 'Broken']),
+                                    bsaTeu: getVal(['BSA TEU']),
+                                    bsaWgt: getVal(['BSA Wgt', 'BSA QTY', 'Wgt']),
+                                    rfrBsaPlugs: getVal(['RFR BSA Plugs', 'BSA UNIT RF']),
+                                    rfrBkgPlugs: getVal(['RFR BKG Plugs', 'Booking Reefer UNIT']),
+                                    rfrMaxLdn: getVal(['RFR Max LDN', 'RFR Max Laden']),
+                                    rfrBkgTtl: getVal(['RFR BKG TTL', 'Reefer TEU', 'RFR BKG Total']),
+                                    rfrUtilizRaw: getVal(['RFR Utiliz', 'Reefer Utilz', 'Reefer Utiliz']),
+                                    actVsBkgUtilzRaw: getVal(['Activity vs Booking Utilz', 'ActVsBkg']),
+                                    actVsMaxLdnRaw: getVal(['Activity vs Max Laden', 'ActVsMax']),
+                                    inlandAct: getVal(['Inland Activity', 'Active Ipi']),
+                                    inlandNoAct: getVal(['Inland No Activity', 'Non Active Ipi']),
+                                    inlandTotal: getVal(['Inland Total', 'Ipi Total']),
+                                    portAct: getVal(['Port Activity', 'Active Local']),
+                                    portNoAct: getVal(['Port No Activity', 'Non Active Local']),
+                                    portTotal: getVal(['Port Total', 'Local Total']),
+                                    opIssues: getVal(['Operational Issues', 'Operation Notice']),
+                                    secAlloc: getVal(['Sector Allocation', 'Sec Alloc']),
+                                    sgsinDryVsRfr: getVal(['SGSIN Dry vs Reefer', 'SGSIN Dry vs Rfr']),
+                                    proformaRot: getVal(['Proforma Rotation', 'Proforma ETA']),
+                                    actualRot: getVal(['Actual Rotation', 'Actual Ro']),
+                                    apStatus: getVal(['MCT AP Status', 'AP Status']),
+                                    tpt: getVal(['TPT']),
+                                    tat: getVal(['TAT']),
+                                    lwt: getVal(['LWT']),
+                                    lnt: getVal(['LNT']),
+                                    imt: getVal(['IMT']),
+                                    let: getVal(['LET']),
+                                    dgTeu: getVal(['DG TEU']),
+                                    remarks: getVal(['Voyage Remarks', 'Remarks']),
+                                    vco: getVal(['VCO Analyst', 'VCO Analyst ', 'VCO']),
+
+                                    pol: getVal(['Route Location 1st Pol', '1st Pol', 'POL']),
+                                    yard: getVal(['Route Location 1st Yard', 'RouteLocation1stYard', 'Yard']),
+                                    plannedMty: getVal(['Measures Planned Mty TEU', 'Planned Mty']),
+                                    actualMty: getVal(['Measures Actual Mty TEU', 'Actual Mty']),
+                                    polMaxLdn: getVal(['POL Max Laden TEU', 'POL Max Laden']),
+                                    polLdnThresh: getVal(['POL Laden Threshold', 'POL Laden Thresh']),
+                                    discharge: getVal(['Measures Discharge TEU', 'Discharge']),
+                                    peakPolUtilzRaw: getVal(['Measures Peak Pol Utilz', 'Peak Pol Utilz']),
+                                    polBkgUtilzRaw: getVal(['Measures POL Booking Utilz', 'POL Booking Utilz']),
+                                    maxLdnVsPolBkg: getVal(['Max Laden vs POL  Booking', 'Max Laden vs POL Booking']),
+                                    loadableQuant: getVal(['Measures Loadable TEU', 'Loadable Quant', 'Loadable TEU']),
+                                    loadableWgt: getVal(['Measures Loadable WGT update', 'Loadable WGT']),
+                                    coastalEtd: getVal(['Route Date Coastal ETD Date', 'Coastal ETD Date', 'Coastal ETD']),
+                                    portCut: getVal(['Route Date POL Cut/off Date', 'POL Cut/off Date', 'Port Cut']),
+                                    sectorRemarks: getVal(['Sector Remarks'])
+                                };
+
+                                // Per the reference workbook's hidden NOTES sheet: "No PIC on the Max
+                                // Laden table will result in a 'TBA' for the SPC PIC." Normalize blank/
+                                // whitespace-only PIC here — the earliest point pic is read from the raw
+                                // file — so 'TBA' flows through consistently to rawRows, the Detail View,
+                                // filteredRawRows (and thus any pivot fed by it), and the existing SPC
+                                // Analyst slicer (whose 'TBA' button and matchAnalyst .includes() check
+                                // already expect this literal value).
+                                rowObj.pic = (rowObj.pic && String(rowObj.pic).trim()) || 'TBA';
+
+                                const totalAct = (parseFloat(rowObj.inlandAct) || 0) + (parseFloat(rowObj.portAct) || 0);
+                                const totalTot = (parseFloat(rowObj.inlandTotal) || 0) + (parseFloat(rowObj.portTotal) || 0);
+                                rowObj.actVsBkgUtilzRaw = totalTot > 0 ? (totalAct / totalTot) : 0;
+                                
+                                return rowObj;
+                            });
+
+                            setRawRows(formattedData);
+                            setParseError(null);
+                            setLastRefresh(new Date());
+                            if (fileInputRef.current) fileInputRef.current.value = '';
+                        }
+                    } catch (error) {
+                        console.error("Error parsing the file:", error);
+                        setParseError(`Failed to parse the uploaded file: ${error && error.message ? error.message : 'unknown error'}. Please verify the file is a valid Excel export and try again.`);
+                    }
+                };
+                reader.readAsBinaryString(file);
+            };
+            
+            const handleFileUpload = (e) => {
+                processFile(e.target.files[0]);
+            };
+            
+            const handleDrop = (e) => {
+                e.preventDefault();
+                setIsDragging(false);
+                if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                    processFile(e.dataTransfer.files[0]);
+                    e.dataTransfer.clearData();
+                }
+            };
+
+            const exportToExcel = () => {
+                const table = document.querySelector('table');
+                if (!table || !window.XLSX) return;
+                const wb = XLSX.utils.table_to_book(table);
+                XLSX.writeFile(wb, `${activeTab}_export.xlsx`);
+            };
+
+            const toggleFilter = (setState, value) => {
+                setState(prev => prev.includes(value) ? prev.filter(v => v !== value) : [...prev, value]);
+            };
+
+            const clearSlicers = () => {
+                setSelectedSubTrades([]);
+                setSelectedAnalysts([]);
+                setSelectedCoasts([]);
+                setSelectedLanes([]);
+                setSelectedSaleWeeks([]);
+                setHeaderFilters({});
+            };
+
+            // Distinct Sale Week values present in the uploaded data (dedup'd, blanks
+            // dropped), ordered chronologically via compareSaleWeek rather than the
+            // default lexicographic Array.sort — mirrors Excel's
+            // Slicer_Route_Date_1st_Sale_Week, which lists weeks in date order.
+            const saleWeekOptions = useMemo(() => {
+                const seen = new Set();
+                rawRows.forEach(row => {
+                    const week = row.saleWeek;
+                    if (week !== undefined && week !== null && String(week).trim() !== '') {
+                        seen.add(String(week).trim());
+                    }
+                });
+                return Array.from(seen).sort(compareSaleWeek);
+            }, [rawRows]);
+
+            const filteredRawRows = useMemo(() => {
+                return rawRows.filter(row => {
+                    const matchSubTrade = selectedSubTrades.length === 0 || selectedSubTrades.includes(row.subTrade);
+                    const matchAnalyst = selectedAnalysts.length === 0 || selectedAnalysts.some(analyst =>
+                        row.pic && row.pic.toLowerCase().includes(analyst.toLowerCase())
+                    );
+                    const matchLane = selectedLanes.length === 0 || selectedLanes.includes(row.lane);
+                    const matchCoast = selectedCoasts.length === 0 || selectedCoasts.includes(row.coast);
+                    const matchSaleWeek = selectedSaleWeeks.length === 0 || selectedSaleWeeks.includes(row.saleWeek);
+
+                    let matchHeaderFilters = true;
+                    for (const key in headerFilters) {
+                        const filterValue = headerFilters[key];
+                        if (filterValue && filterValue.trim() !== '') {
+                            const rawRowVal = String(row[key] || '').toLowerCase();
+                            const searchVal = filterValue.toLowerCase().trim();
+                            
+                            const cleanedRowVal = rawRowVal.replace(/[,%()]/g, '');
+                            const cleanedSearchVal = searchVal.replace(/[,%()]/g, '');
+                            
+                            if (!rawRowVal.includes(searchVal) && !cleanedRowVal.includes(cleanedSearchVal)) {
+                                matchHeaderFilters = false;
+                                break;
+                            }
+                        }
+                    }
+                    return matchSubTrade && matchAnalyst && matchLane && matchCoast && matchSaleWeek && matchHeaderFilters;
+                });
+            }, [rawRows, selectedSubTrades, selectedAnalysts, selectedLanes, selectedCoasts, selectedSaleWeeks, headerFilters]);
+
+            // Static reference seed data from the Sector_Data sheet (not derived from the uploaded file).
+            const sectorDataMapped = useMemo(() => {
+                return SECTOR_DATA_SEED.map(r => ({
+                    trade: r['Vessel 1st Trade'],
+                    subTrade: r['Vessel 1st Sub Trade'],
+                    lane: r['Vessel 1st Lane'],
+                    podSec: r['POD Sec'],
+                    sectorAlloc: r['MCT Sector Allocation'],
+                    avgBooking: r['Average Booking'],
+                    openSpace: r['Sector Open Space']
+                }));
+            }, []);
+
+
+            const sectorRows = useMemo(() => {
+                const parsed = [];
+                filteredRawRows.forEach(row => {
+                    if (row.sectorRemarks) {
+                        const parts = String(row.sectorRemarks).split('/');
+                        parts.forEach(p => {
+                            const match = p.match(/([A-Z]+):\s*([\d,]+)\s*-\s*([\d,]+)/);
+                            if (match) {
+                                parsed.push({
+                                    ...row,
+                                    podSector: match[1],
+                                    sectorAlloc: parseFloat(match[2].replace(/,/g, '')),
+                                    avgBooking: parseFloat(match[3].replace(/,/g, ''))
+                                });
+                            }
+                        });
+                    }
+                });
+                return parsed;
+            }, [filteredRawRows]);
+
+            const tableData = useMemo(() => {
+                const aggregatedMap = {};
+                filteredRawRows.forEach(row => {
+                    const key = `${row.trade}-${row.subTrade}-${row.lane}-${row.saleWeek}-${row.vvd}-${row.vessel}`;
+                    if (!row.vvd && !row.vessel) {
+                        aggregatedMap[`uid-${row.id}`] = row;
+                        return;
+                    }
+
+                    if (!aggregatedMap[key]) {
+                        aggregatedMap[key] = { ...row };
+                        const numerics = ['curLaden', 'quote', 'shortfall', 'rfrBkgPlugs', 'rfrBkgTtl', 'inlandAct', 'inlandNoAct', 'inlandTotal', 'portAct', 'portNoAct', 'portTotal', 'dgTeu', 'tpt', 'tat', 'lwt', 'lnt', 'imt', 'let'];
+                        numerics.forEach(n => aggregatedMap[key][n] = parseFloat(aggregatedMap[key][n]) || 0);
+
+                        const maxes = ['maxLdn', 'bsaTeu', 'bsaWgt', 'rfrBsaPlugs', 'rfrMaxLdn'];
+                        maxes.forEach(n => aggregatedMap[key][n] = parseFloat(aggregatedMap[key][n]) || 0);
+                        
+                        aggregatedMap[key].curUtilRaw = getPercentNum(row.curUtilRaw);
+                    } else {
+                        const numerics = ['curLaden', 'quote', 'rfrBkgPlugs', 'rfrBkgTtl', 'inlandAct', 'inlandNoAct', 'inlandTotal', 'portAct', 'portNoAct', 'portTotal', 'dgTeu', 'tpt', 'tat', 'lwt', 'lnt', 'imt', 'let'];
+                        numerics.forEach(n => {
+                            aggregatedMap[key][n] += (parseFloat(row[n]) || 0);
+                        });
+
+                        const maxes = ['maxLdn', 'bsaTeu', 'bsaWgt', 'rfrBsaPlugs', 'rfrMaxLdn'];
+                        maxes.forEach(n => {
+                            aggregatedMap[key][n] = Math.max(aggregatedMap[key][n], parseFloat(row[n]) || 0);
+                        });
+                        
+                        aggregatedMap[key].curUtilRaw = Math.max(aggregatedMap[key].curUtilRaw, getPercentNum(row.curUtilRaw));
+                    }
+                });
+
+                return Object.values(aggregatedMap).map(row => {
+                    row.standby = formatPercent(row.standbyRaw);
+                    row.peakUtil = formatPercent(row.peakUtilRaw);
+                    row.rfrUtiliz = formatPercent(row.rfrUtilizRaw);
+                    
+                    const totalAct = (parseFloat(row.inlandAct) || 0) + (parseFloat(row.portAct) || 0);
+                    const totalTot = (parseFloat(row.inlandTotal) || 0) + (parseFloat(row.portTotal) || 0);
+                    row.actVsBkgUtilzRaw = totalTot > 0 ? (totalAct / totalTot) : 0;
+                    row.actVsBkgUtilz = formatPercent(row.actVsBkgUtilzRaw);
+                    
+                    row.actVsMaxLdnRaw = totalAct - (parseFloat(row.maxLdn) || 0);
+                    const formattedMaxLdnRaw = formatNumberWithCommas(row.actVsMaxLdnRaw);
+                    row.actVsMaxLdn = (row.actVsMaxLdnRaw > 0 ? '+' : '') + formattedMaxLdnRaw;
+                    row.actVsMaxLdnStyle = row.actVsMaxLdnRaw > 0 ? { color: 'red' } : {};
+
+                    const parsedMax = parseFloat(row.maxLdn);
+                    row.maxLdn = (parsedMax === 0 || isNaN(parsedMax)) ? '' : formatNumberWithCommas(row.maxLdn);
+
+                    row.curUtil = `${Math.round(row.curUtilRaw || 0)}%`;
+
+                    // Native CF (Booking_Flash!N13:O47): ($O-$N)>10% -> red fill on both Peak
+                    // Utiliz % (N/row.peakUtil) and Current Laden Utiliz % (O/row.curUtil).
+                    // row.curUtilRaw is already on the 0-100 percent-point scale (converted via
+                    // getPercentNum above); normalize row.peakUtilRaw (still fractional, see the
+                    // getPercentNum comment near its definition) the same way before comparing.
+                    row.utilGapFlagged = isUtilGapFlagged(row.curUtilRaw, getPercentNum(row.peakUtilRaw));
+                    row.utilGapStyle = row.utilGapFlagged ? { backgroundColor: '#dc2626', color: '#fff', fontWeight: 'bold' } : {};
+
+                    if (row.maxLdn !== '' && row.curLaden !== undefined) {
+                        const rawMaxLdn = parseFloat(String(row.maxLdn).replace(/,/g, ''));
+                        const calculatedShortfall = row.curLaden - rawMaxLdn;
+                        row.shortfall = formatAccountingNumber(calculatedShortfall);
+                    } else {
+                        row.shortfall = formatAccountingNumber(row.shortfall);
+                    }
+                    
+                    row.curLaden = formatNumberWithCommas(row.curLaden);
+                    row.quote = formatNumberWithCommas(row.quote);
+                    row.bsaTeu = formatNumberWithCommas(row.bsaTeu);
+                    row.bsaWgt = formatNumberWithCommas(row.bsaWgt);
+                    
+                    if (String(row.vvd).trim().toUpperCase() === 'VMS') {
+                        const fieldsToKeep = ['id', 'trade', 'subTrade', 'lane', 'saleWeek', 'pic', 'vvd'];
+                        Object.keys(row).forEach(key => {
+                            if (!fieldsToKeep.includes(key)) {
+                                row[key] = '';
+                            }
+                        });
+                    }
+
+                    return row;
+                });
+            }, [filteredRawRows]);
+
+            const processedData = useMemo(() => {
+                let filtered = [...tableData]; // Already filtered!
+                
+                filtered.sort((a, b) => {
+                    if (a.trade !== b.trade) return String(a.trade || '').localeCompare(String(b.trade || ''));
+                    if (a.subTrade !== b.subTrade) return String(a.subTrade || '').localeCompare(String(b.subTrade || ''));
+                    if (a.lane !== b.lane) return String(a.lane || '').localeCompare(String(b.lane || ''));
+                    if (a.saleWeek !== b.saleWeek) return compareSaleWeek(a.saleWeek, b.saleWeek);
+                    return String(a.vessel || '').localeCompare(String(b.vessel || ''));
+                });
+
+                const withBlanks = [];
+                for (let i = 0; i < filtered.length; i++) {
+                    withBlanks.push(filtered[i]);
+                    const isLastInLane = i === filtered.length - 1 || filtered[i].lane !== filtered[i+1].lane;
+                    if (isLastInLane) {
+                        withBlanks.push({
+                            id: `blank-${filtered[i].id || i}`,
+                            isBlankRow: true,
+                            trade: filtered[i].trade,
+                            subTrade: filtered[i].subTrade,
+                            lane: filtered[i].lane
+                        });
+                    }
+                }
+
+                const spanned = withBlanks.map(row => ({
+                    ...row,
+                    showTrade: true, tradeSpan: 1,
+                    showSub: true, subSpan: 1,
+                    showLane: true, laneSpan: 1
+                }));
+
+                for (let i = 0; i < spanned.length; i++) {
+                    if (spanned[i].showTrade) {
+                        let spanCount = 1;
+                        for (let j = i + 1; j < spanned.length; j++) {
+                            if (spanned[j].trade === spanned[i].trade) {
+                                spanCount++;
+                                spanned[j].showTrade = false;
+                            } else break;
+                        }
+                        spanned[i].tradeSpan = spanCount;
+                    }
+
+                    if (spanned[i].showSub) {
+                        let spanCount = 1;
+                        for (let j = i + 1; j < spanned.length; j++) {
+                            if (spanned[j].trade === spanned[i].trade && spanned[j].subTrade === spanned[i].subTrade) {
+                                spanCount++;
+                                spanned[j].showSub = false;
+                            } else break;
+                        }
+                        spanned[i].subSpan = spanCount;
+                    }
+
+                    if (spanned[i].showLane) {
+                        let spanCount = 1;
+                        for (let j = i + 1; j < spanned.length; j++) {
+                            if (spanned[j].trade === spanned[i].trade &&
+                                spanned[j].subTrade === spanned[i].subTrade &&
+                                spanned[j].lane === spanned[i].lane) {
+                                spanCount++;
+                                spanned[j].showLane = false;
+                            } else break;
+                        }
+                        spanned[i].laneSpan = spanCount;
+                    }
+                }
+                return spanned;
+            }, [tableData]);
+
+            return (
+                <div className="min-h-screen bg-[#f3f3f3] p-4 font-sans select-none text-black">
+                    <input type="file" accept=".xlsx, .xls, .csv" ref={fileInputRef} onChange={handleFileUpload} className="hidden" />
+
+                    {parseError && (
+                        <div className="bg-red-100 border-2 border-red-500 text-red-800 font-bold px-4 py-3 rounded mb-4 mx-4 shadow-sm" role="alert">
+                            {parseError}
+                        </div>
+                    )}
+
+                    {tableData.length === 0 ? (
+                        <div
+                            onDrop={handleDrop}
+                            onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                            onDragLeave={() => setIsDragging(false)}
+                            className={`flex flex-col items-center justify-center h-[80vh] border-4 border-dashed rounded-lg shadow-sm p-10 text-center m-4 transition-colors ${isDragging ? 'border-blue-600 bg-blue-50' : 'border-gray-400 bg-white'}`}
+                        >
+                            <h1 className="text-4xl font-extrabold italic tracking-tighter text-[#002060] mb-4" style={{ fontFamily: 'Arial, sans-serif' }}>
+                                Booking Flash Report NA
+                            </h1>
+                            <p className="text-gray-600 mb-8 text-lg max-w-lg">
+                                Please upload the underlying data file to populate and generate the pivot table.
+                            </p>
+                            <button onClick={() => fileInputRef.current?.click()} className="bg-[#002060] text-white px-8 py-4 rounded shadow-md hover:bg-blue-800 transition-colors text-lg font-bold cursor-pointer">
+                                Upload Underlying Data
+                            </button>
+                        </div>
+                    ) : (
+                        <>
+                            <div className="flex justify-between items-end mb-2 border-b-2 border-gray-300 pb-1">
+                                <h1 className="text-3xl font-extrabold italic tracking-tighter" style={{ fontFamily: 'Arial, sans-serif' }}>
+                                    Booking Flash Report NA
+                                </h1>
+                                <div className="text-sm font-bold pb-1">
+                                    Last Refresh: <span className="text-blue-700 italic">{lastRefresh ? `${lastRefresh.toLocaleDateString()} ${lastRefresh.toLocaleTimeString()}` : '—'}</span>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4 mb-4 items-stretch">
+                                <div className="flex-1 bg-[#e7e6e6] border-2 border-black p-3 flex flex-col shadow-sm rounded-sm">
+                                    <div className="flex justify-end mb-1">
+                                        <button onClick={clearSlicers} className="bg-gray-700 text-white px-2 py-1 text-xs font-bold rounded-sm hover:bg-gray-900 transition-colors cursor-pointer">Clear Filters</button>
+                                    </div>
+                                    <div className="flex justify-between items-start mb-2">
+                                        <div className="flex items-start">
+                                            <span className="text-sm font-bold mr-2 w-20 mt-1">Sub Trade</span>
+                                            <div className="flex flex-col flex-1 relative">
+                                                <div className="flex justify-end mb-1 absolute right-0 -top-5">
+                                                    <ListFilterIcon size={16} className="text-gray-500 mr-1" />
+                                                    <FilterIcon size={16} className="text-gray-500" />
+                                                </div>
+                                                <div className="flex flex-wrap bg-[#d9d9d9] p-1 border border-gray-300 rounded-sm">
+                                                    {['AW', 'LN', 'PN', 'PS', 'TA'].map(trade => (
+                                                        <SlicerBtn key={trade} bgClass="bg-[#a9d08e]" isSelected={selectedSubTrades.includes(trade)} isFilterActive={selectedSubTrades.length > 0} onClick={() => toggleFilter(setSelectedSubTrades, trade)}>{trade}</SlicerBtn>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-start">
+                                            <span className="text-sm font-bold mr-2 w-12 mt-1">Coast</span>
+                                            <div className="flex flex-col flex-1 relative">
+                                                <div className="flex justify-end mb-1 absolute right-0 -top-5">
+                                                    <ListFilterIcon size={16} className="text-gray-500 mr-1" />
+                                                    <FilterIcon size={16} className="text-gray-500" />
+                                                </div>
+                                                <div className="flex flex-wrap bg-[#d9d9d9] p-1 border border-gray-300 rounded-sm">
+                                                    {['WC', 'EC'].map(c => (
+                                                        <SlicerBtn key={c} bgClass="bg-[#c00000]" isSelected={selectedCoasts.includes(c)} isFilterActive={selectedCoasts.length > 0} onClick={() => toggleFilter(setSelectedCoasts, c)}>{c}</SlicerBtn>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start mb-2">
+                                        <span className="text-sm font-bold mr-2 w-20 mt-1">SPC Analyst</span>
+                                        <div className="flex flex-col flex-1 relative">
+                                            <div className="flex justify-end mb-1 absolute right-0 -top-5">
+                                                <ListFilterIcon size={16} className="text-gray-500 mr-1" />
+                                                <FilterIcon size={16} className="text-gray-500" />
+                                            </div>
+                                            <div className="flex flex-nowrap overflow-x-auto whitespace-nowrap bg-[#d9d9d9] p-1 border border-gray-300 rounded-sm w-fit">
+                                                {['Evan', 'Joe', 'Kysa', 'Lani', 'Peter', 'Resid', 'Ryan H', 'Ryan T', 'TBA'].map(a => (
+                                                    <SlicerBtn key={a} bgClass="bg-[#ed7d31]" isSelected={selectedAnalysts.includes(a)} isFilterActive={selectedAnalysts.length > 0} onClick={() => toggleFilter(setSelectedAnalysts, a)}>{a}</SlicerBtn>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start">
+                                        <span className="text-sm font-bold mr-2 w-20 mt-1">Lane</span>
+                                        <div className="flex flex-col flex-1 relative">
+                                            <div className="flex justify-end mb-1 absolute right-0 -top-5">
+                                                <ListFilterIcon size={16} className="text-gray-500 mr-1" />
+                                                <FilterIcon size={16} className="text-gray-500" />
+                                            </div>
+                                            <div className="flex flex-wrap bg-[#d9d9d9] p-1 border border-gray-300 rounded-sm">
+                                                {['AL5', 'AN2', 'ANG', 'AT1', 'AT3', 'AT4', 'EC1', 'EC2', 'EC3', 'EC4', 'EMA', 'FLX', 'FP2', 'MAR', 'MS2', 'PN1', 'PN3', 'PS1', 'PS3', 'PS4', 'PS6', 'PS7', 'PS8', 'VSE', 'WIN'].map(lane => (
+                                                    <SlicerBtn key={lane} bgClass="bg-[#5b9bd5]" isSelected={selectedLanes.includes(lane)} isFilterActive={selectedLanes.length > 0} onClick={() => toggleFilter(setSelectedLanes, lane)}>{lane}</SlicerBtn>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start mt-2">
+                                        <span className="text-sm font-bold mr-2 w-20 mt-1">Sale Week</span>
+                                        <div className="flex flex-col flex-1 relative">
+                                            <div className="flex justify-end mb-1 absolute right-0 -top-5">
+                                                <ListFilterIcon size={16} className="text-gray-500 mr-1" />
+                                                <FilterIcon size={16} className="text-gray-500" />
+                                            </div>
+                                            <div className="flex flex-nowrap overflow-x-auto whitespace-nowrap bg-[#d9d9d9] p-1 border border-gray-300 rounded-sm w-fit max-w-full">
+                                                {saleWeekOptions.map(week => (
+                                                    <SlicerBtn key={week} bgClass="bg-[#7030a0]" isSelected={selectedSaleWeeks.includes(week)} isFilterActive={selectedSaleWeeks.length > 0} onClick={() => toggleFilter(setSelectedSaleWeeks, week)}>{week}</SlicerBtn>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {availableYards.length > 0 && (
+                                        <div className="flex items-start mt-2">
+                                            <span className="text-sm font-bold mr-2 w-20 mt-1">Yard</span>
+                                            <div className="flex flex-col flex-1 relative">
+                                                <div className="flex justify-end mb-1 absolute right-0 -top-5">
+                                                    <ListFilterIcon size={16} className="text-gray-500 mr-1" />
+                                                    <FilterIcon size={16} className="text-gray-500" />
+                                                </div>
+                                                <div className="flex flex-wrap bg-[#d9d9d9] p-1 border border-gray-300 rounded-sm">
+                                                    {availableYards.map(yard => (
+                                                        <SlicerBtn key={yard} bgClass="bg-[#7030a0]" isSelected={selectedYards.includes(yard)} isFilterActive={selectedYards.length > 0} onClick={() => toggleFilter(setSelectedYards, yard)}>{yard}</SlicerBtn>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex bg-[#e7e6e6] border-2 border-black p-2 shadow-sm rounded-sm text-sm font-bold text-center gap-2 max-w-4xl">
+                                        <div className="flex flex-col gap-1 w-1/4">
+                                            <button onClick={() => setApStatusHidden(!apStatusHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${apStatusHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{apStatusHidden ? 'Show AP Status' : 'Hide AP Status'}</button>
+                                            <button onClick={() => setRotationHidden(!rotationHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${rotationHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{rotationHidden ? 'Show Rotation' : 'Hide Rotation'}</button>
+                                            <button onClick={() => setRemarksHidden(!remarksHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${remarksHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{remarksHidden ? 'Show Voyage Remarks' : 'Hide Voyage Remarks'}</button>
+                                        </div>
+                                        <div className="flex flex-col gap-1 w-1/4">
+                                            <button onClick={() => setTradeBreakdownHidden(!tradeBreakdownHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${tradeBreakdownHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{tradeBreakdownHidden ? 'Show Trade Breakdown' : 'Hide Trade Breakdown'}</button>
+                                            <button onClick={() => setDgVolumeHidden(!dgVolumeHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${dgVolumeHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{dgVolumeHidden ? 'Show DG Volume' : 'Hide DG Volume'}</button>
+                                            <button onClick={() => setVcoHidden(!vcoHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${vcoHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{vcoHidden ? 'Show VCO Analyst' : 'Hide VCO Analyst'}</button>
+                                        </div>
+                                        <div className="flex flex-col gap-1 w-1/4">
+                                            <button onClick={() => setBsaHidden(!bsaHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${bsaHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{bsaHidden ? 'Show BSA' : 'Hide BSA'}</button>
+                                            <button onClick={() => setReeferHidden(!reeferHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${reeferHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{reeferHidden ? 'Show Reefer' : 'Hide Reefer'}</button>
+                                            <button onClick={() => setActivityHidden(!activityHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${activityHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{activityHidden ? 'Show Activity' : 'Hide Activity'}</button>
+                                        </div>
+                                        <div className="flex flex-col gap-1 w-1/4">
+                                            <button onClick={() => setSectorAllocHidden(!sectorAllocHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${sectorAllocHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{sectorAllocHidden ? 'Show Sector Allocation' : 'Hide Sector Allocation'}</button>
+                                            <button onClick={() => setOpIssuesHidden(!opIssuesHidden)} className={`border border-black p-1 h-full flex items-center justify-center cursor-pointer hover:brightness-105 text-xs leading-tight transition-all ${opIssuesHidden ? 'bg-[#d9d9d9]' : 'bg-[#a9d08e]'}`}>{opIssuesHidden ? 'Show Operational Issues' : 'Hide Operational Issues'}</button>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <div className="ml-2 flex items-center gap-2 font-bold text-sm">
+                                            Zoom:
+                                            <button onClick={() => setZoomLevel(prev => Math.max(0.5, prev - 0.1))} className="px-2 py-1 bg-gray-200 border-2 border-black hover:bg-gray-300">-</button>
+                                            <span>{Math.round(zoomLevel * 100)}%</span>
+                                            <button onClick={() => setZoomLevel(prev => Math.min(2.0, prev + 0.1))} className="px-2 py-1 bg-gray-200 border-2 border-black hover:bg-gray-300">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div className="flex gap-2 mb-2 items-center justify-between">
+                                <div className="flex gap-2">
+                                    <button onClick={() => setActiveTab('trade_summary')} className={`px-4 py-2 font-bold rounded-t-md ${activeTab === 'trade_summary' ? 'bg-[#002060] text-white' : 'bg-gray-300 text-black hover:bg-gray-400'}`}>Trade_Summary</button>
+                                    <button onClick={() => setActiveTab('sector_summary')} className={`px-4 py-2 font-bold rounded-t-md ${activeTab === 'sector_summary' ? 'bg-[#002060] text-white' : 'bg-gray-300 text-black hover:bg-gray-400'}`}>Sector_Summary</button>
+                                    <button onClick={() => setActiveTab('pol_booking')} className={`px-4 py-2 font-bold rounded-t-md ${activeTab === 'pol_booking' ? 'bg-[#002060] text-white' : 'bg-gray-300 text-black hover:bg-gray-400'}`}>POL_Booking_Flash</button>
+                                    <button onClick={() => setActiveTab('booking_flash')} className={`px-4 py-2 font-bold rounded-t-md ${activeTab === 'booking_flash' ? 'bg-[#002060] text-white' : 'bg-gray-300 text-black hover:bg-gray-400'}`}>Booking_Flash</button>
+                                    <button onClick={() => setActiveTab('detail')} className={`px-4 py-2 font-bold rounded-t-md ${activeTab === 'detail' ? 'bg-[#002060] text-white' : 'bg-gray-300 text-black hover:bg-gray-400'}`}>Detail View</button>
+                                </div>
+                                <button onClick={exportToExcel} className="px-4 py-2 font-bold rounded-md bg-[#375623] text-white hover:bg-green-800 transition-colors cursor-pointer">Export</button>
+                            </div>
+
+                            {/* TABLE DATA */}
+                            <div style={{ transform: `scale(${zoomLevel})`, transformOrigin: 'top left' }}>
+
+                            {activeTab === 'trade_summary' && (
+                                <PivotTableViewer
+                                    data={filteredRawRows}
+                                    config={{
+                                        title: "Trade Summary",
+                                        // Verified: this pivot's rowFields start with 'trade', so
+                                        // PivotTableViewer's generic tree-building (`aggregated` useMemo)
+                                        // already accumulates a Trade-level node (row.level === 1) for
+                                        // each Trade, and `flatten()`/renderRows already emits every
+                                        // level unfiltered (no leaf-only filtering exists), so the
+                                        // Trade-level subtotal row already renders — bolded via the
+                                        // existing `row.level === 1 ? 'font-bold' : ''` rule — with no
+                                        // code change needed here. Unlike the Booking_Flash pivot below
+                                        // (which mirrors the Excel Trade_Summary sheet's per-Sub-Trade,
+                                        // per-Sale-Week "Max Laden"/"Total TEU"/"Trunk Utilization"
+                                        // metrics and needed `rollupSumOfChildren` so its Trade-level "Max
+                                        // LDN" is the SUM of Sub Trades' maxes), this pivot has no
+                                        // colField/Sale-Week breakout — its "Max LDN" here spans the
+                                        // whole filtered window per Trade, so a further MAX across all of
+                                        // that Trade's raw rows (mathematically equivalent to a max over
+                                        // its children's own maxes) is the correct rollup, and no
+                                        // rollupSumOfChildren flag is applied to it.
+                                        rowFields: [
+                                            { key: 'trade', label: 'Trade' },
+                                            { key: 'subTrade', label: 'Sub Trade' },
+                                            { key: 'lane', label: 'Lane' },
+                                            { key: 'saleWeek', label: 'Sale Week' },
+                                            { key: 'vvd', label: 'VVD' },
+                                            { key: 'vessel', label: 'Vessel' }
+                                        ],
+                                        dataFields: [
+                                            { name: 'maxLdn', base: 'maxLdn', label: 'Max LDN', agg: 'max', format: 'number' },
+                                            { name: 'standby', base: 'standbyRaw', label: 'Standby Threshold', agg: 'max', format: 'percent' },
+                                            { name: 'curLaden', base: 'curLaden', label: 'Current Laden', agg: 'sum', format: 'number' },
+                                            // Native CF (Booking_Flash!N13:O47): ($O-$N)>10% -> red fill on
+                                            // both Peak Utiliz % (N) and Current Laden Utiliz % (O).
+                                            { name: 'peakUtilz', base: 'peakUtilRaw', label: 'Peak Utiliz %', agg: 'max', format: 'percent', cellClass: (val, tGrp) => {
+                                                const curUtilz = tGrp.maxLdn && tGrp.maxLdn.max > 0 ? (tGrp.curLaden.sum / tGrp.maxLdn.max) * 100 : 0;
+                                                return utilGapCellClass(curUtilz, val);
+                                            } },
+                                            { name: 'utilization', label: 'Current Laden Utiliz %', agg: 'calc', calc: (t) => t.maxLdn && t.maxLdn.max > 0 ? (t.curLaden.sum / t.maxLdn.max) * 100 : 0, format: 'percent', cellClass: (val, tGrp) => {
+                                                const peakUtilz = tGrp.peakUtilz ? tGrp.peakUtilz.max : 0;
+                                                return utilGapCellClass(val, peakUtilz);
+                                            } },
+                                            { name: 'shortfall', label: 'Shortfall', agg: 'calc', calc: (t) => t.maxLdn && t.maxLdn.max > 0 ? t.curLaden.sum - t.maxLdn.max : 0, format: 'accounting' },
+                                            { name: 'quote', base: 'quote', label: 'ONE Quote', agg: 'sum', format: 'number' },
+                                            { name: 'bsaTeu', base: 'bsaTeu', label: 'BSA TEU', agg: 'max', format: 'number' },
+                                            { name: 'rfrBkgTtl', base: 'rfrBkgTtl', label: 'RFR BKG TTL', agg: 'sum', format: 'number' },
+                                            { name: 'portTotal', base: 'portTotal', label: 'Port Total', agg: 'sum', format: 'number' }
+                                        ]
+                                    }} 
+                                />
+                            )}
+                            {activeTab === 'sector_summary' && (
+                                <div className="flex flex-col lg:flex-row gap-8 items-start">
+                                {/* Verified: all three Sector_Summary pivots below have rowFields
+                                    starting with 'trade', so — same as Trade Summary above — a
+                                    Trade-level subtotal row (row.level === 1) is already computed
+                                    and rendered (bolded) by PivotTableViewer's generic tree/flatten
+                                    logic with no change needed. validation_ground_truth.json has no
+                                    explicit trade_total rows for these avg-based pivots to check
+                                    numerically (its sector_summary_pivot1/2 arrays are flat lane-level
+                                    detail only), but the existing 'avg' aggregation (sum of raw
+                                    rows / count of raw rows, computed independently at every level)
+                                    is a standard, self-consistent rollup for an average field. */}
+                                <PivotTableViewer
+                                    data={filteredRawRows}
+                                    config={{
+                                        title: "Sector Summary",
+                                        rowFields: [
+                                            { key: 'trade', label: 'Trade' },
+                                            { key: 'subTrade', label: 'Sub Trade' },
+                                            { key: 'lane', label: 'Lane' },
+                                            { key: 'saleWeek', label: 'Sale Week' }
+                                        ],
+                                        dataFields: [
+                                            { name: 'secAlloc', base: 'secAlloc', label: 'Sector Alloc', agg: 'sum', format: 'number' },
+                                            { name: 'avgBooking', base: 'curLaden', label: 'Average Booking', agg: 'avg', format: 'number' },
+                                            { name: 'curLaden', base: 'curLaden', label: 'Current Laden', agg: 'sum', format: 'number' },
+                                            { name: 'utilization', label: 'Current Laden Utiliz %', agg: 'calc', calc: (t) => t.secAlloc && t.secAlloc.sum > 0 ? (t.curLaden.sum / t.secAlloc.sum) * 100 : 0, format: 'percent' },
+                                        ]
+                                    }} 
+                                />
+                                <PivotTableViewer 
+                                    data={filteredRawRows}
+                                    config={{
+                                        title: "Average Max Laden vs Booking",
+                                        rowFields: [
+                                            { key: 'trade', label: 'Trade' },
+                                            { key: 'subTrade', label: 'Sub Trade' },
+                                            { key: 'lane', label: 'Lane' }
+                                        ],
+                                        dataFields: [
+                                            { name: 'avgMaxLdn', base: 'maxLdn', label: 'Avg Max Laden', agg: 'avg', format: 'number' },
+                                            { name: 'avgBkg', base: 'curLaden', label: 'Avg Booking', agg: 'avg', format: 'number' },
+                                            { name: 'avgMaxVsBkg', label: 'Avg Max Laden vs Bkg', agg: 'calc', calc: (t) => {
+                                                const avgBkg = t.avgBkg.count > 0 ? t.avgBkg.sum/t.avgBkg.count : 0;
+                                                const avgMax = t.avgMaxLdn.count > 0 ? t.avgMaxLdn.sum/t.avgMaxLdn.count : 0;
+                                                return avgBkg - avgMax;
+                                            }, format: 'accounting' },
+                                            { name: 'avgUtilz', label: 'Avg Utilization', agg: 'calc', calc: (t) => {
+                                                const avgBkg = t.avgBkg.count > 0 ? t.avgBkg.sum/t.avgBkg.count : 0;
+                                                const avgMax = t.avgMaxLdn.count > 0 ? t.avgMaxLdn.sum/t.avgMaxLdn.count : 0;
+                                                return avgMax > 0 ? (avgBkg / avgMax) * 100 : 0;
+                                            }, format: 'percent', cellClass: (val) => val > 100 ? 'bg-red-600 text-white font-bold' : '' }
+                                        ]
+                                    }}
+                                />
+                                <PivotTableViewer
+                                    data={sectorDataMapped}
+                                    config={{
+                                        title: "Sector Data",
+                                        rowFields: [
+                                            { key: 'trade', label: 'Trade' },
+                                            { key: 'subTrade', label: 'Sub Trade' },
+                                            { key: 'lane', label: 'Lane' },
+                                            { key: 'podSec', label: 'POD Sector' }
+                                        ],
+                                        dataFields: [
+                                            { name: 'sectorAlloc', base: 'sectorAlloc', label: 'Sector Alloc', agg: 'sum', format: 'number' },
+                                            { name: 'avgBooking', base: 'avgBooking', label: 'Average Booking', agg: 'sum', format: 'number' },
+                                            { name: 'openSpace', base: 'openSpace', label: 'Open Space', agg: 'sum', format: 'number' }
+                                        ]
+                                    }}
+                                />
+                            </div>
+                            )}
+                            {activeTab === 'pol_booking' && (
+                                <PivotTableViewer 
+                                    data={filteredRawRows}
+                                    config={{
+                                        title: "POL_Booking_Flash",
+                                        rowFields: [
+                                            { key: 'trade', label: 'Trade' },
+                                            { key: 'subTrade', label: 'Sub Trade' },
+                                            { key: 'lane', label: 'Service' },
+                                            { key: 'saleWeek', label: 'Sale Week' },
+                                            { key: 'coastalEtd', label: 'Coastal ETD' },
+                                            { key: 'portCut', label: 'Port Cut' },
+                                            { key: 'loadingStatus', label: 'Status' },
+                                            { key: 'vvd', label: 'VVD' },
+                                            { key: 'vessel', label: 'Vessel Name' },
+                                            { key: 'pol', label: 'POL' }
+                                        ],
+                                        // Verified: Measures Loading Status (col K) diverges from Measures Overall
+                                        // Status (col L) in ~5.7% of rows (55/964) in the 8/12/2026 test workbook,
+                                        // so POL_Booking_Flash uses the POL-level Loading Status for its Status
+                                        // column/coloring, while Booking_Flash/Detail View keep Measures Overall
+                                        // Status (see status alias + getBg below).
+                                        // Verified 8/13/2026 against theme1.xml's <a:clrScheme> in the reference
+                                        // workbook + conditional_formatting_rules.json's resolved dxf fills:
+                                        // - VMS fill = theme 0 (lt1 = #FFFFFF) with tint -0.14996795556505021.
+                                        //   Negative-tint formula final = color*(1+tint) -> 255*0.85003... =
+                                        //   216.76 -> rounds to 0xD9 per channel = #D9D9D9, an exact match for
+                                        //   the hardcoded #d9d9d9 below. No change needed.
+                                        // - AP Frozen fill = theme 5 (accent2 = #C0504D) with tint
+                                        //   0.39994506668294322. Positive-tint formula final = color+(255-color)*tint
+                                        //   -> R: 192+(255-192)*0.39995=217.19->0xD9, G: 80+(255-80)*0.39995=150.0->0x96,
+                                        //   B: 77+(255-77)*0.39995=148.2->0x94 = #D99694, 1 unit off (of 255) from the
+                                        //   hardcoded #DA9694 below on the R channel only -- visually indistinguishable
+                                        //   drift from manual color-picking during original implementation. No change
+                                        //   needed.
+                                        // - AP Only fill is a literal dxf hex #FFC000 (no theme/tint resolution
+                                        //   needed) and matches the hardcoded #ffc000 below exactly.
+                                        rowClass: (totals, ctx) => {
+                                            const vvd = String(ctx.vvd || '').trim().toUpperCase();
+                                            const status = String(ctx.loadingStatus || '').trim();
+                                            const pol = String(ctx.pol || '').trim().toUpperCase();
+                                            if (vvd === 'VMS') return 'bg-[#d9d9d9] text-black font-semibold border-b border-gray-400';
+                                            if (status === 'AP Frozen') return 'bg-[#DA9694] font-bold';
+                                            if (status === 'AP Only') return 'bg-[#ffc000] font-bold';
+                                            if (pol === 'NO N.A. CALL') return 'bg-[#FF0000] italic text-black';
+                                            return '';
+                                        },
+                                        // Native POL_Booking_Flash CF rules do AND($H12="VMS", <col>=0) -> white
+                                        // font on these specific columns (P, Q, T, U, V, Y, Z) to hide the "0"
+                                        // placeholder on VMS rows. This pivot pulls straight from
+                                        // filteredRawRows (upstream of the Detail View's tableData VMS field
+                                        // wipe), so without this, a VMS row's raw 0 would render as a literal
+                                        // "0" here. Field names below match the dataFields' `name` values.
+                                        vmsZeroMaskFields: ['plannedMty', 'actualMty', 'discharge', 'curLaden', 'peakPolUtilz', 'loadableQuant', 'loadableWgt'],
+                                        dataFields: [
+                                            { name: 'plannedMty', base: 'plannedMty', label: 'Planned Mty (TEU)', agg: 'sum', format: 'number' },
+                                            { name: 'actualMty', base: 'actualMty', label: 'Actual Mty (TEU)', agg: 'sum', format: 'number' },
+                                            { name: 'polMaxLdn', base: 'polMaxLdn', label: 'POL Max Laden (TEU)', agg: 'max', format: 'number' },
+                                            { name: 'polLdnThresh', base: 'polLdnThresh', label: 'POL Laden Threshold', agg: 'max', format: 'percent' },
+                                            { name: 'discharge', base: 'discharge', label: 'Discharge (TEU)', agg: 'sum', format: 'number' },
+                                            { name: 'curLaden', base: 'curLaden', label: 'Current Laden (TEU)', agg: 'sum', format: 'number' },
+                                            // Audited 8/13/2026: grouping the 964-row Data_download test set by this
+                                            // exact 10-field row key (trade, subTrade, lane, saleWeek, coastalEtd,
+                                            // portCut, loadingStatus, vvd, vessel, pol) produces 964 groups for 964
+                                            // rows -- i.e. ZERO groups with more than 1 raw row (VVD+POL together are
+                                            // effectively unique per rotation leg). Reference workbook rows behave the
+                                            // same way (consecutive ground-truth rows share a VVD but differ by POL).
+                                            // Since every group is a singleton, agg:'max' on the raw percent columns
+                                            // is mathematically identical to any recomputed ratio here -- no rollup
+                                            // ever actually occurs, so left as agg:'max' on the raw values rather than
+                                            // recomputing (see peakPolUtilzRaw/polBkgUtilzRaw source columns above).
+                                            // Native CF (POL_Booking_Flash!V13:W2000): ($W-$V)>10% -> red fill on
+                                            // both Peak Laden Utilz % (V) and Current Laden Utilz % (W).
+                                            { name: 'peakPolUtilz', base: 'peakPolUtilzRaw', label: 'Peak Laden Utilz', agg: 'max', format: 'percent', cellClass: (val, tGrp) => {
+                                                const curUtilz = tGrp.polBkgUtilz ? tGrp.polBkgUtilz.max : 0;
+                                                return utilGapCellClass(curUtilz, val);
+                                            } },
+                                            { name: 'polBkgUtilz', base: 'polBkgUtilzRaw', label: 'Current Laden Utilz', agg: 'max', format: 'percent', cellClass: (val, tGrp) => {
+                                                const peakUtilz = tGrp.peakPolUtilz ? tGrp.peakPolUtilz.max : 0;
+                                                return utilGapCellClass(val, peakUtilz);
+                                            } },
+                                            { name: 'maxLdnVsPolBkg', base: 'maxLdnVsPolBkg', label: 'Max Laden Vs POL Booking', agg: 'sum', format: 'accounting' },
+                                            { name: 'loadableQuant', base: 'loadableQuant', label: 'Loadable Quant', agg: 'sum', format: 'number' },
+                                            { name: 'loadableWgt', base: 'loadableWgt', label: 'Loadable WGT', agg: 'sum', format: 'number' }
+                                        ]
+                                    }} 
+                                />
+                            )}
+                            {activeTab === 'booking_flash' && (
+                                <PivotTableViewer 
+                                    data={filteredRawRows}
+                                    config={{
+                                        title: "Booking_Flash",
+                                        // Row grouping includes Trade (in addition to Sub Trade) so a
+                                        // bolded Trade-level subtotal row renders for each Trade group,
+                                        // matching the reference Trade_Summary sheet's "TPT"/"TAT"/"LAT"
+                                        // rollup rows. See `rollupSumOfChildren` below and the generic
+                                        // rollup logic in PivotTableViewer's `aggregated` useMemo for the
+                                        // aggregation methodology (verified against ground truth data).
+                                        rowFields: [
+                                            { key: 'trade', label: 'Trade' },
+                                            { key: 'subTrade', label: 'Sub Trade' }
+                                        ],
+                                        colField: 'saleWeek',
+                                        valuesInRows: true,
+                                        dataFields: [
+                                            // Trade-level "Max Laden" is the SUM of its Sub Trades' own max
+                                            // values (not a further max across raw rows) — verified against
+                                            // validation_ground_truth.json (e.g. TPT Max Laden 2026/W27 =
+                                            // 18800+3725+28045 = 50570, matching the reference trade_total
+                                            // exactly).
+                                            { name: 'maxLdn', base: 'maxLdn', label: 'Max Laden', agg: 'max', format: 'number', rollupSumOfChildren: true },
+                                            { name: 'curLaden', base: 'curLaden', label: 'Total TEU', agg: 'sum', format: 'number' },
+                                            { name: 'utilization', label: 'Trunk Utilization', agg: 'calc', calc: (t) => t.maxLdn && t.maxLdn.max > 0 ? (t.curLaden.sum / t.maxLdn.max) * 100 : 0, format: 'percent', cellClass: (val) => val > 100 ? 'text-red-600 font-bold' : '' }
+                                        ]
+                                    }}
+                                />
+                            )}
+                            {activeTab === 'detail' && (
+    
+                            <div className="border-2 border-black overflow-x-auto bg-white shadow-md">
+                                <table className="w-full text-xs text-center border-collapse border border-gray-400 whitespace-nowrap">
+                                    <thead className="bg-[#203764] text-white sticky top-0 z-10 shadow-sm border-black">
+                                        {/* FILTER ROW: All filters level at the very top */}
+                                        <tr className="bg-[#203764]">
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('trade')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('subTrade')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('lane')}</th>
+                                            <th className="border border-black p-1 min-w-[60px]">{renderFilter('saleWeek')}</th>
+                                            <th className="border border-black p-1 min-w-[80px]">{renderFilter('pic')}</th>
+                                            <th className="border border-black p-1 min-w-[60px]">{renderFilter('cutoff')}</th>
+                                            <th className="border border-black p-1 min-w-[60px]">{renderFilter('etd')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('status')}</th>
+                                            <th className="border border-black p-1 min-w-[80px]">{renderFilter('vvd')}</th>
+                                            <th className="border border-black p-1 min-w-[120px]">{renderFilter('vessel')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('maxLdn')}</th>
+                                            <th className="border border-black p-1 min-w-[60px]">{renderFilter('standby')}</th>
+                                            <th className="border border-black p-1 min-w-[50px] bg-[#d9e1f2]">{renderFilter('curLaden')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('peakUtil')}</th>
+                                            <th className="border border-black p-1 min-w-[50px] bg-[#FDE9D9]">{renderFilter('curUtil')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('shortfall')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('quote')}</th>
+                                            <th className="border border-black p-1 min-w-[50px]">{renderFilter('broken')}</th>
+                                            {!bsaHidden && (
+                                                <>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#DAEEF3]">{renderFilter('bsaTeu')}</th>
+                                                    <th className="border border-black p-1 min-w-[60px] bg-[#DAEEF3]">{renderFilter('bsaWgt')}</th>
+                                                </>
+                                            )}
+
+                                            {!reeferHidden && (
+                                                <>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#ffc000]">{renderFilter('rfrBsaPlugs')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#ffc000]">{renderFilter('rfrBkgPlugs')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#ffc000]">{renderFilter('rfrMaxLdn')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#ffc000]">{renderFilter('rfrBkgTtl')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#ffc000]">{renderFilter('rfrUtiliz')}</th>
+                                                </>
+                                            )}
+                                            
+                                            {!activityHidden && (
+                                                <>
+                                                    <th className="border border-black p-1 min-w-[60px]">{renderFilter('actVsBkgUtilz')}</th>
+                                                    <th className="border border-black p-1 min-w-[60px]">{renderFilter('actVsMaxLdn')}</th>
+
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#C4BD97]">{renderFilter('inlandAct')}</th>
+                                                    <th className="border border-black p-1 min-w-[60px] bg-[#C4BD97]">{renderFilter('inlandNoAct')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#C4BD97]">{renderFilter('inlandTotal')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#C4BD97]">{renderFilter('portAct')}</th>
+                                                    <th className="border border-black p-1 min-w-[60px] bg-[#C4BD97]">{renderFilter('portNoAct')}</th>
+                                                    <th className="border border-black p-1 min-w-[50px] bg-[#C4BD97]">{renderFilter('portTotal')}</th>
+                                                </>
+                                            )}
+
+                                            {!opIssuesHidden && (
+                                                <th className="border border-black p-1 min-w-[80px]">{renderFilter('opIssues')}</th>
+                                            )}
+                                            {!sectorAllocHidden && (
+                                                <>
+                                                    <th className="border border-black p-1 min-w-[80px]">{renderFilter('secAlloc')}</th>
+                                                    <th className="border border-black p-1 min-w-[80px]">{renderFilter('sgsinDryVsRfr')}</th>
+                                                </>
+                                            )}
+                                            {!rotationHidden && (
+                                                <>
+                                                    <th className="border border-black p-1 min-w-[100px]">{renderFilter('proformaRot')}</th>
+                                                    <th className="border border-black p-1 min-w-[100px]">{renderFilter('actualRot')}</th>
+                                                </>
+                                            )}
+                                            {!apStatusHidden && (
+                                                <th className="border border-black p-1 min-w-[60px]">{renderFilter('apStatus')}</th>
+                                            )}
+                                            {!vcoHidden && (
+                                                <th className="border border-black p-1 min-w-[80px]">{renderFilter('vco')}</th>
+                                            )}
+                                            {!tradeBreakdownHidden && (
+                                                <>
+                                                    <th className="border border-black p-1 min-w-[40px]">{renderFilter('tpt')}</th>
+                                                    <th className="border border-black p-1 min-w-[40px]">{renderFilter('tat')}</th>
+                                                    <th className="border border-black p-1 min-w-[40px]">{renderFilter('lwt')}</th>
+                                                    <th className="border border-black p-1 min-w-[40px]">{renderFilter('lnt')}</th>
+                                                    <th className="border border-black p-1 min-w-[40px]">{renderFilter('imt')}</th>
+                                                    <th className="border border-black p-1 min-w-[40px]">{renderFilter('let')}</th>
+                                                </>
+                                            )}
+                                            {!dgVolumeHidden && (
+                                                <th className="border border-black p-1 min-w-[50px]">{renderFilter('dgTeu')}</th>
+                                            )}
+
+                                            {!remarksHidden && (
+                                                <th className="border border-black p-1 min-w-[200px]">{renderFilter('remarks')}</th>
+                                            )}
+                                        </tr>
+
+                                        {/* HEADER TITLES ROW 1 */}
+                                        <tr>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Trade</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Sub Trade</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Lane</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">Sale Week</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[80px] text-[11px] leading-tight">PIC (spc/mkg)</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">1st POL<br/>Cutoff</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">ETD Last<br/>Port</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Status</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[80px] text-[11px] leading-tight">VVD</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[120px] text-[11px] leading-tight">Vessel Name</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Max LDN</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">Standby<br/>Threshold</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#d9e1f2] text-black">Current<br/>Laden<br/>(TEU)</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Peak<br/>Utiliz %</th>
+                                            <th rowSpan={2} className="border border-black font-bold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#FDE9D9] text-[#974706]">Current<br/>Laden<br/>Utiliz %</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Max LDN vs<br/>BKG<br/>(Short_Fall)</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight text-white">ONE<br/>Quote<br/>(TEU)</th>
+                                            <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">Broken<br/>Routes</th>
+                                            {!bsaHidden && (
+                                                <>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#DAEEF3] text-black">BSA TEU</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight bg-[#DAEEF3] text-black">BSA Wgt<br/>(Last NA Port )</th>
+                                                </>
+                                            )}
+                                            
+                                            {!reeferHidden && (
+                                                <>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#ffc000] text-black">RFR BSA<br/>Plugs</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#ffc000] text-black">RFR BKG<br/>Plugs</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#ffc000] text-black">RFR Max<br/>LDN</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#ffc000] text-black">RFR BKG<br/>TTL</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#ffc000] text-black">RFR<br/>Utiliz %</th>
+                                                </>
+                                            )}
+                                            
+                                            {!activityHidden && (
+                                                <>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">Activity vs<br/>Booking Utilz</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">Activity vs<br/>Max Laden</th>
+                                                    <th colSpan={3} className="border border-black font-bold p-1 min-w-[160px] text-[12px] leading-tight bg-[#C4BD97] text-black">Inland Activity</th>
+                                                    <th colSpan={3} className="border border-black font-bold p-1 min-w-[160px] text-[12px] leading-tight bg-[#C4BD97] text-black">Port Activity</th>
+                                                </>
+                                            )}
+
+                                            {!opIssuesHidden && <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[80px] text-[11px] leading-tight">Operational<br/>Issues</th>}
+                                            {!sectorAllocHidden && (
+                                                <>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[80px] text-[11px] leading-tight">Sector<br/>Allocation</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[80px] text-[11px] leading-tight">SGSIN Dry<br/>vs Reefer</th>
+                                                </>
+                                            )}
+                                            {!rotationHidden && (
+                                                <>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[100px] text-[11px] leading-tight">Proforma<br/>Rotation</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[100px] text-[11px] leading-tight">Actual<br/>Rotation</th>
+                                                </>
+                                            )}
+                                            {!apStatusHidden && <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight">AP<br/>Status</th>}
+                                            {!vcoHidden && <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[80px] text-[11px] leading-tight">VCO<br/>Analyst</th>}
+                                            {!tradeBreakdownHidden && (
+                                                <>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[40px] text-[11px] leading-tight">TPT</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[40px] text-[11px] leading-tight">TAT</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[40px] text-[11px] leading-tight">LWT</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[40px] text-[11px] leading-tight">LNT</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[40px] text-[11px] leading-tight">IMT</th>
+                                                    <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[40px] text-[11px] leading-tight">LET</th>
+                                                </>
+                                            )}
+                                            {!dgVolumeHidden && <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight">DG<br/>TEU</th>}
+                                            
+                                            {!remarksHidden && (
+                                                <th rowSpan={2} className="border border-black font-semibold p-1.5 min-w-[200px] text-[11px] leading-tight text-left">Voyage Remarks</th>
+                                            )}
+                                        </tr>
+                                        {/* HEADER TITLES ROW 2 (For Sub-headers) */}
+                                        <tr>
+                                            {!activityHidden && (
+                                                <>
+                                                    <th className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#002060] text-white">Inland<br/>Activity</th>
+                                                    <th className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight bg-[#002060] text-white">Inland No<br/>Activity</th>
+                                                    <th className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#002060] text-white">Inland<br/>Total</th>
+                                                    <th className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#002060] text-white">Port<br/>Activity</th>
+                                                    <th className="border border-black font-semibold p-1.5 min-w-[60px] text-[11px] leading-tight bg-[#002060] text-white">Port No<br/>Activity</th>
+                                                    <th className="border border-black font-semibold p-1.5 min-w-[50px] text-[11px] leading-tight bg-[#002060] text-white">Port<br/>Total</th>
+                                                </>
+                                            )}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {processedData.map((row, index) => {
+                                            if (row.isBlankRow) {
+                                                return (
+                                                    <tr key={row.id || `blank-${index}`} className="h-4">
+                                                        {row.showTrade && <td rowSpan={row.tradeSpan} className="border border-gray-400 font-bold bg-white align-top pt-1.5">{row.trade}</td>}
+                                                        {row.showSub && <td rowSpan={row.subSpan} className="border border-gray-400 font-bold bg-[#e2efda] align-top pt-1.5">{row.subTrade}</td>}
+                                                        {row.showLane && <td rowSpan={row.laneSpan} className="border border-gray-400 font-bold bg-[#bdd7ee] text-[#2f5597] align-top pt-1.5">{row.lane}</td>}
+                                                        <td colSpan={detailBlankRowColSpan} className="border border-gray-400 bg-[#f3f3f3]"></td>
+                                                    </tr>
+                                                );
+                                            }
+
+                                            // Deliberately keyed on `status` (Measures Overall Status), not
+                                            // `loadingStatus` (Measures Loading Status) — Detail View/Booking_Flash
+                                            // coloring stays on the overall status field; only POL_Booking_Flash's
+                                            // rowClass uses the POL-level loading status.
+                                            const isVMS = String(row.vvd).trim().toUpperCase() === 'VMS';
+                                            const isAPOnly = String(row.status).trim().toUpperCase() === 'AP ONLY';
+                                            const isAPFrozen = String(row.status).trim().toUpperCase() === 'AP FROZEN';
+
+                                            // Colors verified 8/13/2026 against theme1.xml's <a:clrScheme> +
+                                            // conditional_formatting_rules.json's resolved dxf fills (see the
+                                            // matching note by POL_Booking_Flash's rowClass above for the full
+                                            // tint math): VMS's theme-0/tint -0.14996795556505021 resolves to an
+                                            // exact #D9D9D9 match; AP Frozen's theme-5/tint 0.39994506668294322
+                                            // resolves to #D99694, 1 unit off #DA9694 on the R channel only
+                                            // (negligible/expected drift); AP Only's literal dxf hex #FFC000
+                                            // matches exactly. No hardcoded values changed.
+                                            const getBg = (defaultBg, isApRange) => {
+                                                if (isVMS) return 'bg-[#d9d9d9]';
+                                                if (isAPOnly && isApRange) return 'bg-[#ffc000]';
+                                                if (isAPFrozen && isApRange) return 'bg-[#DA9694]';
+                                                return defaultBg;
+                                            };
+
+                                            return (
+                                                <tr key={row.id || index}>
+                                                    {row.showTrade && <td rowSpan={row.tradeSpan} className="border border-gray-400 font-bold bg-white align-top pt-1.5">{row.trade}</td>}
+                                                    {row.showSub && <td rowSpan={row.subSpan} className="border border-gray-400 font-bold bg-[#e2efda] align-top pt-1.5">{row.subTrade}</td>}
+                                                    {row.showLane && <td rowSpan={row.laneSpan} className="border border-gray-400 font-bold bg-[#bdd7ee] text-[#2f5597] align-top pt-1.5">{row.lane}</td>}
+                                                    
+                                                    <td className={`border border-gray-400 font-bold ${getBg('bg-white', true)}`}>{row.saleWeek}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.pic}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.cutoff}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.etd}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.status}</td>
+                                                    <td className={`border border-gray-400 font-bold text-black ${getBg('bg-[#d9e1f2]', true)}`}>{row.vvd}</td>
+                                                    <td className={`border border-gray-400 font-bold text-left px-2 truncate text-[#2f5597] max-w-[140px] ${getBg('bg-[#d9e1f2]', true)}`}>{row.vessel}</td>
+                                                    <td className={`border border-gray-400 font-bold ${getBg('bg-white', true)}`}>{row.maxLdn}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.standby}</td>
+                                                    <td className={`border border-gray-400 font-bold ${getBg('bg-[#d9e1f2]', true)}`}>{row.curLaden}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`} style={row.utilGapFlagged && !isVMS && !isAPOnly && !isAPFrozen ? row.utilGapStyle : {}}>{row.peakUtil}</td>
+                                                    <td className={`border border-gray-400 font-bold text-black ${getBg('bg-[#FDE9D9]', true)}`} style={row.utilGapFlagged && !isVMS && !isAPOnly && !isAPFrozen ? row.utilGapStyle : {}}>{row.curUtil}</td>
+                                                    <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.shortfall}</td>
+                                                    <td className={`border border-gray-400 font-bold text-[#974706] ${getBg('bg-white', true)}`}>{row.quote}</td>
+                                                    <td className={`border border-gray-400 text-[#2f5597] ${getBg('bg-white', true)}`}>{row.broken}</td>
+                                                    {!bsaHidden && (
+                                                        <>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.bsaTeu}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.bsaWgt}</td>
+                                                        </>
+                                                    )}
+                                                    {!reeferHidden && (
+                                                        <>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.rfrBsaPlugs}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.rfrBkgPlugs}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.rfrMaxLdn}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.rfrBkgTtl}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.rfrUtiliz}</td>
+                                                        </>
+                                                    )}
+                                                    {!activityHidden && (
+                                                        <>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.actVsBkgUtilz}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`} style={row.actVsMaxLdnStyle}>{row.actVsMaxLdn}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.inlandAct}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.inlandNoAct}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.inlandTotal}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.portAct}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.portNoAct}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', true)}`}>{row.portTotal}</td>
+                                                        </>
+                                                    )}
+                                                    {!opIssuesHidden && (
+                                                        <td className={`border border-gray-400 text-left px-2 truncate max-w-[150px] ${getBg('bg-white', false)}`} style={String(row.opIssues || '').trim().toUpperCase().startsWith('**ALERT') ? { color: '#FF0000', fontWeight: 'bold' } : {}}>{renderAsteriskHide(row.opIssues)}</td>
+                                                    )}
+                                                    {!sectorAllocHidden && (
+                                                        <>
+                                                            <td className={`border border-gray-400 text-left px-2 ${getBg('bg-white', false)}`}>{renderSecAlloc(row.secAlloc)}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{renderSecAlloc(row.sgsinDryVsRfr)}</td>
+                                                        </>
+                                                    )}
+                                                    {!rotationHidden && (
+                                                        <>
+                                                            <td className={`border border-gray-400 truncate max-w-[150px] ${getBg('bg-white', false)}`}>{renderAsteriskHide(row.proformaRot)}</td>
+                                                            <td className={`border border-gray-400 truncate max-w-[150px] ${getBg('bg-white', false)}`}>{renderAsteriskHide(row.actualRot)}</td>
+                                                        </>
+                                                    )}
+                                                    {!apStatusHidden && (
+                                                        <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{renderAsteriskHide(row.apStatus)}</td>
+                                                    )}
+                                                    {!vcoHidden && (
+                                                        <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.vco}</td>
+                                                    )}
+                                                    {!tradeBreakdownHidden && (
+                                                        <>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.tpt}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.tat}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.lwt}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.lnt}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.imt}</td>
+                                                            <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.let}</td>
+                                                        </>
+                                                    )}
+                                                    {!dgVolumeHidden && (
+                                                        <td className={`border border-gray-400 ${getBg('bg-white', false)}`}>{row.dgTeu}</td>
+                                                    )}
+
+                                                    {!remarksHidden && (
+                                                        <td className="border border-gray-400 bg-white text-left px-2 truncate max-w-xs">{renderAsteriskHide(row.remarks)}</td>
+                                                    )}
+                                                </tr>
+                                            );
+                                        })}
+                                        
+                                        {processedData.length === 0 && (
+                                            <tr>
+                                                <td colSpan={detailNoDataColSpan} className="p-8 text-center text-gray-500 font-semibold bg-white border border-gray-400">
+                                                    No data matches the selected filters.
+                                                </td>
+                                            </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+                                                    )}
+                            </div>
+                        </>
+                    )}
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<FlashReportDashboard />);
+    </script>
+</body>
+</html>
