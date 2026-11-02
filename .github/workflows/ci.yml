@@ -1,0 +1,142 @@
+name: CI
+
+# This repo has no build step -- the app is one static HTML file (see README.md). These jobs
+# mirror AGENTS.md's "Required: run the checks after every change to the app" checklist exactly,
+# so a check that's required locally is required here too. See README.md's "Verifying changes"
+# section for what each one catches and why check 1 alone was never sufficient.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  # AGENTS.md check 1 -- fast, catches JSX/JS syntax errors only. Auto-detects the current app
+  # file the same way tests/check_alias_landmines.py does (highest dotted-version number among
+  # Booking_flash_report_na(_Kevin)?_<ver>_*.html, excluding testing builds), so a version bump
+  # never needs a workflow edit.
+  #
+  # 2026-09-17: this step's own copy of the detection logic was missed by commit 0de749e ("Stop
+  # four checks validating the testing build instead of the main file") -- that commit fixed
+  # AGENTS.md's snippet plus check_alias_landmines.py/check_date_timezone_safety.js/
+  # perf_benchmark.js, but not this embedded copy, so CI's syntax-check job kept silently
+  # validating Booking_flash_report_na_1.67_TESTING.html (numerically higher, but missing the
+  # Fields picker feature entirely) on every push after that "fix" landed. Confirmed live against
+  # origin/main before patching. Now excludes /testing/i before the version comparison, matching
+  # the other four copies, and logs what it skipped.
+  #
+  # If you change the rule here, change it in AGENTS.md's snippet, check_alias_landmines.py,
+  # check_date_timezone_safety.js, check_field_filter_gating.py, check_server_prefs_logic.js,
+  # ci_regression_runner.js and perf_benchmark.js too -- seven hand-synced copies, which is
+  # exactly why this one got missed.
+  syntax-check:
+    name: Syntax check (Babel + node --check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Extract inline script and check syntax
+        run: |
+          python3 - <<'EOF'
+          import re, os
+          repo_root = os.getcwd()
+          all_files = [f for f in os.listdir(repo_root) if re.match(r'[Bb]ooking_flash_report_na(_Kevin)?_[\d.]+_.*\.html$', f)]
+          assert all_files, f"No Booking_flash_report_na*.html file found in {repo_root}"
+          excluded = [f for f in all_files if re.search(r'testing', f, re.I)]
+          if excluded:
+              print("(excluded as testing builds: %s)" % ', '.join(sorted(excluded)))
+          candidates = [f for f in all_files if not re.search(r'testing', f, re.I)]
+          assert candidates, f"No main (non-testing) Booking_flash_report_na*.html file found in {repo_root}"
+          version_key = lambda fname: tuple(int(p) for p in re.search(r'na_(?:Kevin_)?([\d.]+)_', fname).group(1).split('.'))
+          html_path = max(candidates, key=version_key)
+          print(f"(main app file: {html_path})")
+          content = open(html_path).read()
+          open('/tmp/extracted.jsx', 'w').write(re.search(r'<script type="text/babel">(.*?)</script>', content, re.DOTALL).group(1))
+          EOF
+          node -e "
+          const babel = require('@babel/core');
+          const fs = require('fs');
+          const result = babel.transformFileSync('/tmp/extracted.jsx', { presets: ['@babel/preset-react'] });
+          fs.writeFileSync('/tmp/out.js', result.code);
+          " && node --check /tmp/out.js
+
+  # AGENTS.md check 2 -- static getVal()/alias check against a real export's real header row.
+  # Uses the sample export checked into the repo root, same as AGENTS.md's own usage example.
+  alias-landmines:
+    name: Alias-landmine static check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install openpyxl
+      - run: python3 tests/check_alias_landmines.py Booking_Flash_Data_MAIN_UPLOAD_8-12-2026.xlsx
+
+  # Guards the Fields picker's header-filter cleanup. Pure-stdlib and static, so it is fast
+  # and blocking: it caught a real shipped bug (bsaTeu listed for auto-clearing while POL
+  # renders it ungated), and that bug survived a careful manual scan of the render sites,
+  # which is precisely why it is automated rather than written down.
+  field-filter-gating:
+    name: Field-picker filter-gating check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 tests/check_field_filter_gating.py
+
+  # Server-backed preference resolution: WHICH stored value wins and WHETHER a write is sent.
+  # Added to CI 2026-09-18 because it was the one check in AGENTS.md's required list that CI did
+  # not run -- and that gap had already cost us. #88 merged with this check broken: it slices the
+  # preference block positionally, out of the app HTML, and #88 declared a JSX component inside
+  # that slice, so `new Function` threw `SyntaxError: Unexpected token '<'` on every run. Nobody
+  # saw it, because nothing here ran it. A required check that only runs when someone remembers
+  # is not a required check.
+  #
+  # Blocking, and cheap enough to be: pure Node, no browser, ~22 assertions, needs only the
+  # devDependencies `npm ci` already installs.
+  server-prefs-logic:
+    name: Server preference-resolution check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node tests/check_server_prefs_logic.js
+
+  # AGENTS.md check 3 -- forces the timezone itself via subprocess, so it needs no special CI
+  # timezone configuration to be meaningful (a UTC-only run would silently miss this bug class).
+  timezone-safety:
+    name: Date timezone-safety check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node tests/check_date_timezone_safety.js
+
+  # AGENTS.md check 4 -- live browser regression suite, driven headlessly. NON-BLOCKING: see
+  # tests/ci_regression_runner.js's header comment for why (AGENTS.md's own "Known flakiness"
+  # section documents this exact shape of run -- one long automated script -- as an intermittent
+  # false-failure source in this project's history). Treat a red run here as "investigate by
+  # hand," not as a merge blocker on its own.
+  regression-suite:
+    name: Live regression suite (best-effort, see AGENTS.md "Known flakiness")
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/ci_regression_runner.js
