@@ -1,0 +1,87 @@
+name: CI
+
+# This repo has no build step -- the app is one static HTML file (see README.md). These jobs
+# mirror AGENTS.md's "Required: run the checks after every change to the app" checklist exactly,
+# so a check that's required locally is required here too. See README.md's "Verifying changes"
+# section for what each one catches and why check 1 alone was never sufficient.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  # AGENTS.md check 1 -- fast, catches JSX/JS syntax errors only. Auto-detects the current app
+  # file the same way tests/check_alias_landmines.py does (highest dotted-version number among
+  # Booking_flash_report_na(_Kevin)?_<ver>_*.html), so a version bump never needs a workflow edit.
+  syntax-check:
+    name: Syntax check (Babel + node --check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - name: Extract inline script and check syntax
+        run: |
+          python3 - <<'EOF'
+          import re, os
+          repo_root = os.getcwd()
+          candidates = [f for f in os.listdir(repo_root) if re.match(r'[Bb]ooking_flash_report_na(_Kevin)?_[\d.]+_.*\.html$', f)]
+          assert candidates, f"No Booking_flash_report_na*.html file found in {repo_root}"
+          version_key = lambda fname: tuple(int(p) for p in re.search(r'na_(?:Kevin_)?([\d.]+)_', fname).group(1).split('.'))
+          html_path = max(candidates, key=version_key)
+          print(f"(auto-detected current app version: {html_path})")
+          content = open(html_path).read()
+          open('/tmp/extracted.jsx', 'w').write(re.search(r'<script type="text/babel">(.*?)</script>', content, re.DOTALL).group(1))
+          EOF
+          node -e "
+          const babel = require('@babel/core');
+          const fs = require('fs');
+          const result = babel.transformFileSync('/tmp/extracted.jsx', { presets: ['@babel/preset-react'] });
+          fs.writeFileSync('/tmp/out.js', result.code);
+          " && node --check /tmp/out.js
+
+  # AGENTS.md check 2 -- static getVal()/alias check against a real export's real header row.
+  # Uses the sample export checked into the repo root, same as AGENTS.md's own usage example.
+  alias-landmines:
+    name: Alias-landmine static check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install openpyxl
+      - run: python3 tests/check_alias_landmines.py Booking_Flash_Data_MAIN_UPLOAD_8-12-2026.xlsx
+
+  # AGENTS.md check 3 -- forces the timezone itself via subprocess, so it needs no special CI
+  # timezone configuration to be meaningful (a UTC-only run would silently miss this bug class).
+  timezone-safety:
+    name: Date timezone-safety check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node tests/check_date_timezone_safety.js
+
+  # AGENTS.md check 4 -- live browser regression suite, driven headlessly. NON-BLOCKING: see
+  # tests/ci_regression_runner.js's header comment for why (AGENTS.md's own "Known flakiness"
+  # section documents this exact shape of run -- one long automated script -- as an intermittent
+  # false-failure source in this project's history). Treat a red run here as "investigate by
+  # hand," not as a merge blocker on its own.
+  regression-suite:
+    name: Live regression suite (best-effort, see AGENTS.md "Known flakiness")
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/ci_regression_runner.js
