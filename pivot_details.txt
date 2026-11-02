@@ -1,0 +1,30 @@
+
+--- Pivot Table: PivotTable2 (File: pivotTable4.xml, CacheId: 411) ---
+Row Fields: ['Field_0', 'Field_1', 'Field_2', 'Field_3', 'Field_22', 'Field_23', 'Field_10', 'Field_4', 'Field_5', 'Field_7', 'Field_6', 'Field_36', 'Field_90', 'Field_57', 'Field_91', 'Field_40', 'Field_41', 'Field_92', 'Field_93', 'Field_54', 'Field_52', 'Field_44', 'Field_94', 'Field_95', 'Field_55', 'Field_56', 'Field_64', 'Field_65', 'Field_63', 'Field_67', 'Field_68', 'Field_66', 'Field_26', 'Field_27', 'Field_28', 'Field_14', 'Field_32']
+Column Fields: []
+Page/Filter Fields: ['Field_19', 'Field_18']
+Data Fields: []
+
+--- Pivot Table: PivotTable1 (File: pivotTable5.xml, CacheId: 453) ---
+Row Fields: ['Field_0', 'Field_1', 'Field_2', 'Field_4', 'Field_3', 'Field_21', 'Field_22', 'Field_23', 'Field_5', 'Field_6']
+Column Fields: ['Values']
+Page/Filter Fields: []
+Data Fields: ['Max LDN  (Base: Field_32, Agg: max)', 'Standby Threshold  (Base: Field_33, Agg: max)', 'Current Laden (TEU) (Base: Field_15, Agg: sum)', 'Peak Utiliz %  (Base: Field_26, Agg: max)', 'Current Laden Utiliz % (Base: Field_35, Agg: count)', 'Unknown (Base: Field_27, Agg: count)', 'ONE Quote (TEU) (Base: Field_39, Agg: count)', 'Broken Routes (Base: Field_37, Agg: sum)', 'BSA TEU (Base: Field_29, Agg: max)', 'BSA Wgt (Last NA Port ) (Base: Field_30, Agg: max)', 'RFR BSA Plugs (Base: Field_24, Agg: max)', 'RFR BKG Plugs (Base: Field_8, Agg: sum)', 'RFR Max LDN (Base: Field_25, Agg: max)', 'RFR BKG TTL (Base: Field_7, Agg: sum)', 'RFR Utiliz %  (Base: Field_36, Agg: count)', 'Unknown (Base: Field_34, Agg: count)', 'Unknown (Base: Field_28, Agg: count)', 'Inland Activity  (Base: Field_10, Agg: sum)', 'Inland No Activity  (Base: Field_11, Agg: sum)', 'Inland Total (Base: Field_9, Agg: sum)', 'Port Activity (Base: Field_13, Agg: sum)', 'Port No Activity  (Base: Field_14, Agg: sum)', 'Port Total  (Base: Field_12, Agg: sum)', 'Operational Issues (Base: Field_16, Agg: count)', 'Unknown (Base: Field_17, Agg: count)', 'Unknown (Base: Field_38, Agg: count)', 'Proforma Rotation (Base: Field_18, Agg: count)', 'Unknown (Base: Field_19, Agg: count)', 'Unknown (Base: Field_20, Agg: count)', 'Unknown (Base: Field_31, Agg: count)', 'TPT (Base: Field_45, Agg: sum)', 'TAT (Base: Field_44, Agg: sum)', 'LWT (Base: Field_43, Agg: sum)', 'LNT (Base: Field_42, Agg: sum)', 'IMT (Base: Field_40, Agg: sum)', 'LET (Base: Field_41, Agg: sum)', 'DG TEU (Base: Field_46, Agg: sum)']
+
+--- Pivot Table: PivotTable2 (File: pivotTable2.xml, CacheId: 438) ---
+Row Fields: ['Field_0', 'Field_1', 'Field_2']
+Column Fields: ['Values']
+Page/Filter Fields: ['Field_6', 'Field_7']
+Data Fields: ['Unknown (Base: Field_8, Agg: count)', 'Avg Booking (Base: Field_3, Agg: sum)', 'Unknown (Base: Field_4, Agg: count)', 'Unknown (Base: Field_5, Agg: count)']
+
+--- Pivot Table: PivotTable1 (File: pivotTable3.xml, CacheId: 444) ---
+Row Fields: ['Field_0', 'Field_1', 'Field_2', 'Field_3']
+Column Fields: ['Values']
+Page/Filter Fields: []
+Data Fields: ['Sector Alloc (Base: Field_6, Agg: sum)', 'Average Booking (Base: Field_7, Agg: sum)', 'Open Space (Base: Field_8, Agg: sum)']
+
+--- Pivot Table: PivotTable1 (File: pivotTable1.xml, CacheId: 441) ---
+Row Fields: ['Field_0', 'Field_1', 'Values']
+Column Fields: ['Field_2']
+Page/Filter Fields: []
+Data Fields: ['Unknown (Base: Field_4, Agg: count)', 'Total TEU (Base: Field_3, Agg: sum)', 'Unknown (Base: Field_5, Agg: count)']
