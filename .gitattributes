@@ -1,0 +1,5 @@
+# dist/index.html is a generated artifact whose bytes are asserted exactly (see
+# scripts/build_deployable.js --check, which compares fs.readFileSync(...) with strict !==).
+# Pin it to LF so a checkout with core.autocrlf=true can't rewrite it to CRLF and make --check
+# report a genuinely up-to-date artifact as stale.
+dist/index.html text eol=lf
