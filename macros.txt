@@ -1,0 +1,957 @@
+olevba 0.60.2 on Python 3.14.2 - http://decalage.info/python/oletools
+===============================================================================
+FILE: Booking_Flash_Report_REFERENCE_08-12-2026.xlsm
+Type: OpenXML
+WARNING  For now, VBA stomping cannot be detected for files in memory
+-------------------------------------------------------------------------------
+VBA MACRO ThisWorkbook.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/ThisWorkbook'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Module1.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module1'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sub Final_Refresh()
+
+Dim wsBF As Worksheet, wsPOL As Worksheet, wsData As Worksheet, wsSector As Worksheet
+    Dim lastRowPeak As Long, i As Long
+    Dim valPeak As Variant, valTrunk As Variant
+
+    Set wsBF = ThisWorkbook.Sheets("Booking_Flash")
+    Set wsPOL = ThisWorkbook.Sheets("POL_Booking_Flash")
+    Set wsData = ThisWorkbook.Sheets("Data_download")
+    Set wsSector = ThisWorkbook.Sheets("Sector_Data")
+
+    On Error GoTo ErrorHandler
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+    Application.Calculation = xlCalculationManual
+    
+    
+        'Add Refresh Time Stamp
+    Sheets("Booking_Flash").Select
+    Range("N1").Select
+    ActiveCell.FormulaR1C1 = "=NOW()"
+    Range("N1").Select
+    Selection.Copy
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("A12").Select
+    Application.CutCopyMode = False
+    
+
+    
+        'Format
+        Range("AH12:AI12").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveWindow.ScrollColumn = 1
+    Range("A12").Select
+    
+    '''''''''''''''
+        
+    Sheets("POL_Booking_Flash").Select
+    Range("W1").Select
+    ActiveCell.FormulaR1C1 = "=NOW()"
+    Range("W1").Select
+    Selection.Copy
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Range("A11").Select
+    Application.CutCopyMode = False
+    
+    'Format
+        Range("AG12:AH12").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    ActiveWindow.ScrollColumn = 1
+    Range("A12").Select
+
+    ' --- PART 1: Data Refreshes ---
+    wsData.Visible = xlSheetVisible
+    wsSector.Visible = xlSheetVisible
+
+    wsData.ListObjects(1).QueryTable.Refresh BackgroundQuery:=False
+    wsSector.ListObjects(1).QueryTable.Refresh BackgroundQuery:=False
+
+    ' Refresh Pivot Caches
+    wsPOL.PivotTables("PivotTable2").PivotCache.Refresh
+    wsBF.PivotTables("PivotTable1").PivotCache.Refresh
+    ThisWorkbook.Sheets("Trade_Summary").PivotTables("PivotTable1").PivotCache.Refresh
+    
+    With ThisWorkbook.Sheets("Sector_Summary")
+        .PivotTables("PivotTable2").PivotCache.Refresh
+        .PivotTables("PivotTable1").PivotCache.Refresh
+    End With
+
+    ' --- PART 3: Peak Utilization (Optimized) ---
+    'lastRowPeak = wsBF.Cells(wsBF.Rows.Count, 14).End(xlUp).Row
+    'For i = 2 To lastRowPeak
+        'valPeak = wsBF.Cells(i, 14).Value
+        'valTrunk = wsBF.Cells(i, 15).Value
+        'If IsNumeric(valPeak) And IsNumeric(valTrunk) And Not IsEmpty(valPeak) Then
+            'With wsBF.Cells(i, 14).Font
+               ' If (valPeak - valTrunk) > 0.75 Then
+                    '.Color = RGB(255, 0, 0)
+                    '.Bold = True
+                'Else
+                    '.Color = RGB(0, 0, 0)
+                    '.Bold = False
+               ' End If
+            'End With
+        'End If
+   ' Next i
+    
+    ' --- PART 5: Format Trade Summary ---
+    ' Avoid using .Select to prevent screen flickering
+        With ThisWorkbook.Sheets("Trade_Summary")
+        .Activate
+        
+        .Columns("F:F").Copy
+        .Columns("P:U").PasteSpecial Paste:=xlPasteFormats
+        
+        Application.CutCopyMode = False
+
+        .Range("A1").Select
+    End With
+    
+    ' --- PART 6: Stop Overflow Text ---
+    
+    With wsBF
+        .Activate
+        
+        Application.ScreenUpdating = False
+        Application.EnableEvents = False
+        
+        ' Fix AH12 formatting
+        .Range("AI12").VerticalAlignment = xlCenter
+        .Range("AH12").Copy
+        .Range("AI12").PasteSpecial Paste:=xlPasteFormats
+        
+        ' Set headers
+        With .Range("AH12")
+            .HorizontalAlignment = xlJustify
+            .WrapText = False
+        End With
+        
+        ' Apply to data rows to stop overflow (using xlFill)
+        With .Range("AH13:AN1000")
+        .HorizontalAlignment = xlLeft ' Replaced xlLeft to block overflow
+        .WrapText = True
+        .IndentLevel = 1
+        .ShrinkToFit = False
+    End With
+        
+        .Range("13:1000").RowHeight = 15
+        .Range("A1").Select
+        
+        Application.EnableEvents = True ' Turn back on for slicer clicks
+        Application.ScreenUpdating = True
+        
+    End With
+    
+    'Apply Formatting
+    
+    Call Apply_Formatting
+
+    ' --- Cleanup ---
+    wsSector.Visible = xlSheetHidden
+    wsData.Visible = xlSheetHidden
+    wsPOL.Activate
+
+CleanExit:
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+    Application.EnableEvents = True
+    Exit Sub
+    
+    
+
+ErrorHandler:
+    MsgBox "Error " & Err.Number & ": " & Err.Description, vbCritical
+    Resume CleanExit
+    
+    
+
+End Sub
+
+
+
+-------------------------------------------------------------------------------
+VBA MACRO Sheet2.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet2'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Module2.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module2'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sub Clear_POL_Slicer()
+
+    Dim slcrCache As SlicerCache
+    Dim slcr As Slicer
+    Dim targetSheetName As String
+    Dim pt As PivotTable
+    Dim pf As PivotField
+    
+    targetSheetName = "POL_Booking_Flash"
+    
+    ' 1. Optimization: Turn off updates at the very start of the macro
+    Application.ScreenUpdating = False
+    Application.Calculation = xlCalculationManual
+    
+    ' Set table references early to pause layout updates safely
+    On Error Resume Next
+    Set pt = Sheets(targetSheetName).PivotTables("PivotTable2")
+    Set pf = pt.PivotFields("Status ")
+    If Not pt Is Nothing Then pt.ManualUpdate = True
+    On Error GoTo 0
+    
+    ' 2. Loop through and clear only the slicers on the target sheet
+    For Each slcrCache In ActiveWorkbook.SlicerCaches
+        For Each slcr In slcrCache.Slicers
+            If slcr.Shape.Parent.Name = targetSheetName Then
+                slcrCache.ClearManualFilter
+                Exit For ' Move to next cache once a match is cleared
+            End If
+        Next slcr
+    Next slcrCache
+    
+    ' 3. Safely clear the specific Pivot Field filter
+    If Not pf Is Nothing Then
+        On Error Resume Next
+        pf.ClearAllFilters
+        On Error GoTo 0
+    End If
+    
+    ' 4. Clean up, re-enable updates, and recalculate everything
+    If Not pt Is Nothing Then pt.ManualUpdate = False
+    
+    Application.Calculation = xlCalculationAutomatic
+    Application.ScreenUpdating = True
+
+
+End Sub
+
+Sub Refresh_Data()
+
+Application.ScreenUpdating = False
+Application.EnableEvents = False
+
+    Sheets("Sector_Data").Select
+    ActiveWindow.SelectedSheets.Visible = True
+    Sheets("Data_download").Select
+    ActiveWindow.SelectedSheets.Visible = True
+ 
+ 'ActiveWorkbook.RefreshAll
+ 
+     Sheets("Sector_Data").Select
+    ActiveWindow.SelectedSheets.Visible = False
+    Sheets("Data_download").Select
+    ActiveWindow.SelectedSheets.Visible = False
+    
+    Call Apply_Formatting
+
+    
+Application.ScreenUpdating = True
+Application.EnableEvents = True
+ 
+
+End Sub
+Sub Clear_Booking()
+
+    Dim sc As SlicerCache
+    Dim ws As Worksheet
+    
+    Set ws = ThisWorkbook.Sheets("Booking_Flash")
+
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+
+    For Each sc In ThisWorkbook.SlicerCaches
+        If sc.Slicers.Count > 0 Then
+            If sc.Slicers(1).Parent.Name = ws.Name Then
+                sc.ClearManualFilter
+            End If
+        End If
+    Next sc
+    
+   ActiveSheet.PivotTables("PivotTable1").PivotFields( _
+    "[Data_download].[Measures Overall Status].[Measures Overall Status]"). _
+   ClearAllFilters
+    
+        On Error Resume Next
+    Range("13:1000").RowHeight = 15
+    
+    Application.EnableEvents = True
+    Application.ScreenUpdating = True
+
+End Sub
+-------------------------------------------------------------------------------
+VBA MACRO Sheet4.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet4'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Sheet1.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet1'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Sheet3.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet3'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Sheet5.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet5'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Private Sub Worksheet_Change(ByVal Target As Range)
+    Dim cell As Range
+    Dim keywords As Variant, keyword As Variant
+    Dim startPos As Long, endPos As Long, pos As Long
+    Dim lastRowAI As Long, lastRow As Long, lastRowAG As Long
+    Dim ws As Worksheet
+    Dim dotPos As Long
+    Dim cellText As String
+    Dim targetRange As Range
+
+    ' Only run if the change happens in the relevant data columns
+    If Intersect(Target, Me.Range("A:AL")) Is Nothing Then Exit Sub
+
+    On Error GoTo CleanExit
+
+    Set ws = Me
+
+    ' Performance Boost & Loop Prevention
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+
+    ' --- PART 0: Timestamps ---
+    'On Error Resume Next
+    'Worksheets("POL_Booking_Flash").Range("W1").Value = Now
+    'ws.Range("N1").Value = Now
+    'On Error GoTo CleanExit
+
+    ' --- PART 1: Remove Decimals ---
+    lastRowAI = ws.Cells(ws.Rows.Count, "AI").End(xlUp).Row
+    If lastRowAI >= 13 Then
+        For Each cell In ws.Range("AI13:AJ" & lastRowAI)
+            If Not IsError(cell.Value) And cell.Value <> "" Then
+                cellText = cell.Value
+                Do While InStr(cellText, ".") > 0
+                    dotPos = InStr(cellText, ".")
+                    cellText = Left(cellText, dotPos - 1) & Mid(cellText, dotPos + 3)
+                Loop
+                If cell.Value <> cellText Then cell.Value = IIf(Trim(cellText) = "", " ", cellText)
+            End If
+        Next cell
+    End If
+
+    ' --- PART 2: Bold Keywords ---
+    keywords = Array("AEJEA:", "CNNGB:", "CNSHA:", "CNSHK:", "CR/GT/NI Discharge:", _
+                     "EB PA Load:", "FRFOS/ESVLC Discharge:", "GRPIR:", "INPAV:", _
+                     "KRPUS:", "LATAM Load:", "MX Laden:", "PA Load:", _
+                     "PAROD Discharge :", "PAROD Move Count Unit:", "LKCMB:", "SGSIN:", _
+                     "BEANR:", "DEBRV:", "DEHAM:", "FRLEH:", "GBSOU:", "LATAM:", "NLRTM:", "THLCH:", "VNCMP:", _
+                     "ESALG:", "ESVLC:", "FRFOS:", "ITGOA:", "ITSPE:", _
+                     "Laden:", _
+                     "ITSAL:", "TRALI:", "TRISK:", "TRIST:", "INNSA:", "MTY:", "PAROD Discharge:")
+
+    If lastRowAI >= 13 Then
+        For Each cell In ws.Range("AI13:AJ" & lastRowAI)
+            If Not IsError(cell.Value) And cell.Value <> "" Then
+                cell.Font.Bold = False
+                cell.Font.ColorIndex = xlAutomatic
+                For Each keyword In keywords
+                    startPos = InStr(1, cell.Value, keyword, vbTextCompare)
+                    Do While startPos > 0
+                        cell.Characters(startPos, Len(keyword)).Font.Bold = True
+                        startPos = InStr(startPos + Len(keyword), cell.Value, keyword, vbTextCompare)
+                    Loop
+                Next keyword
+            End If
+        Next cell
+    End If
+
+    ' --- PART 3: Red text between + and * ---
+' --- PART 3: Red text between +###* and (-###*) ---
+
+Dim re As Object
+Dim matches As Object
+Dim m As Object
+
+Set re = CreateObject("VBScript.RegExp")
+
+For Each cell In ws.Range("AI13:AJ" & lastRowAI)
+
+    If Not IsError(cell.Value) And Len(cell.Value) > 0 Then
+
+        cellText = CStr(cell.Value)
+
+        ' Positive values: +123*
+        With re
+    .Global = True
+    .Pattern = "\+\d+\*+"
+End With
+
+Set matches = re.Execute(cellText)
+
+For Each m In matches
+    cell.Characters(m.FirstIndex + 1, m.Length).Font.Color = RGB(255, 0, 0)
+Next m
+
+' Negative values: (-123*), (-123**), (-123***)
+With re
+    .Global = True
+    .Pattern = "\(-\d+\*+\)"
+End With
+
+Set matches = re.Execute(cellText)
+
+For Each m In matches
+    cell.Characters(m.FirstIndex + 1, m.Length).Font.Color = RGB(255, 0, 0)
+Next m
+
+    End If
+
+Next cell
+
+
+    ' --- PART 4: Hide * Cells (FIXED) ---
+    ' Using AG to find the last row to ensure we cover all data rows
+    lastRowAG = ws.Cells(ws.Rows.Count, "AH").End(xlUp).Row
+    If lastRowAG >= 13 Then
+        Set targetRange = ws.Range("AH13:AN" & lastRowAG)
+        For Each cell In targetRange
+            If Not IsError(cell.Value) Then
+                ' FIX: Only hide if the cell contains ONLY "*" or starts with "*"
+                ' This prevents hiding actual descriptive text that might contain an asterisk
+                If Trim(cell.Text) = "*" Then
+                    cell.NumberFormat = ";;;"
+                Else
+                    ' Reset to General only if it was hidden, otherwise keep current format
+                    If cell.NumberFormat = ";;;" Then cell.NumberFormat = "General"
+                End If
+            End If
+        Next cell
+    End If
+
+
+    ' --- PART 5: Copy Formatting ---
+    ws.Range("AH12").Copy
+    ws.Range("AI12").PasteSpecial Paste:=xlPasteFormats
+    Application.CutCopyMode = False
+
+    With ws.Range("AH12:AJ12")
+       .HorizontalAlignment = xlCenter
+       .VerticalAlignment = xlCenter
+       .WrapText = False
+    End With
+    
+  ' This macro automatically fires every time a Slicer is clicked
+    On Error Resume Next
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+    
+    ' Explicitly freeze the row heights right after the slicer updates
+    Me.Range("13:1000").RowHeight = 15
+    
+    
+    
+
+
+CleanExit:
+    Application.EnableEvents = True
+    Application.ScreenUpdating = True
+End Sub
+
+-------------------------------------------------------------------------------
+VBA MACRO Module3.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module3'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Sub See_BSA()
+'
+' See_Activity Macro
+'
+
+'
+    
+    
+    Application.ScreenUpdating = False
+
+If ActiveSheet.Shapes("TextBox 7").TextFrame.Characters.Text = "Booking Flash Report NA" Then
+    ActiveSheet.Shapes("TextBox 7").TextFrame.Characters.Text = "Hide BSA & BKG Weight"
+    ActiveSheet.Shapes("TextBox 7").Select
+    Selection.Font.ColorIndex = 3
+    
+    
+        'Hide Rows
+
+
+    Columns("Q:R").Select
+    Selection.EntireColumn.Hidden = False
+
+    Range("A1").Select
+    
+Else
+    ActiveSheet.Shapes("TextBox 7").TextFrame.Characters.Text = "Booking Flash Report NA"
+   
+    
+    ActiveSheet.Shapes("TextBox 7").Select
+    Selection.Font.ColorIndex = 1
+    
+    
+    
+        'Unhide Rows
+    
+
+    Columns("Q:R").Select
+    Selection.EntireColumn.Hidden = True
+    
+    Range("A1").Select
+    
+End If
+
+Application.ScreenUpdating = True
+    
+        
+    
+    
+End Sub
+
+-------------------------------------------------------------------------------
+VBA MACRO Sheet6.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet6'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Module5.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module5'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+' --- MAIN MACROS (Right-click your shapes and assign these) ---
+
+Sub Toggle_POL_Act_Macro()
+    ToggleColumns "AA:AF", "Hide Activity", "Activity"
+End Sub
+
+Sub Toggle_POL_Operation_Macro()
+    ToggleColumns "AJ:AJ", "Hide Operational Issues", "Operational Issues"
+End Sub
+
+Sub Toggle_POL_ETA_Macro()
+    ToggleColumns "AG:AI", "Hide ETA", "ETA vs Proforma"
+End Sub
+
+Sub Toggle_POL_Reefer_Macro()
+    ToggleColumns "M:O", "Hide Reefer", "Reefer"
+End Sub
+Sub Toggle_Trade()
+    ToggleColumns "AO:AT", "Hide Trade Breakdown", "Trade Breakdown"
+End Sub
+
+Sub Toggle_DG_Macro()
+    ToggleColumns "AU:AU", "Hide DG", "DG Volume"
+End Sub
+
+
+
+' --- THE MASTER SHAPE ENGINE ---
+
+Private Sub ToggleColumns(ColRange As String, ShownText As String, HiddenText As String)
+    Dim xRange As Range
+    Dim shp As Object
+    
+    ' Set the target columns
+    Set xRange = ActiveSheet.Columns(ColRange)
+    
+    ' Identify which shape was clicked
+    On Error Resume Next
+    Set shp = ActiveSheet.Shapes(Application.Caller)
+    On Error GoTo 0
+
+    If Not shp Is Nothing Then
+        ' Force solid fill to prevent "half-green" gradient glitches
+        shp.Fill.Solid
+        ' Keep text bold in both states
+        shp.TextFrame.Characters.Font.Bold = True
+        
+        ' Toggle Logic: If columns are hidden, show them. Otherwise, hide them.
+        If xRange.EntireColumn.Hidden = True Then
+            ' STATE: SHOW COLUMNS
+            xRange.EntireColumn.Hidden = False
+            shp.TextFrame.Characters.Text = ShownText
+            shp.Fill.ForeColor.RGB = RGB(146, 208, 80) ' Green
+        Else
+            ' STATE: HIDE COLUMNS
+            xRange.EntireColumn.Hidden = True
+            shp.TextFrame.Characters.Text = HiddenText
+            shp.Fill.ForeColor.RGB = RGB(225, 225, 225) ' Grey
+        End If
+        
+        ' Standardize Alignment
+        shp.TextFrame.HorizontalAlignment = -4108 ' Center
+        shp.TextFrame.VerticalAlignment = -4108   ' Center
+    End If
+    
+    ActiveSheet.Range("S2").Select
+End Sub
+-------------------------------------------------------------------------------
+VBA MACRO Sheet8.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet8'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Module4.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module4'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+' --- MAIN MACROS (Assign these to your shapes) ---
+
+Sub ToggleBsa_Macro():      ToggleColumns "S:T", "Hide BSA", "BSA": End Sub
+Sub ToggleActive_Macro():   ToggleColumns "Z:AG", "Hide Activity", "Activity": End Sub
+Sub ToggleStatus_Macro():   ToggleColumns "AM:AM", "Hide AP Status", "AP Status": End Sub
+Sub ToggleRotation_Macro(): ToggleColumns "AK:AL", "Hide Rotation", "Rotation": End Sub
+Sub ToggleVoy_Macro():      ToggleColumns "AN:AN", "Hide Voyage Remarks", "Voyage Remarks": End Sub
+Sub ToggleOps_Macro():      ToggleColumns "AH:AH", "Hide Operational Issues", "Operational Issues": End Sub
+Sub ToggleSector_Macro():   ToggleColumns "AI:AJ", "Hide Sector Allocation", "Sector Allocation": End Sub
+Sub ToggleRfr_Macro():      ToggleColumns "U:Y", "Hide Reefer", "Reefer": End Sub
+Sub ToggleTrade_Macro():    ToggleColumns "AO:AT", "Hide Trade Breakdown", "Trade Breakdown": End Sub
+Sub ToggleDG_Macro():       ToggleColumns "AU:AU", "Hide DG", "DG Volume": End Sub
+Sub ToggleVco_Macro():      ToggleColumns "AK:AK", "Hide VCO", "VCO Analyst": End Sub
+
+
+
+
+' --- THE "ALWAYS BOLD" ENGINE ---
+
+Private Sub ToggleColumns(ColRange As String, ShownText As String, HiddenText As String)
+    Dim xRange As Range
+    Dim shp As Object
+    
+    Set xRange = ActiveSheet.Columns(ColRange)
+    
+    On Error Resume Next
+    Set shp = ActiveSheet.Shapes(Application.Caller)
+    On Error GoTo 0
+
+    If Not shp Is Nothing Then
+        ' Force the shape to a solid fill to clear any "half-green" gradients
+        shp.Fill.Solid
+        
+        ' Apply Bold to the font for BOTH states
+        shp.TextFrame.Characters.Font.Bold = True
+        
+        If xRange.EntireColumn.Hidden = True Then
+            ' --- STATE: SHOWING COLUMNS (Vibrant Green) ---
+            xRange.EntireColumn.Hidden = False
+            shp.TextFrame.Characters.Text = ShownText
+            shp.Fill.ForeColor.RGB = RGB(146, 208, 80) ' Bright Green
+        Else
+            ' --- STATE: HIDING COLUMNS (Clean Grey) ---
+            xRange.EntireColumn.Hidden = True
+            shp.TextFrame.Characters.Text = HiddenText
+            shp.Fill.ForeColor.RGB = RGB(225, 225, 225) ' Light Grey
+        End If
+        
+        ' Ensure text is always centered vertically and horizontally
+        shp.TextFrame.HorizontalAlignment = -4108 ' xlCenter
+        shp.TextFrame.VerticalAlignment = -4108   ' xlCenter
+    End If
+    
+    ' Select a safe cell so the shape doesn't stay "focused"
+    ActiveSheet.Range("A12").Select
+End Sub
+-------------------------------------------------------------------------------
+VBA MACRO Module6.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module6'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Module7.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module7'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sub StopTextOverflow()
+ With Range("AG12")
+        .HorizontalAlignment = xlJustify
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+    End With
+    
+    ' Apply to the rest of the data rows to stop overflow
+    With Range("AG13:AG1000")
+        .HorizontalAlignment = xlFill
+        .WrapText = False
+        .Range("13:1000").RowHeight = 15
+    End With
+End Sub
+-------------------------------------------------------------------------------
+VBA MACRO Module11.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module11'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Sub SetShapeVisibility(IsVisible As Boolean)
+    Dim s As Shape
+    For Each s In ActiveSheet.Shapes
+        ' We don't want to hide the button we are clicking!
+        ' This hides everything that starts above Row 12
+        If s.Top < Range("A12").Top And s.Name <> Application.Caller Then
+            s.Visible = IsVisible
+        End If
+    Next s
+End Sub
+-------------------------------------------------------------------------------
+VBA MACRO Sheet7.cls 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Sheet7'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+(empty macro)
+-------------------------------------------------------------------------------
+VBA MACRO Module10.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module10'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sub FilterAPStatus()
+Attribute FilterAPStatus.VB_Description = "Filter by AP Frozen or AP Only"
+Attribute FilterAPStatus.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' FilterAPStatus Macro
+' Filter by AP Frozen
+'
+
+'
+    ActiveSheet.PivotTables("PivotTable1").PivotFields( _
+        "[Data_download].[Measures Overall Status].[Measures Overall Status]"). _
+        VisibleItemsList = Array( _
+        "[Data_download].[Measures Overall Status].&[AP Frozen(GD6)]")
+End Sub
+
+Sub Fitler_AP_Only()
+Attribute Fitler_AP_Only.VB_Description = "Filter AP Only"
+Attribute Fitler_AP_Only.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' Fitler_AP_Only Macro
+' Filter AP Only
+'
+
+'
+    ActiveSheet.PivotTables("PivotTable1").PivotFields( _
+        "[Data_download].[Measures Overall Status].[Measures Overall Status]"). _
+        VisibleItemsList = Array( _
+        "[Data_download].[Measures Overall Status].&[AP Only(GD6)]", _
+        "[Data_download].[Measures Overall Status].&[AP ONLY]")
+End Sub
+
+Sub Filter_POL_AP_Frozen()
+Attribute Filter_POL_AP_Frozen.VB_ProcData.VB_Invoke_Func = " \n14"
+'
+' Filter_POL_AP_Frozen Macro
+'
+
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Status ")
+        .PivotItems("").Visible = False
+        .PivotItems("AP Frozen").Visible = True
+        .PivotItems("AP Only").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+End Sub
+
+Sub Filter_POL_AP_Only()
+Attribute Filter_POL_AP_Only.VB_ProcData.VB_Invoke_Func = " \n14"
+    Dim pt As PivotTable
+    Dim pf As PivotField
+    
+    ' Set references to prevent typing errors
+    Set pt = ActiveSheet.PivotTables("PivotTable2")
+    Set pf = pt.PivotFields("Status ") ' Note: Kept the trailing space from your original code
+    
+    pt.AllowMultipleFilters = True
+    
+    ' Speed up execution by turning off screen updates
+    Application.ScreenUpdating = False
+    pt.ManualUpdate = True
+    
+    On Error Resume Next
+    ' 1. Show the target item first so a visible item always exists
+    pf.PivotItems("AP Only").Visible = True
+    
+    ' 2. Hide the other unwanted items safely
+    pf.PivotItems("").Visible = False
+    pf.PivotItems("AP Frozen").Visible = False
+    pf.PivotItems("(blank)").Visible = False
+    On Error GoTo 0
+    
+    ' Refresh the layout and turn updates back on
+    pt.ManualUpdate = False
+    Application.ScreenUpdating = True
+End Sub
+-------------------------------------------------------------------------------
+VBA MACRO Module8.bas 
+in file: xl/vbaProject.bin - OLE stream: 'VBA/Module8'
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Sub Apply_Formatting()
+
+    Dim cell As Range
+    Dim keywords As Variant, keyword As Variant
+    Dim startPos As Long, endPos As Long, pos As Long
+    Dim lastRowAI As Long, lastRow As Long, lastRowAG As Long
+    Dim ws As Worksheet
+    Dim dotPos As Long
+    Dim cellText As String
+    Dim targetRange As Range
+    Dim re As Object
+    Dim matches As Object
+    Dim m As Object
+
+    On Error GoTo CleanExit
+
+    ' Set ws to the ActiveSheet since this runs from a standard module
+    Set ws = ActiveSheet
+
+    ' Performance Boost & Loop Prevention
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+
+    ' --- PART 1: Remove Decimals ---
+    lastRowAI = ws.Cells(ws.Rows.Count, "AI").End(xlUp).Row
+    If lastRowAI >= 13 Then
+        For Each cell In ws.Range("AI13:AJ" & lastRowAI)
+            If Not IsError(cell.Value) And cell.Value <> "" Then
+                cellText = cell.Value
+                Do While InStr(cellText, ".") > 0
+                    dotPos = InStr(cellText, ".")
+                    cellText = Left(cellText, dotPos - 1) & Mid(cellText, dotPos + 3)
+                Loop
+                If cell.Value <> cellText Then cell.Value = IIf(Trim(cellText) = "", " ", cellText)
+            End If
+        Next cell
+    End If
+
+    ' --- PART 2: Bold Keywords ---
+    keywords = Array("AEJEA:", "CNNGB:", "CNSHA:", "CNSHK:", "CR/GT/NI Discharge:", _
+                     "EB PA Load:", "FRFOS/ESVLC Discharge:", "GRPIR:", "INPAV:", _
+                     "KRPUS:", "LATAM Load:", "MX Laden:", "PA Load:", _
+                     "PAROD Discharge :", "PAROD Move Count Unit:", "LKCMB:", "SGSIN:", _
+                     "BEANR:", "DEBRV:", "DEHAM:", "FRLEH:", "GBSOU:", "LATAM:", "NLRTM:", "THLCH:", "VNCMP:", _
+                     "ESALG:", "ESVLC:", "FRFOS:", "ITGOA:", "ITSPE:", _
+                     "Laden:", _
+                     "ITSAL:", "TRALI:", "TRISK:", "TRIST:", "INNSA:", "MTY:", "PAROD Discharge:")
+
+    If lastRowAI >= 13 Then
+        For Each cell In ws.Range("AI13:AJ" & lastRowAI)
+            If Not IsError(cell.Value) And cell.Value <> "" Then
+                cell.Font.Bold = False
+                cell.Font.ColorIndex = xlAutomatic
+                For Each keyword In keywords
+                    startPos = InStr(1, cell.Value, keyword, vbTextCompare)
+                    Do While startPos > 0
+                        cell.Characters(startPos, Len(keyword)).Font.Bold = True
+                        startPos = InStr(startPos + Len(keyword), cell.Value, keyword, vbTextCompare)
+                    Loop
+                Next keyword
+            End If
+        Next cell
+    End If
+    
+  ' --- PART 3: Red text between +###* and (-###*) ---
+    Set re = CreateObject("VBScript.RegExp")
+
+    If lastRowAI >= 13 Then
+        For Each cell In ws.Range("AI13:AJ" & lastRowAI)
+            If Not IsError(cell.Value) And Len(cell.Value) > 0 Then
+                cellText = CStr(cell.Value)
+        
+                ' Positive values: +123*
+                With re
+                    .Global = True
+                    .Pattern = "\+\d+\*+"
+                End With
+        
+                Set matches = re.Execute(cellText)
+                For Each m In matches
+                    cell.Characters(m.FirstIndex + 1, m.Length).Font.Color = RGB(255, 0, 0)
+                Next m
+        
+                ' Negative values: (-123*), (-123**), (-123***)
+                With re
+                    .Global = True
+                    .Pattern = "\(-\d+\*+\)"
+                End With
+        
+                Set matches = re.Execute(cellText)
+                For Each m In matches
+                    cell.Characters(m.FirstIndex + 1, m.Length).Font.Color = RGB(255, 0, 0)
+                Next m
+            End If
+        Next cell
+    End If
+
+    ' --- PART 4: Hide * Cells ---
+    lastRowAG = ws.Cells(ws.Rows.Count, "AH").End(xlUp).Row
+    If lastRowAG >= 13 Then
+        Set targetRange = ws.Range("AH13:AN" & lastRowAG)
+        For Each cell In targetRange
+            If Not IsError(cell.Value) Then
+                If Trim(cell.Text) = "*" Then
+                    cell.NumberFormat = ";;;"
+                Else
+                    If cell.NumberFormat = ";;;" Then cell.NumberFormat = "General"
+                End If
+            End If
+        Next cell
+    End If
+
+    ' --- PART 5: Copy Formatting ---
+    ws.Range("AH12").Copy
+    ws.Range("AI12").PasteSpecial Paste:=xlPasteFormats
+    Application.CutCopyMode = False
+
+    With ws.Range("AH12:AJ12")
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlCenter
+        .WrapText = False
+    End With
+    
+    ' Explicitly freeze the row heights
+    ws.Range("13:1000").RowHeight = 15
+
+CleanExit:
+    ' Restore settings safely
+    Application.EnableEvents = True
+    Application.ScreenUpdating = True
+End Sub
+
++----------+--------------------+---------------------------------------------+
+|Type      |Keyword             |Description                                  |
++----------+--------------------+---------------------------------------------+
+|AutoExec  |Worksheet_Change    |Runs when the file is opened and ActiveX     |
+|          |                    |objects trigger events                       |
+|Suspicious|run                 |May run an executable file or a system       |
+|          |                    |command                                      |
+|Suspicious|Call                |May call a DLL using Excel 4 Macros (XLM/XLF)|
+|Suspicious|CreateObject        |May create an OLE object                     |
+|Suspicious|Hex Strings         |Hex-encoded strings were detected, may be    |
+|          |                    |used to obfuscate strings (option --decode to|
+|          |                    |see all)                                     |
+|Suspicious|Base64 Strings      |Base64-encoded strings were detected, may be |
+|          |                    |used to obfuscate strings (option --decode to|
+|          |                    |see all)                                     |
++----------+--------------------+---------------------------------------------+
+
