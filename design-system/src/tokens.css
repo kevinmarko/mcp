@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Booking Flash DS — design tokens
+ * -------------------------------------------------------------------------
+ * These CSS custom properties document the same values wired into
+ * tailwind.config.js (theme.extend.colors). Components style themselves
+ * with the Tailwind utility classes (bg-brand, bg-status-apFrozen, etc.) —
+ * that's this design system's idiom — not var(--...) lookups. The
+ * properties below exist as a single source-of-truth reference for anyone
+ * (or any tool) that needs the raw values, and they mirror the source
+ * Excel workbook's conditional-formatting palette exactly, so a color
+ * here is never an arbitrary pick — each ties to a real business meaning
+ * (e.g. AP Frozen bookings, VMS rows, utilization alerts).
+ */
+:root {
+  /* Brand */
+  --color-brand: #e5007d;
+  --color-brand-dark: #c2185b;
+
+  /* Row/record status fills (mirrors Excel conditional formatting) */
+  --status-vms: #d9d9d9;
+  --status-ap-frozen: #da9694;
+  --status-ap-only: #ffc000;
+  --status-no-call: #ff0000;
+  --status-port-excluded: #fecaca;
+
+  /* Slicer / filter chip colors */
+  --chip-sub-trade: #a9d08e;
+  --chip-sub-trade-dark: #3d5a34;
+  --chip-coast: #c00000;
+  --chip-analyst: #ed7d31;
+  --chip-lane: #e5007d;
+  --chip-sale-week: #555555;
+  --chip-yard: #ed7d31;
+
+  /* Table chrome */
+  --table-head: #333333;
+  --table-subhead: #444444;
+  --table-current-laden: #d9e1f2;
+  --table-total-tint: #eef2fa;
+  --table-panel: #e7e6e6;
+  --table-sub-trade-cell: #e2efda;
+  --table-lane-cell-bg: #bdd7ee;
+  --table-lane-cell-text: #2f5597;
+  --table-inland-tint: #ddd9c3;
+  --table-port-tint: #c4bd97;
+  --table-inland-port-total: #e3ecf8;
+  --table-bsa-tint: #daeef3;
+  --table-utiliz-header-bg: #fde9d9;
+  --table-utiliz-header-text: #974706;
+  --table-reefer-fallback: #e4dfec;
+  --table-vco-fallback: #ebf1de;
+  --table-eta-blue: #3172c4;
+
+  /* Page background */
+  --page-light: #f3f3f3;
+  --page-dark: #0f1115;
+
+  /* Action button accents */
+  --action-export: #333333;
+  --action-analyze: #1d4ed8;
+  --action-warning-bg: #ffe699;
+  --action-warning-bg-dark: #b8860b;
+}
+
+/*
+ * Typography scale (documented, not enforced via custom properties —
+ * consumed as Tailwind font-size utilities on components):
+ *   text-[9px]  filter inputs only
+ *   text-[10px] / text-[11px] / text-[12px]  badges, chip labels, toggle labels
+ *   text-xs   table cells, section subtitles, stat-tile labels
+ *   text-sm   buttons, form labels, tab labels, body copy
+ *   text-lg   panel titles, section headers
+ *   text-xl   stat-tile values
+ *   text-2xl  page-level headers
+ *   text-3xl  app title
+ *   text-4xl  empty-state hero title
+ * Weight: font-semibold for secondary labels/headers; font-bold /
+ * font-extrabold for primary titles, active states, emphasized values.
+ */

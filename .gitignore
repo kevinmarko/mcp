@@ -1,0 +1,24 @@
+node_modules/
+.venv/
+.DS_Store
+
+# The perf harnesses' fetch-once CDN cache and their throwaway app copies (see
+# tests/perf_benchmark.js's own header comment for why a throwaway copy is used and why the
+# real app file's CDN tags are never edited) -- never committed, regenerated on first run.
+# Each harness deletes its own copy on exit; the glob is here so a crashed run can't leave one
+# staged by accident.
+tests/vendor/
+tests/_perf_throwaway_app.html
+tests/_*throwaway*.html
+~$*.xlsm
+~$*.xlsx
+.claude/worktrees/
+
+# design-sync
+.ds-sync/
+ds-bundle/
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules
+design-system/node_modules/
+design-system/dist/
