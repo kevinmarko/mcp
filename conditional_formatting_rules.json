@@ -1,0 +1,7075 @@
+[
+  {
+    "sheet": "Sector_Summary",
+    "sheet_file": "sheet2.xml",
+    "sqref": "H7:H35",
+    "sqref_columns": [
+      "H"
+    ],
+    "header_candidates": [
+      {
+        "row": 6,
+        "captions": {
+          "H": "Avg Utilization"
+        }
+      },
+      {
+        "row": 7,
+        "captions": {
+          "H": "0.27147058823529413"
+        }
+      },
+      {
+        "row": 8,
+        "captions": {
+          "H": "0.44956937799043062"
+        }
+      },
+      {
+        "row": 9,
+        "captions": {
+          "H": "0.26256177924217461"
+        }
+      },
+      {
+        "row": 10,
+        "captions": {
+          "H": "0.4582664526484751"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "H": "0.87703703703703706"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "H": "0.44444444444444442"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "H": "0.50935960591133"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "H": "0.55825242718446599"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "H": "5.5190162996854447E-2"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "H": "0.5500570125427594"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "H": "0.49171270718232046"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "H": "0.71881720430107532"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "H": "0.34538296349319969"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "H": "0.36413793103448278"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "H": "4.6999276934201015E-2"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "H": "0.14269503546099291"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "greaterThan",
+        "priority": 2,
+        "formulas": [
+          "1"
+        ],
+        "dxfId": 587,
+        "dxf_resolved": {
+          "dxfId": 587,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              },
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "hex": "#FF0000",
+                "argb": "FFFF0000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Sector_Summary",
+    "sheet_file": "sheet2.xml",
+    "sqref": "E7:E35",
+    "sqref_columns": [
+      "E"
+    ],
+    "header_candidates": [
+      {
+        "row": 4,
+        "captions": {
+          "E": "2026/W27"
+        }
+      },
+      {
+        "row": 5,
+        "captions": {
+          "E": "2026/W27  -  2026/W30"
+        }
+      },
+      {
+        "row": 6,
+        "captions": {
+          "E": "Avg Max Laden"
+        }
+      },
+      {
+        "row": 7,
+        "captions": {
+          "E": "3400"
+        }
+      },
+      {
+        "row": 8,
+        "captions": {
+          "E": "5225"
+        }
+      },
+      {
+        "row": 9,
+        "captions": {
+          "E": "4856.25"
+        }
+      },
+      {
+        "row": 10,
+        "captions": {
+          "E": "2491.6666666666665"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "E": "2700"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "E": "3303.3333333333335"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "E": "2030"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "E": "1441.6666666666667"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "E": "6993.75"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "E": "4385"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "E": "3801.25"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "E": "1860"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "E": "2793.75"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "E": "2175"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "E": "1383.3333333333333"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "E": "3525"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "greaterThanOrEqual",
+        "priority": 1,
+        "formulas": [
+          "0"
+        ],
+        "dxfId": 586,
+        "dxf_resolved": {
+          "dxfId": 586,
+          "resolved": {
+            "fill": {
+              "patternType": "solid",
+              "bgColor": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "D12:AH2000",
+    "sqref_columns": [
+      "AH",
+      "D"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AH": "Proforma ETA Time",
+          "D": "Sale Week "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AH": "46206.041666666664",
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AH": "46209.8125",
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "D": "2026/W28"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AH": "46220.041666666664",
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AH": "46223.8125",
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AH": "46227.041666666664",
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AH": "46230.8125",
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AH": "46234.041666666664",
+          "D": "2026/W31"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AH": "46237.8125",
+          "D": "2026/W31"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 89,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 585,
+        "dxf_resolved": {
+          "dxfId": 585,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "numFmt": "@"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "P12:P2000",
+    "sqref_columns": [
+      "P"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "P": "Planned Mty (TEU) "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "P": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "P": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "P": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 68,
+        "formulas": [
+          "AND($H12=\"VMS\",P12=0)"
+        ],
+        "dxfId": 584,
+        "dxf_resolved": {
+          "dxfId": 584,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "notContainsBlanks",
+        "operator": null,
+        "priority": 88,
+        "formulas": [
+          "LEN(TRIM(P12))>0"
+        ],
+        "dxfId": 583,
+        "dxf_resolved": {
+          "dxfId": 583,
+          "resolved": {
+            "numFmt": "#,##0"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "Q12:Q2000",
+    "sqref_columns": [
+      "Q"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "Q": "Actual Mty (TEU)"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Q": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "Q": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "Q": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 67,
+        "formulas": [
+          "AND($H12=\"VMS\", Q12=0)"
+        ],
+        "dxfId": 582,
+        "dxf_resolved": {
+          "dxfId": 582,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "notContainsBlanks",
+        "operator": null,
+        "priority": 71,
+        "formulas": [
+          "LEN(TRIM(Q12))>0"
+        ],
+        "dxfId": 581,
+        "dxf_resolved": {
+          "dxfId": 581,
+          "resolved": {
+            "numFmt": "#,##0"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "T12:T2000",
+    "sqref_columns": [
+      "T"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "T": "Discharge (TEU)"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "T": "197"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "T": "22"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "T": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "T": "463"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "T": "38"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "T": "255"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "T": "11"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "T": "341"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "T": "8"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 58,
+        "formulas": [
+          "AND($H12=\"VMS\", T12=0)"
+        ],
+        "dxfId": 580,
+        "dxf_resolved": {
+          "dxfId": 580,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "notContainsBlanks",
+        "operator": null,
+        "priority": 70,
+        "formulas": [
+          "LEN(TRIM(T12))>0"
+        ],
+        "dxfId": 579,
+        "dxf_resolved": {
+          "dxfId": 579,
+          "resolved": {
+            "numFmt": "#,##0"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "U12:U2000",
+    "sqref_columns": [
+      "U"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "U": "Current Laden (TEU)"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "U": "380"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "U": "28"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "U": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "U": "597"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "U": "69"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "U": "322"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "U": "30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "U": "344"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "U": "25"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 60,
+        "formulas": [
+          "AND($H12=\"VMS\", U12=0)"
+        ],
+        "dxfId": 578,
+        "dxf_resolved": {
+          "dxfId": 578,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "notContainsBlanks",
+        "operator": null,
+        "priority": 69,
+        "formulas": [
+          "LEN(TRIM(U12))>0"
+        ],
+        "dxfId": 577,
+        "dxf_resolved": {
+          "dxfId": 577,
+          "resolved": {
+            "numFmt": "#,##0"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "Y12:Y2000",
+    "sqref_columns": [
+      "Y"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "Y": "Loadable Quantity"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "Y": "21"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "Y": "15"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Y": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "Y": "-232"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "Y": "-265"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "Y": "79"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "Y": "20"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "Y": "88"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "Y": "31"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 55,
+        "formulas": [
+          "AND($H12=\"VMS\", Y12=0)"
+        ],
+        "dxfId": 576,
+        "dxf_resolved": {
+          "dxfId": 576,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "Z969:ZZ2000 Z12:AJ968 AL12:ZZ968",
+    "sqref_columns": [
+      "AJ",
+      "AL",
+      "Z",
+      "ZZ"
+    ],
+    "header_candidates": [
+      {
+        "row": 10,
+        "captions": {
+          "Z": "Note*"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "AJ": "Operational Issues",
+          "Z": "Loadable WGT"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "Z": "819"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "Z": "541"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Z": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AJ": "P/I @ GBSOU",
+          "Z": "-1893"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AJ": "P/I @ GBSOU",
+          "Z": "-2481"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "Z": "909"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "Z": "420"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "Z": "1167"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "Z": "738"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 54,
+        "formulas": [
+          "AND($H12=\"VMS\", Z12=0)"
+        ],
+        "dxfId": 575,
+        "dxf_resolved": {
+          "dxfId": 575,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AA12:AA2000",
+    "sqref_columns": [
+      "AA"
+    ],
+    "header_candidates": [
+      {
+        "row": 10,
+        "captions": {
+          "AA": "Inland Total"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "AA": "Inland  w/Activity"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AA": "47"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AA": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AA": "31"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AA": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AA": "34"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AA": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AA": "30"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AA": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 53,
+        "formulas": [
+          "AND($H12=\"VMS\", AA12=0)"
+        ],
+        "dxfId": 574,
+        "dxf_resolved": {
+          "dxfId": 574,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AB12:AB2000",
+    "sqref_columns": [
+      "AB"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AB": "Inland No-Activity"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AB": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AB": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 52,
+        "formulas": [
+          "AND($H12=\"VMS\", AB12=0)"
+        ],
+        "dxfId": 573,
+        "dxf_resolved": {
+          "dxfId": 573,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AC12:AC2000",
+    "sqref_columns": [
+      "AC"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AC": "Inland Total "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AC": "47"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AC": "31"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AC": "34"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AC": "30"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AC": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 50,
+        "formulas": [
+          "AND($H12=\"VMS\", AC12=0)"
+        ],
+        "dxfId": 572,
+        "dxf_resolved": {
+          "dxfId": 572,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "3",
+                "tint": "0.89996032593768116"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AF12:AF2000",
+    "sqref_columns": [
+      "AF"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AF": "Port Total"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AF": "333"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AF": "28"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AF": "566"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AF": "69"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AF": "288"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AF": "30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AF": "314"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AF": "25"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 49,
+        "formulas": [
+          "AND($H12=\"VMS\", AF12=0)"
+        ],
+        "dxfId": 571,
+        "dxf_resolved": {
+          "dxfId": 571,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "3",
+                "tint": "0.89996032593768116"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AD12:AD2000",
+    "sqref_columns": [
+      "AD"
+    ],
+    "header_candidates": [
+      {
+        "row": 10,
+        "captions": {
+          "AD": "Port Total"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "AD": "Port w/Activity"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AD": "333"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AD": "28"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AD": "566"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AD": "69"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AD": "288"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AD": "30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AD": "314"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AD": "25"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 48,
+        "formulas": [
+          "AND($H12=\"VMS\", AD12=0)"
+        ],
+        "dxfId": 570,
+        "dxf_resolved": {
+          "dxfId": 570,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-0.24994659260841701"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AE12:AE2000",
+    "sqref_columns": [
+      "AE"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AE": "Port No-Activity"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AE": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AE": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 47,
+        "formulas": [
+          "AND($H12=\"VMS\", Z12=0)"
+        ],
+        "dxfId": 569,
+        "dxf_resolved": {
+          "dxfId": 569,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-0.24994659260841701"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "N12:N2000",
+    "sqref_columns": [
+      "N"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "N": "RFR BKG TEU"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "N": "24"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "N": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "N": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "N": "34"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "N": "0"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "N": "12"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "N": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "N": "28"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "N": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 45,
+        "formulas": [
+          "AND($H12=\"VMS\", N12=0)"
+        ],
+        "dxfId": 568,
+        "dxf_resolved": {
+          "dxfId": 568,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "M12:AF2000",
+    "sqref_columns": [
+      "AF",
+      "M"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "M": "RFR Max Laden TEU ",
+          "AF": "Port Total"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "M": "60",
+          "AF": "333"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "M": "10",
+          "AF": "28"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "M": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "M": "60",
+          "AF": "566"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "M": "10",
+          "AF": "69"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "M": "60",
+          "AF": "288"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "M": "10",
+          "AF": "30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "M": "60",
+          "AF": "314"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "M": "10",
+          "AF": "25"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 44,
+        "formulas": [
+          "AND($H13=\"VMS\", M13:AK13=0)"
+        ],
+        "dxfId": 567,
+        "dxf_resolved": {
+          "dxfId": 567,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "numFmt": "0.00"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "G12:G2000",
+    "sqref_columns": [
+      "G"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "G": "Status "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "G": "AP Frozen"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "G": "AP Only"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 41,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 566,
+        "dxf_resolved": {
+          "dxfId": 566,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "H12:H2000",
+    "sqref_columns": [
+      "H"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "H": "VVD"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "H": "GLMT1006E"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "H": "GLMT1006E"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "H": "VMS"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "H": "OTRT0122E"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "H": "OTRT0122E"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "H": "OVZT0019E"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "H": "OVZT0019E"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "H": "ACNT0022E"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "H": "ACNT0022E"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 28,
+        "formulas": [
+          "\"VMS\""
+        ],
+        "dxfId": 565,
+        "dxf_resolved": {
+          "dxfId": 565,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "I12:I2000",
+    "sqref_columns": [
+      "I"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "I": "Vessel Name"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "I": "CMA CGM LAMARTINE"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "I": "CMA CGM LAMARTINE"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "I": "VMS"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "I": "ONE TRITON"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "I": "ONE TRITON"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "I": "OOCL VERACRUZ"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "I": "OOCL VERACRUZ"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "I": "APL CALIFORNIA"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "I": "APL CALIFORNIA"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 30,
+        "formulas": [
+          "\"VMS\""
+        ],
+        "dxfId": 564,
+        "dxf_resolved": {
+          "dxfId": 564,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "V12:V2000",
+    "sqref_columns": [
+      "V"
+    ],
+    "header_candidates": [
+      {
+        "row": 1,
+        "captions": {
+          "V": "Last Refresh:"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "V": "Peak Laden Utilz %"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "V": "1.8"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "V": "1.46"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "V": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "V": "2"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "V": "2.76"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "V": "1.68"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "V": "2.76"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "V": "1.43"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "V": "1.96"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 35,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 563,
+        "dxf_resolved": {
+          "dxfId": 563,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 56,
+        "formulas": [
+          "AND($H12=\"VMS\", V12=0%)"
+        ],
+        "dxfId": 562,
+        "dxf_resolved": {
+          "dxfId": 562,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "R12:R2000",
+    "sqref_columns": [
+      "R"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "R": "POL Max Laden (TEU)"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "R": "368"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "R": "57"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "R": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "R": "510"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "R": "70"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "R": "400"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "R": "25"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "R": "400"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "R": "25"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 32,
+        "formulas": [
+          "$I12=\"VMS\""
+        ],
+        "dxfId": 561,
+        "dxf_resolved": {
+          "dxfId": 561,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 34,
+        "formulas": [
+          "NOT(ISBLANK($J12))"
+        ],
+        "dxfId": 560,
+        "dxf_resolved": {
+          "dxfId": 560,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "theme": "7",
+                "tint": "0.79998168889431442"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 37,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 559,
+        "dxf_resolved": {
+          "dxfId": 559,
+          "resolved": {
+            "font": {
+              "color": {
+                "hex": "#E4DFEC",
+                "argb": "FFE4DFEC",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "M12:M2000",
+    "sqref_columns": [
+      "M"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "M": "RFR Max Laden TEU "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "M": "60"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "M": "10"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "M": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "M": "60"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "M": "10"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "M": "60"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "M": "10"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "M": "60"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "M": "10"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 31,
+        "formulas": [
+          "$I12=\"VMS\""
+        ],
+        "dxfId": 558,
+        "dxf_resolved": {
+          "dxfId": 558,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 36,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 557,
+        "dxf_resolved": {
+          "dxfId": 557,
+          "resolved": {
+            "font": {
+              "color": {
+                "hex": "#E4DFEC",
+                "argb": "FFE4DFEC",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "E12:G2000",
+    "sqref_columns": [
+      "E",
+      "G"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "E": " Coastal ETD",
+          "G": "Status "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "E": "46208",
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "E": "46211"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "E": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "E": "46222",
+          "G": "AP Frozen"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "E": "46225"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "E": "46229",
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "E": "46232",
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "E": "46236",
+          "G": "AP Only"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "E": "46238"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 27,
+        "formulas": [
+          "$I12=\"VMS\""
+        ],
+        "dxfId": 556,
+        "dxf_resolved": {
+          "dxfId": 556,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "D12:AI2000",
+    "sqref_columns": [
+      "AI",
+      "D"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AI": "Coastal ETA vs Proforma",
+          "D": "Sale Week "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AI": "--1 days -13 hrs",
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AI": "-0 days -3 hrs",
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "D": "2026/W28"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AI": "-0 days 0 hrs",
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AI": "-0 days 0 hrs",
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AI": "-0 days 0 hrs",
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AI": "-0 days 0 hrs",
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AI": "--2 days -13 hrs",
+          "D": "2026/W31"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AI": "-0 days -8 hrs",
+          "D": "2026/W31"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 23,
+        "formulas": [
+          "LEFT($G12,4)=\"AP F\""
+        ],
+        "dxfId": 555,
+        "dxf_resolved": {
+          "dxfId": 555,
+          "resolved": {
+            "font": {
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "5",
+                "tint": "0.39994506668294322"
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 24,
+        "formulas": [
+          "LEFT($G12,7)=\"AP Only\""
+        ],
+        "dxfId": 554,
+        "dxf_resolved": {
+          "dxfId": 554,
+          "resolved": {
+            "font": {
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "hex": "#FFC000",
+                "argb": "FFFFC000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "AI12:AI2000",
+    "sqref_columns": [
+      "AI"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AI": "Coastal ETA vs Proforma"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AI": "--1 days -13 hrs"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "AI": "-0 days -3 hrs"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AI": "-0 days 0 hrs"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AI": "-0 days 0 hrs"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "AI": "-0 days 0 hrs"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AI": "-0 days 0 hrs"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AI": "--2 days -13 hrs"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AI": "-0 days -8 hrs"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 38,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 553,
+        "dxf_resolved": {
+          "dxfId": 553,
+          "resolved": {
+            "font": {
+              "color": {
+                "hex": "#EBEDC5",
+                "argb": "FFEBEDC5",
+                "note": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 39,
+        "formulas": [
+          "\"(blank)\""
+        ],
+        "dxfId": 552,
+        "dxf_resolved": {
+          "dxfId": 552,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#EBEDC5",
+                "argb": "FFEBEDC5",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "J12:Z2000",
+    "sqref_columns": [
+      "J",
+      "Z"
+    ],
+    "header_candidates": [
+      {
+        "row": 10,
+        "captions": {
+          "Z": "Note*"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "J": "POL",
+          "Z": "Loadable WGT"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "J": "USHOU05",
+          "Z": "819"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "J": "USMSY01",
+          "Z": "541"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Z": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "J": "USHOU05",
+          "Z": "-1893"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "J": "USMSY01",
+          "Z": "-2481"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "J": "USHOU05",
+          "Z": "909"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "J": "USMSY01",
+          "Z": "420"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "J": "USHOU05",
+          "Z": "1167"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "J": "USMSY01",
+          "Z": "738"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 26,
+        "formulas": [
+          "$I12=\"VMS\""
+        ],
+        "dxfId": 551,
+        "dxf_resolved": {
+          "dxfId": 551,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "D12:D2000",
+    "sqref_columns": [
+      "D"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "D": "Sale Week "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "D": "2026/W28"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "D": "2026/W31"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "D": "2026/W31"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 25,
+        "formulas": [
+          "$I12=\"VMS\""
+        ],
+        "dxfId": 550,
+        "dxf_resolved": {
+          "dxfId": 550,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "J12:J2000",
+    "sqref_columns": [
+      "J"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "J": "POL"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "J": "USHOU05"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "J": "USMSY01"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "J": "USHOU05"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "J": "USMSY01"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "J": "USHOU05"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "J": "USMSY01"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "J": "USHOU05"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "J": "USMSY01"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 16,
+        "formulas": [
+          "\"NO N.A. CALL\""
+        ],
+        "dxfId": 549,
+        "dxf_resolved": {
+          "dxfId": 549,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              },
+              "bold": false,
+              "italic": true
+            },
+            "fill": {
+              "bgColor": {
+                "hex": "#FF0000",
+                "argb": "FFFF0000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "POL_Booking_Flash",
+    "sheet_file": "sheet3.xml",
+    "sqref": "V13:W2000",
+    "sqref_columns": [
+      "V",
+      "W"
+    ],
+    "header_candidates": [
+      {
+        "row": 1,
+        "captions": {
+          "V": "Last Refresh:",
+          "W": "46246.643813425922"
+        }
+      },
+      {
+        "row": 11,
+        "captions": {
+          "V": "Peak Laden Utilz %",
+          "W": "Current Laden Utiliz %"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "V": "1.8",
+          "W": "1.03"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "V": "1.46",
+          "W": "0.49"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "V": "(blank)",
+          "W": "(blank)"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "V": "2",
+          "W": "1.17"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "V": "2.76",
+          "W": "0.99"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "V": "1.68",
+          "W": "0.81"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "V": "2.76",
+          "W": "1.2"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "V": "1.43",
+          "W": "0.86"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "V": "1.96",
+          "W": "1"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 15,
+        "formulas": [
+          "($W13-$V13)>10%"
+        ],
+        "dxfId": 548,
+        "dxf_resolved": {
+          "dxfId": 548,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#FF0000",
+                "argb": "FFFF0000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "F13:F600",
+    "sqref_columns": [
+      "F"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "F": "1st POL Cutoff"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "F": "46192"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "F": "46199"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "F": "46205"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "F": "46227"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "F": "46220"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "F": "46241"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "F": "46255"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "F": "46261"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "notContainsBlanks",
+        "operator": null,
+        "priority": 88,
+        "formulas": [
+          "LEN(TRIM(F13))>0"
+        ],
+        "dxfId": 547,
+        "dxf_resolved": {
+          "dxfId": 547,
+          "resolved": {
+            "numFmt": "m/d;@"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "D13:J600",
+    "sqref_columns": [
+      "D",
+      "J"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "J": "Vessel Name",
+          "D": "Sale Week"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "J": "FELIXSTOWE",
+          "D": "2026/W28"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "J": "LONCOMILLA",
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "J": "SPYROS V",
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "J": "SUNNY PHOENIX",
+          "D": "2026/W31"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "J": "NAVIOS AMARILLO",
+          "D": "2026/W32"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W33"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W34"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "J": "ZIM BALTIMORE",
+          "D": "2026/W35"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W36"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "J": "FELIXSTOWE",
+          "D": "2026/W37"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "J": "LONCOMILLA",
+          "D": "2026/W38"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 82,
+        "formulas": [
+          "LEFT($H13,4)=\"AP F\""
+        ],
+        "dxfId": 546,
+        "dxf_resolved": {
+          "dxfId": 546,
+          "resolved": {
+            "font": {
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "5",
+                "tint": "0.39994506668294322"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "K13:P47 R13:AG47 AP13:AT47",
+    "sqref_columns": [
+      "AG",
+      "AP",
+      "AT",
+      "K",
+      "P",
+      "R"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AG": "Port Total ",
+          "AP": "TAT",
+          "R": "Broken Routes",
+          "K": "Max LDN ",
+          "P": "Max LDN vs BKG (Short_Fall)",
+          "AT": "LET"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AG": "226",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "105",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AG": "114",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-19",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AG": "85",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-32",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AG": "85",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-53",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AG": "163",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "39",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AG": "118",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-14",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AG": "217",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "111",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AG": "144",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "38",
+          "AT": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 38,
+        "formulas": [
+          "LEFT($H13,4)=\"AP F\""
+        ],
+        "dxfId": 545,
+        "dxf_resolved": {
+          "dxfId": 545,
+          "resolved": {
+            "font": {
+              "color": {
+                "auto": "1"
+              },
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "5",
+                "tint": "0.39994506668294322"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AC13:AC47",
+    "sqref_columns": [
+      "AC"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AC": "Inland No Activity "
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AC": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AC": "24"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AC": "34"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 56,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 544,
+        "dxf_resolved": {
+          "dxfId": 544,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AB13:AB47",
+    "sqref_columns": [
+      "AB"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AB": "Inland Activity "
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AB": "Inland Activity "
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AB": "19"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AB": "7"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AB": "23"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AB": "2"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AB": "16"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AB": "8"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AB": "10"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AB": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 55,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 543,
+        "dxf_resolved": {
+          "dxfId": 543,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AF13:AF47",
+    "sqref_columns": [
+      "AF"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AF": "Port No Activity "
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AF": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AF": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AF": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AF": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AF": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AF": "2"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AF": "215"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AF": "142"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 54,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 542,
+        "dxf_resolved": {
+          "dxfId": 542,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-0.24994659260841701"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "2",
+                "tint": "-0.24994659260841701"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AE13:AE47",
+    "sqref_columns": [
+      "AE"
+    ],
+    "header_candidates": [
+      {
+        "row": 11,
+        "captions": {
+          "AE": "Port Activity"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "AE": "Port Activity"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AE": "226"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AE": "114"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AE": "85"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AE": "85"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AE": "163"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AE": "116"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AE": "2"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AE": "2"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 53,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 541,
+        "dxf_resolved": {
+          "dxfId": 541,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-0.24994659260841701"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "2",
+                "tint": "-0.24994659260841701"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "",
+    "sqref_columns": [],
+    "header_candidates": [],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 46,
+        "formulas": [
+          "XFD1=\"\""
+        ],
+        "dxfId": 540,
+        "dxf_resolved": {
+          "dxfId": 540,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#002060",
+                "argb": "FF002060",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "K13:P47 R13:AN47",
+    "sqref_columns": [
+      "AN",
+      "K",
+      "P",
+      "R"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "K": "Max LDN ",
+          "AN": "Voyage Remarks",
+          "R": "Broken Routes",
+          "P": "Max LDN vs BKG (Short_Fall)"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "105"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "-19"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "-32"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "K": "140",
+          "AN": "20260731 | SUNNY PHOENIX V.0075S PHASE OUT AT AN2 JMKIN\nCARGO on PHXT0075_SB from MX and US up to COSPC: The units will remain on board and must be discharged at Kingston to connect with the first available connection according to its priority (Attached sheet file)\nRICGZ9922700 : The units will remain on board and must be discharged at Kingston_SB to connect with FELIXSTOWE _ FOWT0529N\nCARGO on PHXT0075_SB up to CRMOB and GTSTC: The units will remain on board and must be discharged at Kingston to connect with TBC\nCARGO on PHXT0075_SB from BRSSZ up to ARBUE (SAOG39199500) : Transfer to the next vessel - ZIM BALTIMORE v.0349SB",
+          "R": "0",
+          "P": "-53"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "39"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "-14"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "111"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "K": "140",
+          "R": "0",
+          "P": "38"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 50,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 539,
+        "dxf_resolved": {
+          "dxfId": 539,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "K13:P47 R13:AI47 AK13:AN47 AP13:AT47",
+    "sqref_columns": [
+      "AI",
+      "AK",
+      "AN",
+      "AP",
+      "AT",
+      "K",
+      "P",
+      "R"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AN": "Voyage Remarks",
+          "AP": "TAT",
+          "AK": "Proforma Rotation",
+          "R": "Broken Routes",
+          "K": "Max LDN ",
+          "P": "Max LDN vs BKG (Short_Fall)",
+          "AT": "LET",
+          "AI": "Sector Allocation"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "105",
+          "AT": "0",
+          "AI": "MX Laden: 77 + MTY: 0 = 77"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "-19",
+          "AT": "0",
+          "AI": "MX Laden: 37 + MTY: 41 = 78"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "-32",
+          "AT": "0",
+          "AI": "MX Laden: 45 + MTY: 6 = 51"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AN": "20260731 | SUNNY PHOENIX V.0075S PHASE OUT AT AN2 JMKIN\nCARGO on PHXT0075_SB from MX and US up to COSPC: The units will remain on board and must be discharged at Kingston to connect with the first available connection according to its priority (Attached sheet file)\nRICGZ9922700 : The units will remain on board and must be discharged at Kingston_SB to connect with FELIXSTOWE _ FOWT0529N\nCARGO on PHXT0075_SB up to CRMOB and GTSTC: The units will remain on board and must be discharged at Kingston to connect with TBC\nCARGO on PHXT0075_SB from BRSSZ up to ARBUE (SAOG39199500) : Transfer to the next vessel - ZIM BALTIMORE v.0349SB",
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "-53",
+          "AT": "0",
+          "AI": "MX Laden: 38 + MTY: 0 = 38"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "39",
+          "AT": "0",
+          "AI": "MX Laden: 49 + MTY: 0 = 49"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "-14",
+          "AT": "0",
+          "AI": "MX Laden: 77 + MTY: 0 = 77"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "111",
+          "AT": "0",
+          "AI": "MX Laden: 30 + MTY: 0 = 30"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AP": "0",
+          "AK": "MXVER04-MXATM04-USHOU01-USMIA01-JMKIN-COSPC->ARBUE-UYMVD-BRIOA-BRPNG-BRSSZ-BRRIO",
+          "R": "0",
+          "K": "140",
+          "P": "38",
+          "AT": "0",
+          "AI": "MX Laden: 25 + MTY: 0 = 25"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 41,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 538,
+        "dxf_resolved": {
+          "dxfId": 538,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "I13:J600",
+    "sqref_columns": [
+      "I",
+      "J"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "J": "Vessel Name",
+          "I": "VVD "
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "J": "VMS",
+          "I": "VMS"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "J": "FELIXSTOWE",
+          "I": "FOWT0529S"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "J": "LONCOMILLA",
+          "I": "LCMT0034S"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "J": "SPYROS V",
+          "I": "SROT0044S"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "J": "SUNNY PHOENIX",
+          "I": "PHXT0075S"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "J": "NAVIOS AMARILLO",
+          "I": "NSOT0066S"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "J": "VMS",
+          "I": "VMS"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "J": "VMS",
+          "I": "VMS"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "J": "ZIM BALTIMORE",
+          "I": "ZBTT0349S"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "J": "VMS",
+          "I": "VMS"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "J": "FELIXSTOWE",
+          "I": "FOWT0530S"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "J": "LONCOMILLA",
+          "I": "LCMT0035S"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 45,
+        "formulas": [
+          "\"VMS\""
+        ],
+        "dxfId": 537,
+        "dxf_resolved": {
+          "dxfId": 537,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "E13:H600",
+    "sqref_columns": [
+      "E",
+      "H"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "E": "PIC (spc/mkg)",
+          "H": "Status "
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "E": "Ryan T / Alex",
+          "H": "AP Only"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "E": "Ryan T / Alex",
+          "H": "AP Only"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "E": "Ryan T / Alex",
+          "H": "AP Frozen"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "E": "Ryan T / Alex"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "E": "Ryan T / Alex",
+          "H": "AP Only"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "E": "Ryan T / Alex",
+          "H": "AP Only"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 48,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 536,
+        "dxf_resolved": {
+          "dxfId": 536,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "D13:D600",
+    "sqref_columns": [
+      "D"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "D": "Sale Week"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "D": "2026/W28"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "D": "2026/W31"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "D": "2026/W32"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "D": "2026/W33"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "D": "2026/W34"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "D": "2026/W35"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "D": "2026/W36"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "D": "2026/W37"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "D": "2026/W38"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 43,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 535,
+        "dxf_resolved": {
+          "dxfId": 535,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "1",
+                "tint": null
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AH13:AH47",
+    "sqref_columns": [
+      "AH"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AH": "Operational Issues"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AH": "120 TEU of compensation"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AH": "48 TEU of compensation"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AH": "100 TEU of compensation & P/O JMKIN"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AH": "100 TEU of compensation"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 33,
+        "formulas": [
+          "\"*\""
+        ],
+        "dxfId": 534,
+        "dxf_resolved": {
+          "dxfId": 534,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AN13:AN47",
+    "sqref_columns": [
+      "AN"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AN": "Voyage Remarks"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AN": "20260731 | SUNNY PHOENIX V.0075S PHASE OUT AT AN2 JMKIN\nCARGO on PHXT0075_SB from MX and US up to COSPC: The units will remain on board and must be discharged at Kingston to connect with the first available connection according to its priority (Attached sheet file)\nRICGZ9922700 : The units will remain on board and must be discharged at Kingston_SB to connect with FELIXSTOWE _ FOWT0529N\nCARGO on PHXT0075_SB up to CRMOB and GTSTC: The units will remain on board and must be discharged at Kingston to connect with TBC\nCARGO on PHXT0075_SB from BRSSZ up to ARBUE (SAOG39199500) : Transfer to the next vessel - ZIM BALTIMORE v.0349SB"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "cellIs",
+        "operator": "equal",
+        "priority": 32,
+        "formulas": [
+          "\"*\""
+        ],
+        "dxfId": 533,
+        "dxf_resolved": {
+          "dxfId": 533,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "2",
+                "tint": "-9.9948118533890809E-2"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "D592:AF600 D13:J591",
+    "sqref_columns": [
+      "AF",
+      "D",
+      "J"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "J": "Vessel Name",
+          "AF": "Port No Activity ",
+          "D": "Sale Week"
+        }
+      },
+      {
+        "row": 13,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W27"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "J": "FELIXSTOWE",
+          "AF": "0",
+          "D": "2026/W28"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "J": "LONCOMILLA",
+          "AF": "0",
+          "D": "2026/W29"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "J": "SPYROS V",
+          "AF": "0",
+          "D": "2026/W30"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "J": "SUNNY PHOENIX",
+          "AF": "0",
+          "D": "2026/W31"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "J": "NAVIOS AMARILLO",
+          "AF": "0",
+          "D": "2026/W32"
+        }
+      },
+      {
+        "row": 19,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W33"
+        }
+      },
+      {
+        "row": 20,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W34"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "J": "ZIM BALTIMORE",
+          "AF": "2",
+          "D": "2026/W35"
+        }
+      },
+      {
+        "row": 22,
+        "captions": {
+          "J": "VMS",
+          "D": "2026/W36"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "J": "FELIXSTOWE",
+          "AF": "215",
+          "D": "2026/W37"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "J": "LONCOMILLA",
+          "AF": "142",
+          "D": "2026/W38"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 83,
+        "formulas": [
+          "LEFT($H13,7)=\"AP Only\""
+        ],
+        "dxfId": 532,
+        "dxf_resolved": {
+          "dxfId": 532,
+          "resolved": {
+            "font": {
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "hex": "#FFC000",
+                "argb": "FFFFC000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "K13:P47 R13:AG47 AP13:AT47",
+    "sqref_columns": [
+      "AG",
+      "AP",
+      "AT",
+      "K",
+      "P",
+      "R"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AG": "Port Total ",
+          "AP": "TAT",
+          "R": "Broken Routes",
+          "K": "Max LDN ",
+          "P": "Max LDN vs BKG (Short_Fall)",
+          "AT": "LET"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AG": "226",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "105",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AG": "114",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-19",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AG": "85",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-32",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AG": "85",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-53",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AG": "163",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "39",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AG": "118",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "-14",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AG": "217",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "111",
+          "AT": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AG": "144",
+          "AP": "0",
+          "R": "0",
+          "K": "140",
+          "P": "38",
+          "AT": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 31,
+        "formulas": [
+          "LEFT($H13,7)=\"AP Only\""
+        ],
+        "dxfId": 531,
+        "dxf_resolved": {
+          "dxfId": 531,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#FFC000",
+                "argb": "FFFFC000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AJ13:AJ47",
+    "sqref_columns": [
+      "AJ"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AJ": "SGSIN Dry vs Reefer"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 29,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 530,
+        "dxf_resolved": {
+          "dxfId": 530,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "N13:O47",
+    "sqref_columns": [
+      "N",
+      "O"
+    ],
+    "header_candidates": [
+      {
+        "row": 1,
+        "captions": {
+          "N": "46246.643812615737"
+        }
+      },
+      {
+        "row": 12,
+        "captions": {
+          "O": "Current Laden Utiliz %",
+          "N": "Peak Utiliz % "
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "O": "1.75",
+          "N": "2.11"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "O": "0.86428571428571432",
+          "N": "2.33"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "O": "0.77142857142857146",
+          "N": "2.06"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "O": "0.62142857142857144",
+          "N": "1.84"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "O": "1.2785714285714285",
+          "N": "2.69"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "O": "0.9",
+          "N": "1.49"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "O": "1.7928571428571429",
+          "N": "1.81"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "O": "1.2714285714285714",
+          "N": "1.43"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 26,
+        "formulas": [
+          "($O13-$N13)>10%"
+        ],
+        "dxfId": 529,
+        "dxf_resolved": {
+          "dxfId": 529,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#FF0000",
+                "argb": "FFFF0000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "Q13:Q47",
+    "sqref_columns": [
+      "Q"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "Q": "ONE Quote (TEU)"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "Q": "6"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Q": "9"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "Q": "4"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "Q": "2"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "Q": "4"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "Q": "1"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "Q": "1"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "Q": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 21,
+        "formulas": [
+          "LEFT($H13,4)=\"AP F\""
+        ],
+        "dxfId": 528,
+        "dxf_resolved": {
+          "dxfId": 528,
+          "resolved": {
+            "font": {
+              "color": {
+                "auto": "1"
+              },
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "5",
+                "tint": "0.39994506668294322"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "Q13:Q47",
+    "sqref_columns": [
+      "Q"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "Q": "ONE Quote (TEU)"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "Q": "6"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Q": "9"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "Q": "4"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "Q": "2"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "Q": "4"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "Q": "1"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "Q": "1"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "Q": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 22,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 527,
+        "dxf_resolved": {
+          "dxfId": 527,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "Q13:Q47",
+    "sqref_columns": [
+      "Q"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "Q": "ONE Quote (TEU)"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "Q": "6"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "Q": "9"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "Q": "4"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "Q": "2"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "Q": "4"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "Q": "1"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "Q": "1"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "Q": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 20,
+        "formulas": [
+          "LEFT($H13,7)=\"AP Only\""
+        ],
+        "dxfId": 526,
+        "dxf_resolved": {
+          "dxfId": 526,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#FFC000",
+                "argb": "FFFFC000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AS13:AS47",
+    "sqref_columns": [
+      "AS"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AS": "IMT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AS": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AS": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 19,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 525,
+        "dxf_resolved": {
+          "dxfId": 525,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AT13:AT47",
+    "sqref_columns": [
+      "AT"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AT": "LET"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AT": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AT": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 18,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 524,
+        "dxf_resolved": {
+          "dxfId": 524,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AR13:AR47",
+    "sqref_columns": [
+      "AR"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AR": "LNT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AR": "245"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AR": "121"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AR": "108"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AR": "87"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AR": "179"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AR": "126"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AR": "251"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AR": "178"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 17,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 523,
+        "dxf_resolved": {
+          "dxfId": 523,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AQ13:AQ47",
+    "sqref_columns": [
+      "AQ"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AQ": "LWT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AQ": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AQ": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 16,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 522,
+        "dxf_resolved": {
+          "dxfId": 522,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AP13:AP47",
+    "sqref_columns": [
+      "AP"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AP": "TAT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AP": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AP": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 15,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 521,
+        "dxf_resolved": {
+          "dxfId": 521,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AO13:AO47",
+    "sqref_columns": [
+      "AO"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AO": "TPT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AO": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 12,
+        "formulas": [
+          "LEFT($H13,4)=\"AP F\""
+        ],
+        "dxfId": 520,
+        "dxf_resolved": {
+          "dxfId": 520,
+          "resolved": {
+            "font": {
+              "color": {
+                "auto": "1"
+              },
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "5",
+                "tint": "0.39994506668294322"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AO13:AO47",
+    "sqref_columns": [
+      "AO"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AO": "TPT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AO": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 13,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 519,
+        "dxf_resolved": {
+          "dxfId": 519,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AO13:AO47",
+    "sqref_columns": [
+      "AO"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AO": "TPT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AO": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 11,
+        "formulas": [
+          "LEFT($H13,7)=\"AP Only\""
+        ],
+        "dxfId": 518,
+        "dxf_resolved": {
+          "dxfId": 518,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#FFC000",
+                "argb": "FFFFC000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AO13:AO47",
+    "sqref_columns": [
+      "AO"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AO": "TPT"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AO": "0"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AO": "0"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 10,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 517,
+        "dxf_resolved": {
+          "dxfId": 517,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AU13:AU47",
+    "sqref_columns": [
+      "AU"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AU": "DG TEU"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AU": "10"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AU": "2"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AU": "5"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AU": "6"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AU": "3"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 3,
+        "formulas": [
+          "LEFT($H13,4)=\"AP F\""
+        ],
+        "dxfId": 516,
+        "dxf_resolved": {
+          "dxfId": 516,
+          "resolved": {
+            "font": {
+              "color": {
+                "auto": "1"
+              },
+              "bold": true,
+              "italic": false
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "5",
+                "tint": "0.39994506668294322"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AU13:AU47",
+    "sqref_columns": [
+      "AU"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AU": "DG TEU"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AU": "10"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AU": "2"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AU": "5"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AU": "6"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AU": "3"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 5,
+        "formulas": [
+          "$J13=\"\""
+        ],
+        "dxfId": 515,
+        "dxf_resolved": {
+          "dxfId": 515,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": null
+              }
+            },
+            "fill": {
+              "patternType": "none",
+              "bgColor": {
+                "auto": "1"
+              }
+            },
+            "border": {
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AU13:AU47",
+    "sqref_columns": [
+      "AU"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AU": "DG TEU"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AU": "10"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AU": "2"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AU": "5"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AU": "6"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AU": "3"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 4,
+        "formulas": [
+          "$J13=\"VMS\""
+        ],
+        "dxfId": 514,
+        "dxf_resolved": {
+          "dxfId": 514,
+          "resolved": {
+            "font": {
+              "color": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "fill": {
+              "bgColor": {
+                "theme": "0",
+                "tint": "-0.14996795556505021"
+              }
+            },
+            "border": {
+              "left": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "right": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "top": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              },
+              "bottom": {
+                "style": "thin",
+                "color": {
+                  "auto": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AU13:AU47",
+    "sqref_columns": [
+      "AU"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AU": "DG TEU"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AU": "10"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 16,
+        "captions": {
+          "AU": "2"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AU": "5"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 21,
+        "captions": {
+          "AU": "8"
+        }
+      },
+      {
+        "row": 23,
+        "captions": {
+          "AU": "6"
+        }
+      },
+      {
+        "row": 24,
+        "captions": {
+          "AU": "3"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 2,
+        "formulas": [
+          "LEFT($H13,7)=\"AP Only\""
+        ],
+        "dxfId": 513,
+        "dxf_resolved": {
+          "dxfId": 513,
+          "resolved": {
+            "fill": {
+              "bgColor": {
+                "hex": "#FFC000",
+                "argb": "FFFFC000",
+                "note": null
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "sheet": "Booking_Flash",
+    "sheet_file": "sheet4.xml",
+    "sqref": "AH13:AH47",
+    "sqref_columns": [
+      "AH"
+    ],
+    "header_candidates": [
+      {
+        "row": 12,
+        "captions": {
+          "AH": "Operational Issues"
+        }
+      },
+      {
+        "row": 14,
+        "captions": {
+          "AH": "120 TEU of compensation"
+        }
+      },
+      {
+        "row": 15,
+        "captions": {
+          "AH": "48 TEU of compensation"
+        }
+      },
+      {
+        "row": 17,
+        "captions": {
+          "AH": "100 TEU of compensation & P/O JMKIN"
+        }
+      },
+      {
+        "row": 18,
+        "captions": {
+          "AH": "100 TEU of compensation"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "expression",
+        "operator": null,
+        "priority": 1,
+        "formulas": [
+          "LEFT($AH13,7)=\"**ALERT\""
+        ],
+        "dxfId": 512,
+        "dxf_resolved": {
+          "dxfId": 512,
+          "resolved": {
+            "font": {
+              "color": {
+                "hex": "#FF0000",
+                "argb": "FFFF0000",
+                "note": null
+              },
+              "bold": true,
+              "italic": false
+            }
+          }
+        }
+      }
+    ]
+  }
+]
